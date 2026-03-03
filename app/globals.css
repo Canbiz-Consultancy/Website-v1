@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+  /* ── Canbiz brand palette ─────────────────────── */
+  --color-brand-gold:        #E1B857;
+  --color-brand-gold-hover:  #c9a045;
+  --color-brand-navy:        #0a0f1e;
+  --color-brand-navy-mid:    #0d1628;
+  --color-brand-navy-light:  #151d35;
+  --color-brand-navy-border: #1a2540;
+  --color-brand-surface:     #f0f0f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+}
