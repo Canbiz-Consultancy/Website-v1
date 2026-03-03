@@ -22,10 +22,10 @@ const pillars = [
 
 export function EYParthenon() {
   return (
-    <section className="bg-brand-navy">
+    <section className="bg-brand-navy py-24 px-6 md:px-16">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0">
         {/* Left */}
-        <div className="bg-brand-navy p-12 md:p-16 text-white flex flex-col justify-center">
+        <div className="bg-brand-navy py-12 pr-12 text-white flex flex-col justify-center">
           <div className="mb-3">
             <span className="text-brand-gold text-xs font-medium tracking-[3px] uppercase">
               Our Advisory Philosophy

@@ -2,7 +2,7 @@ export function ShapeFuture() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2">
       {/* Left Content */}
-      <div className="bg-brand-surface flex items-center px-12 md:px-16 py-16">
+      <div className="bg-brand-surface flex items-center px-6 md:px-16 py-24">
         <div className="max-w-[420px]">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">Personal Branding</p>
           <h2 className="text-brand-navy text-2xl md:text-3xl font-light leading-tight mb-6">
