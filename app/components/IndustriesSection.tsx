@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const industries = [
@@ -121,7 +121,7 @@ export function IndustriesSection() {
                       {industry.name}
                     </span>
                   </div>
-                  <ArrowRight
+                  <ArrowRightIcon
                     size={14}
                     className={`shrink-0 transition-all duration-200 ${
                       activeIndex === index ? "text-brand-gold opacity-100" : "text-gray-300 opacity-0 group-hover:opacity-100"
@@ -173,7 +173,7 @@ export function IndustriesSection() {
                 href="#"
                 className="inline-flex items-center gap-2 text-sm text-brand-navy font-medium hover:text-brand-gold transition-colors border-b-2 border-brand-gold pb-0.5 self-start"
               >
-                Explore this sector <ArrowRight size={14} />
+                Explore this sector <ArrowRightIcon size={14} />
               </a>
             </div>
           </div>

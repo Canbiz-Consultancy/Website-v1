@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const insights = [
@@ -89,7 +89,7 @@ export function FeaturedInsights() {
               </h3>
               <p className="text-gray-500 text-sm leading-relaxed mb-5">{insights[0].description}</p>
               <a href="#" className="inline-flex items-center gap-2 text-xs font-medium text-brand-navy hover:text-brand-gold transition-colors">
-                Read more <ArrowRight size={13} />
+                Read more <ArrowRightIcon size={13} />
               </a>
             </div>
           </div>
@@ -137,7 +137,7 @@ export function FeaturedInsights() {
                 </h3>
                 <p className="text-gray-500 text-xs leading-relaxed line-clamp-3">{item.description}</p>
                 <a href="#" className="inline-flex items-center gap-1.5 text-xs font-medium text-brand-navy hover:text-brand-gold transition-colors mt-4">
-                  Read more <ArrowRight size={12} />
+                  Read more <ArrowRightIcon size={12} />
                 </a>
               </div>
             </div>
@@ -146,7 +146,7 @@ export function FeaturedInsights() {
 
         <div className="mt-10 text-right">
           <a href="#" className="text-sm text-brand-navy hover:text-brand-gold transition-colors flex items-center justify-end gap-2 font-medium">
-            See all insights <ArrowRight size={16} />
+            See all insights <ArrowRightIcon size={16} />
           </a>
         </div>
       </div>

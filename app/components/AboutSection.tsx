@@ -1,26 +1,26 @@
 "use client";
 
-import { ArrowRight, Target, Eye, Medal, Users } from "@phosphor-icons/react";
+import { ArrowRightIcon, TargetIcon, EyeIcon, MedalIcon, UsersIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const pillars = [
   {
-    icon: Target,
+    icon: TargetIcon,
     title: "Our Mission",
     text: "To empower businesses, entrepreneurs, and leaders with transformative advisory, education, and digital solutions that unlock sustainable growth and long-term value.",
   },
   {
-    icon: Eye,
+    icon: EyeIcon,
     title: "Our Vision",
     text: "To be the most trusted and impactful consultancy firm across the GCC and beyond, shaping a new generation of capable, confident, and globally competitive leaders.",
   },
   {
-    icon: Medal,
+    icon: MedalIcon,
     title: "Our Values",
     text: "Excellence, integrity, innovation, and inclusivity drive everything we do — from our client engagements to our internal culture and community contributions.",
   },
   {
-    icon: Users,
+    icon: UsersIcon,
     title: "Our People",
     text: "A diverse team of seasoned consultants, educators, technologists, and strategists united by a passion for creating real, measurable impact for every client we serve.",
   },
@@ -74,7 +74,7 @@ export function AboutSection() {
               Our core services — spanning management consulting, brand strategy, digital solutions, executive education, and government advisory — reflect our unwavering commitment to comprehensive, high-impact client service.
             </p>
             <button className="self-start inline-flex items-center gap-2 text-brand-gold text-sm font-medium hover:gap-3 transition-all duration-300">
-              Discover our full story <ArrowRight size={15} />
+              Discover our full story <ArrowRightIcon size={15} />
             </button>
           </div>
         </div>
@@ -114,7 +114,7 @@ export function AboutSection() {
             Want to know more about our story, leadership, and journey?
           </p>
           <button className="inline-flex items-center gap-3 bg-brand-navy text-white px-10 py-4 text-sm font-semibold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300">
-            Learn More About Us <ArrowRight size={16} />
+            Learn More About Us <ArrowRightIcon size={16} />
           </button>
         </div>
 

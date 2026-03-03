@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { MagnifyingGlass, List, X } from "@phosphor-icons/react";
+import { MagnifyingGlassIcon, ListIcon, XIcon } from "@phosphor-icons/react";
 import { CanbizLogo } from "./CanbizLogo";
 
 export function Navbar() {
@@ -134,7 +134,7 @@ export function Navbar() {
         {/* Right Actions */}
         <div className="flex items-center gap-4">
           <button className="hidden md:flex items-center gap-1.5 text-xs text-gray-300 hover:text-white transition-colors">
-            <MagnifyingGlass size={14} />
+            <MagnifyingGlassIcon size={14} />
             <span>Search</span>
           </button>
           <button className="hidden md:block bg-brand-gold text-brand-navy text-xs font-semibold px-5 py-2 hover:bg-brand-gold-hover transition-colors">
@@ -144,7 +144,7 @@ export function Navbar() {
             className="lg:hidden text-gray-200 hover:text-white"
             onClick={() => setMobileOpen(!mobileOpen)}
           >
-            {mobileOpen ? <X size={22} /> : <List size={22} />}
+            {mobileOpen ? <XIcon size={22} /> : <ListIcon size={22} />}
           </button>
         </div>
       </div>
@@ -164,7 +164,7 @@ export function Navbar() {
           ))}
           <div className="px-6 py-4 flex gap-4 border-t border-brand-navy-border">
             <button className="flex items-center gap-1.5 text-xs text-gray-300">
-              <MagnifyingGlass size={13} /> Search
+              <MagnifyingGlassIcon size={13} /> Search
             </button>
             <button className="ml-auto bg-brand-gold text-brand-navy text-xs font-semibold px-4 py-2">
               Contact Us

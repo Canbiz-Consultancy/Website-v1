@@ -1,20 +1,20 @@
 "use client";
 
-import { Lightbulb, ShieldCheck, ChartBar } from "@phosphor-icons/react";
+import { LightbulbIcon, ShieldCheckIcon, ChartBarIcon } from "@phosphor-icons/react";
 
 const pillars = [
   {
-    icon: Lightbulb,
+    icon: LightbulbIcon,
     value: "Strategic Clarity",
     label: "Turning complexity into clear, actionable direction for leaders",
   },
   {
-    icon: ShieldCheck,
+    icon: ShieldCheckIcon,
     value: "Risk Intelligence",
     label: "Identifying and mitigating risk before it becomes a liability",
   },
   {
-    icon: ChartBar,
+    icon: ChartBarIcon,
     value: "Performance Elevation",
     label: "Driving measurable growth across every layer of your organisation",
   },

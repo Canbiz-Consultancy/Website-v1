@@ -1,6 +1,6 @@
 "use client";
 
-import { ArrowRight } from "@phosphor-icons/react";
+import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 const values = [
@@ -105,7 +105,7 @@ export function CareersSection() {
             Ready to take the next step? Explore our open roles and find your fit.
           </p>
           <button className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 text-sm font-semibold hover:bg-brand-gold-hover transition-all duration-300">
-            View Open Positions <ArrowRight size={16} />
+            View Open Positions <ArrowRightIcon size={16} />
           </button>
         </div>
 

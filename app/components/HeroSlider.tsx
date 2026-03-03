@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { CaretLeft, CaretRight, Pause, Play } from "@phosphor-icons/react";
+import { CaretLeftIcon, CaretRightIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
 
 const slides = [
   {
@@ -113,19 +113,19 @@ export function HeroSlider() {
               onClick={prev}
               className="w-8 h-8 border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
             >
-              <CaretLeft size={16} />
+              <CaretLeftIcon size={16} />
             </button>
             <button
               onClick={next}
               className="w-8 h-8 border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
             >
-              <CaretRight size={16} />
+              <CaretRightIcon size={16} />
             </button>
             <button
               onClick={() => setIsPlaying(!isPlaying)}
               className="w-8 h-8 border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors"
             >
-              {isPlaying ? <Pause size={14} /> : <Play size={14} />}
+              {isPlaying ? <PauseIcon size={14} /> : <PlayIcon size={14} />}
             </button>
           </div>
         </div>

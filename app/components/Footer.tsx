@@ -1,6 +1,6 @@
 "use client";
 
-import { FacebookLogo, TwitterLogo, LinkedinLogo, YoutubeLogo } from "@phosphor-icons/react";
+import { FacebookLogoIcon, TwitterLogoIcon, LinkedinLogoIcon, YoutubeLogoIcon } from "@phosphor-icons/react";
 import { CanbizLogoDark } from "./CanbizLogo";
 
 const footerLinks = [
@@ -32,16 +32,16 @@ export function Footer() {
           {/* Social */}
           <div className="flex items-center gap-4">
             <a href="#" className="text-gray-500 hover:text-brand-gold transition-colors">
-              <FacebookLogo size={20} />
+              <FacebookLogoIcon size={20} />
             </a>
             <a href="#" className="text-gray-500 hover:text-brand-gold transition-colors">
-              <TwitterLogo size={20} />
+              <TwitterLogoIcon size={20} />
             </a>
             <a href="#" className="text-gray-500 hover:text-brand-gold transition-colors">
-              <LinkedinLogo size={20} />
+              <LinkedinLogoIcon size={20} />
             </a>
             <a href="#" className="text-gray-500 hover:text-brand-gold transition-colors">
-              <YoutubeLogo size={20} />
+              <YoutubeLogoIcon size={20} />
             </a>
           </div>
         </div>

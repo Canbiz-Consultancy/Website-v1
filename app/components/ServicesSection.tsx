@@ -1,12 +1,12 @@
 "use client";
 
 import { useState } from "react";
-import { ArrowRight, Users, Megaphone, Star, Code, ArrowsClockwise, Globe, GraduationCap, Baby, Heart, Buildings } from "@phosphor-icons/react";
+import { ArrowRightIcon, UsersIcon, MegaphoneIcon, StarIcon, CodeIcon, ArrowsClockwiseIcon, GlobeIcon, GraduationCapIcon, BabyIcon, HeartIcon, BuildingsIcon } from "@phosphor-icons/react";
 
 const services = [
   {
     id: 1,
-    icon: Users,
+    icon: UsersIcon,
     title: "Management Consulting & Professional Training",
     shortTitle: "Management Consulting",
     description:
@@ -14,7 +14,7 @@ const services = [
   },
   {
     id: 2,
-    icon: Megaphone,
+    icon: MegaphoneIcon,
     title: "Brand Strategy, Marketing Advisory & Content Development",
     shortTitle: "Brand Strategy & Marketing",
     description:
@@ -22,7 +22,7 @@ const services = [
   },
   {
     id: 3,
-    icon: Star,
+    icon: StarIcon,
     title: "Executive & Entrepreneur Personal Branding",
     shortTitle: "Personal Branding",
     description:
@@ -30,7 +30,7 @@ const services = [
   },
   {
     id: 4,
-    icon: Code,
+    icon: CodeIcon,
     title: "Software Development, Digital Solutions & IT Maintenance",
     shortTitle: "Software & Digital Solutions",
     description:
@@ -38,7 +38,7 @@ const services = [
   },
   {
     id: 5,
-    icon: ArrowsClockwise,
+    icon: ArrowsClockwiseIcon,
     title: "Consultancy Annual Maintenance Contract (AMC) Services",
     shortTitle: "AMC Services",
     description:
@@ -46,7 +46,7 @@ const services = [
   },
   {
     id: 6,
-    icon: Globe,
+    icon: GlobeIcon,
     title: "International Entrepreneur Exposure & Business Delegations",
     shortTitle: "Global Business Delegations",
     description:
@@ -54,7 +54,7 @@ const services = [
   },
   {
     id: 7,
-    icon: GraduationCap,
+    icon: GraduationCapIcon,
     title: "Executive MBA Program",
     shortTitle: "Executive MBA",
     description:
@@ -62,7 +62,7 @@ const services = [
   },
   {
     id: 8,
-    icon: Baby,
+    icon: BabyIcon,
     title: "Junior CEO Leadership Development Program",
     shortTitle: "Junior CEO Program",
     description:
@@ -70,7 +70,7 @@ const services = [
   },
   {
     id: 9,
-    icon: Heart,
+    icon: HeartIcon,
     title: "She Entrepreneurship & Women CEO Leadership Programs",
     shortTitle: "Women Leadership Programs",
     description:
@@ -78,7 +78,7 @@ const services = [
   },
   {
     id: 10,
-    icon: Buildings,
+    icon: BuildingsIcon,
     title: "Finance & Strategic Management Consulting for Government",
     shortTitle: "Government & Public Sector",
     description:
@@ -165,7 +165,7 @@ export function ServicesSection() {
                     isHovered ? "text-brand-navy" : "text-brand-gold"
                   } ${isHovered ? "opacity-100" : "opacity-0"}`}
                 >
-                  Learn more <ArrowRight size={13} />
+                  Learn more <ArrowRightIcon size={13} />
                 </div>
               </div>
             );
@@ -178,7 +178,7 @@ export function ServicesSection() {
             Explore All Services
           </button>
           <a href="#" className="text-gray-400 text-sm hover:text-brand-gold transition-colors flex items-center gap-2">
-            Request a Consultation <ArrowRight size={14} />
+            Request a Consultation <ArrowRightIcon size={14} />
           </a>
         </div>
       </div>
