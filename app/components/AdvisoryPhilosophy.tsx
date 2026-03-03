@@ -20,12 +20,12 @@ const pillars = [
   },
 ];
 
-export function EYParthenon() {
+export function AdvisoryPhilosophy() {
   return (
     <section className="bg-brand-navy py-24 px-6 md:px-16">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0">
         {/* Left */}
-        <div className="bg-brand-navy py-12 pr-12 text-white flex flex-col justify-center">
+        <div className="bg-brand-navy lg:pr-12 text-white flex flex-col justify-center">
           <div className="mb-3">
             <span className="text-brand-gold text-xs font-medium tracking-[3px] uppercase">
               Our Advisory Philosophy
@@ -65,7 +65,7 @@ export function EYParthenon() {
         </div>
 
         {/* Right – Image */}
-        <div className="relative min-h-[420px] overflow-hidden">
+        <div className="relative min-h-[320px] lg:min-h-[420px] overflow-hidden hidden lg:block">
           <img
             src="https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080"
             alt="Canbiz Advisory"

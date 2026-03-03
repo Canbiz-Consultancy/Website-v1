@@ -1,7 +1,7 @@
 import { Navbar } from "./components/Navbar";
 import { HeroSlider } from "./components/HeroSlider";
 import { FeaturedInsights } from "./components/FeaturedInsights";
-import { EYParthenon } from "./components/EYParthenon";
+import { AdvisoryPhilosophy } from "./components/AdvisoryPhilosophy";
 import { ServicesSection } from "./components/ServicesSection";
 import { ConfidenceSection } from "./components/ConfidenceSection";
 import { ShapeFuture } from "./components/ShapeFuture";
@@ -28,7 +28,7 @@ export default function App() {
       </div>
 
       {/* Parthenon brand section */}
-      <EYParthenon />
+      <AdvisoryPhilosophy />
 
       {/* SERVICES */}
       <div id="services">

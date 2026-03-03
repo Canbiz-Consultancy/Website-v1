@@ -50,7 +50,7 @@ export function HeroSlider() {
   const slide = slides[current];
 
   return (
-    <div className="relative w-full h-[540px] md:h-[620px] overflow-hidden">
+    <div className="relative w-full h-[480px] sm:h-[540px] md:h-[620px] overflow-hidden">
       {/* Background Image */}
       {slides.map((s, i) => (
         <div
@@ -84,21 +84,21 @@ export function HeroSlider() {
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-16 pb-6">
         <div className="max-w-[700px]">
           <p className="text-brand-gold text-xs tracking-widest mb-4 font-medium uppercase">{slide.category}</p>
-          <h1 className="text-white text-3xl md:text-4xl font-light leading-tight mb-4 max-w-[600px]">{slide.title}</h1>
-          <div className="flex items-start gap-3 mb-8">
-            <div className="w-0.5 h-5 bg-white mt-1 shrink-0" />
-            <p className="text-gray-200 text-base leading-relaxed">{slide.description}</p>
+          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-light leading-tight mb-3 md:mb-4 max-w-[600px]">{slide.title}</h1>
+          <div className="flex items-start gap-3 mb-6 md:mb-8">
+            <div className="w-0.5 h-4 md:h-5 bg-white mt-1 shrink-0" />
+            <p className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed line-clamp-3 md:line-clamp-none">{slide.description}</p>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="flex items-center justify-between border-t border-white/20 pt-4">
-          <div className="flex gap-6">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-white/20 pt-4 gap-4">
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
             {tabs.map((tab, i) => (
               <button
                 key={tab}
                 onClick={() => setCurrent(i)}
-                className={`text-sm pb-1 transition-colors font-medium ${
+                className={`text-xs sm:text-sm pb-1 transition-colors font-medium whitespace-nowrap shrink-0 ${
                   current === i
                     ? "text-white border-b-2 border-white"
                     : "text-gray-400 hover:text-gray-200"
@@ -108,7 +108,7 @@ export function HeroSlider() {
               </button>
             ))}
           </div>
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-2 shrink-0">
             <button
               onClick={prev}
               className="w-8 h-8 border border-white/40 flex items-center justify-center text-white hover:bg-white/10 transition-colors"

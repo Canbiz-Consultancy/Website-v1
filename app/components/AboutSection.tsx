@@ -62,7 +62,7 @@ export function AboutSection() {
             />
             <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/50 to-transparent" />
           </div>
-          <div className="bg-brand-navy p-10 lg:p-14 flex flex-col justify-center">
+          <div className="bg-brand-navy p-6 sm:p-10 lg:p-14 flex flex-col justify-center">
             <h3 className="text-white text-xl font-light mb-5 leading-tight">
               A decade of{" "}
               <span className="text-brand-gold">transformative impact</span>
@@ -82,7 +82,7 @@ export function AboutSection() {
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-gray-100 mb-16">
           {stats.map((s, i) => (
-            <div key={i} className="p-8 border-r border-gray-100 last:border-r-0 text-center">
+            <div key={i} className="p-5 md:p-8 border-r border-gray-100 last:border-r-0 text-center">
               <p className="text-brand-gold text-3xl font-light mb-2">{s.value}</p>
               <p className="text-gray-500 text-xs">{s.label}</p>
             </div>
@@ -96,7 +96,7 @@ export function AboutSection() {
             return (
               <div
                 key={i}
-                className="p-8 border-r border-gray-100 last:border-r-0 group hover:bg-brand-navy transition-all duration-300 cursor-default"
+                className="p-6 md:p-8 border-r border-gray-100 last:border-r-0 group hover:bg-brand-navy transition-all duration-300 cursor-default"
               >
                 <div className="w-9 h-9 flex items-center justify-center border border-brand-gold/30 mb-5 group-hover:bg-brand-gold/10 transition-colors">
                   <Icon size={16} className="text-brand-gold" weight="light" />

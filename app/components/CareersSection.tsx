@@ -50,7 +50,7 @@ export function CareersSection() {
         {/* Values Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 mb-20 border border-gray-200 bg-white">
           {values.map((v, i) => (
-            <div key={i} className="p-8 border-r border-gray-100 last:border-r-0 group hover:bg-brand-navy transition-colors duration-300">
+            <div key={i} className="p-6 md:p-8 border-r border-gray-100 last:border-r-0 group hover:bg-brand-navy transition-colors duration-300">
               <div className="w-8 h-0.5 bg-brand-gold mb-5 group-hover:w-12 transition-all duration-300" />
               <h3 className="text-brand-navy text-sm font-semibold mb-3 group-hover:text-white transition-colors">{v.title}</h3>
               <p className="text-gray-500 text-xs leading-relaxed group-hover:text-gray-300 transition-colors">{v.description}</p>
@@ -60,7 +60,7 @@ export function CareersSection() {
 
         {/* Split: Hero Image + Why Canbiz */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16 overflow-hidden">
-          <div className="relative h-[380px]">
+          <div className="relative h-[260px] sm:h-[380px]">
             <ImageWithFallback
               src="https://images.unsplash.com/photo-1758520144417-e1c432042dec?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJlZXIlMjBqb2IlMjBvcHBvcnR1bml0eSUyMGhpcmluZyUyMHRhbGVudHxlbnwxfHx8fDE3NzIzMzcxNjN8MA&ixlib=rb-4.1.0&q=80&w=1080"
               alt="Careers at Canbiz"
@@ -68,7 +68,7 @@ export function CareersSection() {
             />
             <div className="absolute inset-0 bg-brand-navy/30" />
           </div>
-          <div className="bg-brand-navy p-10 flex flex-col justify-center">
+          <div className="bg-brand-navy p-6 sm:p-10 flex flex-col justify-center">
             <h3 className="text-white text-xl font-light mb-4">
               Why choose <span className="text-brand-gold">Canbiz?</span>
             </h3>
@@ -92,7 +92,7 @@ export function CareersSection() {
         {/* Stats Row */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-gray-200 bg-white mb-12">
           {stats.map((s, i) => (
-            <div key={i} className="p-8 border-r border-gray-100 last:border-r-0 text-center">
+            <div key={i} className="p-5 md:p-8 border-r border-gray-100 last:border-r-0 text-center">
               <p className="text-brand-gold text-3xl font-light mb-2">{s.value}</p>
               <p className="text-gray-500 text-xs">{s.label}</p>
             </div>

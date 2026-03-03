@@ -93,7 +93,7 @@ export function IndustriesSection() {
         {/* Main Content */}
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-0 border border-gray-100">
           {/* Sidebar Tabs */}
-          <div className="lg:col-span-2 border-r border-gray-100">
+          <div className="lg:col-span-2 border-r border-gray-100 order-2 lg:order-1 max-h-64 lg:max-h-none overflow-y-auto">
             {industries.map((industry, index) => (
               <button
                 key={industry.id}
@@ -133,7 +133,7 @@ export function IndustriesSection() {
           </div>
 
           {/* Detail Panel */}
-          <div className="lg:col-span-3 flex flex-col">
+          <div className="lg:col-span-3 flex flex-col order-1 lg:order-2">
             {/* Image */}
             <div className="relative h-56 lg:h-64 overflow-hidden">
               <ImageWithFallback
@@ -189,9 +189,9 @@ export function IndustriesSection() {
           ].map((stat, i) => (
             <div
               key={i}
-              className="py-8 px-8 text-center border-r border-gray-100 last:border-r-0"
+              className="py-6 px-4 md:py-8 md:px-8 text-center border-r border-gray-100 last:border-r-0"
             >
-              <p className="text-brand-navy text-3xl font-light mb-1">{stat.value}</p>
+              <p className="text-brand-navy text-2xl md:text-3xl font-light mb-1">{stat.value}</p>
               <p className="text-gray-500 text-xs">{stat.label}</p>
             </div>
           ))}

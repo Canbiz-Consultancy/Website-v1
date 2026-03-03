@@ -116,7 +116,7 @@ export function ServicesSection() {
             return (
               <div
                 key={service.id}
-                className={`relative p-8 cursor-pointer transition-all duration-300 ${
+                className={`relative p-5 md:p-8 cursor-pointer transition-all duration-300 ${
                   isHovered ? "bg-brand-gold" : "bg-brand-navy-mid"
                 }`}
                 onMouseEnter={() => setHoveredId(service.id)}
