@@ -3,6 +3,7 @@
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { careersSection, careersValues, careersStats, careersWhyPoints } from "../content";
+import Link from "next/link";
 
 export function CareersSection() {
   return (
@@ -68,9 +69,9 @@ export function CareersSection() {
           <p className="text-gray-500 text-sm mb-6">
             {careersSection.ctaQuestion}
           </p>
-          <button className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 text-sm font-semibold hover:bg-brand-gold-hover transition-all duration-300">
+          <Link href='/careers' className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 text-sm font-semibold hover:bg-brand-gold-hover transition-all duration-300">
             {careersSection.ctaLabel} <ArrowRightIcon size={16} />
-          </button>
+          </Link>
         </div>
 
       </div>

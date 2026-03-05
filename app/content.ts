@@ -998,7 +998,6 @@ export const aboutSection = {
     "Founded in Dubai, Canbiz Consultancy Services has grown from a boutique advisory firm into a multi-sector powerhouse serving government institutions, corporations, SMEs, and individual leaders across the GCC and internationally.",
   storyPara2:
     "Our core services — spanning management consulting, brand strategy, digital solutions, executive education, and government advisory — reflect our unwavering commitment to comprehensive, high-impact client service.",
-  storyCta: "Discover our full story",
   ctaQuestion: "Want to know more about our story, leadership, and journey?",
   ctaLabel: "Learn More About Us",
 };

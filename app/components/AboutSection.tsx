@@ -3,6 +3,7 @@
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { aboutSection, aboutPillars, aboutStats } from "../content";
+import Link from "next/link";
 
 export function AboutSection() {
   return (
@@ -42,9 +43,6 @@ export function AboutSection() {
             <p className="text-gray-400 text-sm leading-relaxed mb-8">
               {aboutSection.storyPara2}
             </p>
-            <button className="self-start inline-flex items-center gap-2 text-brand-gold text-sm font-medium hover:gap-3 transition-all duration-300">
-              {aboutSection.storyCta} <ArrowRightIcon size={15} />
-            </button>
           </div>
         </div>
 
@@ -79,9 +77,9 @@ export function AboutSection() {
           <p className="text-gray-500 text-sm mb-6">
             {aboutSection.ctaQuestion}
           </p>
-          <button className="inline-flex items-center gap-3 bg-brand-navy text-white px-10 py-4 text-sm font-semibold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300">
+          <Link href='/about' className="inline-flex items-center gap-3 bg-brand-navy text-white px-10 py-4 text-sm font-semibold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300">
             {aboutSection.ctaLabel} <ArrowRightIcon size={16} />
-          </button>
+          </Link>
         </div>
 
       </div>
