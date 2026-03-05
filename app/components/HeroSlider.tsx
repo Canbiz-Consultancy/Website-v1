@@ -2,35 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { CaretLeftIcon, CaretRightIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
-
-const slides = [
-  {
-    id: 1,
-    category: "CEO IMPERATIVE",
-    title: "Five priorities for GCC CEOs navigating transformation and growth in 2026",
-    description: "Explore how top business leaders across the Gulf are reimagining strategy, talent, and innovation to build resilient, future-ready organizations.",
-    tab: "CEO Imperative",
-    image: "https://images.unsplash.com/photo-1705234384669-c6d31c61b789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDRU8lMjBsZWFkZXJzaGlwJTIwZnV0dXJlJTIwc3RyYXRlZ3klMjB2aXNpb258ZW58MXx8fHwxNzcyMzM3MzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
-    id: 2,
-    category: "WOMEN LEADERSHIP",
-    title: "She leads: how Canbiz's Women CEO Programs are reshaping business across the GCC",
-    description: "Specialized leadership and capacity-building programs empowering women entrepreneurs and senior executives to reach their full potential.",
-    tab: "Women Leadership",
-    image: "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-  {
-    id: 3,
-    category: "GLOBAL BUSINESS",
-    title: "International business delegations: connecting GCC entrepreneurs with the world",
-    description: "Discover how our curated global exposure programs have facilitated 120+ MOU signings and opened new markets for entrepreneurs across 30+ countries.",
-    tab: "Global Delegations",
-    image: "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
-  },
-];
-
-const tabs = ["CEO Imperative", "Women Leadership", "Global Delegations"];
+import { heroSlides, heroTabs } from "../content";
 
 export function HeroSlider() {
   const [current, setCurrent] = useState(0);
@@ -39,20 +11,19 @@ export function HeroSlider() {
   useEffect(() => {
     if (!isPlaying) return;
     const timer = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
+      setCurrent((prev) => (prev + 1) % heroSlides.length);
     }, 5000);
     return () => clearInterval(timer);
   }, [isPlaying]);
 
-  const prev = () => setCurrent((c) => (c - 1 + slides.length) % slides.length);
-  const next = () => setCurrent((c) => (c + 1) % slides.length);
+  const prev = () => setCurrent((c) => (c - 1 + heroSlides.length) % heroSlides.length);
+  const next = () => setCurrent((c) => (c + 1) % heroSlides.length);
 
-  const slide = slides[current];
+  const slide = heroSlides[current];
 
   return (
     <div className="relative w-full h-[480px] sm:h-[540px] md:h-[620px] overflow-hidden">
-      {/* Background Image */}
-      {slides.map((s, i) => (
+      {heroSlides.map((s, i) => (
         <div
           key={s.id}
           className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
@@ -62,7 +33,6 @@ export function HeroSlider() {
         </div>
       ))}
 
-      {/* Decorative Rectangle */}
       <div className="absolute top-1/4 right-[15%] hidden md:block">
         <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
           <rect x="2" y="2" width="196" height="156" stroke="url(#grad)" strokeWidth="3" fill="none" />
@@ -73,14 +43,12 @@ export function HeroSlider() {
             </linearGradient>
           </defs>
         </svg>
-        {/* Corner dots */}
         <div className="absolute bottom-[-8px] left-[-8px] flex gap-1.5">
           <div className="w-2 h-2 rounded-full bg-brand-gold" />
           <div className="w-2 h-2 rounded-full bg-brand-gold opacity-60" />
         </div>
       </div>
 
-      {/* Content */}
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-16 pb-6">
         <div className="max-w-[700px]">
           <p className="text-brand-gold text-xs tracking-widest mb-4 font-medium uppercase">{slide.category}</p>
@@ -91,10 +59,9 @@ export function HeroSlider() {
           </div>
         </div>
 
-        {/* Bottom Bar */}
         <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-white/20 pt-4 gap-4">
           <div className="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
-            {tabs.map((tab, i) => (
+            {heroTabs.map((tab, i) => (
               <button
                 key={tab}
                 onClick={() => setCurrent(i)}

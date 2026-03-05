@@ -14,47 +14,35 @@ export default function App() {
   return (
     <div className="min-h-screen bg-white">
       <Navbar />
-      {/* Spacer for fixed navbar */}
       <div className="h-14" />
 
-      {/* HOME */}
       <div id="home">
         <HeroSlider />
       </div>
-
-      {/* INSIGHTS */}
       <div id="insights">
         <FeaturedInsights />
       </div>
 
-      {/* Parthenon brand section */}
       <AdvisoryPhilosophy />
 
-      {/* SERVICES */}
       <div id="services">
         <ServicesSection />
       </div>
 
-      {/* Confidence + Shape Future sub-sections */}
       <ConfidenceSection />
       <ShapeFuture />
 
-      {/* INDUSTRIES */}
       <div id="industries">
         <IndustriesSection />
       </div>
       
-      {/* CAREERS */}
       <div id="careers">
         <CareersSection />
       </div>
-
-      {/* ABOUT US */}
       <div id="about">
         <AboutSection />
       </div>
 
-      {/* Footer */}
       <Footer />
     </div>
   );

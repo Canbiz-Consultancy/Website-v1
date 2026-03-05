@@ -1,49 +1,26 @@
 "use client";
 
-import { LightbulbIcon, ShieldCheckIcon, ChartBarIcon } from "@phosphor-icons/react";
-
-const pillars = [
-  {
-    icon: LightbulbIcon,
-    value: "Strategic Clarity",
-    label: "Turning complexity into clear, actionable direction for leaders",
-  },
-  {
-    icon: ShieldCheckIcon,
-    value: "Risk Intelligence",
-    label: "Identifying and mitigating risk before it becomes a liability",
-  },
-  {
-    icon: ChartBarIcon,
-    value: "Performance Elevation",
-    label: "Driving measurable growth across every layer of your organisation",
-  },
-];
+import { advisoryPillars, advisorySection } from "../content";
 
 export function AdvisoryPhilosophy() {
   return (
     <section className="bg-brand-navy py-24 px-6 md:px-16">
       <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0">
-        {/* Left */}
         <div className="bg-brand-navy lg:pr-12 text-white flex flex-col justify-center">
           <div className="mb-3">
             <span className="text-brand-gold text-xs font-medium tracking-[3px] uppercase">
-              Our Advisory Philosophy
+              {advisorySection.eyebrow}
             </span>
           </div>
           <h2 className="text-white text-2xl md:text-3xl font-light leading-tight mb-5">
-            Decisions that create value — today, and for the long term.
+            {advisorySection.heading}
           </h2>
           <p className="text-gray-300 text-sm leading-relaxed mb-8">
-            At Canbiz, we believe great advisory goes beyond advice. We embed
-            ourselves in your challenges, align with your ambitions, and deliver
-            counsel that is grounded in evidence, shaped by experience, and
-            built for lasting impact across the GCC and beyond.
+            {advisorySection.body}
           </p>
 
-          {/* Pillars */}
           <div className="grid grid-cols-1 gap-5 mb-10">
-            {pillars.map((pillar, i) => {
+            {advisoryPillars.map((pillar, i) => {
               const Icon = pillar.icon;
               return (
                 <div key={i} className="flex items-start gap-4">
@@ -60,28 +37,24 @@ export function AdvisoryPhilosophy() {
           </div>
 
           <button className="border-2 border-white text-white px-8 py-3 text-sm font-medium hover:bg-white hover:text-brand-navy transition-colors w-fit">
-            Explore our advisory approach
+            {advisorySection.ctaLabel}
           </button>
         </div>
 
-        {/* Right – Image */}
         <div className="relative min-h-[320px] lg:min-h-[420px] overflow-hidden hidden lg:block">
           <img
-            src="https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080"
-            alt="Canbiz Advisory"
+            src={advisorySection.image}
+            alt={advisorySection.imageAlt}
             className="w-full h-full object-cover absolute inset-0"
           />
-          {/* Dark gradient overlay */}
           <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent" />
-          {/* Gold top bar */}
           <div className="absolute top-0 left-0 right-0 h-1 bg-brand-gold" />
-          {/* Bottom callout */}
           <div className="absolute bottom-0 left-0 right-0 px-8 py-7">
             <p className="text-brand-gold text-xs font-medium tracking-[2px] uppercase mb-1">
-              Canbiz Advisory
+              {advisorySection.imageEyebrow}
             </p>
             <p className="text-white text-lg font-light leading-snug max-w-[280px]">
-              Trusted by leaders across 30+ countries to navigate what comes next.
+              {advisorySection.imageCaption}
             </p>
           </div>
         </div>
