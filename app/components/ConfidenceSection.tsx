@@ -2,6 +2,7 @@
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { confidenceSection } from "../content";
+import Link from "next/link";
 
 export function ConfidenceSection() {
   return (
@@ -37,9 +38,9 @@ export function ConfidenceSection() {
               </li>
             ))}
           </ul>
-          <button className="border-2 border-brand-navy text-brand-navy px-8 py-3 text-sm font-medium hover:bg-brand-navy hover:text-white transition-colors flex items-center gap-2">
+          <Link href='/services' className="border-2 border-brand-navy text-brand-navy px-8 py-3 text-sm font-medium hover:bg-brand-navy hover:text-white transition-colors inline-flex items-center gap-2">
             {confidenceSection.ctaLabel} <ArrowRightIcon size={14} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>
