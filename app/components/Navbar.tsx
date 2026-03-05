@@ -126,7 +126,10 @@ export function Navbar() {
             <MagnifyingGlassIcon size={14} />
             <span>Search</span>
           </button>
-          <button className="hidden md:block bg-brand-gold text-brand-navy text-xs font-semibold px-5 py-2 hover:bg-brand-gold-hover transition-colors">
+          <button 
+            onClick={() => router.push('/contact')}
+            className="hidden md:block bg-brand-gold text-brand-navy text-xs font-semibold px-5 py-2 hover:bg-brand-gold-hover transition-colors"
+          >
             Contact Us
           </button>
           <button
@@ -154,7 +157,13 @@ export function Navbar() {
             <button className="flex items-center gap-1.5 text-xs text-gray-300">
               <MagnifyingGlassIcon size={13} /> Search
             </button>
-            <button className="ml-auto bg-brand-gold text-brand-navy text-xs font-semibold px-4 py-2">
+            <button 
+              onClick={() => {
+                setMobileOpen(false);
+                router.push('/contact');
+              }}
+              className="ml-auto bg-brand-gold text-brand-navy text-xs font-semibold px-4 py-2"
+            >
               Contact Us
             </button>
           </div>

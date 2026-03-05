@@ -1135,6 +1135,35 @@ export const careersGradPrograms = [
   },
 ];
 
+// ─── Contact Section ──────────────────────────────────────────────────────────
+
+export const contactSection = {
+  eyebrow: "Get In Touch",
+  headingPlain: "Let's build",
+  headingGold: "together",
+  subtext: "Whether you have a question about our services, want to partner with us, or are ready to transform your organization, our team is here to help.",
+  officeHeadingPlain: "Visit Us",
+  officeHeadingMain: "Our",
+  officeHeadingGold: "Office",
+  officeImageSrc: "https://images.unsplash.com/photo-1549247796-6d153dc3cb4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkdWJhaXxlbnwxfHx8fDE3NzIzNjYxOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+  officeImageAlt: "Dubai Skyline",
+  office: {
+    city: "Dubai",
+    country: "United Arab Emirates",
+    address: "Office 402, Canbiz Tower, Business Bay",
+    phone: "+971 4 123 4567",
+    email: "info@canbizconsultancy.com"
+  },
+  otherInquiriesHeading: "Other Inquiries",
+  otherInquiries: [
+    { label: "Careers", email: "careers@canbizconsultancy.com" },
+    { label: "Media & Press", email: "media@canbizconsultancy.com" }
+  ],
+  formEyebrow: "Send a Message",
+  formHeadingPlain: "How can we",
+  formHeadingGold: "help?"
+};
+
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
 export const footerContent = {
@@ -1144,8 +1173,8 @@ export const footerContent = {
 };
 
 export const footerLinks = [
-  { label: "Connect with us", href: "#" },
-  { label: "Site map", href: "#" },
+  { label: "Connect with us", href: "/contact" },
+  { label: "Site map", href: "/sitemap-page" },
   { label: "Terms of Service", href: "#" },
   { label: "Privacy Policy", href: "#" },
 ];
