@@ -890,6 +890,191 @@ export const careersWhyPoints = [
   "Competitive compensation and growth-oriented career paths",
 ];
 
+export const openPositions = [
+  {
+    id: 1,
+    title: "Senior Management Consultant",
+    department: "Consulting",
+    location: "Dubai, UAE",
+    type: "Full-Time",
+    level: "Senior",
+    slug: "senior-management-consultant",
+    description:
+      "Lead high-impact client engagements across strategy, operations, and organisational transformation. Work directly with C-suite stakeholders and manage delivery teams.",
+    requirements: [
+      "8+ years of management consulting experience",
+      "Strong background in strategy and organisational design",
+      "Experience in GCC markets preferred",
+      "MBA or equivalent advanced degree",
+    ],
+  },
+  {
+    id: 2,
+    title: "Brand Strategy Consultant",
+    department: "Brand & Marketing",
+    location: "Dubai, UAE",
+    type: "Full-Time",
+    level: "Mid-Level",
+    slug: "brand-strategy-consultant",
+    description:
+      "Develop and execute brand positioning, identity, and marketing strategies for our diverse portfolio of clients across government, private, and SME sectors.",
+    requirements: [
+      "5+ years in brand strategy or marketing advisory",
+      "Portfolio of brand positioning projects",
+      "Strong creative and analytical mindset",
+      "Experience with digital marketing channels",
+    ],
+  },
+  {
+    id: 3,
+    title: "Digital Solutions Lead",
+    department: "Technology",
+    location: "Dubai, UAE",
+    type: "Full-Time",
+    level: "Senior",
+    slug: "digital-solutions-lead",
+    description:
+      "Oversee the design and delivery of custom software projects and digital transformation initiatives. Collaborate with clients and internal teams to ensure world-class technical delivery.",
+    requirements: [
+      "7+ years in software development or digital project management",
+      "Experience with enterprise platforms (ERP, CRM, cloud)",
+      "Strong client-facing communication skills",
+      "Agile delivery methodology expertise",
+    ],
+  },
+  {
+    id: 4,
+    title: "Executive Education Facilitator",
+    department: "Programs & Education",
+    location: "Dubai, UAE",
+    type: "Contract / Part-Time",
+    level: "Expert",
+    slug: "executive-education-facilitator",
+    description:
+      "Design and facilitate world-class learning experiences for our Executive MBA, Women CEO, and Junior CEO programs. Bring real-world business expertise to inspiring cohorts of leaders.",
+    requirements: [
+      "10+ years of senior business or academic experience",
+      "Proven track record in executive education or training",
+      "Strong facilitation and public speaking skills",
+      "GCC market knowledge preferred",
+    ],
+  },
+  {
+    id: 5,
+    title: "Business Development Manager",
+    department: "Growth & Partnerships",
+    location: "Dubai, UAE",
+    type: "Full-Time",
+    level: "Mid-Level",
+    slug: "business-development-manager",
+    description:
+      "Identify, develop, and close new business opportunities across Canbiz's service portfolio. Build lasting relationships with clients, partners, and institutions across the GCC.",
+    requirements: [
+      "5+ years of B2B business development experience",
+      "Established network in GCC business community",
+      "Experience selling professional services",
+      "Strong commercial acumen and negotiation skills",
+    ],
+  },
+  {
+    id: 6,
+    title: "Government Advisory Analyst",
+    department: "Government Advisory",
+    location: "Abu Dhabi, UAE",
+    type: "Full-Time",
+    level: "Junior",
+    slug: "government-advisory-analyst",
+    description:
+      "Support high-level consulting engagements with government ministries and public sector entities. Conduct research, analysis, and strategy documentation for senior consultants.",
+    requirements: [
+      "2–4 years of public sector or consulting experience",
+      "Strong research and data analysis skills",
+      "Excellent written Arabic and English communication",
+      "Bachelor's degree in business, economics, or public policy",
+    ],
+  },
+];
+
+export const careersBenefits = [
+  {
+    title: "Competitive Compensation",
+    description:
+      "Market-leading salaries, performance bonuses, and equity participation for senior roles reflecting the value you bring.",
+  },
+  {
+    title: "Executive Education Access",
+    description:
+      "Free enrolment in Canbiz executive programs including MBA modules, leadership workshops, and global delegation participation.",
+  },
+  {
+    title: "Flexible Working",
+    description:
+      "Hybrid and remote-friendly policies that respect your personal commitments while empowering you to do your best work.",
+  },
+  {
+    title: "Health & Wellbeing",
+    description:
+      "Comprehensive medical insurance, mental health support, and wellness initiatives for you and your family.",
+  },
+  {
+    title: "Global Travel",
+    description:
+      "Regular international exposure through business delegations, client visits, and conferences across 30+ countries.",
+  },
+  {
+    title: "Structured Mentorship",
+    description:
+      "One-on-one mentorship from Canbiz's senior leadership and industry advisors to accelerate your career trajectory.",
+  },
+];
+
+export const careersLifeImages = [
+  {
+    src: "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb21wYW55JTIwdGVhbSUyMGRpdmVyc2UlMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjMzNzE2OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    alt: "Canbiz team collaboration",
+    caption: "Collaborative, high-energy team environment",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1705234384669-c6d31c61b789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDRU8lMjBsZWFkZXJzaGlwJTIwZnV0dXJlJTIwc3RyYXRlZ3klMjB2aXNpb258ZW58MXx8fHwxNzcyMzM3MzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    alt: "Strategy sessions at Canbiz",
+    caption: "Working on challenges that shape the region",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    alt: "International delegations",
+    caption: "Global exposure across 30+ countries",
+  },
+  {
+    src: "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    alt: "Women leadership programs",
+    caption: "An inclusive culture where everyone leads",
+  },
+];
+
+export const careersGradPrograms = [
+  {
+    title: "Graduate Consultant Program",
+    duration: "12 Months",
+    description:
+      "A structured pathway for top graduates to join Canbiz as junior consultants and build a world-class advisory career from the ground up.",
+    tracks: ["Management Consulting", "Brand Strategy", "Government Advisory"],
+  },
+  {
+    title: "Technology Graduate Track",
+    duration: "12 Months",
+    description:
+      "For graduates in computer science, engineering, or related fields ready to build enterprise digital solutions and drive transformation projects.",
+    tracks: ["Software Development", "Digital Strategy", "IT Maintenance"],
+  },
+  {
+    title: "6-Month Internship Program",
+    duration: "6 Months",
+    description:
+      "Hands-on internship placements for university students and recent graduates across all Canbiz practice areas, with a strong conversion pipeline.",
+    tracks: ["Open to All Departments"],
+  },
+];
+
 // ─── Footer ───────────────────────────────────────────────────────────────────
 
 export const footerContent = {
