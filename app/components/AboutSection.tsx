@@ -2,7 +2,7 @@
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { aboutSection, aboutPillars, aboutStats } from "../content";
+import { aboutSection, aboutPillars, aboutStats } from "../constants/content";
 import Link from "next/link";
 
 export function AboutSection() {

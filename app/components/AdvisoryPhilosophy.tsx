@@ -1,6 +1,6 @@
 "use client";
 
-import { advisoryPillars, advisorySection } from "../content";
+import { advisoryPillars, advisorySection } from "../constants/content";
 
 export function AdvisoryPhilosophy() {
   return (

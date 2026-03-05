@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { industries, industryDetails, industriesSection, industriesBottomStats } from "../content";
+import { industries, industryDetails, industriesSection, industriesBottomStats } from "../constants/content";
 import { ArrowRightIcon, ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 

@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { services, serviceDetails, servicesSection } from "../content";
+import { services, serviceDetails, servicesSection } from "../constants/content";
 import { ArrowRightIcon, ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 

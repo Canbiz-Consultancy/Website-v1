@@ -1,4 +1,4 @@
-import { shapeFutureSection } from "../content";
+import { shapeFutureSection } from "../constants/content";
 
 export function ShapeFuture() {
   return (

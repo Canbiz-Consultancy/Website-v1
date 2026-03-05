@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
-import { confidenceSection } from "../content";
+import { confidenceSection } from "../constants/content";
 import Link from "next/link";
 
 export function ConfidenceSection() {

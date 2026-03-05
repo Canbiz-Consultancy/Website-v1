@@ -10,7 +10,7 @@ import {
   careersStats,
   openPositions,
   careersLifeImages,
-} from "../content";
+} from "../constants/content";
 import {
   ArrowLeftIcon,
   ArrowRightIcon,

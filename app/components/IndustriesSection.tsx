@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { industries, industriesSection, industriesBottomStats } from "../content";
+import { industries, industriesSection, industriesBottomStats } from "../constants/content";
 
 export function IndustriesSection() {
   const [activeIndex, setActiveIndex] = useState(0);

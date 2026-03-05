@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import Link from "next/link";
-import { services, servicesSection } from "../content";
+import { services, servicesSection } from "../constants/content";
 
 export function ServicesSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);

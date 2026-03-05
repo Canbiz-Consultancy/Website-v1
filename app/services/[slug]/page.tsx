@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
-import { services, serviceDetails } from "../../content";
+import { services, serviceDetails } from "../../constants/content";
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 interface Props {

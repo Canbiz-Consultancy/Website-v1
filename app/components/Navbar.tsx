@@ -5,7 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { MagnifyingGlassIcon, ListIcon, XIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { CanbizLogo } from "./CanbizLogo";
-import { navItems, services, industries } from "../content";
+import { navItems, services, industries } from "../constants/content";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);

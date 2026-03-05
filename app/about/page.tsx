@@ -9,7 +9,7 @@ import {
   aboutStats,
   aboutLeadership,
   aboutJourney,
-} from "../content";
+} from "../constants/content";
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 export default function AboutPage() {

@@ -2,7 +2,7 @@
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { insights, insightsSection } from "../content";
+import { insights, insightsSection } from "../constants/content";
 
 export function FeaturedInsights() {
   return (

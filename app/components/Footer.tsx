@@ -1,7 +1,7 @@
 "use client";
 
 import { CanbizLogoDark } from "./CanbizLogo";
-import { footerLinks, footerSocials, footerContent } from "../content";
+import { footerLinks, footerSocials, footerContent } from "../constants/content";
 
 export function Footer() {
   return (

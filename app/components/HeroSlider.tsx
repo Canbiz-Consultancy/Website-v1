@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { CaretLeftIcon, CaretRightIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
-import { heroSlides, heroTabs } from "../content";
+import { heroSlides, heroTabs } from "../constants/content";
 
 export function HeroSlider() {
   const [current, setCurrent] = useState(0);

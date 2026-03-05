@@ -1372,8 +1372,8 @@ export const footerContent = {
 export const footerLinks = [
   { label: "Connect with us", href: "/contact" },
   { label: "Site map", href: "/sitemap-page" },
-  { label: "Terms of Service", href: "#" },
-  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "/terms-of-service" },
+  { label: "Privacy Policy", href: "/privacy-policy" },
 ];
 
 export const footerSocials = [

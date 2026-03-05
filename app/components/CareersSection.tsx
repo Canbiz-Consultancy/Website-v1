@@ -2,7 +2,7 @@
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { careersSection, careersValues, careersStats, careersWhyPoints } from "../content";
+import { careersSection, careersValues, careersStats, careersWhyPoints } from "../constants/content";
 import Link from "next/link";
 
 export function CareersSection() {

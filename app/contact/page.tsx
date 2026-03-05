@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { contactSection } from "../content";
+import { contactSection } from "../constants/content";
 import {
   ArrowLeftIcon,
   MapPinIcon,
