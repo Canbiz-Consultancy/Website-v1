@@ -1,4 +1,3 @@
-"use client"
 import {
   TargetIcon,
   EyeIcon,
@@ -20,7 +19,7 @@ import {
   TwitterLogoIcon,
   LinkedinLogoIcon,
   YoutubeLogoIcon,
-} from "@phosphor-icons/react";
+} from "@phosphor-icons/react/dist/ssr";
 
 // ─── Hero Slider ─────────────────────────────────────────────────────────────
 
@@ -171,6 +170,7 @@ export const servicesSection = {
 export const services = [
   {
     id: 1,
+    slug: "management-consulting",
     icon: UsersIcon,
     title: "Management Consulting & Professional Training",
     shortTitle: "Management Consulting",
@@ -179,6 +179,7 @@ export const services = [
   },
   {
     id: 2,
+    slug: "brand-strategy-marketing",
     icon: MegaphoneIcon,
     title: "Brand Strategy, Marketing Advisory & Content Development",
     shortTitle: "Brand Strategy & Marketing",
@@ -187,6 +188,7 @@ export const services = [
   },
   {
     id: 3,
+    slug: "personal-branding",
     icon: StarIcon,
     title: "Executive & Entrepreneur Personal Branding",
     shortTitle: "Personal Branding",
@@ -195,6 +197,7 @@ export const services = [
   },
   {
     id: 4,
+    slug: "software-digital-solutions",
     icon: CodeIcon,
     title: "Software Development, Digital Solutions & IT Maintenance",
     shortTitle: "Software & Digital Solutions",
@@ -203,6 +206,7 @@ export const services = [
   },
   {
     id: 5,
+    slug: "amc-services",
     icon: ArrowsClockwiseIcon,
     title: "Consultancy Annual Maintenance Contract (AMC) Services",
     shortTitle: "AMC Services",
@@ -211,6 +215,7 @@ export const services = [
   },
   {
     id: 6,
+    slug: "global-business-delegations",
     icon: GlobeIcon,
     title: "International Entrepreneur Exposure & Business Delegations",
     shortTitle: "Global Business Delegations",
@@ -219,6 +224,7 @@ export const services = [
   },
   {
     id: 7,
+    slug: "executive-mba",
     icon: GraduationCapIcon,
     title: "Executive MBA Program",
     shortTitle: "Executive MBA",
@@ -227,6 +233,7 @@ export const services = [
   },
   {
     id: 8,
+    slug: "junior-ceo-program",
     icon: BabyIcon,
     title: "Junior CEO Leadership Development Program",
     shortTitle: "Junior CEO Program",
@@ -235,6 +242,7 @@ export const services = [
   },
   {
     id: 9,
+    slug: "women-leadership-programs",
     icon: HeartIcon,
     title: "She Entrepreneurship & Women CEO Leadership Programs",
     shortTitle: "Women Leadership Programs",
@@ -243,6 +251,7 @@ export const services = [
   },
   {
     id: 10,
+    slug: "government-advisory",
     icon: BuildingsIcon,
     title: "Finance & Strategic Management Consulting for Government",
     shortTitle: "Government & Public Sector",
@@ -250,6 +259,342 @@ export const services = [
       "High-level financial advisory, strategic planning, policy support, and performance management consulting for government and semi-government organizations.",
   },
 ];
+
+// ─── Service Detail Pages ─────────────────────────────────────────────────────
+
+export const serviceDetails: Record<string, {
+  hero: string;
+  heroAlt: string;
+  eyebrow: string;
+  headline: string;
+  subheadline: string;
+  overview: string;
+  tags: string[];
+  highlights: { label: string; value: string }[];
+  features: { title: string; body: string }[];
+  process: { step: string; title: string; body: string }[];
+  cta: string;
+}> = {
+  "management-consulting": {
+    hero: "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Management Consulting professionals in a strategy session",
+    eyebrow: "Management Consulting & Professional Training",
+    headline: "Transform strategy into sustainable performance.",
+    subheadline: "Expert advisory that turns organisational ambition into measurable, lasting results across the GCC.",
+    overview: "Canbiz's Management Consulting practice provides organisations with the strategic clarity, operational discipline, and leadership capability needed to outperform in today's competitive landscape. We work alongside leadership teams to diagnose challenges, design solutions, and implement change — from business model pivots to large-scale operational transformation.",
+    tags: ["Strategy", "Leadership", "Operations", "Sales Excellence", "Organisational Design"],
+    highlights: [
+      { label: "Clients Served", value: "500+" },
+      { label: "Years of Expertise", value: "10+" },
+      { label: "Countries Reached", value: "30+" },
+      { label: "Engagements Completed", value: "1,000+" },
+    ],
+    features: [
+      { title: "Business Growth Strategy", body: "We develop bespoke growth roadmaps aligned to your market position, competitive landscape, and long-term vision — covering revenue expansion, market entry, and portfolio optimisation." },
+      { title: "Leadership Development", body: "Our tailored leadership programs build the executive capabilities, decision-making frameworks, and cultural alignment needed to lead high-performing organisations in complexity." },
+      { title: "Sales Effectiveness", body: "From go-to-market strategy to sales force design and incentive architecture, we help organisations build commercial engines that consistently win and retain high-value clients." },
+      { title: "Operational Excellence", body: "We improve process efficiency, reduce waste, and embed performance management systems that create sustainable competitive advantage at the operational level." },
+      { title: "Organisational Design", body: "Structural realignment, role clarity, and governance frameworks tailored to support your strategy and enable agility as your organisation grows and evolves." },
+      { title: "Professional Training Programs", body: "Customised capability-building workshops and training curricula designed in partnership with your teams to embed practical skills and drive lasting behavioural change." },
+    ],
+    process: [
+      { step: "01", title: "Discovery & Diagnostics", body: "We begin with a rigorous diagnostic phase — stakeholder interviews, data analysis, and benchmarking — to build a shared, evidence-based picture of your current state." },
+      { step: "02", title: "Strategy Design", body: "Our consultants co-develop a tailored strategic blueprint with your leadership team, identifying priorities, initiatives, and success metrics aligned to your goals." },
+      { step: "03", title: "Implementation Planning", body: "We translate strategy into a structured implementation roadmap, with phased workstreams, accountabilities, and risk mitigation built in from the outset." },
+      { step: "04", title: "Execution Support", body: "We work alongside your team during delivery — providing hands-on advisory, resolving blockers, and course-correcting as needed to maintain momentum." },
+      { step: "05", title: "Performance Review", body: "Structured review cycles ensure outcomes are tracked against defined KPIs, with learnings fed back into continuous improvement and future planning." },
+    ],
+    cta: "Request a Consulting Engagement",
+  },
+
+  "brand-strategy-marketing": {
+    hero: "https://images.unsplash.com/photo-1733231291455-3c4de1c24e20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGJyYW5kaW5nJTIwbWFya2V0aW5nJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MjMzNzE2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Creative branding and marketing professionals at work",
+    eyebrow: "Brand Strategy, Marketing Advisory & Content Development",
+    headline: "Build a brand that commands attention and loyalty.",
+    subheadline: "End-to-end brand and marketing advisory for organisations ready to define, differentiate, and dominate their market.",
+    overview: "Your brand is your most enduring business asset. Canbiz's Brand Strategy and Marketing Advisory practice helps organisations craft compelling, differentiated identities — and then activate them across every channel and touchpoint. From foundational brand architecture to targeted content campaigns, we deliver integrated solutions that build awareness, trust, and commercial momentum.",
+    tags: ["Brand Positioning", "Marketing Strategy", "Digital Marketing", "Content Planning", "Campaign Management"],
+    highlights: [
+      { label: "Brands Positioned", value: "200+" },
+      { label: "Campaigns Executed", value: "350+" },
+      { label: "Industries Covered", value: "12+" },
+      { label: "Growth Rate Achieved", value: "3× avg." },
+    ],
+    features: [
+      { title: "Brand Architecture & Positioning", body: "We guide organisations through the process of defining their brand promise, personality, and positioning relative to the competitive landscape and target audience expectations." },
+      { title: "Marketing Strategy", body: "Comprehensive marketing roadmaps that align your commercial goals with audience insights, channel mix, and budget — covering both digital and traditional channels." },
+      { title: "Digital Marketing", body: "Performance-driven digital strategies across SEO, paid media, social platforms, and email marketing — designed to generate qualified demand and measurable ROI." },
+      { title: "Content Development & Planning", body: "Structured editorial planning and high-quality content creation — thought leadership articles, video scripts, social content, and campaign assets — tailored to your brand voice." },
+      { title: "Brand Identity Design", body: "Visual identity systems including logomarks, colour palettes, typography, and brand guidelines that ensure consistency across every customer interaction." },
+      { title: "Campaign Management", body: "End-to-end execution support for integrated marketing campaigns, from brief to launch to post-campaign performance analysis and optimisation." },
+    ],
+    process: [
+      { step: "01", title: "Brand Audit", body: "A thorough review of your existing brand assets, competitive positioning, and market perception — identifying gaps and strengths that inform strategy." },
+      { step: "02", title: "Strategy Development", body: "We co-create a differentiated brand and marketing strategy, establishing positioning pillars, messaging frameworks, and channel priorities." },
+      { step: "03", title: "Creative Development", body: "Our creative team translates strategy into compelling visual identities, messaging, and campaign concepts tailored to your audiences." },
+      { step: "04", title: "Activation & Launch", body: "Campaigns and content are activated across agreed channels, with robust tracking and attribution frameworks in place from day one." },
+      { step: "05", title: "Optimise & Evolve", body: "Ongoing performance analysis drives continuous refinement — ensuring your brand and marketing investment delivers compounding returns over time." },
+    ],
+    cta: "Start Your Brand Journey",
+  },
+
+  "personal-branding": {
+    hero: "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Executive personal branding and thought leadership",
+    eyebrow: "Executive & Entrepreneur Personal Branding",
+    headline: "Your story is your most powerful competitive advantage.",
+    subheadline: "We help executives, entrepreneurs, and senior leaders build authentic personal brands that command authority, open doors, and create lasting influence.",
+    overview: "In a world where credibility is built online and influence is earned through visibility, a strong personal brand is no longer optional for senior leaders. Canbiz's Personal Branding practice works with executives and entrepreneurs to clarify their unique narrative, amplify their thought leadership, and build a public presence that reflects the depth of their expertise and character.",
+    tags: ["Personal Narrative", "Thought Leadership", "Executive Visibility", "Reputation Management", "Media & PR"],
+    highlights: [
+      { label: "Executives Branded", value: "300+" },
+      { label: "Media Features Secured", value: "500+" },
+      { label: "LinkedIn Growth Avg.", value: "10×" },
+      { label: "MOU Facilitated", value: "120+" },
+    ],
+    features: [
+      { title: "Personal Brand Strategy", body: "We help you define your unique brand positioning — your story, values, voice, and the distinct perspective you bring to your industry and audience." },
+      { title: "Thought Leadership Development", body: "We craft high-impact content strategies and ghostwrite articles, speeches, and social content that position you as a credible authority in your field." },
+      { title: "Digital Presence Optimisation", body: "From LinkedIn profile overhaul to website design, we build a polished, professional digital footprint that makes the right first impression every time." },
+      { title: "Reputation Management", body: "Proactive strategies to protect, manage, and enhance your public reputation — including crisis readiness, media relations, and narrative control." },
+      { title: "Media & Speaker Positioning", body: "We secure media features, podcast appearances, and speaking opportunities that expand your reach, credibility, and influence." },
+      { title: "Coaching & Advisory", body: "One-on-one personal branding coaching sessions that equip you with the skills, confidence, and strategic mindset to sustain and grow your presence independently." },
+    ],
+    process: [
+      { step: "01", title: "Brand Discovery", body: "A deep-dive session to uncover your story, strengths, achievements, values, and the audiences you want to connect with." },
+      { step: "02", title: "Positioning & Narrative", body: "We craft your personal brand positioning statement and core narrative — the foundation for all content and communications." },
+      { step: "03", title: "Digital & Visual Identity", body: "Your digital presence is elevated with a professional profile, visual identity, and content calendar aligned to your brand." },
+      { step: "04", title: "Content & Visibility", body: "We activate your presence through consistent, high-quality content and targeted media outreach for maximum visibility." },
+      { step: "05", title: "Sustain & Scale", body: "Regular advisory check-ins, audience growth analysis, and content performance reviews ensure your brand continues to grow." },
+    ],
+    cta: "Build Your Personal Brand",
+  },
+
+  "software-digital-solutions": {
+    hero: "https://images.unsplash.com/photo-1760346546767-95b89356a6bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwdGVjaG5vbG9neSUyMHNvZnR3YXJlJTIwZGV2ZWxvcG1lbnR8ZW58MXx8fHwxNzcyMzM3MTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Software development and digital innovation workspace",
+    eyebrow: "Software Development, Digital Solutions & IT Maintenance",
+    headline: "Custom digital solutions engineered for your business.",
+    subheadline: "From bespoke software to full-scale digital transformation — we build, implement, and maintain technology that powers growth.",
+    overview: "Canbiz's Digital Solutions practice combines technical excellence with deep business understanding to deliver software and digital systems that solve real problems. Whether you need a custom enterprise platform, a client-facing web application, or an IT maintenance partner to keep your systems running at peak performance, our team of experienced engineers and digital strategists delivers with precision and speed.",
+    tags: ["Web Development", "Mobile Apps", "ERP & CRM", "Cloud Solutions", "IT Maintenance"],
+    highlights: [
+      { label: "Digital Projects Delivered", value: "150+" },
+      { label: "Platforms Built", value: "80+" },
+      { label: "Uptime SLA", value: "99.9%" },
+      { label: "Tech Partners", value: "20+" },
+    ],
+    features: [
+      { title: "Custom Software Development", body: "We design and build tailored software solutions — from enterprise management systems to consumer-facing digital products — engineered to your exact specifications." },
+      { title: "Web & Mobile Applications", body: "High-performance, scalable web and mobile applications built with modern frameworks, responsive design, and an obsessive focus on user experience." },
+      { title: "ERP & CRM Implementation", body: "Expert implementation, configuration, and training for leading ERP and CRM platforms, ensuring seamless adoption and maximum return on investment." },
+      { title: "Cloud Solutions & Migration", body: "Strategic cloud architecture design and migration services that improve scalability, reduce infrastructure costs, and enhance data security." },
+      { title: "IT Maintenance & Support", body: "Proactive monitoring, patch management, and dedicated technical support ensuring your digital infrastructure remains secure, stable, and continuously optimised." },
+      { title: "Digital Transformation Strategy", body: "We help organisations formulate and execute digital transformation roadmaps that modernise operations, improve agility, and unlock new revenue opportunities." },
+    ],
+    process: [
+      { step: "01", title: "Discovery & Requirements", body: "We work with your stakeholders to understand business objectives, user needs, and technical constraints — producing a clear, agreed project specification." },
+      { step: "02", title: "Architecture & Design", body: "Our team designs the technical architecture and user experience, validating with prototypes before a single line of production code is written." },
+      { step: "03", title: "Agile Development", body: "Development is delivered in structured sprints with regular demos, ensuring alignment with your expectations at every stage." },
+      { step: "04", title: "Testing & Quality Assurance", body: "Rigorous multi-layer testing — functional, performance, security, and user acceptance — ensures every solution meets our exacting quality standards." },
+      { step: "05", title: "Deployment & Ongoing Support", body: "Smooth, managed go-live deployment followed by proactive maintenance, monitoring, and feature iteration to keep your systems performing." },
+    ],
+    cta: "Start Your Digital Project",
+  },
+
+  "amc-services": {
+    hero: "https://images.unsplash.com/photo-1763739527737-e3626d731072?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmd8ZW58MXx8fHwxNzcyMzM3MTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Ongoing consulting advisory and support team",
+    eyebrow: "Consultancy Annual Maintenance Contract (AMC) Services",
+    headline: "Senior advisory, continuously at your side.",
+    subheadline: "Retainer-based consulting partnerships that give your organisation access to expert strategic support — exactly when you need it, all year round.",
+    overview: "The Canbiz AMC Retainer model provides organisations with a dedicated advisory partnership on a continuous, subscription basis. Rather than engaging consultants reactively, our AMC clients benefit from proactive strategic counsel, regular review sessions, and rapid-response advisory support — ensuring they are always prepared, always progressing, and never navigating complexity alone.",
+    tags: ["Retainer Advisory", "Strategic Support", "Performance Reviews", "Operational Guidance", "On-Demand Access"],
+    highlights: [
+      { label: "Active AMC Clients", value: "80+" },
+      { label: "Advisory Hours/Month", value: "Flexible" },
+      { label: "Response Time SLA", value: "24 hrs" },
+      { label: "Client Retention Rate", value: "92%" },
+    ],
+    features: [
+      { title: "Dedicated Advisory Partnership", body: "A named senior consultant is assigned to your account, ensuring continuity, context, and a trusted relationship that deepens over time." },
+      { title: "Monthly Strategy Reviews", body: "Structured monthly sessions review performance against strategic goals, surface emerging issues, and recalibrate priorities as your business evolves." },
+      { title: "On-Demand Advisory Access", body: "Rapid-response access to your advisory team for emerging questions, decisions, and challenges — without the delay of new engagement setup." },
+      { title: "Operational Performance Support", body: "Continuous monitoring and advisory on KPIs, operational metrics, and performance dashboards to keep your business on track." },
+      { title: "Priority Project Support", body: "AMC clients receive priority access to specialist teams for new projects, ensuring faster mobilisation and seamless advisory continuity." },
+      { title: "Annual Strategic Planning", body: "A comprehensive annual planning engagement at the start of each cycle, setting the strategic agenda and investment priorities for the year ahead." },
+    ],
+    process: [
+      { step: "01", title: "Onboarding & Setup", body: "An intensive onboarding process ensures your dedicated consultant fully understands your business, goals, team, and current priorities." },
+      { step: "02", title: "Monthly Advisory Cycle", body: "Structured monthly sessions review performance, surface issues, and set the agenda for the coming period — keeping strategic momentum consistent." },
+      { step: "03", title: "On-Demand Support", body: "Your advisory team is available for rapid consultation between scheduled sessions, ensuring you are never without expert guidance on urgent matters." },
+      { step: "04", title: "Quarterly Deep-Dives", body: "Every quarter, a more intensive review session examines strategic progress, major challenges, and alignment with annual objectives." },
+      { step: "05", title: "Annual Renewal & Planning", body: "Contract renewal comes with a full strategic planning workshop, ensuring the next cycle is set up for even greater impact." },
+    ],
+    cta: "Enquire About AMC Retainer",
+  },
+
+  "global-business-delegations": {
+    hero: "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "International business delegation and global networking event",
+    eyebrow: "International Entrepreneur Exposure & Business Delegations",
+    headline: "Open your business to the world.",
+    subheadline: "Curated international delegations that connect GCC entrepreneurs with global markets, partners, and opportunities across 30+ countries.",
+    overview: "Canbiz's Global Business Delegations program has facilitated over 120 MOU signings and connected entrepreneurs across 30+ countries through meticulously curated market exposure visits, networking forums, trade shows, and high-level business meetings. Each delegation is tailored to the specific interests, industries, and goals of participating businesses — ensuring every trip delivers tangible commercial outcomes.",
+    tags: ["Market Exposure", "Partnership Facilitation", "Trade Missions", "MOU Signings", "Global Networking"],
+    highlights: [
+      { label: "Countries Visited", value: "30+" },
+      { label: "MOU Signings Facilitated", value: "120+" },
+      { label: "Entrepreneurs Participated", value: "500+" },
+      { label: "Delegations Organised", value: "50+" },
+    ],
+    features: [
+      { title: "Curated Country Delegations", body: "Each delegation is built around a specific target market, with deep pre-trip preparation including briefings, business matching, and cultural orientation." },
+      { title: "Business Matching & Meetings", body: "We facilitate structured one-on-one meetings between GCC entrepreneurs and pre-vetted international partners, suppliers, investors, and distributors." },
+      { title: "Trade Show & Exhibition Access", body: "Participants gain privileged access to leading international trade exhibitions and business forums relevant to their industry sector." },
+      { title: "MOU & Partnership Facilitation", body: "Our experienced team supports negotiations and formalises partnerships through MOUs and commercial agreements during and after each delegation." },
+      { title: "Government & Institution Visits", body: "Delegations include access to government bodies, chambers of commerce, and economic development agencies that open doors standard business travel cannot." },
+      { title: "Post-Delegation Follow-Up", body: "We provide structured post-trip support to convert delegation relationships into active commercial partnerships and long-term collaborations." },
+    ],
+    process: [
+      { step: "01", title: "Delegation Design", body: "We work with participants to understand their commercial objectives and design a delegation itinerary that maximises relevant exposure and meeting quality." },
+      { step: "02", title: "Pre-Trip Preparation", body: "Comprehensive briefings, cultural training, and business matching ensure every participant arrives ready to engage and negotiate effectively." },
+      { step: "03", title: "In-Country Execution", body: "Our on-the-ground team manages all logistics, coordinates meetings, and provides real-time facilitation throughout the delegation." },
+      { step: "04", title: "MOU & Agreement Support", body: "We support the formalisation of partnerships, MOUs, and commercial agreements negotiated during the trip." },
+      { step: "05", title: "Post-Delegation Support", body: "Regular follow-up sessions and relationship management ensure delegation contacts are converted into active, valuable business partnerships." },
+    ],
+    cta: "Join the Next Delegation",
+  },
+
+  "executive-mba": {
+    hero: "https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNQkElMjBleGVjdXRpdmUlMjBlZHVjYXRpb24lMjBjbGFzc3Jvb20lMjBsZWFybmluZ3xlbnwxfHx8fDE3NzIzMzcxNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Executive MBA leadership education classroom",
+    eyebrow: "Executive MBA Program",
+    headline: "Elevate your leadership. Accelerate your enterprise.",
+    subheadline: "An advanced executive education experience designed for senior leaders ready to scale their thinking, their organisations, and their impact.",
+    overview: "The Canbiz Executive MBA Program is a premium, practice-based leadership education experience built for senior executives, business owners, and high-potential leaders. Combining world-class academic rigour with real-world business application, our program equips participants with the strategic frameworks, financial acumen, and global perspective needed to lead and scale organisations in the modern era.",
+    tags: ["Executive Education", "Leadership", "Finance", "Strategy", "Global Expansion"],
+    highlights: [
+      { label: "Graduates to Date", value: "600+" },
+      { label: "Program Duration", value: "12 months" },
+      { label: "Countries Represented", value: "20+" },
+      { label: "Industries Covered", value: "12+" },
+    ],
+    features: [
+      { title: "Strategic Leadership", body: "Advanced frameworks for leading organisations through transformation, uncertainty, and growth — from vision-setting to execution excellence." },
+      { title: "Financial Management", body: "Deep-dive into corporate finance, investment decision-making, financial modelling, and value creation strategies for senior leaders." },
+      { title: "Business Scaling & Growth", body: "Proven methodologies for scaling businesses sustainably — across markets, geographies, and product lines — drawing on real GCC case studies." },
+      { title: "Global Business & Market Entry", body: "Frameworks for international expansion, cross-border partnerships, and navigating the regulatory and cultural complexities of global markets." },
+      { title: "Innovation & Digital Strategy", body: "How to leverage emerging technologies, data, and digital platforms to create competitive advantage and drive organisational innovation." },
+      { title: "Peer Learning & Networking", body: "A cohort of accomplished peers across industries provides a richly collaborative learning environment and a powerful professional network for life." },
+    ],
+    process: [
+      { step: "01", title: "Application & Selection", body: "A competitive application process ensures each cohort is composed of accomplished, committed professionals who elevate the learning experience for all." },
+      { step: "02", title: "Orientation", body: "An immersive orientation program builds cohort connections, aligns expectations, and prepares participants for the intensity of the learning journey." },
+      { step: "03", title: "Core Modules", body: "Rigorous monthly modules delivered by expert faculty and practitioners, combining theory with real case applications and peer discussion." },
+      { step: "04", title: "Capstone Project", body: "Each participant completes a high-impact capstone project applied directly to their own business — generating real strategic outcomes." },
+      { step: "05", title: "Graduation & Alumni", body: "Program completion is celebrated with a formal graduation, and participants join an active global alumni network for continued growth." },
+    ],
+    cta: "Apply to the Executive MBA",
+  },
+
+  "junior-ceo-program": {
+    hero: "https://images.unsplash.com/photo-1629124096116-48743a0cea58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRyZXByZW5ldXIlMjBidXNpbmVzcyUyMGdyb3d0aCUyMHN1Y2Nlc3N8ZW58MXx8fHwxNzcyMzM3MTU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Junior CEO youth leadership and entrepreneurship program",
+    eyebrow: "Junior CEO Leadership Development Program",
+    headline: "Building the next generation of business leaders.",
+    subheadline: "A world-class entrepreneurship and leadership program for the children of business owners, equipping tomorrow's CEOs with the mindset, skills, and network to lead.",
+    overview: "The Canbiz Junior CEO Program is a unique, structured leadership journey designed for the sons and daughters of entrepreneurs and business owners. Through a combination of mentorship, business education, real-world exposure, and peer networking, we prepare the next generation to confidently assume leadership roles, continue family business legacies, and launch ventures of their own.",
+    tags: ["Youth Leadership", "Entrepreneurship", "Business Education", "Mentorship", "Family Business"],
+    highlights: [
+      { label: "Youth Leaders Enrolled", value: "400+" },
+      { label: "Program Tracks", value: "3" },
+      { label: "Mentor Network", value: "50+" },
+      { label: "Business Plans Created", value: "200+" },
+    ],
+    features: [
+      { title: "Business Fundamentals", body: "An accessible, engaging curriculum covering entrepreneurship, finance, marketing, and operations — designed to build genuine business literacy from a young age." },
+      { title: "Leadership & Mindset", body: "Character, resilience, decision-making, and leadership presence are cultivated through experiential workshops, challenges, and reflection activities." },
+      { title: "Mentorship Program", body: "Each participant is paired with a senior business mentor who provides guidance, challenges their thinking, and shares real-world experience." },
+      { title: "Internship Placements", body: "Practical experience through structured internship placements within leading organisations, giving participants real exposure to professional environments." },
+      { title: "Startup Practicum", body: "Participants develop and pitch their own business plans, receiving expert feedback and competing in a final-day investor showcase event." },
+      { title: "Global Exposure", body: "International study visits and networking events connect Junior CEO participants with peers and leaders from across the GCC and beyond." },
+    ],
+    process: [
+      { step: "01", title: "Enrolment", body: "Participants are enrolled through a straightforward process, with tracks available for different age groups and prior business exposure levels." },
+      { step: "02", title: "Orientation Camp", body: "A high-energy orientation event builds connections among the cohort and introduces the program journey, goals, and expectations." },
+      { step: "03", title: "Monthly Learning Modules", body: "Engaging monthly sessions covering core business and leadership topics, delivered in an interactive, age-appropriate format." },
+      { step: "04", title: "Mentorship & Internship", body: "Ongoing mentorship and workplace internship experience runs in parallel with the academic curriculum throughout the program." },
+      { step: "05", title: "Graduation & Showcase", body: "The program culminates in a business pitch showcase, with participants presenting plans to a panel of industry leaders, followed by graduation." },
+    ],
+    cta: "Enrol Your Child Today",
+  },
+
+  "women-leadership-programs": {
+    hero: "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Women entrepreneurs in a leadership empowerment session",
+    eyebrow: "She Entrepreneurship & Women CEO Leadership Programs",
+    headline: "She leads. She succeeds. She transforms.",
+    subheadline: "Comprehensive leadership and business development programs designed to empower women entrepreneurs and senior executives to reach their full potential and lead with confidence.",
+    overview: "The Canbiz She Entrepreneurship and Women CEO Leadership Programs are purpose-built to address the unique opportunities and challenges faced by women in business across the GCC. Through a combination of executive education, peer networks, mentorship, and visibility platforms, we equip women leaders with everything they need to build thriving enterprises and make a lasting impact in their industries and communities.",
+    tags: ["Women Empowerment", "Leadership", "Entrepreneurship", "Networking", "Business Development"],
+    highlights: [
+      { label: "Women Leaders Empowered", value: "800+" },
+      { label: "CEOs Graduated", value: "150+" },
+      { label: "Industries Represented", value: "15+" },
+      { label: "Business Revenue Generated", value: "$50M+" },
+    ],
+    features: [
+      { title: "Women CEO Leadership Program", body: "An intensive leadership curriculum covering executive strategy, financial acumen, personal branding, and governance — built specifically for women in senior roles." },
+      { title: "She Entrepreneurship Program", body: "A structured startup and growth program for women entrepreneurs, covering ideation, business planning, funding readiness, and market launch." },
+      { title: "Peer Mastermind Network", body: "An exclusive network of accomplished women leaders who collaborate, challenge, and support each other through regular facilitated mastermind sessions." },
+      { title: "Mentorship from Industry Leaders", body: "Access to a curated network of senior mentors — businesswomen, executives, and sector specialists — who provide guidance and open doors." },
+      { title: "International Exposure", body: "Dedicated women's business delegations, international conferences, and global speaking opportunities that expand networks and horizons." },
+      { title: "Media & Visibility Platform", body: "Canbiz provides a platform for women graduates to amplify their stories, participate in media features, and build public profiles as sector thought leaders." },
+    ],
+    process: [
+      { step: "01", title: "Application & Assessment", body: "A personalised assessment process ensures the right program track — CEO Leadership or She Entrepreneurship — is matched to each participant's profile and goals." },
+      { step: "02", title: "Orientation & Community", body: "An inspiring orientation event introduces the cohort, sets the cultural tone of inclusion and ambition, and launches the peer community." },
+      { step: "03", title: "Core Program Modules", body: "Monthly learning sessions, workshops, and guest speaker events build knowledge and skills in an environment designed for women's learning preferences." },
+      { step: "04", title: "Mentorship & Projects", body: "Personalised mentorship and real-world business projects ensure learning is applied to each participant's unique circumstances." },
+      { step: "05", title: "Graduation & Platform", body: "Graduation marks the beginning — not the end — with ongoing access to the alumni network, events, and Canbiz's She Leadership platform." },
+    ],
+    cta: "Apply to the Program",
+  },
+
+  "government-advisory": {
+    hero: "https://images.unsplash.com/photo-1768399808130-abac2a8442e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwcHVibGljJTIwc2VjdG9yJTIwcG9saWN5JTIwcGxhbm5pbmd8ZW58MXx8fHwxNzcyMzM3MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Government advisory and strategic planning session",
+    eyebrow: "Finance & Strategic Management Consulting for Government",
+    headline: "Shaping public sector excellence.",
+    subheadline: "High-level strategic, financial, and performance consulting trusted by government ministries, authorities, and semi-government organisations across the GCC.",
+    overview: "Canbiz's Government Advisory practice brings deep expertise in public sector strategy, financial management, and institutional performance to the organisations that shape the future of nations. We work in close partnership with government entities to design and implement transformational strategies, build institutional capabilities, and optimise performance — ensuring public resources are deployed for maximum societal impact.",
+    tags: ["Policy Advisory", "Financial Consulting", "Strategic Planning", "Performance Management", "Public Sector"],
+    highlights: [
+      { label: "Government Bodies Served", value: "20+" },
+      { label: "Strategic Plans Delivered", value: "60+" },
+      { label: "Countries of Engagement", value: "10+" },
+      { label: "Years of Public Sector Expertise", value: "10+" },
+    ],
+    features: [
+      { title: "Strategic Planning & Policy Advisory", body: "We partner with government leaders to design multi-year strategic plans, policy frameworks, and national programs aligned to Vision 2030 and broader development goals." },
+      { title: "Financial Advisory & Budget Optimisation", body: "Expert financial consulting covering budget planning, revenue diversification, expenditure optimisation, and fiscal sustainability for public entities." },
+      { title: "Institutional Performance Management", body: "Design and implementation of balanced scorecards, KPI frameworks, and performance management systems that drive accountability and measurable improvement." },
+      { title: "Organisational Restructuring", body: "We support government entities in restructuring for efficiency, clear accountability, and alignment with strategic mandates." },
+      { title: "Feasibility & Economic Studies", body: "Rigorous feasibility analysis, economic impact assessments, and investment appraisals to support high-stakes government decision-making." },
+      { title: "Public–Private Partnership Advisory", body: "End-to-end advisory on PPP structuring, partner selection, contract negotiation, and performance monitoring for major public initiatives." },
+    ],
+    process: [
+      { step: "01", title: "Stakeholder Engagement", body: "Deep engagement with ministers, directors, and frontline staff to build a comprehensive understanding of the entity's mandate, challenges, and priorities." },
+      { step: "02", title: "Situation Analysis", body: "A rigorous diagnostic using quantitative data, benchmarking, and qualitative insight to establish an accurate baseline for strategy design." },
+      { step: "03", title: "Strategy Development", body: "Co-design of a strategic plan or solution with senior government officials, ensuring ownership and alignment from the outset." },
+      { step: "04", title: "Implementation Support", body: "Hands-on support during execution — managing workstreams, building internal capability, and navigating institutional complexity." },
+      { step: "05", title: "Performance Monitoring", body: "Ongoing performance tracking, reporting, and advisory support ensures strategic objectives are achieved and outcomes are sustained." },
+    ],
+    cta: "Engage Our Government Advisory Team",
+  },
+};
 
 // ─── Confidence Section ───────────────────────────────────────────────────────
 

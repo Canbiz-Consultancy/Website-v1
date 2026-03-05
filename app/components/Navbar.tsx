@@ -1,34 +1,57 @@
 "use client";
 
 import { useState } from "react";
+import { useRouter, usePathname } from "next/navigation";
 import { MagnifyingGlassIcon, ListIcon, XIcon } from "@phosphor-icons/react";
+import Link from "next/link";
 import { CanbizLogo } from "./CanbizLogo";
-import { navItems } from "../content";
+import { navItems, services } from "../content";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const router = useRouter();
+  const pathname = usePathname();
 
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      const yOffset = -56;
-      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }
+  const handleNavClick = (sectionId: string) => {
     setMobileOpen(false);
     setActiveDropdown(null);
+
+    if (sectionId === "services") {
+      router.push("/services");
+      return;
+    }
+
+    if (pathname === "/") {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        const yOffset = -56;
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: "smooth" });
+      }
+    } else {
+      router.push(`/#${sectionId}`);
+    }
+  };
+
+  const getServiceHref = (childLabel: string) => {
+    const match = services.find(
+      (s) =>
+        s.shortTitle.toLowerCase() === childLabel.toLowerCase() ||
+        s.title.toLowerCase().includes(childLabel.toLowerCase())
+    );
+    return match ? `/services/${match.slug}` : "/services";
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy text-white">
       <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between h-14">
-        <button
-          onClick={() => scrollToSection("home")}
+        <Link
+          href="/"
           className="flex items-center shrink-0 hover:opacity-80 transition-opacity"
         >
           <CanbizLogo className="h-10 w-auto" />
-        </button>
+        </Link>
 
         <div className="hidden lg:flex items-center gap-0">
           {navItems.map((item) => (
@@ -39,7 +62,7 @@ export function Navbar() {
               onMouseLeave={() => setActiveDropdown(null)}
             >
               <button
-                onClick={() => scrollToSection(item.section)}
+                onClick={() => handleNavClick(item.section)}
                 className="px-4 py-5 text-xs text-gray-300 hover:text-white hover:bg-brand-navy-light transition-colors flex items-center gap-1 tracking-wide uppercase"
               >
                 {item.label}
@@ -48,17 +71,23 @@ export function Navbar() {
               {activeDropdown === item.label && item.children && (
                 <div className="absolute top-full left-0 bg-brand-navy-mid min-w-[260px] shadow-2xl z-50 border-t-2 border-brand-gold">
                   <div className="py-2">
-                    {item.children.map((child) => (
-                      <a
-                        key={child.label}
-                        href="#"
-                        onClick={(e) => { e.preventDefault(); scrollToSection(item.section); }}
-                        className="flex flex-col px-5 py-3 hover:bg-brand-navy-light transition-colors border-b border-brand-navy-border/50 last:border-b-0 group"
-                      >
-                        <span className="text-xs text-gray-200 group-hover:text-brand-gold transition-colors font-medium">{child.label}</span>
-                        <span className="text-[10px] text-gray-500 mt-0.5">{child.sub}</span>
-                      </a>
-                    ))}
+                    {item.children.map((child) => {
+                      const href =
+                        item.section === "services"
+                          ? getServiceHref(child.label)
+                          : `/#${item.section}`;
+                      return (
+                        <Link
+                          key={child.label}
+                          href={href}
+                          onClick={() => setActiveDropdown(null)}
+                          className="flex flex-col px-5 py-3 hover:bg-brand-navy-light transition-colors border-b border-brand-navy-border/50 last:border-b-0 group"
+                        >
+                          <span className="text-xs text-gray-200 group-hover:text-brand-gold transition-colors font-medium">{child.label}</span>
+                          <span className="text-[10px] text-gray-500 mt-0.5">{child.sub}</span>
+                        </Link>
+                      );
+                    })}
                   </div>
                 </div>
               )}
@@ -89,7 +118,7 @@ export function Navbar() {
             <div key={item.label}>
               <button
                 className="w-full text-left px-6 py-4 text-xs text-gray-200 hover:text-brand-gold hover:bg-brand-navy-light transition-colors uppercase tracking-widest border-b border-brand-navy-border"
-                onClick={() => scrollToSection(item.section)}
+                onClick={() => handleNavClick(item.section)}
               >
                 {item.label}
               </button>

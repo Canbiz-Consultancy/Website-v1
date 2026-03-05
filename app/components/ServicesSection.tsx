@@ -2,11 +2,11 @@
 
 import { useState } from "react";
 import { ArrowRightIcon } from "@phosphor-icons/react";
+import Link from "next/link";
 import { services, servicesSection } from "../content";
 
 export function ServicesSection() {
   const [hoveredId, setHoveredId] = useState<number | null>(null);
-  const [activeService, setActiveService] = useState<number | null>(null);
 
   return (
     <section className="bg-brand-navy py-24 px-6 md:px-16">
@@ -30,14 +30,14 @@ export function ServicesSection() {
             const Icon = service.icon;
             const isHovered = hoveredId === service.id;
             return (
-              <div
+              <Link
                 key={service.id}
-                className={`relative p-5 md:p-8 cursor-pointer transition-all duration-300 ${
+                href={`/services/${service.slug}`}
+                className={`relative p-5 md:p-8 transition-all duration-300 block ${
                   isHovered ? "bg-brand-gold" : "bg-brand-navy-mid"
                 }`}
                 onMouseEnter={() => setHoveredId(service.id)}
                 onMouseLeave={() => setHoveredId(null)}
-                onClick={() => setActiveService(activeService === service.id ? null : service.id)}
               >
                 <span
                   className={`absolute top-6 right-6 text-xs font-light tracking-widest transition-colors duration-300 ${
@@ -78,16 +78,19 @@ export function ServicesSection() {
                 >
                   Learn more <ArrowRightIcon size={13} />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
 
         <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center gap-6">
-          <button className="border border-brand-gold text-brand-gold px-10 py-3.5 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300">
+          <Link
+            href="/services"
+            className="border border-brand-gold text-brand-gold px-10 py-3.5 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300"
+          >
             {servicesSection.ctaPrimary}
-          </button>
-          <a href="#" className="text-gray-400 text-sm hover:text-brand-gold transition-colors flex items-center gap-2">
+          </Link>
+          <a href="#contact" className="text-gray-400 text-sm hover:text-brand-gold transition-colors flex items-center gap-2">
             {servicesSection.ctaSecondary} <ArrowRightIcon size={14} />
           </a>
         </div>
