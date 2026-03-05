@@ -27,6 +27,11 @@ export function Navbar() {
       return;
     }
 
+    if (sectionId === "about") {
+      router.push("/about");
+      return;
+    }
+
     if (pathname === "/") {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -77,6 +82,12 @@ export function Navbar() {
                 <div className="absolute top-full left-0 bg-brand-navy-mid min-w-[260px] shadow-2xl z-50 border-t-2 border-brand-gold">
                   <div className="py-2">
                     {item.children.map((child) => {
+                      const aboutAnchors: Record<string, string> = {
+                        "Our Story": "/about#our-story",
+                        "Mission & Values": "/about#mission-values",
+                        "Leadership Team": "/about#leadership",
+                        "Our Journey": "/about#journey",
+                      };
                       const careersAnchors: Record<string, string> = {
                         "Open Positions": "/careers#open-positions",
                         "Life at Canbiz": "/careers#life",
@@ -88,6 +99,8 @@ export function Navbar() {
                           ? getServiceHref(child.label)
                           : item.section === "careers"
                           ? (careersAnchors[child.label] ?? "/careers")
+                          : item.section === "about"
+                          ? (aboutAnchors[child.label] ?? "/about")
                           : `/#${item.section}`;
                       return (
                         <Link

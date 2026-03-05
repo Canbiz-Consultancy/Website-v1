@@ -835,6 +835,66 @@ export const aboutStats = [
   { value: "6+", label: "Industry Sectors" },
 ];
 
+export const aboutLeadership = [
+  {
+    name: "Dr. Ahmed Al-Mansoori",
+    role: "Founder & Chairman",
+    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MXx8fHwxNzcyMzQ4NzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "A visionary leader with over 25 years of experience in regional economic development, corporate strategy, and cross-border partnerships."
+  },
+  {
+    name: "Sarah Jenks",
+    role: "Managing Director",
+    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwxfHx8fDE3NzIzNDg3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Expert in organizational transformation, leading Canbiz's advisory expansion and ensuring world-class service delivery across all practice areas."
+  },
+  {
+    name: "Tariq Rahman",
+    role: "Head of Government Advisory",
+    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBleGVjdXRpdmV8ZW58MXx8fDE3NzIzNDg3NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Trusted advisor to public sector institutions, specializing in policy formulation, national strategy, and public-private partnerships."
+  },
+  {
+    name: "Elena Rostova",
+    role: "Head of Digital & Innovation",
+    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwZmVtYWxlJTIwbGVhZGVyfGVufDF8fHx8MTc3MjM0ODc2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+    description: "Driving technological modernization for clients, bridging the gap between strategic business objectives and complex enterprise IT ecosystems."
+  }
+];
+
+export const aboutJourney = [
+  {
+    year: "2014",
+    title: "The Foundation",
+    description: "Canbiz was established in Dubai as a boutique management consultancy focused on SMEs and regional market entry."
+  },
+  {
+    year: "2017",
+    title: "Practice Expansion",
+    description: "Launched the Digital Solutions and Brand Strategy practices to provide integrated end-to-end services for growing clients."
+  },
+  {
+    year: "2019",
+    title: "Regional Reach",
+    description: "Expanded our footprint across the GCC, taking on major government advisory projects and opening pathways for international partnerships."
+  },
+  {
+    year: "2021",
+    title: "Executive Education",
+    description: "Introduced the Executive MBA, Women CEO, and Junior CEO programs, addressing a critical need for structured capability building."
+  },
+  {
+    year: "2024",
+    title: "Global Delegations",
+    description: "Scaled our global network, connecting hundreds of GCC entrepreneurs with markets across Europe, Asia, and the Americas."
+  },
+  {
+    year: "2026",
+    title: "A Decade of Impact",
+    description: "Celebrating over a decade of continuous growth, trusted by 1,000+ clients to navigate complexity and achieve sustainable success."
+  }
+];
+
 // ─── Careers Section ──────────────────────────────────────────────────────────
 
 export const careersSection = {
