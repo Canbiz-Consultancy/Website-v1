@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { industries, industriesSection, industriesBottomStats } from "../content";
@@ -99,12 +100,12 @@ export function IndustriesSection() {
                 </div>
               </div>
 
-              <a
-                href="#"
+              <Link
+                href={`/industries/${active.slug}`}
                 className="inline-flex items-center gap-2 text-sm text-brand-navy font-medium hover:text-brand-gold transition-colors border-b-2 border-brand-gold pb-0.5 self-start"
               >
                 {industriesSection.ctaLabel} <ArrowRightIcon size={14} />
-              </a>
+              </Link>
             </div>
           </div>
         </div>

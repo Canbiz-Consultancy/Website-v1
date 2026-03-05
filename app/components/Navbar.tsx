@@ -5,7 +5,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { MagnifyingGlassIcon, ListIcon, XIcon } from "@phosphor-icons/react";
 import Link from "next/link";
 import { CanbizLogo } from "./CanbizLogo";
-import { navItems, services } from "../content";
+import { navItems, services, industries } from "../content";
 
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
@@ -19,6 +19,11 @@ export function Navbar() {
 
     if (sectionId === "services") {
       router.push("/services");
+      return;
+    }
+
+    if (sectionId === "industries") {
+      router.push("/industries");
       return;
     }
 
@@ -51,6 +56,15 @@ export function Navbar() {
         s.title.toLowerCase().includes(childLabel.toLowerCase())
     );
     return match ? `/services/${match.slug}` : "/services";
+  };
+
+  const getIndustryHref = (childLabel: string) => {
+    const match = industries.find(
+      (i) =>
+        i.shortTitle?.toLowerCase() === childLabel.toLowerCase() ||
+        i.name.toLowerCase().includes(childLabel.toLowerCase())
+    );
+    return match ? `/industries/${match.slug}` : "/industries";
   };
 
   return (
@@ -97,6 +111,8 @@ export function Navbar() {
                       const href =
                         item.section === "services"
                           ? getServiceHref(child.label)
+                          : item.section === "industries"
+                          ? getIndustryHref(child.label)
                           : item.section === "careers"
                           ? (careersAnchors[child.label] ?? "/careers")
                           : item.section === "about"

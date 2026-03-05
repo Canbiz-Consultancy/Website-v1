@@ -642,7 +642,10 @@ export const industriesSection = {
 export const industries = [
   {
     id: 1,
+    slug: "government-public-sector",
+    icon: BuildingsIcon,
     name: "Government & Public Sector",
+    shortTitle: "Government",
     description:
       "Strategic advisory, financial management, and policy consulting for government ministries, authorities, and semi-government organizations seeking to optimize performance and public value delivery.",
     image:
@@ -653,7 +656,10 @@ export const industries = [
   },
   {
     id: 2,
+    slug: "entrepreneurship-smes",
+    icon: LightbulbIcon,
     name: "Entrepreneurship & SMEs",
+    shortTitle: "Entrepreneurship",
     description:
       "Comprehensive growth strategies, mentorship, and capability-building services for startups and small-to-medium enterprises navigating market entry, scaling, and operational excellence.",
     image:
@@ -664,7 +670,10 @@ export const industries = [
   },
   {
     id: 3,
+    slug: "technology-digital-innovation",
+    icon: CodeIcon,
     name: "Technology & Digital Innovation",
+    shortTitle: "Technology",
     description:
       "End-to-end digital transformation, software development, IT maintenance, and technology strategy for organizations adapting to the demands of a digitally-driven economy.",
     image:
@@ -675,7 +684,10 @@ export const industries = [
   },
   {
     id: 4,
+    slug: "financial-services",
+    icon: ChartBarIcon,
     name: "Financial Services",
+    shortTitle: "Financial Services",
     description:
       "Expert financial advisory, performance management, and consulting services for financial institutions, investment firms, and corporate finance teams across the region.",
     image:
@@ -686,7 +698,10 @@ export const industries = [
   },
   {
     id: 5,
+    slug: "education-training-leadership",
+    icon: GraduationCapIcon,
     name: "Education, Training & Leadership",
+    shortTitle: "Education",
     description:
       "Transformational learning programs — from Executive MBAs and Junior CEO development to Women Leadership programs — building the next generation of capable leaders.",
     image:
@@ -697,7 +712,10 @@ export const industries = [
   },
   {
     id: 6,
+    slug: "global-business-international-markets",
+    icon: GlobeIcon,
     name: "Global Business & International Markets",
+    shortTitle: "Global Business",
     description:
       "Curated international business delegations, cross-border market entry strategies, and global networking programs facilitating partnerships across continents.",
     image:
@@ -707,6 +725,189 @@ export const industries = [
     tags: ["Market Entry", "Business Delegations", "Global Partnerships"],
   },
 ];
+
+export const industryDetails: Record<string, {
+  hero: string;
+  heroAlt: string;
+  eyebrow: string;
+  headline: string;
+  subheadline: string;
+  overview: string;
+  tags: string[];
+  highlights: { label: string; value: string }[];
+  features: { title: string; body: string }[];
+  process: { step: string; title: string; body: string }[];
+  cta: string;
+}> = {
+  "government-public-sector": {
+    hero: "https://images.unsplash.com/photo-1768399808130-abac2a8442e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwcHVibGljJTIwc2VjdG9yJTIwcG9saWN5JTIwcGxhbm5pbmd8ZW58MXx8fHwxNzcyMzM3MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Government advisory and strategic planning session",
+    eyebrow: "Government & Public Sector",
+    headline: "Shaping public sector excellence.",
+    subheadline: "Strategic advisory, financial management, and policy consulting for government ministries and semi-government organizations.",
+    overview: "Canbiz's Government Advisory practice brings deep expertise in public sector strategy, financial management, and institutional performance to the organizations that shape the future of nations. We work in close partnership with government entities to design and implement transformational strategies.",
+    tags: ["Policy Advisory", "Financial Consulting", "Strategic Planning", "Performance Management"],
+    highlights: [
+      { label: "Government Bodies Served", value: "20+" },
+      { label: "Strategic Plans Delivered", value: "60+" },
+      { label: "Countries of Engagement", value: "10+" },
+      { label: "Years of Expertise", value: "10+" },
+    ],
+    features: [
+      { title: "Strategic Planning", body: "We partner with government leaders to design multi-year strategic plans aligned to national goals." },
+      { title: "Financial Advisory", body: "Expert financial consulting covering budget planning and optimization for public entities." },
+      { title: "Performance Management", body: "Design and implementation of performance management systems that drive accountability." },
+    ],
+    process: [
+      { step: "01", title: "Stakeholder Engagement", body: "Deep engagement with ministers and directors to build understanding of the entity's mandate." },
+      { step: "02", title: "Situation Analysis", body: "A rigorous diagnostic to establish an accurate baseline for strategy design." },
+      { step: "03", title: "Strategy Development", body: "Co-design of a strategic plan with senior government officials." },
+      { step: "04", title: "Implementation Support", body: "Hands-on support during execution and navigating institutional complexity." },
+      { step: "05", title: "Performance Monitoring", body: "Ongoing performance tracking ensures objectives are achieved." },
+    ],
+    cta: "Engage Our Government Advisory Team",
+  },
+  "entrepreneurship-smes": {
+    hero: "https://images.unsplash.com/photo-1629124096116-48743a0cea58?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbnRyZXByZW5ldXIlMjBidXNpbmVzcyUyMGdyb3d0aCUyMHN1Y2Nlc3N8ZW58MXx8fHwxNzcyMzM3MTU2fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Entrepreneurship and SMEs growth",
+    eyebrow: "Entrepreneurship & SMEs",
+    headline: "Fueling startup and SME growth.",
+    subheadline: "Comprehensive growth strategies, mentorship, and scaling support.",
+    overview: "We help startups and small-to-medium enterprises navigate market entry, scaling, and operational excellence through proven methodologies and tailored advisory.",
+    tags: ["Business Growth", "Startup Advisory", "Operational Excellence"],
+    highlights: [
+      { label: "Entrepreneurs Empowered", value: "500+" },
+      { label: "Industries Analyzed", value: "15+" },
+      { label: "Funding Facilitated", value: "$50M+" },
+      { label: "Years of Experience", value: "10+" },
+    ],
+    features: [
+      { title: "Growth Strategy", body: "Bespoke actionable roadmaps to scale rapidly." },
+      { title: "Operational Excellence", body: "Streamlining operations to improve efficiency and reduce costs." },
+      { title: "Go-to-Market", body: "Targeted strategies for launching new products and entering markets." },
+    ],
+    process: [
+      { step: "01", title: "Discovery", body: "Analyzing current market position and potential." },
+      { step: "02", title: "Roadmap Creation", body: "Building step-by-step strategies for scaling." },
+      { step: "03", title: "Execution", body: "Implementing the plan with real-time support." },
+      { step: "04", title: "Monitoring", body: "Tracking KPIs to ensure optimal growth." },
+      { step: "05", title: "Refinement", body: "Iterating strategies to maximize outcomes." },
+    ],
+    cta: "Boost Your Growth",
+  },
+  "technology-digital-innovation": {
+    hero: "https://images.unsplash.com/photo-1760346546767-95b89356a6bb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwdGVjaG5vbG9neSUyMHNvZnR3YXJlJTIwZGV2ZWxvcG1lbnR8ZW58MXx8fHwxNzcyMzM3MTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Technology & Digital Innovation",
+    eyebrow: "Technology & Digital Innovation",
+    headline: "Accelerating your digital transformation.",
+    subheadline: "Software development, IT maintenance, and technology strategy for the digital economy.",
+    overview: "End-to-end digital solutions that transform organizations, leveraging scalable software development, agile methodologies, and proactive IT maintenance.",
+    tags: ["Software Development", "Digital Strategy", "IT Maintenance"],
+    highlights: [
+      { label: "Digital Projects", value: "150+" },
+      { label: "Platforms Built", value: "80+" },
+      { label: "Uptime SLA", value: "99.9%" },
+      { label: "Tech Partners", value: "20+" },
+    ],
+    features: [
+      { title: "Custom Development", body: "Tailored applications solving real business challenges." },
+      { title: "ERP Integration", body: "Seamless ERP & CRM systems for optimal flow." },
+      { title: "Tech Strategy", body: "Digital roadmaps designed for long-term scalability." },
+    ],
+    process: [
+      { step: "01", title: "Requirement Gathering", body: "Defining business objectives and tech needs." },
+      { step: "02", title: "Architecture", body: "Designing solid foundations." },
+      { step: "03", title: "Development", body: "Agile sprints delivering functional software." },
+      { step: "04", title: "Quality Assurance", body: "Rigorous testing protocols." },
+      { step: "05", title: "Launch and Support", body: "Continuous maintenance and optimization." },
+    ],
+    cta: "Start Your Digital Journey",
+  },
+  "financial-services": {
+    hero: "https://images.unsplash.com/photo-1763739527737-e3626d731072?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmd8ZW58MXx8fHwxNzcyMzM3MTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Financial Services",
+    eyebrow: "Financial Services",
+    headline: "Driving financial performance and risk resilience.",
+    subheadline: "Advisory, performance management, and consulting for financial institutions and corporate finance.",
+    overview: "Expert guidance for banks, investment firms, and corporate finance teams to elevate performance, manage risk, and identify new wealth opportunities in rapidly changing environments.",
+    tags: ["Investment Advisory", "Risk Management", "Corporate Finance"],
+    highlights: [
+      { label: "Institutions Advised", value: "35+" },
+      { label: "Capital Optimized", value: "$2B+" },
+      { label: "Risk Assessments", value: "100+" },
+      { label: "Years in Market", value: "10+" },
+    ],
+    features: [
+      { title: "Performance Management", body: "Metrics and systems tracking core financial health." },
+      { title: "Risk Analytics", body: "Identifying vulnerabilities and creating contingencies." },
+      { title: "Investment Strategy", body: "Data-backed advice for sustainable portfolio growth." },
+    ],
+    process: [
+      { step: "01", title: "Audit", body: "Comprehensive review of current financial health." },
+      { step: "02", title: "Strategy Formulation", body: "Identifying key optimization targets." },
+      { step: "03", title: "Implementation", body: "Applying precise operational adjustments." },
+      { step: "04", title: "Risk Mitigation", body: "Establishing protective measures." },
+      { step: "05", title: "Ongoing Review", body: "Continuous financial advisory and course-correction." },
+    ],
+    cta: "Speak to a Financial Advisor",
+  },
+  "education-training-leadership": {
+    hero: "https://images.unsplash.com/photo-1557734864-c78b6dfef1b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxNQkElMjBleGVjdXRpdmUlMjBlZHVjYXRpb24lMjBjbGFzc3Jvb20lMjBsZWFybmluZ3xlbnwxfHx8fDE3NzIzMzcxNjR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Education, Training & Leadership",
+    eyebrow: "Education & Training",
+    headline: "Building the next generation of capable leaders.",
+    subheadline: "Transformational learning programs to empower minds and scale impacts.",
+    overview: "From Executive MBAs and Junior CEO development to specialized Women Leadership programs, we shape visionaries equipped to tackle tomorrow's complexities.",
+    tags: ["Executive MBA", "Junior CEO Program", "Women Leadership"],
+    highlights: [
+      { label: "Leaders Trained", value: "1,200+" },
+      { label: "Programs Offered", value: "5+" },
+      { label: "Alumni Network", value: "1,000+" },
+      { label: "Global Mentors", value: "50+" },
+    ],
+    features: [
+      { title: "Executive MBA", body: "Rigorous training combining theory with real-case application." },
+      { title: "Junior CEOs", body: "Guiding the youth toward entrepreneurial thinking." },
+      { title: "Women in Leadership", body: "Specialized cohorts empowering female executives." },
+    ],
+    process: [
+      { step: "01", title: "Assessment", body: "Aligning candidates with the right programs." },
+      { step: "02", title: "Enrollment", body: "Getting onboarded into specialized cohorts." },
+      { step: "03", title: "Instruction", body: "Learning modules taught by industry experts." },
+      { step: "04", title: "Practical Application", body: "Real-world projects and case studies." },
+      { step: "05", title: "Graduation", body: "Joining a global alumni network." },
+    ],
+    cta: "Explore Our Programs",
+  },
+  "global-business-international-markets": {
+    hero: "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    heroAlt: "Global Business & International Markets",
+    eyebrow: "Global Business",
+    headline: "Connecting GCC entrepreneurs with the world.",
+    subheadline: "Curated international business delegations and cross-border partnerships.",
+    overview: "We facilitate international market exposure, B2B meetings, and partnership development across continents to unlock truly global growth opportunities.",
+    tags: ["Market Entry", "Business Delegations", "Global Partnerships"],
+    highlights: [
+      { label: "Countries Visited", value: "30+" },
+      { label: "MOUs Signed", value: "120+" },
+      { label: "Delegations Hosted", value: "50+" },
+      { label: "Global Active Partners", value: "200+" },
+    ],
+    features: [
+      { title: "Curated Delegations", body: "Sector-focused international travel and networking." },
+      { title: "Business Matching", body: "Pre-vetted introductions with global counterparts." },
+      { title: "Market Entry Strategies", body: "Advising on legal, financial, and cultural transitions." },
+    ],
+    process: [
+      { step: "01", title: "Program Design", body: "Tailoring trips based on business needs." },
+      { step: "02", title: "Preparation", body: "Pre-trip briefings and cultural training." },
+      { step: "03", title: "Execution", body: "On-the-ground facilitation and management." },
+      { step: "04", title: "Negotiation", body: "Supporting MOUs and agreements." },
+      { step: "05", title: "Follow-Up", body: "Post-delegation action plans." },
+    ],
+    cta: "Join the Next Delegation",
+  },
+};
 
 export const industriesBottomStats = [
   { value: "6+", label: "Industry Sectors" },
