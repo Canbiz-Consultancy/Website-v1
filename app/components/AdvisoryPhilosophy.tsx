@@ -35,10 +35,6 @@ export function AdvisoryPhilosophy() {
               );
             })}
           </div>
-
-          <button className="border-2 border-white text-white px-8 py-3 text-sm font-medium hover:bg-white hover:text-brand-navy transition-colors w-fit">
-            {advisorySection.ctaLabel}
-          </button>
         </div>
 
         <div className="relative min-h-[320px] lg:min-h-[420px] overflow-hidden hidden lg:block">

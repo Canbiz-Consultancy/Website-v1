@@ -12,12 +12,6 @@ export function ShapeFuture() {
           <p className="text-gray-600 text-sm leading-relaxed mb-6">
             {shapeFutureSection.body}
           </p>
-          <a href="#" className="block text-sm text-brand-navy hover:text-brand-gold transition-colors mb-3 font-medium">
-            {shapeFutureSection.link1Label}
-          </a>
-          <a href="#" className="block text-sm text-brand-navy hover:text-brand-gold transition-colors font-medium">
-            {shapeFutureSection.link2Label}
-          </a>
         </div>
       </div>
 

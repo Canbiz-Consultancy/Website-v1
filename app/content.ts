@@ -129,7 +129,6 @@ export const advisorySection = {
   eyebrow: "Our Advisory Philosophy",
   heading: "Decisions that create value — today, and for the long term.",
   body: "At Canbiz, we believe great advisory goes beyond advice. We embed ourselves in your challenges, align with your ambitions, and deliver counsel that is grounded in evidence, shaped by experience, and built for lasting impact across the GCC and beyond.",
-  ctaLabel: "Explore our advisory approach",
   image:
     "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Canbiz Advisory",
@@ -620,8 +619,6 @@ export const shapeFutureSection = {
   eyebrow: "Personal Branding",
   heading: "Will you shape your narrative, or let others define it?",
   body: "In today's hyper-connected world, your personal brand is your most powerful business asset. We help executives and entrepreneurs build an authentic, compelling presence that commands authority and opens doors.",
-  link1Label: "Build your personal brand with Canbiz →",
-  link2Label: "Read our Executive Visibility Report →",
   image:
     "https://images.unsplash.com/photo-1733231291455-3c4de1c24e20?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcmVhdGl2ZSUyMGJyYW5kaW5nJTIwbWFya2V0aW5nJTIwcHJvZmVzc2lvbmFsfGVufDF8fHx8MTc3MjMzNzE2Nnww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Personal branding and marketing",

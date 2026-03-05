@@ -90,9 +90,9 @@ export function ServicesSection() {
           >
             {servicesSection.ctaPrimary}
           </Link>
-          <a href="#contact" className="text-gray-400 text-sm hover:text-brand-gold transition-colors flex items-center gap-2">
+          <Link href="/contact" className="text-gray-400 text-sm hover:text-brand-gold transition-colors flex items-center gap-2">
             {servicesSection.ctaSecondary} <ArrowRightIcon size={14} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
