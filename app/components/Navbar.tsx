@@ -138,10 +138,6 @@ export function Navbar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="hidden md:flex items-center gap-1.5 text-xs text-gray-300 hover:text-white transition-colors">
-            <MagnifyingGlassIcon size={14} />
-            <span>Search</span>
-          </button>
           <button 
             onClick={() => router.push('/contact')}
             className="hidden md:block bg-brand-gold text-brand-navy text-xs font-semibold px-5 py-2 hover:bg-brand-gold-hover transition-colors"
