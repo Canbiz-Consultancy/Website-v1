@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
+import { TrainingSection } from "../components/TrainingSection";
 import {
   aboutSection,
   aboutPillars,
@@ -146,6 +147,9 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Employee Training ─────────────────────────────────────────────────── */}
+      <TrainingSection />
 
       {/* ── Leadership Team ───────────────────────────────────────────────────── */}
       <section id="leadership" className="bg-white py-24 px-6 md:px-16">

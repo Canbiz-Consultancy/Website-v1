@@ -206,7 +206,7 @@ export function Navbar() {
                       handleNavClick(item.section);
                     }
                   }}
-                  className={`relative px-4 h-full text-xs tracking-wide uppercase transition-colors flex items-center gap-1
+                  className={`relative px-4 h-full text-xs tracking-wide transition-colors flex items-center gap-1
                     ${isActive
                       ? "text-white bg-brand-navy-light"
                       : "text-gray-300 hover:text-white hover:bg-brand-navy-light"

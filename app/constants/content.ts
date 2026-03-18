@@ -106,19 +106,20 @@ export const navItems = [
     section: "careers",
     children: [
       { label: "Open Positions", sub: "Join our growing team" },
-      { label: "Life at Canbiz", sub: "Culture and values" },
+      { label: "Life At Canbiz", sub: "Culture and values" },
       { label: "Graduate Programs", sub: "Start your career" },
       { label: "Internships", sub: "Hands-on experience" },
     ],
   },
   {
-    label: "About us",
+    label: "About Us",
     section: "about",
     children: [
       { label: "Our Story", sub: "A decade of impact" },
       { label: "Mission & Vision", sub: "Purpose-driven advisory" },
       { label: "Leadership Team", sub: "Meet our experts" },
       { label: "Our Journey", sub: "Milestones and growth" },
+      { label: "Employee Training", sub: "Cultivating leadership from within" },
     ],
   },
 ];
@@ -1382,3 +1383,14 @@ export const footerSocials = [
   { icon: LinkedinLogoIcon, href: "#", label: "LinkedIn" },
   { icon: YoutubeLogoIcon, href: "#", label: "YouTube" },
 ];
+
+// ─── Employee Training Section ────────────────────────────────────────────────
+export const employeeTrainingSection = {
+  eyebrow: "Employee Development",
+  heading: "Cultivating leadership from within.",
+  body: "We believe that our most profound impact starts with our own people. By investing heavily in continuous learning, executive coaching, and cross-disciplinary training, we ensure that every member of our team is equipped to navigate complex challenges and drive unparalleled value for our clients.",
+  image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbXBsb3llZSUyMHRyYWluaW5nfGVufDF8fHx8MTcyMzg1NjQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
+  imageAlt: "Employee Training at Canbiz",
+  imageTag: "Continuous Learning",
+  ctaLabel: "View Open Positions",
+};
