@@ -26,31 +26,31 @@ import {
 export const heroSlides = [
   {
     id: 1,
-    category: "CEO IMPERATIVE",
-    title: "Five priorities for GCC CEOs navigating transformation and growth in 2026",
+    category: "STARTUP GROWTH",
+    title: "The importance of business systems and structured processes for sustainable growth",
     description:
-      "Explore how top business leaders across the Gulf are reimagining strategy, talent, and innovation to build resilient, future-ready organizations.",
-    tab: "CEO Imperative",
+      "Discover why strong business systems, corporate training, and structured processes are essential for startup success and sustainable business growth.",
+    tab: "Business Systems",
     image:
       "https://images.unsplash.com/photo-1705234384669-c6d31c61b789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDRU8lMjBsZWFkZXJzaGlwJTIwZnV0dXJlJTIwc3RyYXRlZ3klMjB2aXNpb258ZW58MXx8fHwxNzcyMzM3MzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: 2,
-    category: "WOMEN LEADERSHIP",
-    title: "She leads: how Canbiz's Women CEO Programs are reshaping business across the GCC",
+    category: "OPERATIONAL SYSTEMS",
+    title: "Build strong operational systems before expanding your infrastructure",
     description:
-      "Specialized leadership and capacity-building programs empowering women entrepreneurs and senior executives to reach their full potential.",
-    tab: "Women Leadership",
+      "Create a clear operational roadmap that supports efficiency, scalability, and consistency across all departments in your growing company.",
+    tab: "Structured Operations",
     image:
       "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: 3,
-    category: "GLOBAL BUSINESS",
-    title: "International business delegations: connecting GCC entrepreneurs with the world",
+    category: "CORPORATE TRAINING",
+    title: "Developing a future-ready team through continuous corporate training",
     description:
-      "Discover how our curated global exposure programs have facilitated 120+ MOU signings and opened new markets for entrepreneurs across 30+ countries.",
-    tab: "Global Delegations",
+      "Keep your workforce competitive, skilled, and resilient by investing in continuous learning and leadership management capabilities.",
+    tab: "Corporate Training",
     image:
       "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
   },
@@ -128,30 +128,30 @@ export const navItems = [
 
 export const advisorySection = {
   eyebrow: "Our Advisory Philosophy",
-  heading: "Decisions that create value — today, and for the long term.",
-  body: "At Canbiz, we believe great advisory goes beyond advice. We embed ourselves in your challenges, align with your ambitions, and deliver counsel that is grounded in evidence, shaped by experience, and built for lasting impact across the GCC and beyond.",
+  heading: "Sustainable growth for startups and growing companies.",
+  body: "At Canbiz, we believe the real foundation of a successful and scalable organization lies in well-defined systems, processes, and continuous team development. We help businesses prioritize structured systems early on to position themselves for long-term stability and operational efficiency.",
   image:
     "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Canbiz Advisory",
   imageEyebrow: "Canbiz Advisory",
-  imageCaption: "Trusted by leaders across 30+ countries to navigate what comes next.",
+  imageCaption: "Supporting organizations in building practical, scalable systems.",
 };
 
 export const advisoryPillars = [
   {
     icon: LightbulbIcon,
-    value: "Strategic Clarity",
-    label: "Turning complexity into clear, actionable direction for leaders",
+    value: "Build Systems",
+    label: "Establishing clear operational processes before expanding infrastructure",
   },
   {
     icon: ShieldCheckIcon,
-    value: "Risk Intelligence",
-    label: "Identifying and mitigating risk before it becomes a liability",
+    value: "Mitigate Risk",
+    label: "Avoiding the deep long-term challenges of unstructured operations",
   },
   {
     icon: ChartBarIcon,
-    value: "Performance Elevation",
-    label: "Driving measurable growth across every layer of your organisation",
+    value: "Corporate Training",
+    label: "Developing future-ready teams equipped with competitive capabilities",
   },
 ];
 
@@ -989,16 +989,16 @@ export const aboutSection = {
   headingPlain: "About",
   headingGold: "Canbiz",
   subtext:
-    "A premier management consultancy and professional services firm dedicated to empowering organizations and leaders across the GCC and global markets.",
+    "A premier consultancy dedicated to helping startups and growing businesses design effective operational frameworks and leadership capabilities.",
   image:
     "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb21wYW55JTIwdGVhbSUyMGRpdmVyc2UlMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjMzNzE2OHww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "About Canbiz",
-  storyHeadingPlain: "A decade of",
-  storyHeadingGold: "transformative impact",
+  storyHeadingPlain: "A foundation of",
+  storyHeadingGold: "sustainable growth",
   storyPara1:
-    "Founded in Dubai, Canbiz Consultancy Services has grown from a boutique advisory firm into a multi-sector powerhouse serving government institutions, corporations, SMEs, and individual leaders across the GCC and internationally.",
+    "Founded with the mission to build resilient businesses, Canbiz helps growing organizations across the globe establish robust systems and continuous team development.",
   storyPara2:
-    "Our core services — spanning management consulting, brand strategy, digital solutions, executive education, and government advisory — reflect our unwavering commitment to comprehensive, high-impact client service.",
+    "Our core services — spanning strategic systems design, structured processes, and corporate training — reflect our unwavering commitment to ensuring businesses function independently and effectively.",
   ctaQuestion: "Want to know more about our story, leadership, and journey?",
   ctaLabel: "Learn More About Us",
 };
@@ -1366,7 +1366,7 @@ export const contactSection = {
 
 export const footerContent = {
   description:
-    "Canbiz Consultancy Services is a global professional services firm providing consulting, assurance, tax, and advisory services. We help clients across industries navigate complexity, unlock growth opportunities, and build sustainable value for their stakeholders.",
+    "Canbiz Consultancy Services provides leading corporate training and startup consulting services, focusing on business process management, policies, and robust procedures.",
   copyright: "© 2026 Canbiz Consultancy Services. All Rights Reserved.",
 };
 
@@ -1386,11 +1386,11 @@ export const footerSocials = [
 
 // ─── Employee Training Section ────────────────────────────────────────────────
 export const employeeTrainingSection = {
-  eyebrow: "Employee Development",
-  heading: "Cultivating leadership from within.",
-  body: "We believe that our most profound impact starts with our own people. By investing heavily in continuous learning, executive coaching, and cross-disciplinary training, we ensure that every member of our team is equipped to navigate complex challenges and drive unparalleled value for our clients.",
+  eyebrow: "Corporate Training",
+  heading: "Developing a Future-Ready Team.",
+  body: "Even the most well-structured organization cannot succeed without a capable team. We design and deliver professional corporate training programs that help organizations improve productivity, strengthen leadership, and prepare for future challenges.",
   image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbXBsb3llZSUyMHRyYWluaW5nfGVufDF8fHx8MTcyMzg1NjQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-  imageAlt: "Employee Training at Canbiz",
+  imageAlt: "Corporate Training at Canbiz",
   imageTag: "Continuous Learning",
-  ctaLabel: "View Open Positions",
+  ctaLabel: "Explore Training Programs",
 };

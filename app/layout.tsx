@@ -9,8 +9,9 @@ const manrope = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: "Canbiz Consultancy Services",
-  description: "A premier management consultancy and professional services firm dedicated to empowering organizations and leaders across the GCC and global markets.",
+  title: "Why Business Systems Are Critical for Startups and Growing Companies | Canbiz Consultancy Services",
+  description: "Discover why strong business systems, corporate training, and structured processes are essential for startup success and sustainable business growth.",
+  keywords: "Business systems for startups, corporate training for companies, business process management, company policies and procedures, startup consulting services",
 };
 
 export default function RootLayout({
