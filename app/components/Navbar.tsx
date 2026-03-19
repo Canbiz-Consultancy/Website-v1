@@ -176,7 +176,7 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy text-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F5F0E6] text-white">
         {/* Top bar */}
         <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between h-14">
           <Link
@@ -209,7 +209,7 @@ export function Navbar() {
                   className={`relative px-4 h-full text-xs tracking-wide transition-colors flex items-center gap-1
                     ${isActive
                       ? "text-white bg-brand-navy-light"
-                      : "text-gray-300 hover:text-white hover:bg-brand-navy-light"
+                      : "text-black font-semibold hover:text-white hover:bg-brand-navy-light"
                     }`}
                 >
                   {item.label}
