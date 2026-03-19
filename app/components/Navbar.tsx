@@ -176,7 +176,7 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-[#F5F0E6] text-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy text-white">
         {/* Top bar */}
         <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between h-14">
           <Link
@@ -185,9 +185,9 @@ export function Navbar() {
             onClick={() => setActiveDropdown(null)}
           >
             <img 
-              src="/logo-1.png" 
+              src="/logo-3.png" 
               alt="Canbiz Logo" 
-              className="absolute left-6 top-1/2 -translate-y-1/2 h-20 w-auto object-contain max-w-none"
+              className="absolute left-6 top-1/2 -translate-y-1/2 h-14 w-auto object-contain max-w-none"
             />
           </Link>
 
@@ -209,7 +209,7 @@ export function Navbar() {
                   className={`relative px-4 h-full text-xs tracking-wide transition-colors flex items-center gap-1
                     ${isActive
                       ? "text-white bg-brand-navy-light"
-                      : "text-black font-semibold hover:text-white hover:bg-brand-navy-light"
+                      : "text-white hover:text-white hover:bg-brand-navy-light"
                     }`}
                 >
                   {item.label}
