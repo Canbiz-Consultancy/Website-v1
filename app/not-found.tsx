@@ -4,79 +4,58 @@ import Link from "next/link";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { motion } from "framer-motion";
-import { ArrowLeftIcon, ArrowRightIcon, WarningIcon } from "@phosphor-icons/react";
+import { ArrowRightIcon, HouseIcon, EnvelopeSimpleIcon } from "@phosphor-icons/react";
 
 export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col bg-brand-navy text-white selection:bg-brand-gold/30">
       <Navbar />
-      
-      {/* Subtract navbar height */}
-      <div className="h-14" />
-      
-      <main className="flex-grow flex items-center justify-center relative overflow-hidden bg-[radial-gradient(circle_at_center,rgba(225,184,87,0.03)_0%,transparent_70%)]">
-        {/* Animated accent lines */}
-        <div className="absolute inset-0 z-0 opacity-10 pointer-events-none">
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-brand-gold to-transparent absolute top-[30%] -rotate-6 scale-150 transform-gpu animate-pulse" />
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-brand-gold to-transparent absolute bottom-[40%] rotate-12 scale-150 transform-gpu animate-pulse [animation-delay:1s]" />
-        </div>
 
-        <div className="max-w-4xl w-full px-6 text-center relative z-10 py-20">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: [0.16, 1, 0.3, 1] }}
-          >
-            <div className="inline-flex items-center gap-4 mb-4">
-              <span className="w-12 h-px bg-brand-gold/40" />
-              <span className="text-[10px] uppercase tracking-[0.6em] font-extrabold text-brand-gold">
-                Error 404
-              </span>
-              <span className="w-12 h-px bg-brand-gold/40" />
-            </div>
+      <main className="flex-1 flex items-center justify-center px-6 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="max-w-lg w-full"
+        >
+          {/* Eyebrow */}
+          <p className="text-[10px] uppercase tracking-[0.3em] text-brand-gold mb-6 font-medium">
+            Error 404
+          </p>
 
-            <h1 className="text-[120px] md:text-[220px] leading-tight font-light text-white italic tracking-tighter mix-blend-overlay absolute inset-x-0 -top-12 md:-top-24 select-none opacity-20 pointer-events-none">
-              Lost
-            </h1>
+          {/* Divider */}
+          <div className="w-10 h-px bg-brand-gold/40 mb-8" />
 
-            <div className="relative z-10">
-              <h2 className="text-4xl md:text-6xl font-extralight text-white mb-6 tracking-tight leading-tight">
-                This page is beyond <br />
-                <span className="text-brand-gold font-light">the horizon.</span>
-              </h2>
+          {/* Headline */}
+          <h1 className="text-3xl md:text-4xl font-extralight tracking-[0.08em] uppercase text-white mb-5 leading-snug">
+            Page Not Found
+          </h1>
 
-              <p className="text-sm md:text-base text-gray-400 mb-12 max-w-lg mx-auto leading-[1.8] font-medium tracking-wide uppercase">
-                The content you are searching for does not inhabit this coordinate. Let us guide you back to the mainland.
-              </p>
+          {/* Body */}
+          <p className="text-sm text-white/40 font-light leading-relaxed mb-10 max-w-sm">
+            The page you are looking for may have been moved, renamed, or is temporarily unavailable. Please return to the homepage or contact us for assistance.
+          </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-8">
-                <Link
-                  href="/"
-                  className="group relative inline-flex items-center gap-3 px-10 py-5 bg-white text-brand-navy text-[10px] font-black uppercase tracking-[0.3em] overflow-hidden transition-all duration-500 hover:tracking-[0.4em] rounded-sm hover:-translate-y-1"
-                >
-                  Return Home
-                  <ArrowRightIcon size={16} weight="bold" className="text-brand-gold group-hover:translate-x-1 transition-transform" />
-                </Link>
-                
-                <Link
-                  href="/contact"
-                  className="group inline-flex items-center gap-3 px-5 py-4 text-brand-gold text-[10px] font-black uppercase tracking-[0.3em] transition-all duration-300 hover:text-white"
-                >
-                  <span className="h-px w-6 bg-brand-gold group-hover:w-10 group-hover:bg-white transition-all duration-300" />
-                  Consult with Support
-                </Link>
-              </div>
-            </div>
-          </motion.div>
+          {/* CTAs */}
+          <div className="flex flex-col sm:flex-row gap-4">
+            <Link
+              href="/"
+              className="group inline-flex items-center gap-3 px-8 py-3.5 bg-white text-brand-navy text-[10px] font-black uppercase tracking-[0.25em] transition-all duration-300 hover:-translate-y-0.5 hover:bg-brand-gold"
+            >
+              <HouseIcon size={13} weight="bold" />
+              Return Home
+              <ArrowRightIcon size={12} weight="bold" className="group-hover:translate-x-1 transition-transform duration-300" />
+            </Link>
 
-          {/* Minimalist footer indicator */}
-          <footer className="mt-24 flex flex-col items-center gap-4">
-            <div className="w-px h-16 bg-gradient-to-b from-brand-gold/60 to-transparent" />
-            <span className="text-[9px] uppercase tracking-[0.8em] text-gray-500 font-bold ml-[0.8em]">
-              Precision · Vision · Excellence
-            </span>
-          </footer>
-        </div>
+            <Link
+              href="/contact"
+              className="group inline-flex items-center gap-3 px-8 py-3.5 border border-white/15 text-white/50 text-[10px] font-medium uppercase tracking-[0.25em] transition-all duration-300 hover:border-white/30 hover:text-white/80"
+            >
+              <EnvelopeSimpleIcon size={13} />
+              Contact Us
+            </Link>
+          </div>
+        </motion.div>
       </main>
 
       <Footer />
