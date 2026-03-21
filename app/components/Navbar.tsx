@@ -368,6 +368,11 @@ export function Navbar() {
                                     <div className="flex-1">
                                       <span className="text-sm text-gray-200 group-hover:text-brand-gold transition-colors font-medium block">
                                         {child.label}
+                                        {child.upcoming && (
+                                          <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-[2px] bg-brand-gold/10 text-brand-gold border border-brand-gold/20 text-[7px] font-bold uppercase tracking-widest leading-none align-middle">
+                                            Upcoming
+                                          </span>
+                                        )}
                                       </span>
                                       {child.sub && (
                                         <span className="text-[11px] text-gray-500 mt-1 block">

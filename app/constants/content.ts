@@ -83,10 +83,10 @@ export const navItems = [
       { label: "Digital Solutions & IT", sub: "Software and maintenance" },
       { label: "AMC Retainer Services", sub: "Ongoing advisory support" },
       { label: "Executive MBA Program", sub: "Advanced leadership education" },
-      { label: "Junior CEO Program", sub: "Youth entrepreneurship" },
-      { label: "Women CEO Programs", sub: "She entrepreneurship" },
       { label: "Government Advisory", sub: "Public sector consulting" },
-      { label: "Global Delegations", sub: "International exposure" },
+      { label: "Junior CEO Program", sub: "Youth entrepreneurship", upcoming: true },
+      { label: "Women CEO Programs", sub: "She entrepreneurship", upcoming: true },
+      { label: "Global Delegations", sub: "International exposure", upcoming: true },
     ],
   },
   {
@@ -214,15 +214,6 @@ export const services = [
       "Retainer-based advisory services providing continuous strategic, operational, and performance support to clients on an ongoing basis.",
   },
   {
-    id: 6,
-    slug: "global-business-delegations",
-    icon: GlobeIcon,
-    title: "International Entrepreneur Exposure & Business Delegations",
-    shortTitle: "Global Business Delegations",
-    description:
-      "Curated international business trips, market exposure visits, networking forums, and global partnership facilitation for entrepreneurs.",
-  },
-  {
     id: 7,
     slug: "executive-mba",
     icon: GraduationCapIcon,
@@ -232,6 +223,25 @@ export const services = [
       "Advanced executive education program focused on strategic leadership, business scaling, financial management, and global expansion.",
   },
   {
+    id: 10,
+    slug: "government-advisory",
+    icon: BuildingsIcon,
+    title: "Finance & Strategic Management Consulting for Government",
+    shortTitle: "Government & Public Sector",
+    description:
+      "High-level financial advisory, strategic planning, policy support, and performance management consulting for government and semi-government organizations.",
+  },
+  {
+    id: 6,
+    slug: "global-business-delegations",
+    icon: GlobeIcon,
+    title: "International Entrepreneur Exposure & Business Delegations",
+    shortTitle: "Global Business Delegations",
+    description:
+      "Curated international business trips, market exposure visits, networking forums, and global partnership facilitation for entrepreneurs.",
+    isUpcoming: true,
+  },
+  {
     id: 8,
     slug: "junior-ceo-program",
     icon: BabyIcon,
@@ -239,6 +249,7 @@ export const services = [
     shortTitle: "Junior CEO Program",
     description:
       "Structured leadership and business exposure program for children of business owners, including mentorship, internships, and entrepreneurial skill development.",
+    isUpcoming: true,
   },
   {
     id: 9,
@@ -248,15 +259,7 @@ export const services = [
     shortTitle: "Women Leadership Programs",
     description:
       "Specialized leadership, business development, and capacity-building programs designed to empower women entrepreneurs and senior executives.",
-  },
-  {
-    id: 10,
-    slug: "government-advisory",
-    icon: BuildingsIcon,
-    title: "Finance & Strategic Management Consulting for Government",
-    shortTitle: "Government & Public Sector",
-    description:
-      "High-level financial advisory, strategic planning, policy support, and performance management consulting for government and semi-government organizations.",
+    isUpcoming: true,
   },
 ];
 

@@ -80,10 +80,15 @@ export default function ServicesPage() {
                         className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-brand-navy/20 transition-colors duration-300" />
-                      <div className="absolute top-4 left-4">
+                      <div className="absolute top-4 left-4 flex gap-2">
                         <span className="text-[10px] bg-brand-gold text-brand-navy px-2.5 py-1 font-semibold tracking-widest uppercase">
                           {String(service.id).padStart(2, "0")}
                         </span>
+                        {service.isUpcoming && (
+                          <span className="text-[10px] bg-brand-navy text-brand-gold px-2.5 py-1 font-semibold tracking-widest uppercase border border-brand-gold/30">
+                            Upcoming
+                          </span>
+                        )}
                       </div>
                     </div>
                   )}

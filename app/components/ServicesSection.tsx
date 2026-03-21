@@ -61,6 +61,17 @@ export function ServicesSection() {
                   }`}
                 >
                   {service.title}
+                  {service.isUpcoming && (
+                    <span
+                      className={`ml-2 inline-flex items-center px-2 py-0.5 rounded-sm text-[8px] font-bold uppercase tracking-widest transition-colors duration-300 ${
+                        isHovered
+                          ? "bg-brand-navy text-white"
+                          : "bg-brand-gold/10 text-brand-gold border border-brand-gold/20"
+                      }`}
+                    >
+                      Upcoming
+                    </span>
+                  )}
                 </h3>
 
                 <p

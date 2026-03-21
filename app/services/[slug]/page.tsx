@@ -65,9 +65,16 @@ export default async function ServiceDetailPage({ params }: Props) {
             </span>
           </div>
 
-          <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-4">
-            {detail.eyebrow}
-          </p>
+          <div className="flex items-center gap-3 mb-4">
+            <p className="text-brand-gold text-xs tracking-[0.25em] uppercase">
+              {detail.eyebrow}
+            </p>
+            {service.isUpcoming && (
+              <span className="text-[9px] bg-brand-gold text-brand-navy px-2 py-0.5 font-bold tracking-[0.1em] uppercase rounded-sm">
+                Upcoming
+              </span>
+            )}
+          </div>
           <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[820px] mb-6">
             {detail.headline}
           </h1>
