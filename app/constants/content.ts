@@ -27,9 +27,9 @@ export const heroSlides = [
   {
     id: 1,
     category: "STARTUP GROWTH",
-    title: "The importance of business systems and structured processes for sustainable growth",
+    title: "True scalable growth starts with structured business systems",
     description:
-      "Discover why strong business systems, corporate training, and structured processes are essential for startup success and sustainable business growth.",
+      "Avoid the trap of simply expanding infrastructure or headcount. Discover how strong operational frameworks and team development form the bedrock of sustainable business growth.",
     tab: "Business Systems",
     image:
       "https://images.unsplash.com/photo-1705234384669-c6d31c61b789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDRU8lMjBsZWFkZXJzaGlwJTIwZnV0dXJlJTIwc3RyYXRlZ3klMjB2aXNpb258ZW58MXx8fHwxNzcyMzM3MzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
@@ -37,19 +37,19 @@ export const heroSlides = [
   {
     id: 2,
     category: "OPERATIONAL SYSTEMS",
-    title: "Build strong operational systems before expanding your infrastructure",
+    title: "Systemize your business to eliminate owner dependency",
     description:
-      "Create a clear operational roadmap that supports efficiency, scalability, and consistency across all departments in your growing company.",
-    tab: "Structured Operations",
+      "Operating for years without documented systems creates organizational fragility. We design clear operational procedures that allow your company to scale effortlessly, without relying on constant leadership intervention.",
+    tab: "Systemize & Scale",
     image:
       "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: 3,
     category: "CORPORATE TRAINING",
-    title: "Developing a future-ready team through continuous corporate training",
+    title: "Forge a future-ready workforce through continuous learning",
     description:
-      "Keep your workforce competitive, skilled, and resilient by investing in continuous learning and leadership management capabilities.",
+      "Your strategic systems are only as effective as the team running them. Invest in professional corporate training strategies to boost engagement, adaptability, and long-term competitive advantage.",
     tab: "Corporate Training",
     image:
       "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -128,8 +128,8 @@ export const navItems = [
 
 export const advisorySection = {
   eyebrow: "Our Advisory Philosophy",
-  heading: "Sustainable growth for startups and growing companies.",
-  body: "At Canbiz, we believe the real foundation of a successful and scalable organization lies in well-defined systems, processes, and continuous team development. We help businesses prioritize structured systems early on to position themselves for long-term stability and operational efficiency.",
+  heading: "Transforming startups into durable, independent powerhouses.",
+  body: "At Canbiz Consultancy, we believe the real foundation of a successful organization is structured processes—not just physical expansion. Operating without formal frameworks is like leaving a condition untreated; over time, it creates severe bottlenecks and deep reliance on owner involvement. We step in to design documented methodologies and build capability-driven teams that empower your business to function, adapt, and scale smoothly on its own.",
   image:
     "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Canbiz Advisory",
@@ -140,18 +140,18 @@ export const advisorySection = {
 export const advisoryPillars = [
   {
     icon: LightbulbIcon,
-    value: "Build Systems",
-    label: "Establishing clear operational processes before expanding infrastructure",
+    value: "Prioritize Systems",
+    label: "Establishing clear operational processes and workflows long before expanding physical infrastructure.",
   },
   {
     icon: ShieldCheckIcon,
-    value: "Mitigate Risk",
-    label: "Avoiding the deep long-term challenges of unstructured operations",
+    value: "Systemize to Mitigate Risk",
+    label: "Avoiding bottlenecks and operational fragility caused by an over-dependence on direct owner involvement.",
   },
   {
     icon: ChartBarIcon,
-    value: "Corporate Training",
-    label: "Developing future-ready teams equipped with competitive capabilities",
+    value: "Future-Ready Teams",
+    label: "Embedding continuous corporate training into your growth strategy to keep employees competitive and engaged.",
   },
 ];
 
@@ -992,16 +992,16 @@ export const aboutSection = {
   headingPlain: "About",
   headingGold: "Canbiz",
   subtext:
-    "A premier consultancy dedicated to helping startups and growing businesses design effective operational frameworks and leadership capabilities.",
+    "A premier consultancy dedicated to helping startups and growing businesses implement structured operational frameworks and impactful leadership capabilities.",
   image:
     "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb21wYW55JTIwdGVhbSUyMGRpdmVyc2UlMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjMzNzE2OHww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "About Canbiz",
   storyHeadingPlain: "A foundation of",
   storyHeadingGold: "sustainable growth",
   storyPara1:
-    "Founded with the mission to build resilient businesses, Canbiz helps growing organizations across the globe establish robust systems and continuous team development.",
+    "Established with a clear mission to build resilient, independent businesses, Canbiz Consultancy helps organizations prioritize well-defined systems over premature infrastructure expansion.",
   storyPara2:
-    "Our core services — spanning strategic systems design, structured processes, and corporate training — reflect our unwavering commitment to ensuring businesses function independently and effectively.",
+    "Whether it’s developing documented policies, constructing operational workflows, or delivering continuous corporate training, our interventions prevent the deep, long-term risks of unstructured operations.",
   ctaQuestion: "Want to know more about our story, leadership, and journey?",
   ctaLabel: "Learn More About Us",
 };
@@ -1390,8 +1390,8 @@ export const footerSocials = [
 // ─── Employee Training Section ────────────────────────────────────────────────
 export const employeeTrainingSection = {
   eyebrow: "Corporate Training",
-  heading: "Developing a Future-Ready Team.",
-  body: "Even the most well-structured organization cannot succeed without a capable team. We design and deliver professional corporate training programs that help organizations improve productivity, strengthen leadership, and prepare for future challenges.",
+  heading: "Building teams that power your strategic systems.",
+  body: "Even the most rigorously structured organization will falter without a capable, adaptable workforce. In a rapidly changing business environment, continuous learning isn't a one-time event—it's a massive competitive advantage. At Canbiz Consultancy, we design professional corporate training programs that supercharge employee productivity, cultivate reliable management, and keep your teams perfectly aligned with long-term organizational stability.",
   image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbXBsb3llZSUyMHRyYWluaW5nfGVufDF8fHx8MTcyMzg1NjQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Corporate Training at Canbiz",
   imageTag: "Continuous Learning",
