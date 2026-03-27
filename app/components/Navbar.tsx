@@ -178,18 +178,19 @@ export function Navbar() {
 
       <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy text-white">
         {/* Top bar */}
-        <div className="max-w-[1440px] mx-auto px-6 flex items-center justify-between h-14">
-          <Link
-            href="/"
-            className="relative shrink-0 h-14 w-48 -ml-6"
-            onClick={() => setActiveDropdown(null)}
-          >
-            <img 
-              src="/logo-3.png" 
-              alt="Canbiz Logo" 
-              className="absolute left-6 top-1/2 -translate-y-1/2 h-14 w-auto object-contain max-w-none"
-            />
-          </Link>
+        <div className="px-6 md:px-16">
+          <div className="max-w-[1200px] mx-auto flex items-center justify-between h-14">
+            <Link
+              href="/"
+              className="relative shrink-0 h-14 flex items-center justify-center"
+              onClick={() => setActiveDropdown(null)}
+            >
+              <img 
+                src="/logo-1.svg" 
+                alt="Canbiz Logo" 
+                className="h-25 w-auto object-contain max-w-none"
+              />
+            </Link>
 
           {/* Desktop nav */}
           <div className="hidden lg:flex items-center gap-0 h-14">
@@ -240,6 +241,7 @@ export function Navbar() {
             </button>
           </div>
         </div>
+      </div>
 
         {/* ── Mega Dropdown Panel ──
           NO key prop here — the panel is a single persistent element.
@@ -263,7 +265,7 @@ export function Navbar() {
                 style={{ transformOrigin: "0% 50%" }}
               />
 
-              <div className="max-w-[1440px] mx-auto px-6 py-10 grid grid-cols-[320px_1fr] gap-20 min-h-[480px]">
+              <div className="max-w-[1200px] mx-auto px-6 md:px-16 py-10 grid grid-cols-[320px_1fr] gap-20 min-h-[480px]">
 
                 {/* Inner content: keyed by activeDropdown so it crossfades on tab switch */}
                 <AnimatePresence mode="wait">
