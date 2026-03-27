@@ -1,6 +1,5 @@
 import { Navbar } from "./components/Navbar";
 import { HeroSlider } from "./components/HeroSlider";
-import { FeaturedInsights } from "./components/FeaturedInsights";
 import { AdvisoryPhilosophy } from "./components/AdvisoryPhilosophy";
 import { ServicesSection } from "./components/ServicesSection";
 import { ConfidenceSection } from "./components/ConfidenceSection";
@@ -9,6 +8,7 @@ import { IndustriesSection } from "./components/IndustriesSection";
 import { CareersSection } from "./components/CareersSection";
 import { AboutSection } from "./components/AboutSection";
 import { Footer } from "./components/Footer";
+import { FeaturedInsights } from "./components/FeaturedInsights";
 
 export default function App() {
   return (
@@ -20,7 +20,7 @@ export default function App() {
         <HeroSlider />
       </div>
       <div id="insights">
-        <FeaturedInsights />
+        <FeaturedInsights/>
       </div>
 
       <AdvisoryPhilosophy />
