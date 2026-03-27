@@ -12,13 +12,14 @@ import {
   ArrowRightIcon,
 } from "@phosphor-icons/react";
 import { useState } from "react";
+import { submitContactForm } from "../lib/strapi";
+
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
-    phone: "",
+    phoneNumber: "",
     company: "",
     message: "",
   });
@@ -34,19 +35,27 @@ export default function ContactPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate API call to form backend
-    setTimeout(() => {
+    try {
+      const response = await submitContactForm(formData);
+      
+      if (response) {
+        setSuccess(true);
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          company: "",
+          message: "",
+        });
+      } else {
+        alert("Failed to send message. Please try again later.");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An unexpected error occurred. Please try again later.");
+    } finally {
       setIsSubmitting(false);
-      setSuccess(true);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        company: "",
-        message: "",
-      });
-    }, 1500);
+    }
   };
 
   return (
@@ -186,31 +195,17 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="space-y-6 relative z-10">
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      <div className="space-y-2">
-                        <label htmlFor="firstName" className="text-brand-navy text-xs font-semibold uppercase tracking-wider block">First Name</label>
-                        <input 
-                          type="text" 
-                          id="firstName" 
-                          name="firstName" 
-                          required
-                          value={formData.firstName}
-                          onChange={handleChange}
-                          className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
-                        />
-                      </div>
-                      <div className="space-y-2">
-                        <label htmlFor="lastName" className="text-brand-navy text-xs font-semibold uppercase tracking-wider block">Last Name</label>
-                        <input 
-                          type="text" 
-                          id="lastName" 
-                          name="lastName" 
-                          required
-                          value={formData.lastName}
-                          onChange={handleChange}
-                          className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
-                        />
-                      </div>
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-brand-navy text-xs font-semibold uppercase tracking-wider block">Full Name</label>
+                      <input 
+                        type="text" 
+                        id="name" 
+                        name="name" 
+                        required
+                        value={formData.name}
+                        onChange={handleChange}
+                        className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                      />
                     </div>
                     
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -227,12 +222,12 @@ export default function ContactPage() {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="phone" className="text-brand-navy text-xs font-semibold uppercase tracking-wider block">Phone Number</label>
+                        <label htmlFor="phoneNumber" className="text-brand-navy text-xs font-semibold uppercase tracking-wider block">Phone Number</label>
                         <input 
                           type="tel" 
-                          id="phone" 
-                          name="phone" 
-                          value={formData.phone}
+                          id="phoneNumber" 
+                          name="phoneNumber" 
+                          value={formData.phoneNumber}
                           onChange={handleChange}
                           className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
                         />
