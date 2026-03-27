@@ -65,18 +65,6 @@ export default function CareersPage() {
           <p className="text-gray-400 text-sm leading-relaxed max-w-[580px] mb-16">
             {careersSection.subtext}
           </p>
-
-          {/* Stats strip */}
-          <div className="grid grid-cols-2 md:grid-cols-4 border-t border-brand-navy-border divide-x divide-brand-navy-border">
-            {careersStats.map((s, i) => (
-              <div key={i} className="py-8 px-6 md:px-10">
-                <p className="text-brand-gold text-3xl font-light mb-1">
-                  {s.value}
-                </p>
-                <p className="text-gray-500 text-xs tracking-wide">{s.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
