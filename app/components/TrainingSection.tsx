@@ -3,7 +3,6 @@
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { employeeTrainingSection } from "../constants/content";
 import Link from "next/link";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 
 export function TrainingSection() {
   return (
@@ -29,7 +28,7 @@ export function TrainingSection() {
       </div>
 
       <div className="relative h-[400px] lg:h-auto overflow-hidden order-1 lg:order-2">
-        <ImageWithFallback
+        <img
           src={employeeTrainingSection.image}
           alt={employeeTrainingSection.imageAlt}
           className="w-full h-full object-cover"

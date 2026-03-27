@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { careersSection, careersValues, careersStats, careersWhyPoints } from "../constants/content";
 import Link from "next/link";
 
@@ -34,7 +33,7 @@ export function CareersSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16 overflow-hidden">
           <div className="relative h-[260px] sm:h-[380px]">
-            <ImageWithFallback
+            <img
               src={careersSection.image}
               alt={careersSection.imageAlt}
               className="w-full h-full object-cover"

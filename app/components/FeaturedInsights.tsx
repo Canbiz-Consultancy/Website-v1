@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { getFeaturedInsights, getStrapiImageUrl } from "../lib/strapi";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { insightsSection } from "../constants/content";
 
 export async function FeaturedInsights() {
@@ -39,11 +38,11 @@ export async function FeaturedInsights() {
           >
             <div className="border-t-4 border-brand-gold" />
             <div className="relative overflow-hidden h-72">
-              <ImageWithFallback
-                src={getStrapiImageUrl(featuredInsight.featuredImage)}
-                alt={featuredInsight.title}
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-              />
+                <img
+                  src={getStrapiImageUrl(featuredInsight.featuredImage)}
+                  alt={featuredInsight.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
               <span className="absolute top-4 left-4 text-[10px] bg-brand-gold text-brand-navy px-2 py-0.5 font-semibold tracking-wider uppercase">
                 {featuredInsight.category}
@@ -69,7 +68,7 @@ export async function FeaturedInsights() {
               >
                 <div className="border-t-4 border-brand-gold" />
                 <div className="overflow-hidden h-36">
-                  <ImageWithFallback
+                  <img
                     src={getStrapiImageUrl(insight.featuredImage)}
                     alt={insight.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
@@ -96,7 +95,7 @@ export async function FeaturedInsights() {
             >
               <div className="border-t-4 border-brand-gold" />
               <div className="overflow-hidden h-44">
-                <ImageWithFallback
+                <img
                   src={getStrapiImageUrl(insight.featuredImage)}
                   alt={insight.title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"

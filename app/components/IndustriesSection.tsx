@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { industries, industriesSection, industriesBottomStats } from "../constants/content";
 
 export function IndustriesSection() {
@@ -70,7 +69,7 @@ export function IndustriesSection() {
 
           <div className="lg:col-span-3 flex flex-col order-1 lg:order-2">
             <div className="relative h-56 lg:h-64 overflow-hidden">
-              <ImageWithFallback
+              <img
                 key={active.id}
                 src={active.image}
                 alt={active.name}

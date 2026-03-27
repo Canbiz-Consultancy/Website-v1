@@ -4,7 +4,6 @@ import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 import { ArrowLeftIcon, ArrowRightIcon, CalendarBlank, User } from "@phosphor-icons/react/dist/ssr";
 import { getInsightBySlug, getStrapiImageUrl, getInsights } from "../../lib/strapi";
-import { ImageWithFallback } from "../../components/figma/ImageWithFallback";
 import { formatDate } from "../../lib/utils";
 import type { StrapiBlock, Insight } from "../../types/insight";
 import type { ReactNode } from "react";

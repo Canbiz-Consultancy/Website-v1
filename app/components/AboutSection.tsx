@@ -1,7 +1,6 @@
 "use client";
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
-import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { aboutSection, aboutPillars, aboutStats } from "../constants/content";
 import Link from "next/link";
 
@@ -25,7 +24,7 @@ export function AboutSection() {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16 border border-gray-100 overflow-hidden">
           <div className="relative min-h-[380px]">
-            <ImageWithFallback
+            <img
               src={aboutSection.image}
               alt={aboutSection.imageAlt}
               className="w-full h-full object-cover"

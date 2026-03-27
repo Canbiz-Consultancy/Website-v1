@@ -2,7 +2,6 @@ import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { getInsights, getStrapiImageUrl } from "../lib/strapi";
-import { ImageWithFallback } from "../components/figma/ImageWithFallback";
 import { insightsSection } from "../constants/content";
 import { ArrowRightIcon, ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
@@ -85,7 +84,7 @@ export default async function InsightsPage() {
                 >
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <ImageWithFallback
+                    <img
                       src={getStrapiImageUrl(insight.featuredImage)}
                       alt={insight.title}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
