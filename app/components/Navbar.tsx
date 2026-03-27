@@ -179,10 +179,10 @@ export function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy text-white">
         {/* Top bar */}
         <div className="px-6 md:px-16">
-          <div className="max-w-[1200px] mx-auto flex items-center justify-between h-14">
+          <div className="max-w-[1200px] mx-auto flex items-center justify-between">
             <Link
               href="/"
-              className="relative shrink-0 h-14 flex items-center justify-center"
+              className="relative shrink-0 h-14 flex items-center justify-start"
               onClick={() => setActiveDropdown(null)}
             >
               <img 
@@ -265,7 +265,8 @@ export function Navbar() {
                 style={{ transformOrigin: "0% 50%" }}
               />
 
-              <div className="max-w-[1200px] mx-auto px-6 md:px-16 py-10 grid grid-cols-[320px_1fr] gap-20 min-h-[480px]">
+              <div className="px-6 md:px-16">
+                <div className="max-w-[1200px] mx-auto py-10 grid grid-cols-[320px_1fr] gap-20 min-h-[480px]">
 
                 {/* Inner content: keyed by activeDropdown so it crossfades on tab switch */}
                 <AnimatePresence mode="wait">
@@ -395,20 +396,21 @@ export function Navbar() {
                   </motion.div>
                 </AnimatePresence>
               </div>
+            </div>
 
-              {/* Chevron */}
-              <motion.div
-                variants={chevronVariants}
-                className="flex justify-center pb-2"
+            {/* Chevron */}
+            <motion.div
+              variants={chevronVariants}
+              className="flex justify-center pb-2"
+            >
+              <button
+                onClick={() => setActiveDropdown(null)}
+                className="group flex flex-col items-center gap-1 text-brand-gold/40 hover:text-brand-gold transition-all duration-200"
               >
-                <button
-                  onClick={() => setActiveDropdown(null)}
-                  className="group flex flex-col items-center gap-1 text-brand-gold/40 hover:text-brand-gold transition-all duration-200"
-                >
-                  <CaretUp size={18} weight="bold" />
-                </button>
-              </motion.div>
+                <CaretUp size={18} weight="bold" />
+              </button>
             </motion.div>
+          </motion.div>
           )}
         </AnimatePresence>
 
