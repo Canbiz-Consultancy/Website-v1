@@ -49,6 +49,26 @@ async function fetchStrapi<T>(endpoint: string): Promise<T | null> {
   }
 }
 
+function slugify(text: string): string {
+  return text
+    .toString()
+    .toLowerCase()
+    .trim()
+    .replace(/\s+/g, "-")     // Replace spaces with -
+    .replace(/[^\w-]+/g, "")    // Remove all non-word chars
+    .replace(/--+/g, "-")       // Replace multiple - with single -
+    .replace(/^-+/, "")         // Trim - from start of text
+    .replace(/-+$/, "");        // Trim - from end of text
+}
+
+function processInsight(insight: any): Insight {
+  return {
+    ...insight,
+    // Always generate slug from title as requested
+    slug: slugify(insight.title || ""),
+  };
+}
+
 export async function getInsights(
   page: number = 1,
   pageSize: number = 10
@@ -65,38 +85,45 @@ export async function getInsights(
   
   const response = await fetchStrapi<StrapiResponse<Insight>>(`/insights?${params.toString()}`);
   
-  if (response) {
+  if (response && response.data) {
     console.log(`Found ${response.data.length} insights`);
+    response.data = response.data.map(processInsight);
   } else {
-    console.log('No response from Strapi');
+    console.log('No response from Strapi or empty data');
   }
   
   return response || { data: [], meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } } };
 }
 
 export async function getInsightBySlug(slug: string): Promise<Insight | null> {
-  if (!slug || slug.trim() === '') {
+  if (!slug || slug.trim() === '' || slug === 'undefined') {
     console.warn('Invalid slug provided to getInsightBySlug');
     return null;
   }
 
-  const params = new URLSearchParams({
-    "filters[slug][$eq]": slug.trim(),
-    "populate": "featuredImage",
-    // Temporarily remove published filter for debugging
-  });
-
-  console.log(`Fetching insight by slug: ${slug} with params: ${params.toString()}`);
-
-  const response = await fetchStrapi<StrapiResponse<Insight>>(`/insights?${params.toString()}`);
+  console.log(`Searching for insight with generated slug matching: ${slug}`);
+  
+  // Since we are generating the slug from the title, we need to find the insight
+  // whose title, when slugified, matches the requested slug.
+  // For better performance, we'll fetch a larger number of insights and filter.
+  // Note: For a very large number of insights, this should be handled differently 
+  // (e.g. by storing the generated slug back in Strapi).
+  const response = await getInsights(1, 100);
   
   if (!response || response.data.length === 0) {
-    console.warn(`No insight found for slug: ${slug}`);
+    console.warn(`No insights found to search from for slug: ${slug}`);
     return null;
   }
 
-  console.log(`Found insight: ${response.data[0].title}`);
-  return response.data[0];
+  const insight = response.data.find(i => i.slug === slug);
+
+  if (!insight) {
+    console.warn(`No insight found with generated slug: ${slug}`);
+    return null;
+  }
+
+  console.log(`Found insight: ${insight.title}`);
+  return insight;
 }
 
 export async function getFeaturedInsights(limit: number = 6): Promise<Insight[]> {
@@ -111,7 +138,7 @@ export async function getFeaturedInsights(limit: number = 6): Promise<Insight[]>
 
   const response = await fetchStrapi<StrapiResponse<Insight>>(`/insights?${params.toString()}`);
   
-  const insights = response?.data || [];
+  const insights = (response?.data || []).map(processInsight);
   console.log(`Found ${insights.length} featured insights`);
   
   return insights;
@@ -132,6 +159,11 @@ export async function getInsightsByCategory(
   });
 
   const response = await fetchStrapi<StrapiResponse<Insight>>(`/insights?${params.toString()}`);
+  
+  if (response && response.data) {
+    response.data = response.data.map(processInsight);
+  }
+  
   return response || { data: [], meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } } };
 }
 
