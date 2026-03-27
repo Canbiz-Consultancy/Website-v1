@@ -75,7 +75,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               </span>
             )}
           </div>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[820px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[1100px] mb-6 whitespace-pre-line">
             {detail.headline}
           </h1>
           <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-[640px] mb-10">
