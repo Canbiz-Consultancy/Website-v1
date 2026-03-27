@@ -96,20 +96,6 @@ export default async function ServiceDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Highlights Strip ─────────────────────────────────────────────────── */}
-      <section className="bg-brand-navy-mid border-t border-brand-navy-border">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-16">
-          <div className="grid grid-cols-2 md:grid-cols-4 divide-x divide-brand-navy-border">
-            {detail.highlights.map((h) => (
-              <div key={h.label} className="py-8 px-4 md:px-10 text-center">
-                <p className="text-brand-gold text-3xl font-light mb-1">{h.value}</p>
-                <p className="text-gray-400 text-xs tracking-wide">{h.label}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
       {/* ── Overview ─────────────────────────────────────────────────────────── */}
       <section className="bg-white py-24 px-6 md:px-16">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
