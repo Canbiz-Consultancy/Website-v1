@@ -3,9 +3,9 @@ import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
 import { getInsights, getStrapiImageUrl } from "../lib/strapi";
 import { insightsSection } from "../constants/content";
-import { ArrowRightIcon, ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 import type { Insight } from "../types/insight";
+import { ArrowLeft as ArrowLeftIcon, ArrowRight as ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 
 export const metadata: Metadata = {
   title: "Insights | Canbiz Consultancy",
@@ -133,83 +133,7 @@ export default async function InsightsPage() {
         </div>
       </section>
 
-      {/* ── Why Canbiz Strip ─────────────────────────────────────────────────── */}
-      <section className="bg-brand-navy py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
-                Knowledge Hub
-              </p>
-              <h2 className="text-white text-3xl md:text-4xl font-light leading-tight mb-6">
-                Expert insights for{" "}
-                <span className="text-brand-gold">modern leaders</span>.
-              </h2>
-              <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-              <p className="text-gray-400 text-sm leading-relaxed mb-10">
-                Our research and perspectives cover the latest trends in strategy,
-                leadership, digital transformation, and market dynamics across the
-                GCC and global markets.
-              </p>
-              <Link
-                href="/#contact"
-                className="inline-flex items-center gap-2 border border-white text-white px-8 py-3 text-sm font-medium hover:bg-white hover:text-brand-navy transition-all duration-300"
-              >
-                Get in touch <ArrowRightIcon size={14} />
-              </Link>
-            </div>
 
-            <div className="grid grid-cols-2 gap-px bg-brand-navy-border">
-              {[
-                { v: "100+", l: "Articles Published" },
-                { v: "50+", l: "Expert Contributors" },
-                { v: "15+", l: "Industry Sectors" },
-                { v: "10K+", l: "Monthly Readers" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="bg-brand-navy-mid p-8 flex flex-col items-center justify-center text-center"
-                >
-                  <span className="text-brand-gold text-3xl font-light mb-2">
-                    {s.v}
-                  </span>
-                  <span className="text-gray-400 text-xs">{s.l}</span>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* ── CTA ──────────────────────────────────────────────────────────────── */}
-      <section className="bg-brand-surface py-20 px-6 md:px-16">
-        <div className="max-w-[800px] mx-auto text-center">
-          <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
-            Stay Informed
-          </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
-            Never miss an insight
-          </h2>
-          <p className="text-gray-500 text-sm leading-relaxed mb-10">
-            Subscribe to receive our latest research, perspectives, and analysis
-            delivered directly to your inbox.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#contact"
-              className="bg-brand-navy text-white px-10 py-3.5 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 flex items-center gap-2"
-            >
-              Subscribe <ArrowRightIcon size={14} />
-            </a>
-            <Link
-              href="/"
-              className="text-gray-500 text-sm hover:text-brand-navy transition-colors flex items-center gap-1.5"
-            >
-              <ArrowLeftIcon size={13} /> Back to Home
-            </Link>
-          </div>
-        </div>
-      </section>
 
       <Footer />
     </div>

@@ -1116,7 +1116,7 @@ export const insightsSection = {
   ctaLabel: "See all insights",
 };
 
-export const insights = [
+export const fallbackInsights = [
   {
     id: 1,
     category: "CEO Imperative",
