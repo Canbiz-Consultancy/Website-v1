@@ -11,7 +11,7 @@ export function Footer() {
             <img 
               src="/logo-2.svg" 
               alt="Canbiz Logo" 
-              className="h-24 md:h-40 w-auto object-contain max-w-none"
+              className="h-14 md:h-50 w-auto object-contain max-w-none"
             />
           </div>
 
