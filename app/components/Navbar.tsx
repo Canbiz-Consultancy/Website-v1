@@ -132,7 +132,7 @@ export function Navbar() {
     if (pathname === "/") {
       const element = document.getElementById(sectionId);
       if (element) {
-        const y = element.getBoundingClientRect().top + window.pageYOffset - 56;
+        const y = element.getBoundingClientRect().top + window.pageYOffset - 80;
         window.scrollTo({ top: y, behavior: "smooth" });
       }
     } else {
@@ -182,18 +182,18 @@ export function Navbar() {
           <div className="max-w-[1200px] mx-auto flex items-center justify-between">
             <Link
               href="/"
-              className="relative shrink-0 h-14 flex items-center justify-start"
+              className="relative shrink-0 h-20 flex items-center justify-start"
               onClick={() => setActiveDropdown(null)}
             >
               <img 
                 src="/logo-1.svg" 
                 alt="Canbiz Logo" 
-                className="h-25 w-auto object-contain max-w-none"
+                className="h-50 w-auto object-contain max-w-none"
               />
             </Link>
 
           {/* Desktop nav */}
-          <div className="hidden lg:flex items-center gap-0 h-14">
+          <div className="hidden lg:flex items-center gap-0 h-20">
             {navItems.map((item) => {
               const isActive = activeDropdown === item.label;
               return (
