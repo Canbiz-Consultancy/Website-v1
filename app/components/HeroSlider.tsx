@@ -52,7 +52,7 @@ export function HeroSlider() {
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-16 pb-6">
         <div className="max-w-[700px]">
           <p className="text-brand-gold text-xs tracking-widest mb-4 font-medium uppercase">{slide.category}</p>
-          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-light leading-tight mb-3 md:mb-4 max-w-[600px]">{slide.title}</h1>
+          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-3 md:mb-4 max-w-[600px]">{slide.title}</h1>
           <div className="flex items-start gap-3 mb-6 md:mb-8">
             <div className="w-0.5 h-4 md:h-5 bg-white mt-1 shrink-0" />
             <p className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed line-clamp-3 md:line-clamp-none">{slide.description}</p>

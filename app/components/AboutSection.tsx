@@ -12,7 +12,7 @@ export function AboutSection() {
         <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{aboutSection.eyebrow}</p>
-            <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight">
+            <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight">
               {aboutSection.headingPlain} <span className="text-brand-gold">{aboutSection.headingGold}</span>
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5" />

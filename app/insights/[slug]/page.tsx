@@ -29,9 +29,9 @@ function renderBlock(block: StrapiBlock, index: number): ReactNode {
     case "heading":
       const headingLevel = block.level || 2;
       const headingClass = headingLevel === 1 
-        ? "text-3xl md:text-4xl font-light text-brand-navy mb-8 mt-12" 
+        ? "text-3xl md:text-4xl font-semibold text-brand-navy mb-8 mt-12" 
         : headingLevel === 2 
-        ? "text-2xl md:text-3xl font-light text-brand-navy mb-6 mt-10" 
+        ? "text-2xl md:text-3xl font-semibold text-brand-navy mb-6 mt-10" 
         : "text-xl font-medium text-brand-navy mb-4 mt-8";
       return (
         <div key={index} className={headingClass} role="heading" aria-level={headingLevel}>
@@ -53,7 +53,7 @@ function renderBlock(block: StrapiBlock, index: number): ReactNode {
       );
     case "quote":
       return (
-        <blockquote key={index} className="border-l-4 border-brand-gold pl-8 py-2 italic text-brand-navy text-xl md:text-2xl font-light my-10 bg-brand-surface/50 pr-6">
+        <blockquote key={index} className="border-l-4 border-brand-gold pl-8 py-2 italic text-brand-navy text-xl md:text-2xl font-semibold my-10 bg-brand-surface/50 pr-6">
           {children}
         </blockquote>
       );
@@ -131,7 +131,7 @@ export default async function InsightDetailPage({ params }: Props) {
             </span>
           </div>
 
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[900px] mb-8">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[900px] mb-8">
             {insight.title}
           </h1>
 
@@ -178,7 +178,7 @@ export default async function InsightDetailPage({ params }: Props) {
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Insight into Action
           </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-8">
+          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-8">
             Ready to apply these <span className="text-brand-gold">perspectives</span> to your business?
           </h2>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

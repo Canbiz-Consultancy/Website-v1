@@ -57,7 +57,7 @@ export default function CareersPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {careersSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[800px] mb-6">
             {careersSection.headingPlain}{" "}
             <span className="text-brand-gold">{careersSection.headingGold}</span>
           </h1>
@@ -97,7 +97,7 @@ export default function CareersPage() {
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
               Current Openings
             </p>
-            <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-2">
+            <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-2">
               Open <span className="text-brand-gold">Positions</span>
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5 mb-6" />
@@ -244,7 +244,7 @@ export default function CareersPage() {
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
               Life at Canbiz
             </p>
-            <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
+            <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-5">
               Where great work meets{" "}
               <span className="text-brand-gold">great culture</span>
             </h2>
@@ -284,7 +284,7 @@ export default function CareersPage() {
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Don't See Your Role?
           </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
+          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-5">
             Join our{" "}
             <span className="text-brand-gold">Talent Network</span>
           </h2>

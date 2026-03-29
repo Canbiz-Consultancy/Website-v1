@@ -287,7 +287,7 @@ export function Navbar() {
                         {activeItem.label}
                       </p>
                       <div className="mb-8">
-                        <h3 className="text-xl text-white font-light leading-snug mb-3">
+                        <h3 className="text-xl text-white font-semibold leading-snug mb-3">
                           {activeItem.label === "Insights"
                             ? "Strategic perspectives shaping the future of regional business."
                             : activeItem.label === "Services"
@@ -316,7 +316,7 @@ export function Navbar() {
                           <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6">
                             <MagnifyingGlassIcon className="text-brand-gold" size={24} weight="light" />
                           </div>
-                          <h4 className="text-white text-lg font-light mb-3">Knowledge platform coming soon</h4>
+                          <h4 className="text-white text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
                           <p className="text-gray-400 text-sm leading-relaxed mb-8">
                             We're curating our latest research, white papers, and thought leadership
                             perspectives from our team of experts across the GCC.

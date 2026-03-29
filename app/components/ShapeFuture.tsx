@@ -6,7 +6,7 @@ export function ShapeFuture() {
       <div className="bg-brand-surface flex items-center px-6 md:px-16 py-24">
         <div className="max-w-[420px]">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">{shapeFutureSection.eyebrow}</p>
-          <h2 className="text-brand-navy text-2xl md:text-3xl font-light leading-tight mb-6">
+          <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">
             {shapeFutureSection.heading}
           </h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-6">

@@ -12,7 +12,7 @@ export function AdvisoryPhilosophy() {
               {advisorySection.eyebrow}
             </span>
           </div>
-          <h2 className="text-white text-2xl md:text-3xl font-light leading-tight mb-5">
+          <h2 className="text-white text-2xl md:text-3xl font-semibold leading-tight mb-5">
             {advisorySection.heading}
           </h2>
           <p className="text-gray-300 text-sm leading-relaxed mb-8">
@@ -49,7 +49,7 @@ export function AdvisoryPhilosophy() {
             <p className="text-brand-gold text-xs font-medium tracking-[2px] uppercase mb-1">
               {advisorySection.imageEyebrow}
             </p>
-            <p className="text-white text-lg font-light leading-snug max-w-[280px]">
+            <p className="text-white text-lg font-semibold leading-snug max-w-[280px]">
               {advisorySection.imageCaption}
             </p>
           </div>

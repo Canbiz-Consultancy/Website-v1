@@ -46,7 +46,7 @@ export default function IndustriesPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {industriesSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[800px] mb-6">
             {industriesSection.headingPlain}{" "}
             <span className="text-brand-gold">{industriesSection.headingGold}</span>
           </h1>
@@ -138,7 +138,7 @@ export default function IndustriesPage() {
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
                 Why Canbiz
               </p>
-              <h2 className="text-white text-3xl md:text-4xl font-light leading-tight mb-6">
+              <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight mb-6">
                 A single trusted partner for{" "}
                 <span className="text-brand-gold">every dimension</span> of
                 your growth.
@@ -164,7 +164,7 @@ export default function IndustriesPage() {
                   key={i}
                   className="bg-brand-navy-mid p-8 flex flex-col items-center justify-center text-center"
                 >
-                  <span className="text-brand-gold text-3xl font-light mb-2">
+                  <span className="text-brand-gold text-3xl font-semibold mb-2">
                     {s.value}
                   </span>
                   <span className="text-gray-400 text-xs">{s.label}</span>
@@ -181,7 +181,7 @@ export default function IndustriesPage() {
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Get Started
           </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
+          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-5">
             Not sure where to begin?
           </h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-10">

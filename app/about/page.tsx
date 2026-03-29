@@ -48,7 +48,7 @@ export default function AboutPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {aboutSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[800px] mb-6">
             {aboutSection.headingPlain}{" "}
             <span className="text-brand-gold">{aboutSection.headingGold}</span>
           </h1>
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-2 md:grid-cols-4 border-t border-brand-navy-border divide-x divide-brand-navy-border">
             {aboutStats.map((s, i) => (
               <div key={i} className="py-8 px-6 md:px-10">
-                <p className="text-brand-gold text-3xl font-light mb-1">
+                <p className="text-brand-gold text-3xl font-semibold mb-1">
                   {s.value}
                 </p>
                 <p className="text-gray-500 text-xs tracking-wide">{s.label}</p>
@@ -87,7 +87,7 @@ export default function AboutPage() {
           </div>
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">Our History</p>
-            <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-6">
+            <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6">
               {aboutSection.storyHeadingPlain}{" "}
               <span className="text-brand-gold">{aboutSection.storyHeadingGold}</span>
             </h2>
@@ -121,7 +121,7 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-14 text-center max-w-[600px] mx-auto">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">Purpose & Principles</p>
-            <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight">
+            <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight">
               What <span className="text-brand-gold">drives us</span>
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mx-auto mt-5" />
@@ -156,7 +156,7 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-14">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">The Minds Behind Canbiz</p>
-            <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight">
+            <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight">
               Our <span className="text-brand-gold">Leadership</span> Team
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5 mb-6" />
@@ -195,7 +195,7 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-16">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">Growth & Milestones</p>
-            <h2 className="text-white text-3xl md:text-4xl font-light leading-tight">
+            <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight">
               Our <span className="text-brand-gold">Journey</span>
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5" />
@@ -204,7 +204,7 @@ export default function AboutPage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-px bg-brand-navy-border relative">
             {aboutJourney.map((item, i) => (
               <div key={i} className="bg-brand-navy-mid p-8 lg:p-10 group hover:bg-brand-navy-light transition-colors duration-500">
-                <span className="text-brand-gold/20 text-5xl font-light block mb-4 group-hover:text-brand-gold/40 transition-colors duration-300">
+                <span className="text-brand-gold/20 text-5xl font-semibold block mb-4 group-hover:text-brand-gold/40 transition-colors duration-300">
                   {item.year}
                 </span>
                 <h3 className="text-white text-base font-semibold mb-3">
@@ -225,7 +225,7 @@ export default function AboutPage() {
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Get in touch
           </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
+          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-5">
             Ready to shape the future of your enterprise?
           </h2>
           <p className="text-gray-500 text-sm leading-relaxed max-w-[520px] mx-auto mb-10">

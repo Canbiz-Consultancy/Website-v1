@@ -67,7 +67,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-4">
             {detail.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[820px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[820px] mb-6">
             {detail.headline}
           </h1>
           <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-[640px] mb-10">
@@ -93,7 +93,7 @@ export default async function IndustryDetailPage({ params }: Props) {
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16">
           <div className="lg:w-1/3">
              <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">Sector Overview</p>
-             <h2 className="text-brand-navy text-2xl md:text-3xl font-light leading-tight mb-6">
+             <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">
                Leading transformation in <span className="text-brand-gold">{industry.shortTitle}</span>.
              </h2>
              <p className="text-gray-600 text-sm leading-relaxed mb-8">{detail.overview}</p>
@@ -108,7 +108,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           <div className="lg:w-2/3 grid grid-cols-2 gap-px bg-gray-100 border border-gray-100">
             {detail.highlights.map((h, i) => (
               <div key={i} className="bg-white p-8 md:p-12 flex flex-col justify-center items-center text-center">
-                <p className="text-brand-gold text-4xl md:text-5xl font-light mb-3">{h.value}</p>
+                <p className="text-brand-gold text-4xl md:text-5xl font-semibold mb-3">{h.value}</p>
                 <p className="text-gray-500 text-xs tracking-widest uppercase">{h.label}</p>
               </div>
             ))}
@@ -126,7 +126,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
                 Key Focus Areas
               </p>
-              <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-10">
+              <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-10">
                 Sector <span className="text-brand-gold">Capabilities</span>
               </h2>
               <div className="space-y-6">
@@ -144,7 +144,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
                 Strategic Approach
               </p>
-              <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-10">
+              <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-10">
                 How We <span className="text-brand-gold">Deliver Value</span>
               </h2>
               <div className="space-y-8 relative before:absolute before:left-[17px] before:top-2 before:bottom-2 before:w-px before:bg-brand-gold/20">
@@ -174,7 +174,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
                 Solutions
               </p>
-              <h2 className="text-white text-3xl md:text-4xl font-light leading-tight">
+              <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight">
                 Recommended <span className="text-brand-gold">Services</span>
               </h2>
             </div>
@@ -211,7 +211,7 @@ export default async function IndustryDetailPage({ params }: Props) {
          <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Partner With Us
          </p>
-         <h2 className="text-brand-navy text-3xl md:text-4xl font-light mb-8 max-w-[600px] mx-auto leading-tight">
+         <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold mb-8 max-w-[600px] mx-auto leading-tight">
             Ready to transform your organisation?
          </h2>
          <Link

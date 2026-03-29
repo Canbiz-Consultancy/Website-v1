@@ -12,7 +12,7 @@ export function TrainingSection() {
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
             {employeeTrainingSection.eyebrow}
           </p>
-          <h2 className="text-brand-navy text-2xl md:text-3xl font-light leading-tight mb-6">
+          <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">
             {employeeTrainingSection.heading}
           </h2>
           <p className="text-gray-600 text-sm leading-relaxed mb-10">

@@ -20,7 +20,7 @@ export async function FeaturedInsights() {
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{insightsSection.eyebrow}</p>
-            <h2 className="text-3xl md:text-4xl font-light">
+            <h2 className="text-3xl md:text-4xl font-semibold">
               <span className="text-brand-navy">{insightsSection.headingPlain}</span>
               <span className="text-brand-gold">{insightsSection.headingGold}</span>
             </h2>

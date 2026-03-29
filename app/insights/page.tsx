@@ -56,7 +56,7 @@ export default async function InsightsPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {insightsSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[800px] mb-6">
             {insightsSection.headingPlain}{" "}
             <span className="text-brand-gold">{insightsSection.headingGold}</span>
           </h1>

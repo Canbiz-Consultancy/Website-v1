@@ -11,7 +11,7 @@ export function CareersSection() {
 
         <div className="mb-16">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{careersSection.eyebrow}</p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-4">
+          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-4">
             {careersSection.headingPlain}{" "}
             <span className="text-brand-gold">{careersSection.headingGold}</span>
           </h2>
@@ -41,7 +41,7 @@ export function CareersSection() {
             <div className="absolute inset-0 bg-brand-navy/30" />
           </div>
           <div className="bg-brand-navy p-6 sm:p-10 flex flex-col justify-center">
-            <h3 className="text-white text-xl font-light mb-4">
+            <h3 className="text-white text-xl font-semibold mb-4">
               {careersSection.whyHeadingPlain} <span className="text-brand-gold">{careersSection.whyHeadingGold}</span>
             </h3>
             <ul className="space-y-4">
@@ -58,7 +58,7 @@ export function CareersSection() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-gray-200 bg-white mb-12">
           {careersStats.map((s, i) => (
             <div key={i} className="p-5 md:p-8 border-r border-gray-100 last:border-r-0 text-center">
-              <p className="text-brand-gold text-3xl font-light mb-2">{s.value}</p>
+              <p className="text-brand-gold text-3xl font-semibold mb-2">{s.value}</p>
               <p className="text-gray-500 text-xs">{s.label}</p>
             </div>
           ))}

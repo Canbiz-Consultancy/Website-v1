@@ -14,7 +14,7 @@ export function ServicesSection() {
         <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{servicesSection.eyebrow}</p>
-            <h2 className="text-white text-3xl md:text-4xl font-light leading-tight">
+            <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight">
               {servicesSection.headingPlain}{" "}
               <span className="text-brand-gold">{servicesSection.headingGold}</span>
             </h2>

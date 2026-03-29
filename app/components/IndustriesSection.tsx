@@ -16,7 +16,7 @@ export function IndustriesSection() {
         <div className="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{industriesSection.eyebrow}</p>
-            <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight">
+            <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight">
               {industriesSection.headingPlain}{" "}
               <span className="text-brand-gold">{industriesSection.headingGold}</span>
             </h2>
@@ -77,7 +77,7 @@ export function IndustriesSection() {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
               <div className="absolute bottom-5 left-6">
-                <span className="text-brand-gold text-2xl font-light">{active.stat}</span>
+                <span className="text-brand-gold text-2xl font-semibold">{active.stat}</span>
                 <p className="text-white text-xs mt-0.5">{active.statLabel}</p>
               </div>
             </div>
@@ -115,7 +115,7 @@ export function IndustriesSection() {
               key={i}
               className="py-6 px-4 md:py-8 md:px-8 text-center border-r border-gray-100 last:border-r-0"
             >
-              <p className="text-brand-navy text-2xl md:text-3xl font-light mb-1">{stat.value}</p>
+              <p className="text-brand-navy text-2xl md:text-3xl font-semibold mb-1">{stat.value}</p>
               <p className="text-gray-500 text-xs">{stat.label}</p>
             </div>
           ))}
