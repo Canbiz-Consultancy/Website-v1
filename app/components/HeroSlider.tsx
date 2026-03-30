@@ -33,22 +33,6 @@ export function HeroSlider() {
         </div>
       ))}
 
-      <div className="absolute top-1/4 right-[15%] hidden md:block">
-        <svg width="200" height="160" viewBox="0 0 200 160" fill="none">
-          <rect x="2" y="2" width="196" height="156" stroke="url(#grad)" strokeWidth="3" fill="none" />
-          <defs>
-            <linearGradient id="grad" x1="0" y1="0" x2="200" y2="160">
-              <stop offset="0%" stopColor="var(--color-brand-gold)" />
-              <stop offset="100%" stopColor="#FF00AA" />
-            </linearGradient>
-          </defs>
-        </svg>
-        <div className="absolute bottom-[-8px] left-[-8px] flex gap-1.5">
-          <div className="w-2 h-2 rounded-full bg-brand-gold" />
-          <div className="w-2 h-2 rounded-full bg-brand-gold opacity-60" />
-        </div>
-      </div>
-
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-16 pb-6">
         <div className="max-w-[700px]">
           <p className="text-brand-gold text-xs tracking-widest mb-4 font-medium uppercase">{slide.category}</p>

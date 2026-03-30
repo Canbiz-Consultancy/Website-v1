@@ -23,15 +23,6 @@ export function ShapeFuture() {
         />
         <div className="absolute inset-0 bg-brand-navy/30" />
         <div className="absolute inset-0 flex items-center justify-center">
-          <svg width="120" height="110" viewBox="0 0 120 110" fill="none">
-            <rect x="2" y="2" width="116" height="106" stroke="url(#grad2)" strokeWidth="2.5" fill="none" />
-            <defs>
-              <linearGradient id="grad2" x1="0" y1="0" x2="120" y2="110">
-                <stop offset="0%" stopColor="var(--color-brand-gold)" />
-                <stop offset="100%" stopColor="#ffffff" stopOpacity="0.3" />
-              </linearGradient>
-            </defs>
-          </svg>
         </div>
         <div className="absolute bottom-8 left-8">
           <span className="text-[10px] bg-brand-gold text-brand-navy px-3 py-1 font-semibold tracking-widest uppercase">
