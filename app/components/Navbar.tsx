@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
-import { MagnifyingGlassIcon, ListIcon, XIcon, CaretUp } from "@phosphor-icons/react";
+import { MagnifyingGlassIcon, ListIcon, XIcon, CaretUp, CaretDown } from "@phosphor-icons/react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { navItems, services, industries } from "../constants/content";
@@ -118,6 +118,7 @@ const chevronVariants = {
 export function Navbar() {
   const [mobileOpen, setMobileOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const router = useRouter();
   const pathname = usePathname();
 
@@ -159,6 +160,14 @@ export function Navbar() {
   };
 
   const activeItem = navItems.find((item) => item.label === activeDropdown);
+
+  const toggleMobileItem = (itemLabel: string) => {
+    setExpandedMobileItems(prev => 
+      prev.includes(itemLabel) 
+        ? []
+        : [itemLabel]
+    );
+  };
 
   return (
     <>
@@ -424,16 +433,102 @@ export function Navbar() {
               transition={{ duration: 0.25, ease: EASE_OUT }}
               className="lg:hidden bg-brand-navy-mid border-t border-brand-navy-border overflow-hidden"
             >
-              {navItems.map((item) => (
-                <div key={item.label}>
-                  <button
-                    className="w-full text-left px-6 py-4 text-xs text-gray-200 hover:text-brand-gold hover:bg-brand-navy-light transition-colors uppercase tracking-widest border-b border-brand-navy-border"
-                    onClick={() => handleNavClick(item.section)}
-                  >
-                    {item.label}
-                  </button>
-                </div>
-              ))}
+              {navItems.map((item) => {
+                const isExpanded = expandedMobileItems.includes(item.label);
+                const hasChildren = item.children && item.children.length > 0;
+                
+                return (
+                  <div key={item.label}>
+                    <button
+                      className="w-full text-left px-6 py-4 text-xs text-gray-200 hover:text-brand-gold hover:bg-brand-navy-light transition-colors tracking-widest border-b border-brand-navy-border flex items-center justify-between"
+                      onClick={() => {
+                        if (hasChildren) {
+                          toggleMobileItem(item.label);
+                        } else {
+                          handleNavClick(item.section);
+                        }
+                      }}
+                    >
+                      <span>{item.label}</span>
+                      {hasChildren && (
+                        <motion.div
+                          animate={{ rotate: isExpanded ? 180 : 0 }}
+                          transition={{ duration: 0.2 }}
+                        >
+                          <CaretDown size={14} />
+                        </motion.div>
+                      )}
+                    </button>
+                    
+                    {/* Expandable sub-routes */}
+                    <AnimatePresence>
+                      {isExpanded && hasChildren && (
+                        <motion.div
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.3, ease: EASE_OUT }}
+                          className="overflow-hidden bg-brand-navy-light"
+                        >
+                          {item.children.map((child) => {
+                            const aboutAnchors: Record<string, string> = {
+                              "Our Story":        "/about#our-story",
+                              "Mission & Vision": "/about#mission-values",
+                              "Leadership Team":  "/about#leadership",
+                              "Our Journey":      "/about#journey",
+                            };
+                            const careersAnchors: Record<string, string> = {
+                              "Open Positions": "/careers#open-positions",
+                              "Life at Canbiz": "/careers#life",
+                            };
+                            
+                            const href =
+                              item.section === "services"
+                                ? getServiceHref(child.label)
+                                : item.section === "industries"
+                                ? getIndustryHref(child.label)
+                                : item.section === "careers"
+                                ? (careersAnchors[child.label] ?? "/careers")
+                                : item.section === "about"
+                                ? (aboutAnchors[child.label] ?? "/about")
+                                : `/#${item.section}`;
+
+                            return (
+                              <Link
+                                key={child.label}
+                                href={href}
+                                onClick={() => {
+                                  setMobileOpen(false);
+                                  setExpandedMobileItems([]);
+                                }}
+                                className="block px-12 py-3 text-xs text-gray-300 hover:text-brand-gold hover:bg-brand-navy-mid transition-colors border-b border-brand-navy-border/20"
+                              >
+                                <div className="flex items-start justify-between">
+                                  <div className="flex-1">
+                                    <span className="block font-medium">
+                                      {child.label}
+                                      {child.upcoming && (
+                                        <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-[2px] bg-brand-gold/10 text-brand-gold border border-brand-gold/20 text-[7px] font-bold uppercase tracking-widest leading-none align-middle">
+                                          Upcoming
+                                        </span>
+                                      )}
+                                    </span>
+                                    {child.sub && (
+                                      <span className="text-[10px] text-gray-500 mt-1 block">
+                                        {child.sub}
+                                      </span>
+                                    )}
+                                  </div>
+                                </div>
+                              </Link>
+                            );
+                          })}
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                  </div>
+                );
+              })}
               <div className="px-6 py-4 flex gap-4 border-t border-brand-navy-border">
                 <button className="flex items-center gap-1.5 text-xs text-gray-300">
                   <MagnifyingGlassIcon size={13} /> Search
