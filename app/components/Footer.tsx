@@ -7,11 +7,11 @@ export function Footer() {
     <footer className="bg-white py-6 px-6 md:px-16 border-t border-gray-200">
       <div className="max-w-[1200px] mx-auto">
         <div className="flex flex-col items-center md:flex-row md:items-center justify-between gap-8 mb-8">
-          <div className="relative w-48 flex items-center justify-center md:justify-start">
-            <img 
-              src="/logo-2.svg" 
-              alt="Canbiz Logo" 
-              className="h-14 md:h-50 w-auto object-contain max-w-none"
+          <div className="flex items-center">
+            <img
+              src="/logo-1.png"
+              alt="Canbiz Logo"
+              className="h-18 w-auto"
             />
           </div>
 

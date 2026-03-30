@@ -176,7 +176,7 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy text-white">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-brand-navy border-b-2 border-brand-gold/40">
         {/* Top bar */}
         <div className="px-6 md:px-16">
           <div className="max-w-[1200px] mx-auto flex items-center justify-between">
@@ -185,10 +185,10 @@ export function Navbar() {
               className="relative shrink-0 h-20 flex items-center justify-start"
               onClick={() => setActiveDropdown(null)}
             >
-              <img 
-                src="/logo-1.svg" 
-                alt="Canbiz Logo" 
-                className="h-50 w-auto object-contain max-w-none"
+              <img
+                src="/logo-1.png"
+                alt="Canbiz Logo"
+                className="h-18 w-auto"
               />
             </Link>
 
@@ -209,8 +209,8 @@ export function Navbar() {
                   }}
                   className={`relative px-4 h-full text-xs tracking-wide transition-colors flex items-center gap-1
                     ${isActive
-                      ? "text-white bg-brand-navy-light"
-                      : "text-white hover:text-white hover:bg-brand-navy-light"
+                      ? "text-brand-navy bg-brand-surface"
+                      : "text-brand-navy hover:text-brand-navy hover:bg-brand-surface"
                     }`}
                 >
                   {item.label}
@@ -234,7 +234,7 @@ export function Navbar() {
               Contact Us
             </button>
             <button
-              className="lg:hidden text-gray-200 hover:text-white"
+              className="lg:hidden text-gray-600 hover:text-brand-navy"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <XIcon size={22} /> : <ListIcon size={22} />}

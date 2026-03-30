@@ -69,7 +69,7 @@ export function ServicesSection() {
                           : "bg-brand-gold/10 text-brand-gold border border-brand-gold/20"
                       }`}
                     >
-                      Upcoming
+                    Upcoming
                     </span>
                   )}
                 </h3>
