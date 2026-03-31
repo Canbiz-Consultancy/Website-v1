@@ -9,9 +9,9 @@ export function Footer() {
         <div className="flex flex-col items-center md:flex-row md:items-center justify-between gap-8 mb-8">
           <div className="flex items-center">
             <img
-              src="/logo-1.png"
+              src="/logo.svg"
               alt="Canbiz Logo"
-              className="h-18 w-auto"
+              className="h-20 w-auto"
             />
           </div>
 
