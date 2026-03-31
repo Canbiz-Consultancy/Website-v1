@@ -63,13 +63,13 @@ export default async function ServiceDetailPage({ params }: Props) {
           <div className="flex items-center gap-2 mb-12">
             <Link
               href="/services"
-              className="text-gray-400 hover:text-white text-[11px] font-medium tracking-widest uppercase transition-colors flex items-center gap-1.5"
+              className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
             >
-              <ArrowLeftIcon size={12} />
+              <ArrowLeftIcon size={11} />
               Capabilities
             </Link>
-            <span className="text-brand-gold/50 text-[11px]">-</span>
-            <span className="text-white text-[11px] font-bold tracking-widest uppercase">
+            <span className="text-white/30 text-xs">/</span>
+            <span className="text-white/60 text-[11px] tracking-widest uppercase">
               {service.shortTitle}
             </span>
           </div>

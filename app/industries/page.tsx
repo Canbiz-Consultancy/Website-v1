@@ -18,40 +18,49 @@ export default function IndustriesPage() {
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
-        {/* Decorative grid overlay */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-24 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#07101d] to-transparent" />
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8">
+          <div className="flex items-center gap-2 mb-10">
             <Link
               href="/"
-              className="text-brand-gold/60 hover:text-brand-gold text-xs tracking-widest uppercase transition-colors flex items-center gap-1.5"
+              className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
             >
               <ArrowLeftIcon size={11} />
               Home
             </Link>
-            <span className="text-brand-gold/30 text-xs">/</span>
-            <span className="text-brand-gold/50 text-xs tracking-widest uppercase">Industries</span>
+            <span className="text-white/30 text-xs">/</span>
+            <span className="text-white/60 text-[11px] tracking-widest uppercase">Industries</span>
           </div>
 
-          <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
-            {industriesSection.eyebrow}
-          </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-3xl mb-6">
-            {industriesSection.headingPlain}{" "}
-            <span className="text-brand-gold">{industriesSection.headingGold}</span>
-          </h1>
-          <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mb-16">
-            {industriesSection.subtext}
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 items-end">
+            <div>
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase mb-6">
+                {industriesSection.eyebrow}
+              </p>
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] tracking-[-0.02em] max-w-3xl mb-6">
+                {industriesSection.headingPlain}{" "}
+                <span className="text-brand-gold">{industriesSection.headingGold}</span>
+              </h1>
+              <p className="text-gray-300 text-sm md:text-base leading-7 max-w-2xl">
+                {industriesSection.subtext}
+              </p>
+            </div>
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-1">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Sectors</p>
+              <p className="text-white text-lg leading-7 font-light">
+                Targeted expertise across priority industries where execution discipline matters most.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── Industries Grid ──────────────────────────────────────────────────── */}
-      <section className="bg-brand-surface py-24 px-6 md:px-16">
+      <section className="bg-[#F3F4F6] py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200">
             {industries.map((industry) => {
@@ -99,21 +108,8 @@ export default function IndustriesPage() {
                       {industry.description}
                     </p>
 
-                    {detail && (
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {detail.tags.slice(0, 3).map((tag: string) => (
-                          <span
-                            key={tag}
-                            className="text-[10px] border border-brand-gold/30 text-brand-navy/60 group-hover:text-brand-gold/60 group-hover:border-brand-gold/40 px-2.5 py-1 transition-colors"
-                          >
-                            {tag}
-                          </span>
-                        ))}
-                      </div>
-                    )}
-
-                    <div className="flex items-center gap-1.5 text-xs font-medium text-brand-gold group-hover:gap-3 transition-all duration-300">
-                      Explore industry <ArrowRightIcon size={13} />
+                    <div className="inline-flex items-center gap-2 text-xs font-medium text-brand-gold group-hover:gap-3 transition-all duration-300">
+                      Explore industry <ArrowRightIcon size={12} className="translate-y-[1px]" />
                     </div>
                   </div>
                 </Link>
@@ -124,77 +120,71 @@ export default function IndustriesPage() {
       </section>
 
       {/* ── Why Canbiz Strip ─────────────────────────────────────────────────── */}
-      <section className="bg-brand-navy py-24 px-6 md:px-16">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div>
-              <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
-                Why Canbiz
-              </p>
-              <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight mb-6">
-                A single trusted partner for{" "}
-                <span className="text-brand-gold">every dimension</span> of
-                your growth.
-              </h2>
-              <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-              <p className="text-gray-400 text-sm leading-relaxed mb-10">
-                From strategy to execution, brand to technology, leadership to
-                government — Canbiz provides integrated advisory that eliminates
-                silos and ensures every service we deliver is connected to your
-                overarching business ambition.
-              </p>
-              <Link
-                href="/#about"
-                className="inline-flex items-center gap-2 border border-white text-white px-8 py-3 text-sm font-medium hover:bg-white hover:text-brand-navy transition-all duration-300"
-              >
-                About Canbiz <ArrowRightIcon size={14} />
-              </Link>
-            </div>
+      <section className="bg-brand-navy px-6 md:px-16 py-24 md:py-28">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-14 items-start">
+          <div>
+            <p className="text-brand-gold text-[10px] tracking-[0.28em] uppercase mb-6">
+              Why Canbiz
+            </p>
+            <h2 className="text-white text-3xl md:text-4xl font-light leading-tight mb-6">
+              A single trusted partner for{" "}
+              <span className="text-brand-gold">every dimension</span> of
+              your growth.
+            </h2>
+            <p className="text-gray-400 text-sm leading-7 max-w-xl mb-10">
+              From strategy to execution, brand to technology, leadership to
+              government — Canbiz provides integrated advisory that eliminates
+              silos and ensures every service we deliver is connected to your
+              overarching business ambition.
+            </p>
+            <Link
+              href="/#about"
+              className="inline-flex items-center gap-2 border border-white/70 text-white px-8 py-3 text-sm font-medium hover:bg-white hover:text-brand-navy transition-all duration-300"
+            >
+              About Canbiz <ArrowRightIcon size={14} />
+            </Link>
+          </div>
 
-            <div className="grid grid-cols-2 gap-px bg-brand-navy-border">
-              {industriesBottomStats.map((s, i) => (
-                <div
-                  key={i}
-                  className="bg-brand-navy-mid p-8 flex flex-col items-center justify-center text-center"
-                >
-                  <span className="text-brand-gold text-3xl font-semibold mb-2">
-                    {s.value}
-                  </span>
-                  <span className="text-gray-400 text-xs">{s.label}</span>
-                </div>
-              ))}
-            </div>
+          <div className="border-l border-white/15 pl-8 space-y-6">
+            {industriesBottomStats.map((s, i) => (
+              <div key={i} className="border-b border-white/10 pb-6">
+                <div className="text-brand-gold text-3xl font-light mb-2">{s.value}</div>
+                <div className="text-white/70 text-xs uppercase tracking-[0.22em]">{s.label}</div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────────── */}
-      <section className="bg-brand-surface py-20 px-6 md:px-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
-            Get Started
-          </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-5">
-            Not sure where to begin?
-          </h2>
-          <p className="text-gray-500 text-sm leading-relaxed mb-10">
-            Our team will help you identify the right services for your goals.
-            Book a complimentary discovery call and let's explore how Canbiz
-            can make a measurable difference for your organisation.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#contact"
-              className="bg-brand-navy text-white px-10 py-3.5 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 flex items-center gap-2"
-            >
-              Request a Consultation <ArrowRightIcon size={14} />
-            </a>
-            <Link
-              href="/"
-              className="text-gray-500 text-sm hover:text-brand-navy transition-colors flex items-center gap-1.5"
-            >
-              <ArrowLeftIcon size={13} /> Back to Home
-            </Link>
+      <section className="bg-[#F3F4F6] px-6 md:px-16 py-20 md:py-24">
+        <div className="max-w-6xl mx-auto border-t border-black/10 pt-14 md:pt-16">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-12 items-start">
+            <div>
+              <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-6">Get Started</p>
+              <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
+                Not sure where to begin?
+              </h2>
+              <p className="text-gray-500 text-sm leading-7 max-w-2xl">
+                Our team will help you identify the right services for your goals.
+                Book a complimentary discovery call and let's explore how Canbiz
+                can make a measurable difference for your organisation.
+              </p>
+            </div>
+            <div className="flex flex-col gap-4">
+              <a
+                href="#contact"
+                className="bg-brand-navy text-white px-8 py-3 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 flex items-center justify-center gap-2"
+              >
+                Request a Consultation <ArrowRightIcon size={14} />
+              </a>
+              <Link
+                href="/"
+                className="text-gray-500 text-sm hover:text-brand-navy transition-colors flex items-center gap-1.5"
+              >
+                <ArrowLeftIcon size={13} /> Back to Home
+              </Link>
+            </div>
           </div>
         </div>
       </section>
@@ -203,3 +193,4 @@ export default function IndustriesPage() {
     </div>
   );
 }
+

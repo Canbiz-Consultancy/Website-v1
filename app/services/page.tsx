@@ -20,43 +20,52 @@ export default function ServicesPage() {
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
-        {/* Decorative grid overlay */}
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-24 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
+        <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#07101d] to-transparent" />
 
         <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8">
+          <div className="flex items-center gap-2 mb-10">
             <Link
               href="/"
-              className="text-brand-gold/60 hover:text-brand-gold text-xs tracking-widest uppercase transition-colors flex items-center gap-1.5"
+              className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
             >
               <ArrowLeftIcon size={11} />
               Home
             </Link>
-            <span className="text-brand-gold/30 text-xs">/</span>
-            <span className="text-brand-gold/50 text-xs tracking-widest uppercase">Services</span>
+            <span className="text-white/30 text-xs">/</span>
+            <span className="text-white/60 text-[11px] tracking-widest uppercase">Services</span>
           </div>
 
-          <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
-            {servicesSection.eyebrow}
-          </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-3xl mb-6">
-            {servicesSection.headingPlain}{" "}
-            <span className="text-brand-gold">{servicesSection.headingGold}</span>
-          </h1>
-          <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mb-16">
-            {servicesSection.subtext}
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 items-end">
+            <div>
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase mb-6">
+                {servicesSection.eyebrow}
+              </p>
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] tracking-[-0.02em] max-w-3xl mb-6">
+                {servicesSection.headingPlain}{" "}
+                <span className="text-brand-gold">{servicesSection.headingGold}</span>
+              </h1>
+              <p className="text-gray-300 text-sm md:text-base leading-7 max-w-2xl">
+                {servicesSection.subtext}
+              </p>
+            </div>
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-1">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Portfolio</p>
+              <p className="text-white text-lg leading-7 font-light">
+                A curated set of capabilities designed to move leadership from strategy to execution.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── Services Grid ────────────────────────────────────────────────────── */}
-      <section className="bg-brand-surface py-24 px-6 md:px-16">
+      <section className="bg-[#F3F4F6] py-24 md:py-32 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
-            {services.map((service) => {
+          <div className="border-t border-black/10">
+            {services.map((service, index) => {
               const Icon = service.icon;
               const detail = serviceDetails[service.slug];
 
@@ -64,64 +73,59 @@ export default function ServicesPage() {
                 <Link
                   key={service.id}
                   href={`/services/${service.slug}`}
-                  className="group bg-white flex flex-col hover:bg-brand-navy transition-colors duration-300"
+                  className="group block border-b border-black/10 py-10 md:py-12"
                 >
-                  {/* Hero image */}
-                  {detail && (
-                    <div className="relative h-56 overflow-hidden">
-                      <img
-                        src={detail.hero}
-                        alt={detail.heroAlt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      />
-                      <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-brand-navy/20 transition-colors duration-300" />
-                      <div className="absolute top-4 left-4 flex gap-2">
-                        <span className="text-[10px] bg-brand-gold text-brand-navy px-2 py-0.5 font-bold tracking-widest uppercase">
-                          {String(service.id).padStart(2, "0")}
-                        </span>
+                  <div className="grid grid-cols-1 lg:grid-cols-[160px_minmax(0,1fr)_260px] gap-8 items-start">
+                    <div className="flex flex-col gap-4">
+                      <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-gray-400">
+                        {String(index + 1).padStart(2, "0")}
+                      </p>
+                      <div className="w-10 h-10 border border-brand-navy/15 flex items-center justify-center">
+                        <Icon size={20} className="text-brand-navy/70" weight="light" />
+                      </div>
+                    </div>
+
+                    <div className="max-w-2xl">
+                      <h2 className="text-2xl font-light tracking-[-0.02em] mb-3 text-brand-navy group-hover:text-brand-gold transition-colors">
+                        {service.title}
+                      </h2>
+                      <p className="text-sm text-gray-500 leading-7">
+                        {service.description}
+                      </p>
+
+                      {detail && detail.targetAudience && (
+                        <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
+                          {detail.targetAudience.slice(0, 2).map((aud: any) => (
+                            <span
+                              key={aud.title}
+                              className="text-[10px] uppercase tracking-[0.24em] text-gray-400"
+                            >
+                              {aud.title}
+                            </span>
+                          ))}
+                        </div>
+                      )}
+
+                      <div className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-navy group-hover:text-brand-gold transition-colors">
+                        Explore service <ArrowRightIcon size={13} />
+                      </div>
+                    </div>
+
+                    {detail && (
+                      <div className="hidden lg:block relative h-40 overflow-hidden bg-black/5">
+                        <img
+                          src={detail.hero}
+                          alt={detail.heroAlt}
+                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        />
+                        <div className="absolute inset-0 bg-brand-navy/10 group-hover:bg-brand-navy/0 transition-colors duration-300" />
                         {service.isUpcoming && (
-                          <span className="text-[10px] bg-brand-navy text-brand-gold px-2 py-0.5 font-bold tracking-widest uppercase border border-brand-gold/30">
+                          <div className="absolute top-4 right-4 text-[10px] bg-brand-navy text-brand-gold px-2 py-0.5 font-bold tracking-widest uppercase border border-brand-gold/30">
                             Upcoming
-                          </span>
+                          </div>
                         )}
                       </div>
-                    </div>
-                  )}
-
-                  <div className="p-8 flex flex-col flex-1">
-                    <div className="flex items-start justify-between mb-5">
-                      <div className="w-10 h-10 border border-brand-gold/30 flex items-center justify-center group-hover:border-brand-gold/50 transition-colors">
-                        <Icon
-                          size={20}
-                          className="text-brand-gold"
-                          weight="light"
-                        />
-                      </div>
-                    </div>
-
-                    <h2 className="text-brand-navy text-lg font-semibold leading-tight mb-3 group-hover:text-white transition-colors duration-300">
-                      {service.title}
-                    </h2>
-                    <p className="text-gray-500 text-xs leading-relaxed mb-6 flex-1 group-hover:text-gray-400 transition-colors duration-300">
-                      {service.description}
-                    </p>
-
-                    {detail && detail.targetAudience && (
-                      <div className="flex flex-wrap gap-1.5 mb-8">
-                        {detail.targetAudience.slice(0, 2).map((aud: any) => (
-                          <span
-                            key={aud.title}
-                            className="text-[10px] border border-brand-gold/20 text-brand-navy/60 group-hover:text-brand-gold/60 group-hover:border-brand-gold/30 px-2 py-0.5 transition-colors whitespace-nowrap"
-                          >
-                            {aud.title}
-                          </span>
-                        ))}
-                      </div>
                     )}
-
-                    <div className="flex items-center gap-1.5 text-xs font-semibold text-brand-gold group-hover:gap-3 transition-all duration-300 uppercase tracking-widest">
-                      Explore service <ArrowRightIcon size={13} />
-                    </div>
                   </div>
                 </Link>
               );
