@@ -22,7 +22,7 @@ export function HeroSlider() {
   const slide = heroSlides[current];
 
   return (
-    <div className="relative w-full h-[30rem] sm:h-[34rem] md:h-[38rem] overflow-hidden">
+    <div className="relative w-full h-[100svh] max-h-[100svh] overflow-hidden">
       {heroSlides.map((s, i) => (
         <div
           key={s.id}

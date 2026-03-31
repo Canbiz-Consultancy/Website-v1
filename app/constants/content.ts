@@ -37,30 +37,30 @@ import {
 export const heroSlides = [
   {
     id: 1,
-    category: "STARTUP GROWTH",
-    title: "True scalable growth starts with structured business systems",
+    category: "STARTUP CONSULTING",
+    title: "Transform your startup with structured business systems",
     description:
-      "Avoid the trap of simply expanding infrastructure or headcount. Discover how strong operational frameworks and team development form the bedrock of sustainable business growth.",
-    tab: "Business Systems",
+      "Our startup consulting services provide comprehensive business systems development, from company policies and procedures to business process management. Build the foundation for sustainable growth without founder dependency.",
+    tab: "Startup Consulting",
     image:
       "https://images.unsplash.com/photo-1705234384669-c6d31c61b789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDRU8lMjBsZWFkZXJzaGlwJTIwZnV0dXJlJTIwc3RyYXRlZ3klMjB2aXNpb258ZW58MXx8fHwxNzcyMzM3MzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: 2,
-    category: "OPERATIONAL SYSTEMS",
-    title: "Systemize your business to eliminate owner dependency",
+    category: "BUSINESS PROCESS MANAGEMENT",
+    title: "Systemize operations with proven business processes and procedures",
     description:
-      "Operating for years without documented systems creates organizational fragility. We design clear operational procedures that allow your company to scale effortlessly, without relying on constant leadership intervention.",
-    tab: "Systemize & Scale",
+      "Implement comprehensive business process management systems with documented company policies and procedures. Eliminate operational bottlenecks and create scalable workflows that drive efficiency and growth.",
+    tab: "Process Management",
     image:
       "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: 3,
     category: "CORPORATE TRAINING",
-    title: "Forge a future-ready workforce through continuous learning",
+    title: "Elevate workforce performance through strategic corporate training",
     description:
-      "Your strategic systems are only as effective as the team running them. Invest in professional corporate training strategies to boost engagement, adaptability, and long-term competitive advantage.",
+      "Our corporate training programs empower teams with the skills to execute business systems effectively. From startup consulting to established enterprises, we build capabilities that sustain growth and operational excellence.",
     tab: "Corporate Training",
     image:
       "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -88,10 +88,11 @@ export const navItems = [
     label: "Services",
     section: "services",
     children: [
-      { label: "Strategic Planning", sub: "Strategy optimization & growth" },
-      { label: "Organizational Structure", sub: "Governance & hierarchy design" },
-      { label: "Policies & Procedures", sub: "Standardized operational frameworks" },
-      { label: "Process Optimization", sub: "Workflow design & efficiency" },
+      { label: "Business Systems", sub: "Startup consulting & system design" },
+      { label: "Corporate Training", sub: "Workforce development programs" },
+      { label: "Business Process Management", sub: "Process optimization & workflows" },
+      { label: "Company Policies & Procedures", sub: "Policy frameworks & SOPs" },
+      { label: "Startup Consulting Services", sub: "Growth strategy & scaling" },
       { label: "System Automation", sub: "Digital transformation & ERP" },
       { label: "Performance Management", sub: "KPIs & balanced scorecards" },
       { label: "Risk Management", sub: "Internal controls & compliance" },
@@ -143,30 +144,30 @@ export const navItems = [
 
 export const advisorySection = {
   eyebrow: "Our Advisory Philosophy",
-  heading: "Transforming startups into durable, independent powerhouses.",
-  body: "At Canbiz Consultancy, we believe the real foundation of a successful organization is structured processes—not just physical expansion. Operating without formal frameworks is like leaving a condition untreated; over time, it creates severe bottlenecks and deep reliance on owner involvement. We step in to design documented methodologies and build capability-driven teams that empower your business to function, adapt, and scale smoothly on its own.",
+  heading: "Transforming startups through business systems and corporate training.",
+  body: "At Canbiz Consultancy, we specialize in business systems for startups, corporate training for companies, business process management, company policies and procedures, and startup consulting services. We believe the real foundation of a successful organization is structured processes—not just physical expansion. Our approach combines comprehensive business process management with documented company policies and procedures, creating operational frameworks that eliminate founder dependency. Through targeted corporate training programs and systematic startup consulting, we build capability-driven teams that empower your business to function, adapt, and scale smoothly on its own.",
   image:
     "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Canbiz Advisory",
   imageEyebrow: "Canbiz Advisory",
-  imageCaption: "Supporting organizations in building practical, scalable systems.",
+  imageCaption: "Supporting organizations in building practical, scalable business systems.",
 };
 
 export const advisoryPillars = [
   {
     icon: LightbulbIcon,
-    value: "Prioritize Systems",
-    label: "Establishing clear operational processes and workflows long before expanding physical infrastructure.",
+    value: "Business Systems",
+    label: "Designing comprehensive business systems for startups that create scalable operational frameworks and eliminate founder dependency.",
   },
   {
     icon: ShieldCheckIcon,
-    value: "Systemize to Mitigate Risk",
-    label: "Avoiding bottlenecks and operational fragility caused by an over-dependence on direct owner involvement.",
+    value: "Process Management",
+    label: "Implementing business process management with documented company policies and procedures that ensure operational consistency.",
   },
   {
     icon: ChartBarIcon,
-    value: "Future-Ready Teams",
-    label: "Embedding continuous corporate training into your growth strategy to keep employees competitive and engaged.",
+    value: "Corporate Training",
+    label: "Delivering corporate training for companies that builds workforce capabilities to execute business systems effectively.",
   },
 ];
 
@@ -174,10 +175,10 @@ export const advisoryPillars = [
 
 export const servicesSection = {
   eyebrow: "Our Core Services",
-  headingPlain: "Strategic Consulting",
-  headingGold: "Services",
+  headingPlain: "Business Systems &",
+  headingGold: "Corporate Solutions",
   subtext:
-    "Our consulting services focus on strategy optimization, system automation, and structured organizational development, helping companies align their strategies with market realities, implement clear policies and processes, automate operations, and build scalable systems that support sustainable growth.",
+    "Specializing in business systems for startups, corporate training for companies, business process management, company policies and procedures, and startup consulting services. We build operational frameworks that enable sustainable growth and organizational excellence.",
   ctaPrimary: "Explore All Services",
   ctaSecondary: "Request a Consultation",
 };
@@ -185,39 +186,39 @@ export const servicesSection = {
 export const services = [
   {
     id: 1,
-    slug: "strategic-planning",
+    slug: "business-systems",
     icon: StrategyIcon,
-    title: "Strategic Planning & Strategy Optimization",
-    shortTitle: "Strategic Planning",
+    title: "Business Systems for Startups",
+    shortTitle: "Business Systems",
     description:
-      "Aligning company strategy with market opportunities and growth potential through comprehensive business strategy development, competitive positioning, and go-to-market execution.",
+      "Comprehensive startup consulting services that design scalable business systems, from operational workflows to company policies and procedures. Build the foundation for sustainable growth without founder dependency.",
   },
   {
     id: 2,
-    slug: "organizational-structure",
+    slug: "corporate-training",
     icon: FlowArrowIcon,
-    title: "Organizational Structure & Governance Consulting",
-    shortTitle: "Organizational Structure",
+    title: "Corporate Training for Companies",
+    shortTitle: "Corporate Training",
     description:
-      "Establishing clear structure and decision hierarchy with organizational design, corporate governance frameworks, delegation of authority, and role responsibility mapping.",
+      "Customized corporate training programs that develop workforce capabilities to execute business systems effectively. From leadership development to operational excellence training.",
   },
   {
     id: 3,
-    slug: "policies-procedures",
+    slug: "business-process-management",
     icon: FileTextIcon,
-    title: "Policies & Procedures Development",
-    shortTitle: "Policies & Procedures",
+    title: "Business Process Management",
+    shortTitle: "Process Management",
     description:
-      "Creating standardized policies that guide company operations including corporate policy frameworks, departmental policies, SOPs, compliance policies, and employee handbooks.",
+      "Design and optimize business processes that drive efficiency and scalability. From workflow mapping to process automation, we create streamlined operations that support growth.",
   },
   {
     id: 4,
-    slug: "business-process-optimization",
+    slug: "company-policies-procedures",
     icon: GearIcon,
-    title: "Business Process Design & Optimization",
-    shortTitle: "Process Optimization",
+    title: "Company Policies and Procedures",
+    shortTitle: "Policies & Procedures",
     description:
-      "Designing efficient workflows across departments through business process mapping, process re-engineering, workflow standardization, and operational efficiency optimization.",
+      "Develop comprehensive company policies and procedures that ensure compliance, reduce risk, and standardize operations. From employee handbooks to operational SOPs.",
   },
   {
     id: 5,
