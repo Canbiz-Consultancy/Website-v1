@@ -390,7 +390,7 @@ export function Navbar() {
                                         </span>
                                       )}
                                     </div>
-                                    <span className="text-gray-600 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 translate-x-[-8px] group-hover:translate-x-0">
+                                    <span className="text-gray-600 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
                                       →
                                     </span>
                                   </Link>
