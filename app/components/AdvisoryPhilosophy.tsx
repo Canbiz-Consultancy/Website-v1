@@ -5,7 +5,7 @@ import { advisoryPillars, advisorySection } from "../constants/content";
 export function AdvisoryPhilosophy() {
   return (
     <section className="bg-brand-navy py-24 px-6 md:px-16">
-      <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0">
+      <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-0">
         <div className="bg-brand-navy lg:pr-12 text-white flex flex-col justify-center">
           <div className="mb-3">
             <span className="text-brand-gold text-xs font-medium tracking-[3px] uppercase">

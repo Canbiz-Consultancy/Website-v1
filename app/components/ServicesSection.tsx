@@ -10,7 +10,7 @@ export function ServicesSection() {
 
   return (
     <section className="bg-brand-navy py-24 px-6 md:px-16">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-16 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{servicesSection.eyebrow}</p>
@@ -20,7 +20,7 @@ export function ServicesSection() {
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5" />
           </div>
-          <p className="text-gray-400 text-sm leading-relaxed max-w-[380px]">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-sm">
             {servicesSection.subtext}
           </p>
         </div>
@@ -63,7 +63,7 @@ export function ServicesSection() {
                   {service.title}
                   {service.isUpcoming && (
                     <span
-                      className={`ml-2 inline-flex items-center px-2 py-0.5 rounded-sm text-[8px] font-bold uppercase tracking-widest transition-colors duration-300 ${
+                      className={`ml-2 inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-bold uppercase tracking-widest transition-colors duration-300 ${
                         isHovered
                           ? "bg-brand-navy text-white"
                           : "bg-brand-gold/10 text-brand-gold border border-brand-gold/20"

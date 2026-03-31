@@ -35,7 +35,7 @@ export default async function IndustryDetailPage({ params }: Props) {
   const nextIndustry = industries[industryIndex + 1] ?? null;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 

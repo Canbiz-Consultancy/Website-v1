@@ -8,7 +8,7 @@ export function TrainingSection() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2">
       <div className="bg-brand-surface flex items-center px-6 md:px-16 py-24 order-2 lg:order-1">
-        <div className="max-w-[480px]">
+        <div className="max-w-2xl">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
             {employeeTrainingSection.eyebrow}
           </p>
@@ -27,7 +27,7 @@ export function TrainingSection() {
         </div>
       </div>
 
-      <div className="relative h-[400px] lg:h-auto overflow-hidden order-1 lg:order-2">
+      <div className="relative h-96 lg:h-auto overflow-hidden order-1 lg:order-2">
         <img
           src={employeeTrainingSection.image}
           alt={employeeTrainingSection.imageAlt}
@@ -35,7 +35,7 @@ export function TrainingSection() {
         />
         <div className="absolute inset-0 bg-brand-navy/10" />
         <div className="absolute bottom-8 right-8">
-          <span className="text-[10px] bg-brand-gold text-brand-navy px-3 py-1 font-semibold tracking-widest uppercase shadow-lg">
+          <span className="text-xs bg-brand-gold text-brand-navy px-3 py-1 font-semibold tracking-widest uppercase shadow-lg">
             {employeeTrainingSection.imageTag}
           </span>
         </div>

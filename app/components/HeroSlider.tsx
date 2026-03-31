@@ -22,7 +22,7 @@ export function HeroSlider() {
   const slide = heroSlides[current];
 
   return (
-    <div className="relative w-full h-[480px] sm:h-[540px] md:h-[620px] overflow-hidden">
+    <div className="relative w-full h-[30rem] sm:h-[34rem] md:h-[38rem] overflow-hidden">
       {heroSlides.map((s, i) => (
         <div
           key={s.id}
@@ -34,9 +34,9 @@ export function HeroSlider() {
       ))}
 
       <div className="absolute bottom-0 left-0 right-0 px-6 md:px-16 pb-6">
-        <div className="max-w-[700px]">
+        <div className="max-w-2xl">
           <p className="text-brand-gold text-xs tracking-widest mb-4 font-medium uppercase">{slide.category}</p>
-          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-3 md:mb-4 max-w-[600px]">{slide.title}</h1>
+          <h1 className="text-white text-2xl sm:text-3xl md:text-4xl font-semibold leading-tight mb-3 md:mb-4 max-w-xl">{slide.title}</h1>
           <div className="flex items-start gap-3 mb-6 md:mb-8">
             <div className="w-0.5 h-4 md:h-5 bg-white mt-1 shrink-0" />
             <p className="text-gray-200 text-xs sm:text-sm md:text-base leading-relaxed line-clamp-3 md:line-clamp-none">{slide.description}</p>
@@ -44,7 +44,7 @@ export function HeroSlider() {
         </div>
 
         <div className="flex flex-col sm:flex-row sm:items-center justify-between border-t border-white/20 pt-4 gap-4">
-          <div className="flex gap-4 sm:gap-6 overflow-x-auto no-scrollbar pb-1 sm:pb-0">
+          <div className="flex gap-4 sm:gap-6 overflow-x-auto pb-1 sm:pb-0 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
             {heroTabs.map((tab, i) => (
               <button
                 key={tab}

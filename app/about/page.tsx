@@ -15,21 +15,14 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#E1B857 1px, transparent 1px), linear-gradient(90deg, #E1B857 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-        <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-8">
             <Link
@@ -48,12 +41,12 @@ export default function AboutPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {aboutSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-3xl mb-6">
             {aboutSection.headingPlain}{" "}
             <span className="text-brand-gold">{aboutSection.headingGold}</span>
           </h1>
           <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-[600px] mb-16">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mb-16">
             {aboutSection.subtext}
           </p>
 
@@ -73,7 +66,7 @@ export default function AboutPage() {
 
       {/* ── Story Section ─────────────────────────────────────────────────────── */}
       <section id="our-story" className="bg-white py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="relative">
             {/* The image container */}
             <div className="relative h-[400px] lg:h-[500px] overflow-hidden">
@@ -118,8 +111,8 @@ export default function AboutPage() {
 
       {/* ── Core Values Strip ─────────────────────────────────────────────────── */}
       <section id="mission-values" className="bg-brand-surface py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="mb-14 text-center max-w-[600px] mx-auto">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-14 text-center max-w-2xl mx-auto">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">Purpose & Principles</p>
             <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight">
               What <span className="text-brand-gold">drives us</span>
@@ -153,14 +146,14 @@ export default function AboutPage() {
 
       {/* ── Leadership Team ───────────────────────────────────────────────────── */}
       <section id="leadership" className="bg-white py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-14">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">The Minds Behind Canbiz</p>
             <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight">
               Our <span className="text-brand-gold">Leadership</span> Team
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5 mb-6" />
-            <p className="text-gray-500 text-sm leading-relaxed max-w-[540px]">
+            <p className="text-gray-500 text-sm leading-relaxed max-w-xl">
               A diverse collective of seasoned consultants, educators, technologists, and strategists united by a passion for creating real impact.
             </p>
           </div>
@@ -192,7 +185,7 @@ export default function AboutPage() {
 
       {/* ── Our Journey (Timeline) ────────────────────────────────────────────── */}
       <section id="journey" className="bg-brand-navy py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-16">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">Growth & Milestones</p>
             <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight">
@@ -221,14 +214,14 @@ export default function AboutPage() {
 
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-20 px-6 md:px-16">
-        <div className="max-w-[800px] mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Get in touch
           </p>
           <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-5">
             Ready to shape the future of your enterprise?
           </h2>
-          <p className="text-gray-500 text-sm leading-relaxed max-w-[520px] mx-auto mb-10">
+          <p className="text-gray-500 text-sm leading-relaxed max-w-prose mx-auto mb-10">
             Whether you're looking to transform your organization, build your
             brand, or develop the next generation of leaders — Canbiz is your
             trusted partner.

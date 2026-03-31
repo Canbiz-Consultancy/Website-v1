@@ -36,12 +36,12 @@ export default async function ServiceDetailPage({ params }: Props) {
   const nextService = services[serviceIndex + 1] ?? null;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[520px] flex items-end overflow-hidden px-6 md:px-16">
+      <section className="relative min-h-[32rem] flex items-end overflow-hidden px-6 md:px-16">
         <img
           src={detail.hero}
           alt={detail.heroAlt}
@@ -49,7 +49,7 @@ export default async function ServiceDetailPage({ params }: Props) {
         />
         <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-brand-navy/20" />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto pb-16 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto pb-16 w-full">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-6">
             <Link
@@ -70,15 +70,15 @@ export default async function ServiceDetailPage({ params }: Props) {
               {detail.eyebrow}
             </p>
             {service.isUpcoming && (
-              <span className="text-[9px] bg-brand-gold text-brand-navy px-2 py-0.5 font-bold tracking-[0.1em] uppercase rounded-sm">
+              <span className="text-xs bg-brand-gold text-brand-navy px-2 py-0.5 font-bold tracking-[0.1em] uppercase rounded-sm">
                 Upcoming
               </span>
             )}
           </div>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[1100px] mb-6 whitespace-pre-line">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-5xl mb-6 whitespace-pre-line">
             {detail.headline}
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-[640px] mb-10">
+          <p className="text-gray-300 text-base md:text-lg leading-relaxed max-w-2xl mb-10">
             {detail.subheadline}
           </p>
 
@@ -98,7 +98,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* ── Overview ─────────────────────────────────────────────────────────── */}
       <section className="bg-white py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Left: icon + overview text */}
           <div>
             <div className="w-14 h-14 border border-brand-gold/30 flex items-center justify-center mb-8">
@@ -134,7 +134,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* ── Features Grid ────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-14">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
               What We Deliver
@@ -166,7 +166,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* ── Process Timeline ─────────────────────────────────────────────────── */}
       <section className="bg-brand-navy py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-14">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
               Our Approach
@@ -185,7 +185,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               >
                 {/* Step connector line (desktop only) */}
                 {i < detail.process.length - 1 && (
-                  <div className="hidden md:block absolute top-[52px] right-0 w-px h-6 bg-brand-gold/20" />
+                  <div className="hidden md:block absolute top-14 right-0 w-px h-6 bg-brand-gold/20" />
                 )}
                 <span className="text-brand-gold text-xl font-light mb-4 md:mb-6 md:text-center">
                   {step.step}
@@ -204,7 +204,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* ── CTA Banner ───────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-20 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Ready to get started?
           </p>
@@ -212,7 +212,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             Let's build something{" "}
             <span className="text-brand-gold">exceptional</span> together.
           </h2>
-          <p className="text-gray-500 text-sm leading-relaxed max-w-[520px] mx-auto mb-10">
+          <p className="text-gray-500 text-sm leading-relaxed max-w-prose mx-auto mb-10">
             Speak to our expert team about how Canbiz can support your goals
             with a tailored engagement designed around your unique needs.
           </p>
@@ -235,7 +235,7 @@ export default async function ServiceDetailPage({ params }: Props) {
 
       {/* ── Previous / Next Navigation ───────────────────────────────────────── */}
       <section className="bg-white border-t border-gray-100">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+        <div className="max-w-6xl mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-100">
           <div className="py-8 pr-0 md:pr-12">
             {prevService ? (
               <Link

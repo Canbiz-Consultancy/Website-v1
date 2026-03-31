@@ -94,12 +94,12 @@ export default async function InsightDetailPage({ params }: Props) {
   const nextInsight = currentIndex < allInsights.length - 1 ? allInsights[currentIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[520px] flex items-end overflow-hidden px-6 md:px-16">
+      <section className="relative min-h-[32rem] flex items-end overflow-hidden px-6 md:px-16">
         {insight.featuredImage && (
           <img
             src={getStrapiImageUrl(insight.featuredImage)}
@@ -109,7 +109,7 @@ export default async function InsightDetailPage({ params }: Props) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-brand-navy/20" />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto pb-16 w-full">
+        <div className="relative z-10 max-w-6xl mx-auto pb-16 w-full">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-8">
             <Link
@@ -120,18 +120,18 @@ export default async function InsightDetailPage({ params }: Props) {
               Insights Hub
             </Link>
             <span className="text-brand-gold/30 text-xs">/</span>
-            <span className="text-brand-gold/60 text-xs tracking-widest uppercase truncate max-w-[200px]">
+            <span className="text-brand-gold/60 text-xs tracking-widest uppercase truncate max-w-xs">
               {insight.title}
             </span>
           </div>
 
           <div className="flex items-center gap-4 mb-6">
-            <span className="text-[10px] bg-brand-gold text-brand-navy px-3 py-1 font-bold tracking-[0.15em] uppercase rounded-sm">
+            <span className="text-xs bg-brand-gold text-brand-navy px-3 py-1 font-bold tracking-[0.15em] uppercase rounded-sm">
               {insight.category || 'Expert Perspective'}
             </span>
           </div>
 
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[900px] mb-8">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-4xl mb-8">
             {insight.title}
           </h1>
 
@@ -150,7 +150,7 @@ export default async function InsightDetailPage({ params }: Props) {
 
       {/* ── Article Content ──────────────────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28 px-6 md:px-16">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-3xl mx-auto">
           
           {/* Main Content */}
           <article className="prose prose-lg max-w-none">
@@ -174,7 +174,7 @@ export default async function InsightDetailPage({ params }: Props) {
 
       {/* ── CTA Banner ───────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-20 px-6 md:px-16 border-y border-gray-100">
-        <div className="max-w-[1200px] mx-auto text-center">
+        <div className="max-w-6xl mx-auto text-center">
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Insight into Action
           </p>
@@ -200,7 +200,7 @@ export default async function InsightDetailPage({ params }: Props) {
 
       {/* ── Previous / Next Navigation ───────────────────────────────────────── */}
       <section className="bg-white">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-100 border-b border-gray-100">
+        <div className="max-w-6xl mx-auto px-6 md:px-16 grid grid-cols-1 md:grid-cols-2 divide-y md:divide-y-0 md:divide-x divide-gray-100 border-b border-gray-100">
           <div className="py-12 pr-0 md:pr-12">
             {prevInsight ? (
               <Link
@@ -211,7 +211,7 @@ export default async function InsightDetailPage({ params }: Props) {
                   <ArrowLeftIcon size={18} className="text-gray-300 group-hover:text-brand-gold transition-colors" />
                 </div>
                 <div>
-                  <p className="text-gray-400 text-[10px] mb-1 tracking-widest uppercase font-semibold">Previous Article</p>
+                  <p className="text-gray-400 text-xs mb-1 tracking-widest uppercase font-semibold">Previous Article</p>
                   <p className="text-brand-navy text-base font-light group-hover:text-brand-gold transition-colors line-clamp-1">
                     {prevInsight.title}
                   </p>
@@ -228,7 +228,7 @@ export default async function InsightDetailPage({ params }: Props) {
                 className="group flex items-start gap-4 text-right"
               >
                 <div>
-                  <p className="text-gray-400 text-[10px] mb-1 tracking-widest uppercase font-semibold">Next Article</p>
+                  <p className="text-gray-400 text-xs mb-1 tracking-widest uppercase font-semibold">Next Article</p>
                   <p className="text-brand-navy text-base font-light group-hover:text-brand-gold transition-colors line-clamp-1">
                     {nextInsight.title}
                   </p>

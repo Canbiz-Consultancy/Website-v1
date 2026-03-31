@@ -12,7 +12,7 @@ export function IndustriesSection() {
 
   return (
     <section className="bg-white py-24 px-6 md:px-16">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{industriesSection.eyebrow}</p>
@@ -22,7 +22,7 @@ export function IndustriesSection() {
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5" />
           </div>
-          <p className="text-gray-500 text-sm leading-relaxed max-w-[380px]">
+          <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
             {industriesSection.subtext}
           </p>
         </div>

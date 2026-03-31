@@ -188,7 +188,7 @@ export function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-brand-navy border-b-2 border-brand-gold/40">
         {/* Top bar */}
         <div className="px-6 md:px-16">
-          <div className="max-w-[1200px] mx-auto flex items-center justify-between">
+          <div className="max-w-6xl mx-auto flex items-center justify-between">
             <Link
               href="/"
               className="relative shrink-0 h-20 flex items-center justify-start"
@@ -226,7 +226,7 @@ export function Navbar() {
                   {isActive && (
                     <motion.span
                       layoutId="nav-underline"
-                      className="absolute bottom-0 left-0 right-0 h-0.5 bg-brand-gold"
+                      className="absolute top-0 left-0 right-0 h-0.5 bg-brand-gold origin-left"
                       transition={{ duration: 0.25, ease: EASE_OUT }}
                     />
                   )}
@@ -264,18 +264,16 @@ export function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="w-full bg-brand-navy-mid shadow-2xl overflow-hidden relative"
-              style={{ transformOrigin: "top center" }}
+              className="w-full bg-brand-navy-mid shadow-2xl overflow-hidden relative origin-top"
             >
               {/* Animated gold top border */}
               <motion.div
                 variants={borderVariants}
-                className="absolute top-0 left-0 right-0 h-[2px] bg-brand-gold"
-                style={{ transformOrigin: "0% 50%" }}
+                className="absolute top-0 left-0 right-0 h-0.5 bg-brand-gold"
               />
 
               <div className="px-6 md:px-16">
-                <div className="max-w-[1200px] mx-auto py-10 grid grid-cols-[320px_1fr] gap-20 min-h-[480px]">
+                <div className="max-w-6xl mx-auto py-10 grid grid-cols-[320px_1fr] gap-20 min-h-96">
 
                 {/* Inner content: keyed by activeDropdown so it crossfades on tab switch */}
                 <AnimatePresence mode="wait">
@@ -292,7 +290,7 @@ export function Navbar() {
                       variants={leftColVariants}
                       className="pr-12 border-r border-brand-navy-border flex flex-col justify-start"
                     >
-                      <p className="text-[10px] uppercase tracking-widest text-brand-gold mb-4 font-semibold">
+                      <p className="text-xs uppercase tracking-widest text-brand-gold mb-4 font-semibold">
                         {activeItem.label}
                       </p>
                       <div className="mb-8">
@@ -320,7 +318,7 @@ export function Navbar() {
                       {activeItem.label === "Insights" ? (
                         <motion.div
                           variants={itemVariants}
-                          className="flex flex-col justify-center items-center h-full text-center max-w-[500px] mx-auto"
+                          className="flex flex-col justify-center items-center h-full text-center max-w-2xl mx-auto"
                         >
                           <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6">
                             <MagnifyingGlassIcon className="text-brand-gold" size={24} weight="light" />
@@ -332,7 +330,7 @@ export function Navbar() {
                           </p>
                           <div className="flex gap-4">
                             {["CEO Perspectives", "GCC Market Entry", "Digital Transformation"].map((tag) => (
-                              <span key={tag} className="text-[10px] uppercase tracking-widest text-brand-gold/50 bg-brand-gold/5 px-3 py-1.5 rounded-sm">
+                              <span key={tag} className="text-xs uppercase tracking-widest text-brand-gold/50 bg-brand-gold/5 px-3 py-1.5 rounded-sm">
                                 {tag}
                               </span>
                             ))}
@@ -381,13 +379,13 @@ export function Navbar() {
                                       <span className="text-sm text-gray-200 group-hover:text-brand-gold transition-colors font-medium block">
                                         {child.label}
                                         {child.upcoming && (
-                                          <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-[2px] bg-brand-gold/10 text-brand-gold border border-brand-gold/20 text-[7px] font-bold uppercase tracking-widest leading-none align-middle">
+                                          <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-xs bg-brand-gold/10 text-brand-gold border border-brand-gold/20 text-[7px] font-bold uppercase tracking-widest leading-none align-middle">
                                             Upcoming
                                           </span>
                                         )}
                                       </span>
                                       {child.sub && (
-                                        <span className="text-[11px] text-gray-500 mt-1 block">
+                                        <span className="text-xs text-gray-500 mt-1 block">
                                           {child.sub}
                                         </span>
                                       )}
@@ -514,7 +512,7 @@ export function Navbar() {
                                       )}
                                     </span>
                                     {child.sub && (
-                                      <span className="text-[10px] text-gray-500 mt-1 block">
+                                      <span className="text-xs text-gray-500 mt-1 block">
                                         {child.sub}
                                       </span>
                                     )}

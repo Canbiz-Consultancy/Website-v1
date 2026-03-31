@@ -47,21 +47,14 @@ export default function PrivacyPolicyPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#E1B857 1px, transparent 1px), linear-gradient(90deg, #E1B857 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-        <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-8">
             <Link
@@ -80,7 +73,7 @@ export default function PrivacyPolicyPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             Legal & Compliance
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-3xl mb-6">
             Privacy <span className="text-brand-gold">Policy</span>
           </h1>
           <div className="w-12 h-0.5 bg-brand-gold mb-16" />
@@ -89,7 +82,7 @@ export default function PrivacyPolicyPage() {
 
       {/* ── Content ───────────────────────────────────────────────────────────── */}
       <section className="bg-white py-24 px-6 md:px-16">
-        <div className="max-w-[800px] mx-auto">
+        <div className="max-w-3xl mx-auto">
           <p className="text-gray-400 text-sm mb-12 italic">
             Last updated: {lastUpdated}
           </p>

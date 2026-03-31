@@ -4,7 +4,7 @@ export function ShapeFuture() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2">
       <div className="bg-brand-surface flex items-center px-6 md:px-16 py-24">
-        <div className="max-w-[420px]">
+        <div className="max-w-xl">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">{shapeFutureSection.eyebrow}</p>
           <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">
             {shapeFutureSection.heading}
@@ -15,7 +15,7 @@ export function ShapeFuture() {
         </div>
       </div>
 
-      <div className="relative h-[400px] lg:h-auto overflow-hidden">
+      <div className="relative h-96 lg:h-auto overflow-hidden">
         <img
           src={shapeFutureSection.image}
           alt={shapeFutureSection.imageAlt}
@@ -25,7 +25,7 @@ export function ShapeFuture() {
         <div className="absolute inset-0 flex items-center justify-center">
         </div>
         <div className="absolute bottom-8 left-8">
-          <span className="text-[10px] bg-brand-gold text-brand-navy px-3 py-1 font-semibold tracking-widest uppercase">
+          <span className="text-xs bg-brand-gold text-brand-navy px-3 py-1 font-semibold tracking-widest uppercase">
             {shapeFutureSection.imageTag}
           </span>
         </div>

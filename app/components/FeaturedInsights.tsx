@@ -16,7 +16,7 @@ export async function FeaturedInsights() {
 
   return (
     <section className="bg-white py-24 px-6 md:px-16">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-6xl mx-auto">
         <div className="mb-12 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{insightsSection.eyebrow}</p>
@@ -26,7 +26,7 @@ export async function FeaturedInsights() {
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5" />
           </div>
-          <p className="text-gray-500 text-sm leading-relaxed max-w-[380px]">
+          <p className="text-gray-500 text-sm leading-relaxed max-w-sm">
             {insightsSection.subtext}
           </p>
         </div>
@@ -44,7 +44,7 @@ export async function FeaturedInsights() {
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
-              <span className="absolute top-4 left-4 text-[10px] bg-brand-gold text-brand-navy px-2 py-0.5 font-semibold tracking-wider uppercase">
+              <span className="absolute top-4 left-4 text-xs bg-brand-gold text-brand-navy px-2 py-0.5 font-semibold tracking-wider uppercase">
                 {featuredInsight.category}
               </span>
             </div>
@@ -75,7 +75,7 @@ export async function FeaturedInsights() {
                   />
                 </div>
                 <div className="p-5">
-                  <span className="text-[10px] text-brand-gold font-semibold tracking-wider uppercase block mb-2">{insight.category}</span>
+                  <span className="text-xs text-brand-gold font-semibold tracking-wider uppercase block mb-2">{insight.category}</span>
                   <h3 className="text-brand-navy text-sm leading-snug mb-2 group-hover:text-brand-gold transition-colors font-medium">
                     {insight.title}
                   </h3>
@@ -102,7 +102,7 @@ export async function FeaturedInsights() {
                 />
               </div>
               <div className="p-6">
-                <span className="text-[10px] text-brand-gold font-semibold tracking-wider uppercase block mb-2">{insight.category}</span>
+                <span className="text-xs text-brand-gold font-semibold tracking-wider uppercase block mb-2">{insight.category}</span>
                 <h3 className="text-brand-navy text-base leading-snug mb-2 group-hover:text-brand-gold transition-colors font-medium">
                   {insight.title}
                 </h3>

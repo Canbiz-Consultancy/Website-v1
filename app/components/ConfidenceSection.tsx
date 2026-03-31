@@ -7,7 +7,7 @@ import Link from "next/link";
 export function ConfidenceSection() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2">
-      <div className="relative h-[400px] lg:h-auto overflow-hidden">
+      <div className="relative h-96 lg:h-auto overflow-hidden">
         <img
           src={confidenceSection.image}
           alt={confidenceSection.imageAlt}
@@ -15,14 +15,14 @@ export function ConfidenceSection() {
         />
         <div className="absolute inset-0 bg-brand-navy/20" />
         <div className="absolute bottom-8 left-8">
-          <span className="text-[10px] bg-brand-gold text-brand-navy px-3 py-1 font-semibold tracking-widest uppercase">
+          <span className="text-xs bg-brand-gold text-brand-navy px-3 py-1 font-semibold tracking-widest uppercase">
             {confidenceSection.imageTag}
           </span>
         </div>
       </div>
 
       <div className="bg-brand-surface flex items-center px-6 md:px-16 py-24">
-        <div className="max-w-[480px]">
+        <div className="max-w-2xl">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">{confidenceSection.eyebrow}</p>
           <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">
             {confidenceSection.heading}

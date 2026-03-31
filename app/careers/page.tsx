@@ -24,21 +24,14 @@ export default function CareersPage() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#E1B857 1px, transparent 1px), linear-gradient(90deg, #E1B857 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-        <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-8">
             <Link
@@ -57,12 +50,12 @@ export default function CareersPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {careersSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight md:max-w-md xl:max-w-lg mb-6">
             {careersSection.headingPlain}{" "}
             <span className="text-brand-gold">{careersSection.headingGold}</span>
           </h1>
           <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-[580px] mb-16">
+          <p className="text-gray-400 text-sm leading-relaxed md:max-w-lg xl:max-w-2xl mb-16">
             {careersSection.subtext}
           </p>
         </div>
@@ -70,7 +63,7 @@ export default function CareersPage() {
 
       {/* ── Values Strip ──────────────────────────────────────────────────────── */}
       <section className="bg-white py-20 px-6 md:px-16 border-b border-gray-100">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-gray-100">
             {careersValues.map((v, i) => (
               <div
@@ -92,7 +85,7 @@ export default function CareersPage() {
 
       {/* ── Open Positions ────────────────────────────────────────────────────── */}
       <section id="open-positions" className="bg-brand-surface py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="mb-12">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
               Current Openings
@@ -101,7 +94,7 @@ export default function CareersPage() {
               Open <span className="text-brand-gold">Positions</span>
             </h2>
             <div className="w-12 h-0.5 bg-brand-gold mt-5 mb-6" />
-            <p className="text-gray-500 text-sm leading-relaxed max-w-[540px]">
+            <p className="text-gray-500 text-sm leading-relaxed md:max-w-md xl:max-w-lg">
               We're hiring across multiple practice areas. Find the role where
               your expertise can create the most impact.
             </p>
@@ -239,8 +232,8 @@ export default function CareersPage() {
 
       {/* ── Life at Canbiz  ───────────────────────────────────────────────────── */}
       <section id="life" className="bg-white py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="max-w-[800px] mb-16">
+        <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl mb-16">
             <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">
               Life at Canbiz
             </p>
@@ -280,7 +273,7 @@ export default function CareersPage() {
 
       {/* ── Talent Network CTA ────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-20 px-6 md:px-16">
-        <div className="max-w-[800px] mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Don't See Your Role?
           </p>
@@ -288,7 +281,7 @@ export default function CareersPage() {
             Join our{" "}
             <span className="text-brand-gold">Talent Network</span>
           </h2>
-          <p className="text-gray-500 text-sm leading-relaxed max-w-[520px] mx-auto mb-10">
+          <p className="text-gray-500 text-sm leading-relaxed max-w-prose mx-auto mb-10">
             We're always looking for exceptional people. If you don't see a
             current opening that fits your background, submit your profile and
             we'll reach out when the right opportunity arises.

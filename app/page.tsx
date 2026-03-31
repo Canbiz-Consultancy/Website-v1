@@ -12,7 +12,7 @@ import { FeaturedInsights } from "./components/FeaturedInsights";
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 

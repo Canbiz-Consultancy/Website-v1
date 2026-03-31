@@ -59,21 +59,14 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#E1B857 1px, transparent 1px), linear-gradient(90deg, #E1B857 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
-        <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-8">
             <Link
@@ -92,12 +85,12 @@ export default function ContactPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {contactSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight md:max-w-md lg:max-w-lg xl:max-w-2xl mb-6">
             {contactSection.headingPlain}{" "}
             <span className="text-brand-gold">{contactSection.headingGold}</span>
           </h1>
           <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-[580px] mb-20">
+          <p className="text-gray-400 text-sm leading-relaxed md:max-w-md lg:max-w-lg xl:max-w-2xl mb-20">
             {contactSection.subtext}
           </p>
         </div>
@@ -105,7 +98,7 @@ export default function ContactPage() {
 
       {/* ── Content & Form ────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-24 px-6 md:px-16 relative">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 lg:gap-24">
             
             {/* Left: Contact Info */}
@@ -167,8 +160,7 @@ export default function ContactPage() {
             {/* Right: The Form */}
             <div className="lg:col-span-3">
               <div className="bg-white p-8 md:p-12 border border-gray-100 shadow-sm relative">
-                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-navy opacity-[0.02]" 
-                     style={{backgroundImage: "linear-gradient(#E1B857 1px, transparent 1px), linear-gradient(90deg, #E1B857 1px, transparent 1px)", backgroundSize: "12px 12px"}}/>
+                <div className="absolute top-0 right-0 w-24 h-24 bg-brand-navy opacity-[0.02] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:24px_24px]" />
                      
                 <div className="mb-10 relative z-10">
                   <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">Send a Message</p>

@@ -7,7 +7,7 @@ import Link from "next/link";
 export function CareersSection() {
   return (
     <section className="bg-brand-surface py-24 px-6 md:px-16">
-      <div className="max-w-[1200px] mx-auto">
+      <div className="max-w-6xl mx-auto">
 
         <div className="mb-16">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{careersSection.eyebrow}</p>
@@ -16,7 +16,7 @@ export function CareersSection() {
             <span className="text-brand-gold">{careersSection.headingGold}</span>
           </h2>
           <div className="w-12 h-0.5 bg-brand-gold mb-6" />
-          <p className="text-gray-600 text-sm leading-relaxed max-w-[560px]">
+          <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
             {careersSection.subtext}
           </p>
         </div>
@@ -32,7 +32,7 @@ export function CareersSection() {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16 overflow-hidden">
-          <div className="relative h-[260px] sm:h-[380px]">
+          <div className="relative h-64 sm:h-96">
             <img
               src={careersSection.image}
               alt={careersSection.imageAlt}

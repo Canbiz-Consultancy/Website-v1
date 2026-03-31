@@ -23,23 +23,16 @@ export default async function InsightsPage() {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
         {/* Decorative grid overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#E1B857 1px, transparent 1px), linear-gradient(90deg, #E1B857 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-        <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-8">
             <Link
@@ -56,12 +49,12 @@ export default async function InsightsPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {insightsSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight md:max-w-md lg:max-w-lg xl:max-w-xl mb-6">
             {insightsSection.headingPlain}{" "}
             <span className="text-brand-gold">{insightsSection.headingGold}</span>
           </h1>
           <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-[580px] mb-16">
+          <p className="text-gray-400 text-sm leading-relaxed md:max-w-md lg:max-w-lg xl:max-w-2xl mb-16">
             {insightsSection.subtext}
           </p>
         </div>
@@ -69,7 +62,7 @@ export default async function InsightsPage() {
 
       {/* ── Insights Grid ────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           {insights.length === 0 ? (
             <div className="text-center py-20">
               <p className="text-gray-500">No insights available at the moment.</p>

@@ -13,23 +13,16 @@ export const metadata: Metadata = {
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-background">
       <Navbar />
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
         {/* Decorative grid overlay */}
-        <div
-          className="absolute inset-0 opacity-[0.03]"
-          style={{
-            backgroundImage:
-              "linear-gradient(#E1B857 1px, transparent 1px), linear-gradient(90deg, #E1B857 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
-          }}
-        />
+        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
 
-        <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="max-w-6xl mx-auto relative z-10">
           {/* Breadcrumb */}
           <div className="flex items-center gap-2 mb-8">
             <Link
@@ -46,12 +39,12 @@ export default function ServicesPage() {
           <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
             {servicesSection.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-[800px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-3xl mb-6">
             {servicesSection.headingPlain}{" "}
             <span className="text-brand-gold">{servicesSection.headingGold}</span>
           </h1>
           <div className="w-12 h-0.5 bg-brand-gold mb-8" />
-          <p className="text-gray-400 text-sm leading-relaxed max-w-[580px] mb-16">
+          <p className="text-gray-400 text-sm leading-relaxed max-w-2xl mb-16">
             {servicesSection.subtext}
           </p>
         </div>
@@ -59,7 +52,7 @@ export default function ServicesPage() {
 
       {/* ── Services Grid ────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200">
             {services.map((service) => {
               const Icon = service.icon;
@@ -81,11 +74,11 @@ export default function ServicesPage() {
                       />
                       <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-brand-navy/20 transition-colors duration-300" />
                       <div className="absolute top-4 left-4 flex gap-2">
-                        <span className="text-[10px] bg-brand-gold text-brand-navy px-2.5 py-1 font-semibold tracking-widest uppercase">
+                        <span className="text-xs bg-brand-gold text-brand-navy px-2.5 py-1 font-semibold tracking-widest uppercase">
                           {String(service.id).padStart(2, "0")}
                         </span>
                         {service.isUpcoming && (
-                          <span className="text-[10px] bg-brand-navy text-brand-gold px-2.5 py-1 font-semibold tracking-widest uppercase border border-brand-gold/30">
+                          <span className="text-xs bg-brand-navy text-brand-gold px-2.5 py-1 font-semibold tracking-widest uppercase border border-brand-gold/30">
                             Upcoming
                           </span>
                         )}
@@ -116,7 +109,7 @@ export default function ServicesPage() {
                         {detail.tags.slice(0, 3).map((tag) => (
                           <span
                             key={tag}
-                            className="text-[10px] border border-brand-gold/30 text-brand-navy/60 group-hover:text-brand-gold/60 group-hover:border-brand-gold/40 px-2.5 py-1 transition-colors"
+                            className="text-xs border border-brand-gold/30 text-brand-navy/60 group-hover:text-brand-gold/60 group-hover:border-brand-gold/40 px-2.5 py-1 transition-colors"
                           >
                             {tag}
                           </span>
@@ -137,7 +130,7 @@ export default function ServicesPage() {
 
       {/* ── Why Canbiz Strip ─────────────────────────────────────────────────── */}
       <section className="bg-brand-navy py-24 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto">
+        <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
@@ -187,7 +180,7 @@ export default function ServicesPage() {
 
       {/* ── CTA ──────────────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-20 px-6 md:px-16">
-        <div className="max-w-[800px] mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center">
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Get Started
           </p>
