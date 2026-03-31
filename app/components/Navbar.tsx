@@ -195,7 +195,7 @@ export function Navbar() {
               onClick={() => setActiveDropdown(null)}
             >
               <img
-                src="logo.svg"
+                src="/logo.svg"
                 alt="Canbiz Logo"
                 className="h-18 w-auto"
               />
