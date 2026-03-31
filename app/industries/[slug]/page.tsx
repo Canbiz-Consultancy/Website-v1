@@ -67,7 +67,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           <p className="text-brand-gold text-[10px] tracking-[0.28em] uppercase mb-4">
             {detail.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] tracking-[-0.02em] max-w-[820px] mb-6">
+          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-[820px] mb-6">
             {detail.headline}
           </h1>
           <p className="text-gray-300 text-base md:text-lg leading-[1.7] max-w-[640px] mb-10">
@@ -81,7 +81,7 @@ export default async function IndustryDetailPage({ params }: Props) {
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16">
           <div className="lg:w-1/3">
              <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-4">Sector Overview</p>
-             <h2 className="text-brand-navy text-2xl md:text-3xl font-light leading-tight mb-6">
+             <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">
                Leading transformation in <span className="text-brand-gold">{industry.shortTitle}</span>.
              </h2>
              <p className="text-gray-600 text-sm leading-7 mb-8">{detail.overview}</p>
@@ -114,13 +114,13 @@ export default async function IndustryDetailPage({ params }: Props) {
               <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-4">
                 Key Focus Areas
               </p>
-              <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-8">
+              <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6">
                 Sector <span className="text-brand-gold">Capabilities</span>
               </h2>
               <div className="border-t border-black/10">
                 {detail.features.map((feature, i) => (
                   <div key={i} className="border-b border-black/10 py-6 md:py-7">
-                    <h3 className="text-lg font-light mb-2 text-brand-navy">{feature.title}</h3>
+                    <h3 className="text-lg font-semibold mb-4 text-brand-navy">{feature.title}</h3>
                     <p className="text-gray-500 text-sm leading-7">{feature.body}</p>
                   </div>
                 ))}
@@ -132,7 +132,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-4">
                 Strategic Approach
               </p>
-              <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-8">
+              <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6">
                 How We <span className="text-brand-gold">Deliver Value</span>
               </h2>
               <div className="border-t border-black/10">
@@ -140,7 +140,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                   <div key={i} className="grid grid-cols-[120px_minmax(0,1fr)] gap-6 border-b border-black/10 py-6 md:py-7">
                     <p className="text-[10px] uppercase tracking-[0.26em] text-gray-400">{step.step}</p>
                     <div>
-                      <h3 className="text-lg font-light mb-2 text-brand-navy">{step.title}</h3>
+                      <h3 className="text-lg font-semibold mb-4 text-brand-navy">{step.title}</h3>
                       <p className="text-gray-500 text-sm leading-7">{step.body}</p>
                     </div>
                   </div>
@@ -160,7 +160,7 @@ export default async function IndustryDetailPage({ params }: Props) {
               <p className="text-[10px] uppercase tracking-[0.28em] text-white/45 mb-4">
                 Solutions
               </p>
-              <h2 className="text-white text-3xl md:text-4xl font-light leading-tight">
+              <h2 className="mb-6 text-white text-3xl md:text-4xl font-semibold leading-tight">
                 Recommended <span className="text-brand-gold">Services</span>
               </h2>
             </div>
@@ -180,7 +180,7 @@ export default async function IndustryDetailPage({ params }: Props) {
                   <p className="text-[10px] uppercase tracking-[0.26em] text-white/40 mb-3">
                     {String(i + 1).padStart(2, "0")}
                   </p>
-                  <h3 className="text-white text-xl font-light mb-3 group-hover:text-brand-gold transition-colors">
+                  <h3 className="text-white text-xl font-semibold mb-4 group-hover:text-brand-gold transition-colors">
                     {service.shortTitle}
                   </h3>
                   <p className="text-white/60 text-xs leading-6 max-w-[520px]">
@@ -202,7 +202,7 @@ export default async function IndustryDetailPage({ params }: Props) {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-12 items-start">
             <div>
               <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-6">Partner With Us</p>
-              <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5 max-w-[520px]">
+              <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6 max-w-[520px]">
                 Ready to transform your organisation?
               </h2>
             </div>

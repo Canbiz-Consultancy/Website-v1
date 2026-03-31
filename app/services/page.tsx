@@ -43,7 +43,7 @@ export default function ServicesPage() {
               <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase mb-6">
                 {servicesSection.eyebrow}
               </p>
-              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] tracking-[-0.02em] max-w-3xl mb-6">
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-3xl mb-6">
                 {servicesSection.headingPlain}{" "}
                 <span className="text-brand-gold">{servicesSection.headingGold}</span>
               </h1>
@@ -86,7 +86,7 @@ export default function ServicesPage() {
                     </div>
 
                     <div className="max-w-2xl">
-                      <h2 className="text-2xl font-light tracking-[-0.02em] mb-3 text-brand-navy group-hover:text-brand-gold transition-colors">
+                      <h2 className="text-2xl font-semibold tracking-[-0.02em] mb-6 text-brand-navy group-hover:text-brand-gold transition-colors">
                         {service.title}
                       </h2>
                       <p className="text-sm text-gray-500 leading-7">
@@ -142,7 +142,7 @@ export default function ServicesPage() {
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
                 Why Canbiz
               </p>
-              <h2 className="text-white text-3xl md:text-4xl font-light leading-tight mb-6">
+            <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight mb-6">
                 A single trusted partner for{" "}
                 <span className="text-brand-gold">every dimension</span> of
                 your growth.
@@ -190,7 +190,7 @@ export default function ServicesPage() {
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
             Get Started
           </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
+          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6">
             Not sure where to begin?
           </h2>
           <p className="text-gray-500 text-sm leading-relaxed mb-10">

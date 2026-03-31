@@ -66,7 +66,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
             >
               <ArrowLeftIcon size={11} />
-              Capabilities
+              Services
             </Link>
             <span className="text-white/30 text-xs">/</span>
             <span className="text-white/60 text-[11px] tracking-widest uppercase">
@@ -79,7 +79,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-6">
                 {detail.eyebrow}
               </p>
-              <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-light leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-8">
+              <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-6">
                 {detail.headline}
               </h1>
               <p className="text-gray-300 text-lg md:text-[22px] leading-[1.7] max-w-[680px] font-light">
@@ -102,8 +102,8 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section className="bg-white px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/3 shrink-0">
-             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Challenge</h2>
-             <h3 className="text-2xl md:text-3xl font-light leading-snug max-w-[280px]">
+             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">The Challenge</h2>
+             <h3 className="mb-4 text-2xl md:text-3xl font-semibold leading-snug max-w-[280px]">
                Navigating modern business complexity.
              </h3>
           </div>
@@ -113,7 +113,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                 <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400">
                   {String(i + 1).padStart(2, "0")}
                 </p>
-                <h4 className="text-[22px] font-light mb-4 tracking-[-0.02em] leading-snug">{pain.title}</h4>
+                <h4 className="text-[22px] font-semibold mb-3 tracking-[-0.02em] leading-snug">{pain.title}</h4>
                 <p className="text-sm text-gray-500 leading-7 max-w-[420px]">{pain.description}</p>
               </div>
             ))}
@@ -126,8 +126,8 @@ export default async function ServiceDetailPage({ params }: Props) {
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-16 md:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <div>
-             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Solution</h2>
-             <h3 className="text-3xl md:text-4xl font-light leading-tight max-w-[600px]">
+             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">The Solution</h2>
+             <h3 className="mb-4 text-3xl md:text-4xl font-semibold leading-tight max-w-[600px]">
                Concrete deliverables driving structural transformation.
              </h3>
             </div>
@@ -143,7 +143,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                    {String(i + 1).padStart(2, "0")}
                  </p>
                  <div className="max-w-[760px]">
-                   <h4 className="text-2xl font-light mb-3 tracking-[-0.02em]">{del.title}</h4>
+                   <h4 className="text-2xl font-semibold mb-3 tracking-[-0.02em]">{del.title}</h4>
                    <p className="text-sm text-gray-500 leading-7">{del.description}</p>
                  </div>
               </div>
@@ -156,8 +156,8 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section className="bg-white px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/3 shrink-0">
-             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">Our Approach</h2>
-             <h3 className="text-2xl md:text-3xl font-light leading-snug sticky top-32">
+             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Our Approach</h2>
+             <h3 className="mb-4 text-2xl md:text-3xl font-semibold leading-snug sticky top-32">
                A methodical path to execution.
              </h3>
           </div>
@@ -170,7 +170,7 @@ export default async function ServiceDetailPage({ params }: Props) {
                    </div>
                    <div className="w-full flex-1 pb-12 border-b border-black/10">
                      <div className="mb-5 h-px w-16 bg-black/12" />
-                     <h4 className="text-[24px] font-light mb-3 tracking-[-0.02em]">{step.title}</h4>
+                     <h4 className="text-[24px] font-semibold mb-3 tracking-[-0.02em]">{step.title}</h4>
                      <p className="text-sm text-gray-500 leading-7 max-w-[560px]">{step.description}</p>
                    </div>
                 </div>
@@ -186,8 +186,8 @@ export default async function ServiceDetailPage({ params }: Props) {
            
            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-24">
              <div className="lg:w-1/3">
-                <h2 className="text-[11px] text-brand-gold tracking-[0.2em] font-bold uppercase mb-4">Outcomes</h2>
-                <h3 className="text-3xl md:text-4xl font-light leading-tight">
+                <h2 className="text-[11px] text-brand-gold tracking-[0.2em] font-bold uppercase mb-6">Outcomes</h2>
+                <h3 className="mb-4 text-3xl md:text-4xl font-semibold leading-tight">
                   Measurable impact.
                 </h3>
              </div>
@@ -230,14 +230,14 @@ export default async function ServiceDetailPage({ params }: Props) {
           
           {/* Target Audience */}
           <div>
-            <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">Who This Is For</h2>
-            <h3 className="text-2xl font-light mb-12">Designed for decisive leadership.</h3>
+            <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Who This Is For</h2>
+            <h3 className="text-2xl font-semibold mb-4">Designed for decisive leadership.</h3>
             <div className="space-y-8">
               {detail.targetAudience?.map((aud: any, i: number) => (
                 <div key={i} className="flex gap-4 border-b border-black/10 pb-6">
                    <ArrowRightIcon className="text-brand-navy/50 mt-1 shrink-0" size={16} />
                    <div>
-                     <h4 className="text-sm font-bold mb-1 uppercase tracking-wide">{aud.title}</h4>
+                     <h4 className="text-sm font-bold mb-3 uppercase tracking-wide">{aud.title}</h4>
                      <p className="text-sm text-gray-500 leading-7">{aud.description}</p>
                    </div>
                 </div>
@@ -247,12 +247,12 @@ export default async function ServiceDetailPage({ params }: Props) {
 
           {/* Why Us */}
           <div className="bg-white p-10 md:p-16 border-l-2 border-brand-navy">
-            <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Canbiz Advantage</h2>
-            <h3 className="text-2xl font-light mb-10">Distinctive capabilities.</h3>
+            <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">The Canbiz Advantage</h2>
+            <h3 className="text-2xl font-semibold mb-4">Distinctive capabilities.</h3>
             <div className="space-y-8">
               {detail.whyUs?.map((why: any, i: number) => (
                 <div key={i} className="border-t border-black/10 pt-5">
-                   <h4 className="text-base font-medium mb-2">{why.title}</h4>
+                   <h4 className="text-base font-medium mb-3">{why.title}</h4>
                    <p className="text-sm text-gray-500 leading-7">{why.description}</p>
                 </div>
               ))}
@@ -268,8 +268,8 @@ export default async function ServiceDetailPage({ params }: Props) {
           
           {/* CTA */}
           <div className="lg:w-1/2">
-             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">Initiate Engagement</h2>
-             <h3 className="text-4xl md:text-5xl font-light leading-tight mb-8">
+             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Initiate Engagement</h2>
+             <h3 className="text-4xl md:text-5xl font-semibold leading-tight mb-4">
                Ready to structure your success?
              </h3>
              <p className="text-gray-500 text-sm leading-relaxed max-w-[400px] mb-10">
@@ -286,7 +286,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           {/* FAQs (Optional but rendered if present) */}
           {detail.faqs && detail.faqs.length > 0 && (
             <div className="lg:w-1/2 w-full">
-               <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-8">Frequent Inquiries</h2>
+               <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Frequent Inquiries</h2>
                <div className="border-t border-black/10">
                  {detail.faqs.map((faq: any, i: number) => (
                    <details key={i} className="group border-b border-black/10 [&_summary::-webkit-details-marker]:hidden">

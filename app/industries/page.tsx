@@ -41,7 +41,7 @@ export default function IndustriesPage() {
               <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase mb-6">
                 {industriesSection.eyebrow}
               </p>
-              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-[1.05] tracking-[-0.02em] max-w-3xl mb-6">
+              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-3xl mb-6">
                 {industriesSection.headingPlain}{" "}
                 <span className="text-brand-gold">{industriesSection.headingGold}</span>
               </h1>
@@ -101,7 +101,7 @@ export default function IndustriesPage() {
                       </div>
                     </div>
 
-                    <h2 className="text-brand-navy text-base font-semibold leading-snug mb-3 group-hover:text-white transition-colors duration-300">
+                    <h2 className="text-brand-navy text-base font-semibold leading-snug mb-6 group-hover:text-white transition-colors duration-300">
                       {industry.name}
                     </h2>
                     <p className="text-gray-500 text-xs leading-relaxed mb-6 flex-1 group-hover:text-gray-400 transition-colors duration-300">
@@ -126,7 +126,7 @@ export default function IndustriesPage() {
             <p className="text-brand-gold text-[10px] tracking-[0.28em] uppercase mb-6">
               Why Canbiz
             </p>
-            <h2 className="text-white text-3xl md:text-4xl font-light leading-tight mb-6">
+            <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight mb-6">
               A single trusted partner for{" "}
               <span className="text-brand-gold">every dimension</span> of
               your growth.
@@ -162,7 +162,7 @@ export default function IndustriesPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-12 items-start">
             <div>
               <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-6">Get Started</p>
-              <h2 className="text-brand-navy text-3xl md:text-4xl font-light leading-tight mb-5">
+              <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6">
                 Not sure where to begin?
               </h2>
               <p className="text-gray-500 text-sm leading-7 max-w-2xl">
