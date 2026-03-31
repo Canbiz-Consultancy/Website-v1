@@ -1,7 +1,9 @@
+
+
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { services, serviceDetails, servicesSection } from "../constants/content";
+import { services, servicesSection, serviceDetails } from "../constants/content";
 import { ArrowRightIcon, ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 
@@ -53,7 +55,7 @@ export default function ServicesPage() {
       {/* ── Services Grid ────────────────────────────────────────────────────── */}
       <section className="bg-brand-surface py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-gray-200">
             {services.map((service) => {
               const Icon = service.icon;
               const detail = serviceDetails[service.slug];
@@ -66,7 +68,7 @@ export default function ServicesPage() {
                 >
                   {/* Hero image */}
                   {detail && (
-                    <div className="relative h-48 overflow-hidden">
+                    <div className="relative h-56 overflow-hidden">
                       <img
                         src={detail.hero}
                         alt={detail.heroAlt}
@@ -74,11 +76,11 @@ export default function ServicesPage() {
                       />
                       <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-brand-navy/20 transition-colors duration-300" />
                       <div className="absolute top-4 left-4 flex gap-2">
-                        <span className="text-xs bg-brand-gold text-brand-navy px-2.5 py-1 font-semibold tracking-widest uppercase">
+                        <span className="text-[10px] bg-brand-gold text-brand-navy px-2 py-0.5 font-bold tracking-widest uppercase">
                           {String(service.id).padStart(2, "0")}
                         </span>
                         {service.isUpcoming && (
-                          <span className="text-xs bg-brand-navy text-brand-gold px-2.5 py-1 font-semibold tracking-widest uppercase border border-brand-gold/30">
+                          <span className="text-[10px] bg-brand-navy text-brand-gold px-2 py-0.5 font-bold tracking-widest uppercase border border-brand-gold/30">
                             Upcoming
                           </span>
                         )}
@@ -97,27 +99,27 @@ export default function ServicesPage() {
                       </div>
                     </div>
 
-                    <h2 className="text-brand-navy text-base font-semibold leading-snug mb-3 group-hover:text-white transition-colors duration-300">
+                    <h2 className="text-brand-navy text-lg font-semibold leading-tight mb-3 group-hover:text-white transition-colors duration-300">
                       {service.title}
                     </h2>
                     <p className="text-gray-500 text-xs leading-relaxed mb-6 flex-1 group-hover:text-gray-400 transition-colors duration-300">
                       {service.description}
                     </p>
 
-                    {detail && (
-                      <div className="flex flex-wrap gap-2 mb-6">
-                        {detail.tags.slice(0, 3).map((tag) => (
+                    {detail && detail.targetAudience && (
+                      <div className="flex flex-wrap gap-1.5 mb-8">
+                        {detail.targetAudience.slice(0, 2).map((aud: any) => (
                           <span
-                            key={tag}
-                            className="text-xs border border-brand-gold/30 text-brand-navy/60 group-hover:text-brand-gold/60 group-hover:border-brand-gold/40 px-2.5 py-1 transition-colors"
+                            key={aud.title}
+                            className="text-[10px] border border-brand-gold/20 text-brand-navy/60 group-hover:text-brand-gold/60 group-hover:border-brand-gold/30 px-2 py-0.5 transition-colors whitespace-nowrap"
                           >
-                            {tag}
+                            {aud.title}
                           </span>
                         ))}
                       </div>
                     )}
 
-                    <div className="flex items-center gap-1.5 text-xs font-medium text-brand-gold group-hover:gap-3 transition-all duration-300">
+                    <div className="flex items-center gap-1.5 text-xs font-semibold text-brand-gold group-hover:gap-3 transition-all duration-300 uppercase tracking-widest">
                       Explore service <ArrowRightIcon size={13} />
                     </div>
                   </div>
