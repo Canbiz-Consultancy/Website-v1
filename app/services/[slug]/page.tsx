@@ -87,7 +87,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── The Challenge (Pain Points) ───────────────────────────────────── */}
-      <section className="px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/3 shrink-0">
              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Challenge</h2>
@@ -108,7 +108,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── Our Solution (Deliverables) ──────────────────────────────────── */}
-      <section className="px-6 md:px-16 py-24 md:py-32 bg-gray-50">
+      <section className="bg-brand-surface px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-16 md:mb-24">
              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Solution</h2>
@@ -129,7 +129,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── The Process ──────────────────────────────────────────────────────── */}
-      <section className="px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/3 shrink-0">
              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">Our Approach</h2>
@@ -200,7 +200,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── Audience & Why Us ──────────────────────────────────────────────── */}
-      <section className="px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
+      <section className="bg-brand-surface px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           
           {/* Target Audience */}
@@ -221,7 +221,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           </div>
 
           {/* Why Us */}
-          <div className="bg-gray-50 p-10 md:p-16 border border-gray-200">
+          <div className="bg-white p-10 md:p-16 border border-gray-200">
             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Canbiz Advantage</h2>
             <h3 className="text-2xl font-light mb-10">Distinctive capabilities.</h3>
             <div className="space-y-8">
@@ -238,7 +238,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── CTA & FAQs ─────────────────────────────────────────────────────── */}
-      <section className="px-6 md:px-16 py-24 md:py-32">
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
           
           {/* CTA */}
@@ -284,7 +284,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── Next/Prev Navigation ───────────────────────────────────────────── */}
-      <section className="border-t border-gray-200">
+      <section className="bg-brand-surface border-t border-gray-200">
         <div className="max-w-[1200px] mx-auto px-6 md:px-16 flex justify-between">
           <div className="py-12 md:py-16">
             {prevService && (
