@@ -44,7 +44,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <div className="h-14 md:h-20" />
 
       {/* ── Hero (Outcome-Driven) ─────────────────────────────────────────── */}
-      <section className="relative isolate px-6 md:px-16 pt-28 pb-32 md:pt-40 md:pb-48 overflow-hidden">
+      <section className="relative isolate px-6 md:px-16 pt-28 pb-24 md:pt-40 md:pb-36 overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -55,7 +55,8 @@ export default async function ServiceDetailPage({ params }: Props) {
         </div>
         
         {/* Gradient Overlay for Legibility */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-navy via-brand-navy/90 to-brand-navy/40" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
+        <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />
 
         <div className="max-w-[1200px] mx-auto relative z-10">
           {/* Breadcrumb */}
@@ -73,34 +74,47 @@ export default async function ServiceDetailPage({ params }: Props) {
             </span>
           </div>
 
-          <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold mb-6">
-            {detail.eyebrow}
-          </p>
-          <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-light leading-[1.1] tracking-tight max-w-[900px] mb-8">
-            {detail.headline}
-          </h1>
-          <div className="w-16 h-[2px] bg-brand-gold mb-8" />
-          <p className="text-gray-300 text-lg md:text-xl leading-relaxed max-w-[700px] font-light">
-            {detail.subheadline}
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-14 lg:gap-20 items-end">
+            <div>
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-6">
+                {detail.eyebrow}
+              </p>
+              <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-light leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-8">
+                {detail.headline}
+              </h1>
+              <p className="text-gray-300 text-lg md:text-[22px] leading-[1.7] max-w-[680px] font-light">
+                {detail.subheadline}
+              </p>
+            </div>
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Capability</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">{service.title}</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Positioning</p>
+              <p className="text-sm leading-7 text-gray-300">
+                Strategic advisory designed to create institutional clarity, operating discipline, and measurable commercial traction.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* ── The Challenge (Pain Points) ───────────────────────────────────── */}
-      <section className="bg-white px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/3 shrink-0">
              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Challenge</h2>
-             <h3 className="text-2xl md:text-3xl font-light leading-snug">
+             <h3 className="text-2xl md:text-3xl font-light leading-snug max-w-[280px]">
                Navigating modern business complexity.
              </h3>
           </div>
-          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+          <div className="lg:w-2/3 grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-0 border-t border-black/10">
             {detail.painPoints?.map((pain: any, i: number) => (
-              <div key={i} className="relative">
-                <div className="absolute -left-4 top-1.5 w-[2px] h-6 bg-brand-gold" />
-                <h4 className="text-lg font-medium mb-3">{pain.title}</h4>
-                <p className="text-sm text-gray-500 leading-relaxed">{pain.description}</p>
+              <div key={i} className="relative border-b border-black/10 py-10 md:py-12 md:pr-8">
+                <p className="mb-5 text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400">
+                  {String(i + 1).padStart(2, "0")}
+                </p>
+                <h4 className="text-[22px] font-light mb-4 tracking-[-0.02em] leading-snug">{pain.title}</h4>
+                <p className="text-sm text-gray-500 leading-7 max-w-[420px]">{pain.description}</p>
               </div>
             ))}
           </div>
@@ -108,20 +122,30 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── Our Solution (Deliverables) ──────────────────────────────────── */}
-      <section className="bg-brand-surface px-6 md:px-16 py-24 md:py-32">
+      <section className="bg-[#F3F4F6] px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto">
-          <div className="mb-16 md:mb-24">
+          <div className="mb-16 md:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
+            <div>
              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Solution</h2>
              <h3 className="text-3xl md:text-4xl font-light leading-tight max-w-[600px]">
                Concrete deliverables driving structural transformation.
              </h3>
+            </div>
+            <p className="text-sm text-gray-500 leading-7 max-w-[340px]">
+              Each engagement is translated into operational decisions, documented systems, and governance structures leaders can actually use.
+            </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200 border border-gray-200">
+          <div className="border-t border-black/10">
             {detail.deliverables?.map((del: any, i: number) => (
-              <div key={i} className="bg-white p-10 md:p-14 hover:bg-[#fafafa] transition-colors">
-                 <h4 className="text-xl font-medium mb-4">{del.title}</h4>
-                 <p className="text-sm text-gray-500 leading-relaxed">{del.description}</p>
+              <div key={i} className="grid grid-cols-1 md:grid-cols-[120px_minmax(0,1fr)] gap-6 md:gap-10 border-b border-black/10 py-8 md:py-10">
+                 <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-gray-400">
+                   {String(i + 1).padStart(2, "0")}
+                 </p>
+                 <div className="max-w-[760px]">
+                   <h4 className="text-2xl font-light mb-3 tracking-[-0.02em]">{del.title}</h4>
+                   <p className="text-sm text-gray-500 leading-7">{del.description}</p>
+                 </div>
               </div>
             ))}
           </div>
@@ -129,7 +153,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── The Process ──────────────────────────────────────────────────────── */}
-      <section className="bg-white px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
           <div className="lg:w-1/3 shrink-0">
              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">Our Approach</h2>
@@ -138,15 +162,16 @@ export default async function ServiceDetailPage({ params }: Props) {
              </h3>
           </div>
           <div className="lg:w-2/3">
-            <div className="flex flex-col gap-12">
+            <div className="border-l border-black/10 pl-8 md:pl-10 flex flex-col gap-12">
               {detail.process?.map((step: any, i: number) => (
-                <div key={i} className="flex gap-6 md:gap-10 items-start group">
-                   <div className="text-4xl md:text-5xl font-light text-gray-200 group-hover:text-brand-gold transition-colors tracking-tighter w-16">
+                <div key={i} className="relative flex gap-6 md:gap-10 items-start group">
+                   <div className="text-4xl md:text-5xl font-light text-gray-300 group-hover:text-brand-navy transition-colors tracking-tighter w-16">
                      {step.step}
                    </div>
-                   <div className="pt-2 border-t border-gray-200 w-full flex-1">
-                     <h4 className="text-lg font-medium mb-3 mt-4">{step.title}</h4>
-                     <p className="text-sm text-gray-500 leading-relaxed max-w-[500px]">{step.description}</p>
+                   <div className="w-full flex-1 pb-12 border-b border-black/10">
+                     <div className="mb-5 h-px w-16 bg-black/12" />
+                     <h4 className="text-[24px] font-light mb-3 tracking-[-0.02em]">{step.title}</h4>
+                     <p className="text-sm text-gray-500 leading-7 max-w-[560px]">{step.description}</p>
                    </div>
                 </div>
               ))}
@@ -200,7 +225,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── Audience & Why Us ──────────────────────────────────────────────── */}
-      <section className="bg-brand-surface px-6 md:px-16 py-24 md:py-32 border-b border-gray-200">
+      <section className="bg-[#F3F4F6] px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
           
           {/* Target Audience */}
@@ -209,11 +234,11 @@ export default async function ServiceDetailPage({ params }: Props) {
             <h3 className="text-2xl font-light mb-12">Designed for decisive leadership.</h3>
             <div className="space-y-8">
               {detail.targetAudience?.map((aud: any, i: number) => (
-                <div key={i} className="flex gap-4">
-                   <ArrowRightIcon className="text-brand-gold mt-1 shrink-0" size={16} />
+                <div key={i} className="flex gap-4 border-b border-black/10 pb-6">
+                   <ArrowRightIcon className="text-brand-navy/50 mt-1 shrink-0" size={16} />
                    <div>
                      <h4 className="text-sm font-bold mb-1 uppercase tracking-wide">{aud.title}</h4>
-                     <p className="text-sm text-gray-500 leading-relaxed">{aud.description}</p>
+                     <p className="text-sm text-gray-500 leading-7">{aud.description}</p>
                    </div>
                 </div>
               ))}
@@ -221,14 +246,14 @@ export default async function ServiceDetailPage({ params }: Props) {
           </div>
 
           {/* Why Us */}
-          <div className="bg-white p-10 md:p-16 border border-gray-200">
+          <div className="bg-white p-10 md:p-16 border-l-2 border-brand-navy">
             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-4">The Canbiz Advantage</h2>
             <h3 className="text-2xl font-light mb-10">Distinctive capabilities.</h3>
             <div className="space-y-8">
               {detail.whyUs?.map((why: any, i: number) => (
-                <div key={i} className="border-l-2 border-brand-gold pl-5">
-                   <h4 className="text-sm font-bold mb-1">{why.title}</h4>
-                   <p className="text-sm text-gray-500 leading-relaxed">{why.description}</p>
+                <div key={i} className="border-t border-black/10 pt-5">
+                   <h4 className="text-base font-medium mb-2">{why.title}</h4>
+                   <p className="text-sm text-gray-500 leading-7">{why.description}</p>
                 </div>
               ))}
             </div>
@@ -262,16 +287,16 @@ export default async function ServiceDetailPage({ params }: Props) {
           {detail.faqs && detail.faqs.length > 0 && (
             <div className="lg:w-1/2 w-full">
                <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-8">Frequent Inquiries</h2>
-               <div className="border-t border-gray-200">
+               <div className="border-t border-black/10">
                  {detail.faqs.map((faq: any, i: number) => (
-                   <details key={i} className="group border-b border-gray-200 [&_summary::-webkit-details-marker]:hidden">
+                   <details key={i} className="group border-b border-black/10 [&_summary::-webkit-details-marker]:hidden">
                      <summary className="flex items-center justify-between cursor-pointer py-6 font-medium text-sm hover:text-brand-gold transition-colors">
                        {faq.question}
                        <span className="transition group-open:rotate-180">
                           <CaretDownIcon size={16} />
                        </span>
                      </summary>
-                     <div className="pb-6 text-sm text-gray-500 leading-relaxed">
+                     <div className="pb-6 pr-10 text-sm text-gray-500 leading-7">
                        {faq.answer}
                      </div>
                    </details>
@@ -284,8 +309,8 @@ export default async function ServiceDetailPage({ params }: Props) {
       </section>
 
       {/* ── Next/Prev Navigation ───────────────────────────────────────────── */}
-      <section className="bg-brand-surface border-t border-gray-200">
-        <div className="max-w-[1200px] mx-auto px-6 md:px-16 flex justify-between">
+      <section className="bg-[#F3F4F6] px-6 md:px-16 pb-16 md:pb-20">
+        <div className="max-w-[1200px] mx-auto border-t border-black/10 px-0 md:px-0 flex justify-between">
           <div className="py-12 md:py-16">
             {prevService && (
               <Link href={`/services/${prevService.slug}`} className="group block">
