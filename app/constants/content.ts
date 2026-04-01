@@ -148,8 +148,8 @@ export const advisorySection = {
   body: "At Canbiz Consultancy, we specialize in business systems for startups, corporate training for companies, business process management, company policies and procedures, and startup consulting services. We believe the real foundation of a successful organization is structured processes—not just physical expansion. Our approach combines comprehensive business process management with documented company policies and procedures, creating operational frameworks that eliminate founder dependency. Through targeted corporate training programs and systematic startup consulting, we build capability-driven teams that empower your business to function, adapt, and scale smoothly on its own.",
   image:
     "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-  imageAlt: "Canbiz Advisory",
-  imageEyebrow: "Canbiz Advisory",
+  imageAlt: "Canbiz Consultancy",
+  imageEyebrow: "Canbiz Consultancy",
   imageCaption: "Supporting organizations in building practical, scalable business systems.",
 };
 
