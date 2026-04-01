@@ -21,7 +21,7 @@ export function ConfidenceSection() {
         </div>
       </div>
 
-      <div className="bg-brand-surface flex items-center px-6 md:px-16 py-24">
+      <div className="bg-white flex items-center px-6 md:px-16 py-24">
         <div className="max-w-2xl">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">{confidenceSection.eyebrow}</p>
           <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">

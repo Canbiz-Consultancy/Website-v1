@@ -6,67 +6,72 @@ import Link from "next/link";
 
 export function CareersSection() {
   return (
-    <section className="bg-brand-surface py-24 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto">
-
-        <div className="mb-16">
-          <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-3">{careersSection.eyebrow}</p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-4">
-            {careersSection.headingPlain}{" "}
-            <span className="text-brand-gold">{careersSection.headingGold}</span>
-          </h2>
-          <div className="w-12 h-0.5 bg-brand-gold mb-6" />
-          <p className="text-gray-600 text-sm leading-relaxed max-w-xl">
-            {careersSection.subtext}
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-0 mb-20 border border-gray-200 bg-white">
-          {careersValues.map((v, i) => (
-            <div key={i} className="p-6 md:p-8 border-r border-gray-100 last:border-r-0 group hover:bg-brand-navy transition-colors duration-300">
-              <div className="w-8 h-0.5 bg-brand-gold mb-5 group-hover:w-12 transition-all duration-300" />
-              <h3 className="text-brand-navy text-sm font-semibold mb-3 group-hover:text-white transition-colors">{v.title}</h3>
-              <p className="text-gray-500 text-xs leading-relaxed group-hover:text-gray-300 transition-colors">{v.description}</p>
-            </div>
-          ))}
-        </div>
-
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 mb-16 overflow-hidden">
-          <div className="relative h-64 sm:h-96">
-            <img
-              src={careersSection.image}
-              alt={careersSection.imageAlt}
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute inset-0 bg-brand-navy/30" />
-          </div>
-          <div className="bg-brand-navy p-6 sm:p-10 flex flex-col justify-center">
-            <h3 className="text-white text-xl font-semibold mb-4">
-              {careersSection.whyHeadingPlain} <span className="text-brand-gold">{careersSection.whyHeadingGold}</span>
-            </h3>
-            <ul className="space-y-4">
-              {careersWhyPoints.map((item, i) => (
-                <li key={i} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-brand-gold mt-1.5 shrink-0" />
-                  <span className="text-gray-300 text-xs leading-relaxed">{item}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-
-
-        <div className="text-center">
-          <p className="text-gray-500 text-sm mb-6">
-            {careersSection.ctaQuestion}
-          </p>
-          <Link href='/careers' className="inline-flex items-center gap-3 bg-brand-gold text-brand-navy px-10 py-4 text-sm font-semibold hover:bg-brand-gold-hover transition-all duration-300">
-            {careersSection.ctaLabel} <ArrowRightIcon size={16} />
-          </Link>
-        </div>
-
+    <section className="bg-[#F3F4F6] px-6 md:px-16 py-24 md:py-32">
+      
+      {/* ── Header ─────────────────────────────────────────── */}
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-end mb-20 md:mb-28">
+         <div className="lg:w-1/2 shrink-0">
+             <h2 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">{careersSection.eyebrow}</h2>
+             <h3 className="mb-0 text-3xl md:text-4xl text-black font-semibold leading-tight max-w-[600px]">
+               {careersSection.headingPlain}{" "}
+               <span className="text-brand-gold">{careersSection.headingGold}</span>
+             </h3>
+         </div>
+         <div className="lg:w-1/2 border-l border-black/10 pl-8 md:pl-10">
+             <p className="text-gray-500 text-sm leading-7">
+               {careersSection.subtext}
+             </p>
+         </div>
       </div>
+
+      {/* ── Values/Pillars ──────────────────────────────────────────── */}
+      <div className="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 md:gap-x-12 border-t border-black/10 pt-16 md:pt-20 mb-24 md:mb-32">
+        {careersValues.map((v, i) => (
+          <div key={i} className="border-l border-black/10 pl-6 h-full">
+            <h4 className="text-lg font-semibold mb-3 text-black tracking-[-0.01em] leading-snug">{v.title}</h4>
+            <p className="text-[13px] text-gray-500 leading-[1.8]">{v.description}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* ── Image & Why Us ─────────────────────────────────────────── */}
+      <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 mb-6 md:mb-12 border-t border-black/10 pt-24 md:pt-32">
+         <div className="lg:w-1/2 relative">
+             <div className="relative aspect-[4/5] overflow-hidden">
+               <img
+                 src={careersSection.image}
+                 alt={careersSection.imageAlt}
+                 className="w-full h-full object-cover grayscale-[0.2]"
+               />
+             </div>
+         </div>
+         <div className="lg:w-1/2 flex flex-col justify-center">
+             <h2 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">Environment</h2>
+             <h3 className="mb-8 text-3xl md:text-4xl text-black font-semibold leading-tight max-w-[600px]">
+               {careersSection.whyHeadingPlain}{" "}
+               <span className="text-brand-gold">{careersSection.whyHeadingGold}</span>
+             </h3>
+             <div className="border-t border-black/10 flex flex-col w-full">
+               {careersWhyPoints.map((item, i) => (
+                 <div key={i} className="flex gap-4 border-b border-black/10 py-6 items-start">
+                    <ArrowRightIcon className="text-gray-400 mt-1 shrink-0" size={16} />
+                    <p className="text-sm text-gray-600 leading-7">{item}</p>
+                 </div>
+               ))}
+             </div>
+         </div>
+      </div>
+
+      {/* ── CTA ──────────────────────────────────────────────── */}
+      <div className="max-w-[1200px] mx-auto text-center border-t border-black/10 pt-16 mt-16 md:pt-20 md:mt-24">
+        <p className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">
+          {careersSection.ctaQuestion}
+        </p>
+        <Link href='/careers' className="inline-flex items-center gap-3 bg-brand-navy text-white px-8 py-4 text-xs font-bold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 uppercase tracking-widest">
+          {careersSection.ctaLabel} <ArrowRightIcon size={14} />
+        </Link>
+      </div>
+
     </section>
   );
 }

@@ -11,7 +11,7 @@ export function IndustriesSection() {
   const active = industries[activeIndex];
 
   return (
-    <section className="bg-white py-24 px-6 md:px-16">
+    <section className="bg-brand-surface py-24 px-6 md:px-16">
       <div className="max-w-6xl mx-auto">
         <div className="mb-14 flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <div>

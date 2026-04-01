@@ -34,10 +34,6 @@ export default function App() {
       <div id="industries">
         <IndustriesSection />
       </div>
-      
-      <div id="careers">
-        <CareersSection />
-      </div>
       <div id="about">
         <AboutSection />
       </div>
