@@ -19,21 +19,8 @@ export default function CareersPage() {
       <div className="h-14 md:h-20" />
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="relative isolate px-6 md:px-16 pt-28 pb-24 md:pt-40 md:pb-36 overflow-hidden">
-        {/* Background Image */}
-        <div className="absolute inset-0 z-0 bg-brand-navy">
-          <img 
-             src="https://images.unsplash.com/photo-1497215728101-856f4ea42174?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxvZmZpY2V8ZW58MXx8fHwxNzA4NDA5NjI5fDA&ixlib=rb-4.1.0&q=80&w=1080" 
-             alt="Careers at Canbiz" 
-             className="w-full h-full object-cover object-center grayscale-[0.5] opacity-40 mix-blend-overlay"
-          />
-        </div>
-        
-        {/* Gradient Overlay for Legibility */}
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
-        <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />
-
-        <div className="max-w-[1200px] mx-auto relative z-10">
+      <section className="bg-brand-navy px-6 md:px-16 pt-32 pb-24 md:pt-40 md:pb-36">
+        <div className="max-w-[1200px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-14 lg:gap-20 items-end">
             <div>
               <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-6">
