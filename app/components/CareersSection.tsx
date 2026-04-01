@@ -1,7 +1,7 @@
 "use client";
 
 import { ArrowRightIcon } from "@phosphor-icons/react";
-import { careersSection, careersValues, careersStats, careersWhyPoints } from "../constants/content";
+import { careersSection, careersValues, careersWhyPoints } from "../constants/content";
 import Link from "next/link";
 
 export function CareersSection() {
@@ -55,14 +55,7 @@ export function CareersSection() {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-0 border border-gray-200 bg-white mb-12">
-          {careersStats.map((s, i) => (
-            <div key={i} className="p-5 md:p-8 border-r border-gray-100 last:border-r-0 text-center">
-              <p className="text-brand-gold text-3xl font-semibold mb-2">{s.value}</p>
-              <p className="text-gray-500 text-xs">{s.label}</p>
-            </div>
-          ))}
-        </div>
+
 
         <div className="text-center">
           <p className="text-gray-500 text-sm mb-6">

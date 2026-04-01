@@ -3,7 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react";
-import { industries, industriesSection, industriesBottomStats } from "../constants/content";
+import { industries, industriesSection } from "../constants/content";
 
 export function IndustriesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -87,16 +87,7 @@ export function IndustriesSection() {
                 <h3 className="text-brand-navy text-lg font-semibold mb-3">{active.name}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed mb-6">{active.description}</p>
 
-                <div className="flex flex-wrap gap-2 mb-8">
-                  {active.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="text-xs border border-brand-gold/40 text-brand-navy px-3 py-1"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+
               </div>
 
               <Link
@@ -109,17 +100,7 @@ export function IndustriesSection() {
           </div>
         </div>
 
-        <div className="mt-14 grid grid-cols-2 md:grid-cols-4 gap-0 border border-gray-100">
-          {industriesBottomStats.map((stat, i) => (
-            <div
-              key={i}
-              className="py-6 px-4 md:py-8 md:px-8 text-center border-r border-gray-100 last:border-r-0"
-            >
-              <p className="text-brand-navy text-2xl md:text-3xl font-semibold mb-1">{stat.value}</p>
-              <p className="text-gray-500 text-xs">{stat.label}</p>
-            </div>
-          ))}
-        </div>
+
       </div>
     </section>
   );
