@@ -202,7 +202,7 @@ export default async function ServiceDetailPage({ params }: Props) {
            </div>
 
            {/* Proof Element */}
-           <div className="bg-brand-navy-mid p-10 md:p-16 border-l-4 border-brand-gold relative overflow-hidden">
+           <div className="bg-brand-navy-mid p-10 md:p-16 border-l-4 border-gray-600 relative overflow-hidden">
               <div className="absolute top-0 right-0 opacity-5 text-[150px] leading-none font-serif">&ldquo;</div>
               {detail.proof?.quote ? (
                 <div className="relative z-10">

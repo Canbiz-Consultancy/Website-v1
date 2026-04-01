@@ -66,7 +66,7 @@ export function ServicesSection() {
                       className={`ml-2 inline-flex items-center px-2 py-0.5 rounded-sm text-xs font-bold uppercase tracking-widest transition-colors duration-300 ${
                         isHovered
                           ? "bg-brand-navy text-white"
-                          : "bg-brand-gold/10 text-brand-gold border border-brand-gold/20"
+                          : "bg-brand-gold/10 text-brand-gold"
                       }`}
                     >
                     Upcoming
@@ -97,7 +97,7 @@ export function ServicesSection() {
         <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <Link
             href="/services"
-            className="border border-brand-gold text-brand-gold px-10 py-3.5 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300"
+            className="border border-gray-300 text-gray-600 px-10 py-3.5 text-sm font-medium hover:bg-gray-100 hover:text-gray-800 transition-all duration-300"
           >
             {servicesSection.ctaPrimary}
           </Link>

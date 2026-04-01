@@ -53,7 +53,7 @@ function renderBlock(block: StrapiBlock, index: number): ReactNode {
       );
     case "quote":
       return (
-        <blockquote key={index} className="border-l-4 border-brand-gold pl-8 py-2 italic text-brand-navy text-xl md:text-2xl font-semibold my-10 bg-brand-surface/50 pr-6">
+        <blockquote key={index} className="border-l-4 border-gray-400 pl-8 py-2 italic text-brand-navy text-xl md:text-2xl font-semibold my-10 bg-brand-surface/50 pr-6">
           {children}
         </blockquote>
       );
@@ -207,7 +207,7 @@ export default async function InsightDetailPage({ params }: Props) {
                 href={`/insights/${prevInsight.slug}`}
                 className="group flex items-start gap-4"
               >
-                <div className="w-12 h-12 border border-gray-100 flex items-center justify-center group-hover:border-brand-gold transition-colors shrink-0">
+                <div className="w-12 h-12 border border-gray-100 flex items-center justify-center group-hover:border-gray-400 transition-colors shrink-0">
                   <ArrowLeftIcon size={18} className="text-gray-300 group-hover:text-brand-gold transition-colors" />
                 </div>
                 <div>
@@ -233,7 +233,7 @@ export default async function InsightDetailPage({ params }: Props) {
                     {nextInsight.title}
                   </p>
                 </div>
-                <div className="w-12 h-12 border border-gray-100 flex items-center justify-center group-hover:border-brand-gold transition-colors shrink-0">
+                <div className="w-12 h-12 border border-gray-100 flex items-center justify-center group-hover:border-gray-400 transition-colors shrink-0">
                   <ArrowRightIcon size={18} className="text-gray-300 group-hover:text-brand-gold transition-colors" />
                 </div>
               </Link>

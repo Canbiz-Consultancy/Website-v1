@@ -87,7 +87,7 @@ export default async function IndustryDetailPage({ params }: Props) {
              <p className="text-gray-600 text-sm leading-7 mb-8">{detail.overview}</p>
              <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-sm text-brand-navy font-medium hover:text-brand-gold transition-colors border-b border-black/20 pb-1"
+                className="inline-flex items-center gap-2 text-sm text-brand-navy font-medium hover:text-gray-600 transition-colors border-b border-gray-300 pb-1"
               >
                 Consult Our Industry Experts <ArrowRightIcon size={14} />
               </a>

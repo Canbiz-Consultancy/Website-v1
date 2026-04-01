@@ -24,7 +24,7 @@ export function AdvisoryPhilosophy() {
               const Icon = pillar.icon;
               return (
                 <div key={i} className="flex items-start gap-4">
-                  <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center border border-brand-gold/30 mt-0.5">
+                  <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center mt-0.5">
                     <Icon size={14} className="text-brand-gold" weight="light" />
                   </div>
                   <div>
@@ -44,7 +44,6 @@ export function AdvisoryPhilosophy() {
             className="w-full h-full object-cover absolute inset-0"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent" />
-          <div className="absolute top-0 left-0 right-0 h-1 bg-brand-gold" />
           <div className="absolute bottom-0 left-0 right-0 px-8 py-7">
             <p className="text-brand-gold text-xs font-medium tracking-[2px] uppercase mb-1">
               {advisorySection.imageEyebrow}

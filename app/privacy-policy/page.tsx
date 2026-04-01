@@ -100,7 +100,7 @@ export default function PrivacyPolicyPage() {
             ))}
           </div>
 
-          <div className="mt-20 p-8 bg-brand-surface border border-brand-gold/10">
+          <div className="mt-20 p-8 bg-brand-surface border border-gray-300">
             <p className="text-brand-navy text-sm font-semibold mb-2">
               Need assistance regarding your data?
             </p>

@@ -36,7 +36,6 @@ export async function FeaturedInsights() {
             href={`/insights/${featuredInsight.slug}`}
             className="lg:col-span-2 group cursor-pointer overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
           >
-            <div className="border-t-4 border-brand-gold" />
             <div className="relative overflow-hidden h-72">
                 <img
                   src={getStrapiImageUrl(featuredInsight.featuredImage)}
@@ -66,8 +65,7 @@ export async function FeaturedInsights() {
                 href={`/insights/${insight.slug}`}
                 className="group cursor-pointer bg-white border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow flex-1"
               >
-                <div className="border-t-4 border-brand-gold" />
-                <div className="overflow-hidden h-36">
+                    <div className="overflow-hidden h-36">
                   <img
                     src={getStrapiImageUrl(insight.featuredImage)}
                     alt={insight.title}
@@ -93,8 +91,7 @@ export async function FeaturedInsights() {
               href={`/insights/${insight.slug}`}
               className="group cursor-pointer bg-white border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
             >
-              <div className="border-t-4 border-brand-gold" />
-              <div className="overflow-hidden h-44">
+                <div className="overflow-hidden h-44">
                 <img
                   src={getStrapiImageUrl(insight.featuredImage)}
                   alt={insight.title}

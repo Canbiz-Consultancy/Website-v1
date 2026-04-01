@@ -185,7 +185,7 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-brand-navy border-b-2 border-brand-gold/40">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-brand-navy border-b-2 border-gray-200">
         {/* Top bar */}
         <div className="px-6 md:px-16">
           <div className="max-w-6xl mx-auto flex items-center justify-between">

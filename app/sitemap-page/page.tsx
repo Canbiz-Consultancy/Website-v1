@@ -83,7 +83,7 @@ export default function SitemapPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
             {sitemapData.map((category, idx) => (
               <div key={idx} className="flex flex-col">
-                <h2 className="text-brand-navy text-sm font-bold uppercase tracking-widest mb-6 border-b border-brand-gold/20 pb-4 flex items-center justify-between">
+                <h2 className="text-brand-navy text-sm font-bold uppercase tracking-widest mb-6 border-b border-gray-300 pb-4 flex items-center justify-between">
                   {category.title}
                   <div className="w-2 h-2 bg-brand-gold rotate-45" />
                 </h2>

@@ -92,7 +92,7 @@ export default function IndustriesPage() {
 
                   <div className="p-8 flex flex-col flex-1">
                     <div className="flex items-start justify-between mb-5">
-                      <div className="w-10 h-10 border border-brand-gold/30 flex items-center justify-center group-hover:border-brand-gold/50 transition-colors">
+                      <div className="w-10 h-10 border border-gray-300 flex items-center justify-center group-hover:border-gray-400 transition-colors">
                         <Icon
                           size={20}
                           className="text-brand-gold"

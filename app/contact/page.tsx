@@ -142,7 +142,7 @@ export default function ContactPage() {
               </div>
 
               {/* Other Inquiries block to fill space */}
-              <div className="bg-brand-navy p-8 border-t-2 border-brand-gold">
+              <div className="bg-brand-navy p-8 border-t-2 border-gray-600">
                 <h3 className="text-white text-lg font-light mb-4">Other Inquiries</h3>
                 <div className="space-y-4">
                   <div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                         required
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                        className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-all"
                       />
                     </div>
                     
@@ -210,7 +210,7 @@ export default function ContactPage() {
                           required
                           value={formData.email}
                           onChange={handleChange}
-                          className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                          className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-all"
                         />
                       </div>
                       <div className="space-y-2">
@@ -221,7 +221,7 @@ export default function ContactPage() {
                           name="phoneNumber" 
                           value={formData.phoneNumber}
                           onChange={handleChange}
-                          className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                          className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-all"
                         />
                       </div>
                     </div>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                         name="company" 
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-brand-gold focus:ring-1 focus:ring-brand-gold transition-all"
+                        className="w-full bg-brand-surface border border-gray-200 px-4 py-3.5 text-sm text-brand-navy focus:outline-none focus:border-gray-400 focus:ring-1 focus:ring-gray-400 transition-all"
                       />
                     </div>
 
