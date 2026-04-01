@@ -1,5 +1,3 @@
-
-
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -10,7 +8,7 @@ import type { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Our Services | Canbiz Consultancy Services",
   description:
-    "Explore the full portfolio of Canbiz services — from management consulting and brand strategy to digital solutions, executive education, and government advisory.",
+    "Explore the full portfolio of Canbiz services - from management consulting and brand strategy to digital solutions, executive education, and government advisory.",
 };
 
 export default function ServicesPage() {
@@ -19,7 +17,7 @@ export default function ServicesPage() {
       <Navbar />
       <div className="h-14" />
 
-      {/* ── Hero ─────────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-24 pb-20 md:pt-36 md:pb-28 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#07101d] to-transparent" />
@@ -61,10 +59,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── Services Grid ────────────────────────────────────────────────────── */}
-      <section className="bg-[#F3F4F6] py-24 md:py-32 px-6 md:px-16">
+      {/* â”€â”€ Services Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      <section className="bg-[#F3F4F6] py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="border-t border-black/10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200">
             {services.map((service, index) => {
               const Icon = service.icon;
               const detail = serviceDetails[service.slug];
@@ -73,59 +71,46 @@ export default function ServicesPage() {
                 <Link
                   key={service.id}
                   href={`/services/${service.slug}`}
-                  className="group block border-b border-black/10 py-10 md:py-12"
+                  className="group bg-white flex flex-col hover:bg-brand-navy transition-colors duration-300"
                 >
-                  <div className="grid grid-cols-1 lg:grid-cols-[160px_minmax(0,1fr)_260px] gap-8 items-start">
-                    <div className="flex flex-col gap-4">
-                      <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-gray-400">
-                        {String(index + 1).padStart(2, "0")}
-                      </p>
-                      <div className="w-10 h-10 border border-brand-navy/15 flex items-center justify-center">
-                        <Icon size={20} className="text-brand-navy/70" weight="light" />
+                  {detail && (
+                    <div className="relative h-48 overflow-hidden">
+                      <img
+                        src={detail.hero}
+                        alt={detail.heroAlt}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                      <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-brand-navy/20 transition-colors duration-300" />
+                      <div className="absolute top-4 left-4">
+                        <span className="text-[10px] bg-brand-gold text-brand-navy px-2.5 py-1 font-semibold tracking-widest uppercase">
+                          {String(index + 1).padStart(2, "0")}
+                        </span>
                       </div>
-                    </div>
-
-                    <div className="max-w-2xl">
-                      <h2 className="text-2xl font-semibold tracking-[-0.02em] mb-6 text-brand-navy group-hover:text-brand-gold transition-colors">
-                        {service.title}
-                      </h2>
-                      <p className="text-sm text-gray-500 leading-7">
-                        {service.description}
-                      </p>
-
-                      {detail && detail.targetAudience && (
-                        <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
-                          {detail.targetAudience.slice(0, 2).map((aud: any) => (
-                            <span
-                              key={aud.title}
-                              className="text-[10px] uppercase tracking-[0.24em] text-gray-400"
-                            >
-                              {aud.title}
-                            </span>
-                          ))}
+                      {service.isUpcoming && (
+                        <div className="absolute top-4 right-4 text-[10px] bg-brand-navy text-brand-gold px-2.5 py-1 font-semibold tracking-widest uppercase border border-brand-gold/30">
+                          Upcoming
                         </div>
                       )}
+                    </div>
+                  )}
 
-                      <div className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-brand-navy group-hover:text-brand-gold transition-colors">
-                        Explore service <ArrowRightIcon size={13} />
+                  <div className="p-8 flex flex-col flex-1">
+                    <div className="flex items-start justify-between mb-5">
+                      <div className="w-10 h-10 border border-brand-gold/30 flex items-center justify-center group-hover:border-brand-gold/50 transition-colors">
+                        <Icon size={20} className="text-brand-gold" weight="light" />
                       </div>
                     </div>
 
-                    {detail && (
-                      <div className="hidden lg:block relative h-40 overflow-hidden bg-black/5">
-                        <img
-                          src={detail.hero}
-                          alt={detail.heroAlt}
-                          className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                        />
-                        <div className="absolute inset-0 bg-brand-navy/10 group-hover:bg-brand-navy/0 transition-colors duration-300" />
-                        {service.isUpcoming && (
-                          <div className="absolute top-4 right-4 text-[10px] bg-brand-navy text-brand-gold px-2 py-0.5 font-bold tracking-widest uppercase border border-brand-gold/30">
-                            Upcoming
-                          </div>
-                        )}
-                      </div>
-                    )}
+                    <h2 className="text-brand-navy text-base font-semibold leading-snug mb-6 group-hover:text-white transition-colors duration-300">
+                      {service.title}
+                    </h2>
+                    <p className="text-gray-500 text-xs leading-relaxed mb-6 flex-1 group-hover:text-gray-400 transition-colors duration-300">
+                      {service.description}
+                    </p>
+
+                    <div className="inline-flex items-center gap-2 text-xs font-medium text-brand-gold group-hover:gap-3 transition-all duration-300">
+                      Explore service <ArrowRightIcon size={12} className="translate-y-[1px]" />
+                    </div>
                   </div>
                 </Link>
               );
@@ -134,7 +119,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── Why Canbiz Strip ─────────────────────────────────────────────────── */}
+      {/* â”€â”€ Why Canbiz Strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="bg-brand-navy py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -142,7 +127,7 @@ export default function ServicesPage() {
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
                 Why Canbiz
               </p>
-            <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight mb-6">
+              <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight mb-6">
                 A single trusted partner for{" "}
                 <span className="text-brand-gold">every dimension</span> of
                 your growth.
@@ -150,7 +135,7 @@ export default function ServicesPage() {
               <div className="w-12 h-0.5 bg-brand-gold mb-8" />
               <p className="text-gray-400 text-sm leading-relaxed mb-10">
                 From strategy to execution, brand to technology, leadership to
-                government — Canbiz provides integrated advisory that eliminates
+                government - Canbiz provides integrated advisory that eliminates
                 silos and ensures every service we deliver is connected to your
                 overarching business ambition.
               </p>
@@ -184,7 +169,7 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* ── CTA ──────────────────────────────────────────────────────────────── */}
+      {/* â”€â”€ CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="bg-brand-surface py-20 px-6 md:px-16">
         <div className="max-w-3xl mx-auto text-center">
           <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
