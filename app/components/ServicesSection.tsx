@@ -97,11 +97,11 @@ export function ServicesSection() {
         <div className="mt-14 flex flex-col sm:flex-row items-start sm:items-center gap-6">
           <Link
             href="/services"
-            className="border border-gray-300 text-gray-600 px-10 py-3.5 text-sm font-medium hover:bg-gray-100 hover:text-gray-800 transition-all duration-300"
+            className="border border-gray-300 text-white px-10 py-3.5 text-sm font-medium hover:bg-gray-100 hover:text-gray-800 transition-all duration-300"
           >
             {servicesSection.ctaPrimary}
           </Link>
-          <Link href="/contact" className="text-gray-400 text-sm hover:text-brand-gold transition-colors flex items-center gap-2">
+          <Link href="/contact" className="text-white text-sm hover:text-brand-gold transition-colors flex items-center gap-2">
             {servicesSection.ctaSecondary} <ArrowRightIcon size={14} />
           </Link>
         </div>
