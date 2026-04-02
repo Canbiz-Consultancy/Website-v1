@@ -76,10 +76,6 @@ export function IndustriesSection() {
                 className="w-full h-full object-cover transition-transform duration-700 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
-              <div className="absolute bottom-5 left-6">
-                <span className="text-brand-gold text-2xl font-semibold">{active.stat}</span>
-                <p className="text-white text-xs mt-0.5">{active.statLabel}</p>
-              </div>
             </div>
 
             <div className="p-8 flex-1 flex flex-col justify-between">
