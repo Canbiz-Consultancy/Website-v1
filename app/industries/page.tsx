@@ -18,13 +18,13 @@ export default function IndustriesPage() {
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-24 pb-20 md:pt-36 md:pb-28 overflow-hidden">
+      <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
         <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
         <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-[#07101d] to-transparent" />
 
-        <div className="max-w-6xl mx-auto relative z-10">
+        <div className="max-w-[1200px] mx-auto relative z-10 w-full h-full flex flex-col justify-start">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-10">
+          <div className="flex items-center gap-2 mb-10 md:mb-12">
             <Link
               href="/"
               className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
@@ -38,10 +38,10 @@ export default function IndustriesPage() {
 
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 items-end">
             <div>
-              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase mb-6">
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase mb-4 md:mb-6">
                 {industriesSection.eyebrow}
               </p>
-              <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-3xl mb-6">
+              <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-3xl mb-4 md:mb-6">
                 {industriesSection.headingPlain}{" "}
                 <span className="text-brand-gold">{industriesSection.headingGold}</span>
               </h1>

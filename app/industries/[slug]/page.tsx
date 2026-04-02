@@ -40,17 +40,19 @@ export default async function IndustryDetailPage({ params }: Props) {
       <div className="h-14" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[520px] flex items-end overflow-hidden px-6 md:px-16">
-        <img
-          src={detail.hero}
-          alt={detail.heroAlt}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-brand-navy/20" />
+      <section className="relative h-[600px] lg:h-[650px] pt-32 md:pt-40 pb-16 overflow-hidden px-6 md:px-16 isolate">
+        <div className="absolute inset-0 z-0">
+          <img
+            src={detail.hero}
+            alt={detail.heroAlt}
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-brand-navy/20" />
 
-        <div className="relative z-10 max-w-[1200px] mx-auto pb-16 w-full">
+        <div className="relative z-10 max-w-[1200px] mx-auto w-full h-full flex flex-col justify-start">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-6">
+          <div className="flex items-center gap-2 mb-10 md:mb-12">
             <Link
               href="/industries"
               className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
@@ -64,13 +66,13 @@ export default async function IndustryDetailPage({ params }: Props) {
             </span>
           </div>
 
-          <p className="text-brand-gold text-[10px] tracking-[0.28em] uppercase mb-4">
+          <p className="text-brand-gold text-[10px] tracking-[0.28em] uppercase mb-4 md:mb-6">
             {detail.eyebrow}
           </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-[820px] mb-6">
+          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-[820px] mb-4 md:mb-6">
             {detail.headline}
           </h1>
-          <p className="text-gray-300 text-base md:text-lg leading-[1.7] max-w-[640px] mb-10">
+          <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[640px]">
             {detail.subheadline}
           </p>
         </div>

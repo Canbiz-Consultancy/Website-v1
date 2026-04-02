@@ -64,7 +64,7 @@ export default function ContactPage() {
       <div className="h-14 md:h-20" />
 
       {/* ── Hero Section ──────────────────────────────────────────────────────── */}
-      <section className="relative isolate px-6 md:px-16 pt-28 pb-24 md:pt-40 md:pb-36 overflow-hidden">
+      <section className="relative isolate px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
@@ -78,9 +78,9 @@ export default function ContactPage() {
         <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
         <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />
 
-        <div className="max-w-[1200px] mx-auto relative z-10">
+        <div className="max-w-[1200px] mx-auto relative z-10 w-full h-full flex flex-col justify-start">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-12">
+          <div className="flex items-center gap-2 mb-10 md:mb-12">
             <Link
               href="/"
               className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
@@ -94,15 +94,15 @@ export default function ContactPage() {
             </span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-14 lg:gap-20 items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-12 lg:gap-20 items-end">
             <div>
-              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-6">
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
                 {contactSection.eyebrow}
               </p>
-              <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-6">
+              <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
                 {contactSection.headingPlain} <span className="text-brand-gold">{contactSection.headingGold}</span>
               </h1>
-              <p className="text-gray-300 text-lg md:text-[22px] leading-[1.7] max-w-[680px] font-light">
+              <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">
                 {contactSection.subtext}
               </p>
             </div>

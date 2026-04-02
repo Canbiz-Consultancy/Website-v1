@@ -8,7 +8,9 @@ import {
   ArrowRightIcon,
   MapPinIcon,
   BriefcaseIcon,
+  ArrowLeftIcon,
 } from "@phosphor-icons/react";
+import Link from "next/link";
 
 export default function CareersPage() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
@@ -19,17 +21,34 @@ export default function CareersPage() {
       <div className="h-14 md:h-20" />
 
       {/* ── Hero ─────────────────────────────────────────── */}
-      <section className="bg-brand-navy px-6 md:px-16 pt-32 pb-24 md:pt-40 md:pb-36">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-14 lg:gap-20 items-end">
+      <section className="bg-brand-navy px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px] relative isolate">
+        <div className="absolute inset-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
+        <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />
+        <div className="max-w-[1200px] mx-auto relative z-10 w-full h-full flex flex-col justify-start">
+          {/* Breadcrumb */}
+          <div className="flex items-center gap-2 mb-10 md:mb-12">
+            <Link
+              href="/"
+              className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
+            >
+              <ArrowLeftIcon size={11} />
+              Home
+            </Link>
+            <span className="text-white/30 text-xs">/</span>
+            <span className="text-white/60 text-[11px] tracking-widest uppercase">
+              Careers
+            </span>
+          </div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-12 lg:gap-20 items-end">
             <div>
-              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-6">
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
                 Empowering Human Capital
               </p>
-              <h1 className="text-white text-4xl md:text-6xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-6">
+              <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
                 Join a disciplined consulting team.
               </h1>
-              <p className="text-gray-300 text-lg md:text-[22px] leading-[1.7] max-w-[680px] font-light">
+              <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">
                 We're hiring across multiple practice areas. Find the role where your expertise can create the most impact.
               </p>
             </div>
