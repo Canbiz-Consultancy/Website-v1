@@ -264,7 +264,7 @@ export function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="w-full bg-brand-navy-mid shadow-2xl overflow-hidden relative origin-top"
+              className="w-full bg-white shadow-2xl overflow-hidden relative origin-top border-b border-gray-200"
             >
               {/* Animated gold top border */}
               <motion.div
@@ -288,13 +288,13 @@ export function Navbar() {
                     {/* Left column */}
                     <motion.div
                       variants={leftColVariants}
-                      className="pr-12 border-r border-brand-navy-border flex flex-col justify-start"
+                      className="pr-12 border-r border-gray-200 flex flex-col justify-start"
                     >
                       <p className="text-xs uppercase tracking-widest text-brand-gold mb-4 font-semibold">
                         {activeItem.label}
                       </p>
                       <div className="mb-8">
-                        <h3 className="text-xl text-white font-semibold leading-snug mb-3">
+                        <h3 className="text-xl text-brand-navy font-semibold leading-snug mb-3">
                           {activeItem.label === "Insights"
                             ? "Strategic perspectives shaping the future of regional business."
                             : activeItem.label === "Services"
@@ -307,7 +307,7 @@ export function Navbar() {
 
                       <button
                         onClick={() => { setActiveDropdown(null); handleNavClick(activeItem.section); }}
-                        className="inline-block border border-white/50 text-white text-xs px-6 py-3 hover:bg-white hover:text-brand-navy hover:border-white transition-all duration-300 w-fit"
+                        className="inline-block border border-gray-300 text-brand-navy font-medium text-xs px-6 py-3 hover:bg-brand-navy hover:border-brand-navy hover:text-white transition-all duration-300 w-fit"
                       >
                         Explore {activeItem.label}
                       </button>
@@ -320,24 +320,24 @@ export function Navbar() {
                           variants={itemVariants}
                           className="flex flex-col justify-center items-center h-full text-center max-w-2xl mx-auto"
                         >
-                          <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6">
+                          <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6 bg-brand-gold/5">
                             <MagnifyingGlassIcon className="text-brand-gold" size={24} weight="light" />
                           </div>
-                          <h4 className="text-white text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
-                          <p className="text-gray-400 text-sm leading-relaxed mb-8">
+                          <h4 className="text-brand-navy text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
+                          <p className="text-gray-500 text-sm leading-relaxed mb-8">
                             We're curating our latest research, white papers, and thought leadership
                             perspectives from our team of experts across the GCC.
                           </p>
                           <div className="flex gap-4">
                             {["CEO Perspectives", "GCC Market Entry", "Digital Transformation"].map((tag) => (
-                              <span key={tag} className="text-xs uppercase tracking-widest text-brand-gold/50 bg-brand-gold/5 px-3 py-1.5 rounded-sm">
+                              <span key={tag} className="text-xs uppercase tracking-widest text-brand-gold/80 bg-brand-gold/10 px-3 py-1.5 rounded-sm">
                                 {tag}
                               </span>
                             ))}
                           </div>
                         </motion.div>
                       ) : (
-                        <div className="grid grid-cols-2 gap-x-12 gap-y-2 divide-y divide-brand-navy-border/20">
+                        <div className="grid grid-cols-2 gap-x-12 gap-y-2 divide-y divide-gray-100">
                           {activeItem.children
                             .filter((child) => {
                               if (activeItem.section === "careers") {
@@ -376,7 +376,7 @@ export function Navbar() {
                                       ${idx < 2 ? "pt-0" : ""}`}
                                   >
                                     <div className="flex-1">
-                                      <span className="text-sm text-gray-200 group-hover:text-brand-gold transition-colors font-medium block">
+                                      <span className="text-sm text-brand-navy group-hover:text-brand-gold transition-colors font-medium block">
                                         {child.label}
                                         {child.upcoming && (
                                           <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-xs bg-brand-gold/10 text-brand-gold border border-brand-gold/20 text-[7px] font-bold uppercase tracking-widest leading-none align-middle">
@@ -390,14 +390,14 @@ export function Navbar() {
                                         </span>
                                       )}
                                     </div>
-                                    <span className="text-gray-600 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
+                                    <span className="text-gray-300 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
                                       →
                                     </span>
                                   </Link>
                                 </motion.div>
                               );
                             })}
-                        </div>
+                         </div>
                       )}
                     </div>
                   </motion.div>
@@ -412,7 +412,7 @@ export function Navbar() {
             >
               <button
                 onClick={() => setActiveDropdown(null)}
-                className="group flex flex-col items-center gap-1 text-brand-gold/40 hover:text-brand-gold transition-all duration-200"
+                className="group flex flex-col items-center gap-1 text-gray-300 hover:text-brand-gold transition-all duration-200"
               >
                 <CaretUp size={18} weight="bold" />
               </button>
@@ -425,118 +425,121 @@ export function Navbar() {
         <AnimatePresence>
           {mobileOpen && (
             <motion.div
-              initial={{ opacity: 0, y: -8 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -8 }}
-              transition={{ duration: 0.25, ease: EASE_OUT }}
-              className="lg:hidden bg-brand-navy-mid border-t border-brand-navy-border overflow-hidden"
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: "auto" }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.3, ease: EASE_OUT }}
+              className="lg:hidden bg-white border-t border-gray-200 overflow-y-auto max-h-[calc(100vh-80px)] shadow-2xl"
             >
-              {navItems.map((item) => {
-                const isExpanded = expandedMobileItems.includes(item.label);
-                const hasChildren = item.children && item.children.length > 0;
-                
-                return (
-                  <div key={item.label}>
-                    <button
-                      className="w-full text-left px-6 py-4 text-xs text-gray-200 hover:text-brand-gold hover:bg-brand-navy-light transition-colors tracking-widest border-b border-brand-navy-border flex items-center justify-between"
-                      onClick={() => {
-                        if (hasChildren) {
-                          toggleMobileItem(item.label);
-                        } else {
-                          handleNavClick(item.section);
-                        }
-                      }}
-                    >
-                      <span>{item.label}</span>
-                      {hasChildren && (
-                        <motion.div
-                          animate={{ rotate: isExpanded ? 180 : 0 }}
-                          transition={{ duration: 0.2 }}
-                        >
-                          <CaretDown size={14} />
-                        </motion.div>
-                      )}
-                    </button>
-                    
-                    {/* Expandable sub-routes */}
-                    <AnimatePresence>
-                      {isExpanded && hasChildren && (
-                        <motion.div
-                          initial={{ height: 0, opacity: 0 }}
-                          animate={{ height: "auto", opacity: 1 }}
-                          exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.3, ease: EASE_OUT }}
-                          className="overflow-hidden bg-brand-navy-light"
-                        >
-                          {item.children.map((child) => {
-                            const aboutAnchors: Record<string, string> = {
-                              "Our Story":        "/about#our-story",
-                              "Mission & Vision": "/about#mission-values",
-                              "Leadership Team":  "/about#leadership",
-                              "Our Journey":      "/about#journey",
-                            };
-                            const careersAnchors: Record<string, string> = {
-                              "Open Positions": "/careers#open-positions",
-                              "Life at Canbiz": "/careers#life",
-                            };
-                            
-                            const href =
-                              item.section === "services"
-                                ? getServiceHref(child.label)
-                                : item.section === "industries"
-                                ? getIndustryHref(child.label)
-                                : item.section === "careers"
-                                ? (careersAnchors[child.label] ?? "/careers")
-                                : item.section === "about"
-                                ? (aboutAnchors[child.label] ?? "/about")
-                                : `/#${item.section}`;
+              <div className="flex flex-col h-full">
+                {navItems.map((item) => {
+                  const isExpanded = expandedMobileItems.includes(item.label);
+                  const hasChildren = item.children && item.children.length > 0;
+                  
+                  return (
+                    <div key={item.label}>
+                      <button
+                        className="w-full text-left px-6 py-5 text-[13px] font-semibold text-brand-navy hover:text-brand-gold transition-colors tracking-widest uppercase border-b border-gray-100 flex items-center justify-between bg-white"
+                        onClick={() => {
+                          if (hasChildren) {
+                            toggleMobileItem(item.label);
+                          } else {
+                            handleNavClick(item.section);
+                          }
+                        }}
+                      >
+                        <span>{item.label}</span>
+                        {hasChildren && (
+                          <motion.div
+                            animate={{ rotate: isExpanded ? 180 : 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="bg-gray-50 p-1.5 rounded-full text-gray-500"
+                          >
+                            <CaretDown size={14} weight="bold" />
+                          </motion.div>
+                        )}
+                      </button>
+                      
+                      {/* Expandable sub-routes */}
+                      <AnimatePresence>
+                        {isExpanded && hasChildren && (
+                          <motion.div
+                            initial={{ height: 0, opacity: 0 }}
+                            animate={{ height: "auto", opacity: 1 }}
+                            exit={{ height: 0, opacity: 0 }}
+                            transition={{ duration: 0.3, ease: EASE_OUT }}
+                            className="overflow-hidden bg-[#F9FAFB]"
+                          >
+                            {item.children.map((child) => {
+                              const aboutAnchors: Record<string, string> = {
+                                "Our Story":        "/about#our-story",
+                                "Mission & Vision": "/about#mission-values",
+                                "Leadership Team":  "/about#leadership",
+                                "Our Journey":      "/about#journey",
+                              };
+                              const careersAnchors: Record<string, string> = {
+                                "Open Positions": "/careers#open-positions",
+                                "Life at Canbiz": "/careers#life",
+                              };
+                              
+                              const href =
+                                item.section === "services"
+                                  ? getServiceHref(child.label)
+                                  : item.section === "industries"
+                                  ? getIndustryHref(child.label)
+                                  : item.section === "careers"
+                                  ? (careersAnchors[child.label] ?? "/careers")
+                                  : item.section === "about"
+                                  ? (aboutAnchors[child.label] ?? "/about")
+                                  : `/#${item.section}`;
 
-                            return (
-                              <Link
-                                key={child.label}
-                                href={href}
-                                onClick={() => {
-                                  setMobileOpen(false);
-                                  setExpandedMobileItems([]);
-                                }}
-                                className="block px-12 py-3 text-xs text-gray-300 hover:text-brand-gold hover:bg-brand-navy-mid transition-colors border-b border-brand-navy-border/20"
-                              >
-                                <div className="flex items-start justify-between">
-                                  <div className="flex-1">
-                                    <span className="block font-medium">
-                                      {child.label}
-                                      {child.upcoming && (
-                                        <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-[2px] bg-brand-gold/10 text-brand-gold border border-brand-gold/20 text-[7px] font-bold uppercase tracking-widest leading-none align-middle">
-                                          Upcoming
+                              return (
+                                <Link
+                                  key={child.label}
+                                  href={href}
+                                  onClick={() => {
+                                    setMobileOpen(false);
+                                    setExpandedMobileItems([]);
+                                  }}
+                                  className="block px-8 py-4 text-sm text-gray-600 hover:text-brand-gold hover:bg-gray-100 transition-colors border-b border-gray-200/50"
+                                >
+                                  <div className="flex items-start justify-between">
+                                    <div className="flex-1">
+                                      <span className="block font-medium">
+                                        {child.label}
+                                        {child.upcoming && (
+                                          <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-[2px] bg-brand-gold/10 text-brand-gold border border-brand-gold/30 text-[9px] font-bold uppercase tracking-widest leading-none align-middle">
+                                            Upcoming
+                                          </span>
+                                        )}
+                                      </span>
+                                      {child.sub && (
+                                        <span className="text-[11px] text-gray-400 mt-1.5 block leading-relaxed max-w-[280px]">
+                                          {child.sub}
                                         </span>
                                       )}
+                                    </div>
+                                    <span className="text-gray-300">
+                                      →
                                     </span>
-                                    {child.sub && (
-                                      <span className="text-xs text-gray-500 mt-1 block">
-                                        {child.sub}
-                                      </span>
-                                    )}
                                   </div>
-                                </div>
-                              </Link>
-                            );
-                          })}
-                        </motion.div>
-                      )}
-                    </AnimatePresence>
-                  </div>
-                );
-              })}
-              <div className="px-6 py-4 flex gap-4 border-t border-brand-navy-border">
-                <button className="flex items-center gap-1.5 text-xs text-gray-300">
-                  <MagnifyingGlassIcon size={13} /> Search
-                </button>
-                <button
-                  onClick={() => { setMobileOpen(false); router.push("/contact"); }}
-                  className="ml-auto bg-brand-gold text-brand-navy text-xs font-semibold px-4 py-2"
-                >
-                  Contact Us
-                </button>
+                                </Link>
+                              );
+                            })}
+                          </motion.div>
+                        )}
+                      </AnimatePresence>
+                    </div>
+                  );
+                })}
+                <div className="px-6 py-8 flex gap-4 flex-col bg-[#F9FAFB] mt-auto">
+                  <button
+                    onClick={() => { setMobileOpen(false); router.push("/contact"); }}
+                    className="w-full bg-brand-navy text-white text-sm font-semibold px-4 py-4 hover:bg-brand-gold hover:text-brand-navy transition-all tracking-widest uppercase shadow-lg shadow-brand-navy/10"
+                  >
+                    Contact Us
+                  </button>
+                </div>
               </div>
             </motion.div>
           )}
