@@ -8,8 +8,6 @@ import {
   aboutSection,
   aboutPillars,
   aboutStats,
-  aboutLeadership,
-  aboutJourney,
 } from "../constants/content";
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react";
 
@@ -96,21 +94,6 @@ export default function AboutPage() {
                <p>{aboutSection.storyPara1}</p>
                <p>{aboutSection.storyPara2}</p>
              </div>
-             
-             <a 
-               href="#leadership" 
-               onClick={(e) => {
-                 e.preventDefault();
-                 const el = document.getElementById("leadership");
-                 if (el) {
-                   const y = el.getBoundingClientRect().top + window.scrollY - 56;
-                   window.scrollTo({ top: y, behavior: "smooth" });
-                 }
-               }}
-               className="inline-flex items-center gap-3 bg-brand-navy text-white px-8 py-4 text-xs font-bold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 uppercase tracking-widest"
-             >
-               Meet our experts <ArrowRightIcon size={14} />
-             </a>
           </div>
         </div>
       </section>
@@ -140,75 +123,6 @@ export default function AboutPage() {
 
       {/* ── Employee Training ─────────────────────────────────────────────────── */}
       <TrainingSection />
-
-      {/* ── Leadership Team ───────────────────────────────────────────────────── */}
-      <section id="leadership" className="bg-white px-6 md:px-16 py-24 md:py-32">
-        <div className="max-w-[1200px] mx-auto">
-          <div className="mb-16 md:mb-24 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
-             <div>
-               <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">The Minds Behind Canbiz</h2>
-               <h3 className="text-3xl md:text-4xl font-semibold leading-tight max-w-[600px]">
-                 Our <span className="text-brand-gold">Leadership</span> Team
-               </h3>
-             </div>
-             <p className="text-sm text-gray-500 leading-7 max-w-[400px]">
-               A diverse collective of seasoned consultants, educators, technologists, and strategists united by a passion for creating real impact.
-             </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12">
-            {aboutLeadership.map((leader, i) => (
-              <div key={i} className="group cursor-pointer">
-                <div className="relative aspect-[3/4] overflow-hidden mb-6 bg-[#F3F4F6]">
-                  <img
-                    src={leader.image}
-                    alt={leader.name}
-                    className="w-full h-full object-cover filter grayscale transition-all duration-500 group-hover:grayscale-0 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-brand-navy/90 via-brand-navy/50 to-transparent p-6 translate-y-full group-hover:translate-y-0 transition-transform duration-500">
-                    <p className="text-white/90 text-xs leading-relaxed">{leader.description}</p>
-                  </div>
-                </div>
-                <div className="border-t border-black/10 pt-4">
-                  <h3 className="text-lg font-semibold tracking-[-0.01em] mb-1">
-                    {leader.name}
-                  </h3>
-                  <p className="text-[10px] text-gray-400 font-bold uppercase tracking-[0.2em]">
-                    {leader.role}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* ── Our Journey (Timeline) ────────────────────────────────────────────── */}
-      <section id="journey" className="bg-brand-navy text-white px-6 md:px-16 py-24 md:py-32">
-        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
-          <div className="lg:w-1/3 shrink-0">
-             <h2 className="text-[11px] text-brand-gold tracking-[0.2em] font-bold uppercase mb-6">Growth & Milestones</h2>
-             <h3 className="mb-4 text-3xl md:text-4xl font-semibold leading-tight sticky top-32">
-               Our <span className="text-brand-gold">Journey</span>
-             </h3>
-          </div>
-          <div className="lg:w-2/3">
-            <div className="border-l border-white/10 pl-8 md:pl-10 flex flex-col gap-12">
-              {aboutJourney.map((item, i) => (
-                <div key={i} className="relative flex gap-6 md:gap-10 items-start group">
-                   <div className="text-4xl md:text-5xl font-light text-white/20 group-hover:text-brand-gold transition-colors tracking-tighter w-24 shrink-0 mt-[-4px]">
-                     {item.year}
-                   </div>
-                   <div className="w-full flex-1 pb-12 border-b border-white/10">
-                     <h4 className="text-[22px] font-semibold mb-3 tracking-[-0.02em]">{item.title}</h4>
-                     <p className="text-sm text-gray-400 leading-7 max-w-[560px]">{item.description}</p>
-                   </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ── CTA ───────────────────────────────────────────────────────────────── */}
       <section className="bg-[#F3F4F6] px-6 md:px-16 py-24 md:py-32">
