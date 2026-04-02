@@ -49,34 +49,52 @@ export default function TermsOfServicePage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="h-14" />
+      <div className="h-14 md:h-20" />
 
       {/* ── Hero ──────────────────────────────────────────────────────────────── */}
-      <section className="bg-brand-navy pt-20 pb-0 px-6 md:px-16 overflow-hidden relative">
-        <div className="absolute inset-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
-        <div className="max-w-6xl mx-auto relative z-10">
+      <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
+        {/* Decorative grid overlay */}
+        <div className="absolute inset-0 z-0 opacity-[0.03] bg-[linear-gradient(var(--color-brand-gold)_1px,transparent_1px),linear-gradient(90deg,var(--color-brand-gold)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
+
+        <div className="max-w-[1200px] mx-auto relative z-10 w-full h-full flex flex-col justify-start">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8">
+          <div className="flex items-center gap-2 mb-10 md:mb-12">
             <Link
               href="/"
-              className="text-brand-gold/60 hover:text-brand-gold text-xs tracking-widest uppercase transition-colors flex items-center gap-1.5"
+              className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
             >
               <ArrowLeftIcon size={11} />
               Home
             </Link>
-            <span className="text-brand-gold/30 text-xs">/</span>
-            <span className="text-brand-gold/50 text-xs tracking-widest uppercase">
+            <span className="text-white/30 text-xs">/</span>
+            <span className="text-white/60 text-[11px] tracking-widest uppercase">
               Terms of Service
             </span>
           </div>
 
-          <p className="text-brand-gold text-xs tracking-[0.25em] uppercase mb-5">
-            Legal & Compliance
-          </p>
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-light leading-tight max-w-3xl mb-6">
-            Terms of <span className="text-brand-gold">Service</span>
-          </h1>
-          <div className="w-12 h-0.5 bg-brand-gold mb-16" />
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 lg:gap-20 items-end">
+            <div>
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
+                Legal & Compliance
+              </p>
+              <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
+                Terms of <span className="text-brand-gold">Service</span>
+              </h1>
+              <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">
+                The framework governing our engagement, professional standards, and the operational boundaries of our advisory platform.
+              </p>
+            </div>
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Type</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">Service Framework</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Firm</p>
+              <p className="text-sm leading-7 text-gray-300">
+                A disciplined advisory platform built for long-term institutional impact.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

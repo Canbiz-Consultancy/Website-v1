@@ -79,7 +79,7 @@ export default async function ServiceDetailPage({ params }: Props) {
               <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
                 {detail.eyebrow}
               </p>
-              <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
+              <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
                 {detail.headline}
               </h1>
               <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">

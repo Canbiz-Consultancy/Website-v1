@@ -106,6 +106,14 @@ export default function ContactPage() {
                 {contactSection.subtext}
               </p>
             </div>
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Firm</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">Canbiz Conulstancy</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Positioning</p>
+              <p className="text-sm leading-7 text-gray-300">
+                A disciplined advisory platform built for long-term institutional impact.
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -143,7 +151,7 @@ export default function ContactPage() {
           {/* Right: Contact Form */}
           <div className="lg:w-2/3">
             <div className="mb-16">
-              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Initiate Dialogue</h2>
+              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Contact Us</h2>
               <h3 className="text-3xl md:text-4xl font-semibold leading-tight max-w-[600px]">
                 Begin your <span className="text-brand-gold">transformation</span>
               </h3>
@@ -263,7 +271,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                       className="bg-brand-navy text-white text-sm font-bold px-10 py-4 flex items-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed uppercase tracking-widest shadow-lg hover:shadow-xl"
                     >
-                      {isSubmitting ? "Initiating Contact..." : "Initiate Contact"} 
+                      {isSubmitting ? "Submitting..." : "Submit"} 
                       {!isSubmitting && <ArrowRightIcon size={14} />}
                     </button>
                   </div>

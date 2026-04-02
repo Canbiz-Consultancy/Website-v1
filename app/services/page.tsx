@@ -15,7 +15,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="h-14" />
+      <div className="h-14 md:h-20" />
 
       {/* â”€â”€ Hero â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
       <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
@@ -36,22 +36,24 @@ export default function ServicesPage() {
             <span className="text-white/60 text-[11px] tracking-widest uppercase">Services</span>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 items-end">
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 lg:gap-20 items-end">
             <div>
-              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase mb-4 md:mb-6">
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
                 {servicesSection.eyebrow}
               </p>
-              <h1 className="text-white text-3xl md:text-4xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-3xl mb-4 md:mb-6">
+              <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
                 {servicesSection.headingPlain}{" "}
                 <span className="text-brand-gold">{servicesSection.headingGold}</span>
               </h1>
-              <p className="text-gray-300 text-sm md:text-base leading-7 max-w-2xl">
+              <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">
                 {servicesSection.subtext}
               </p>
             </div>
-            <div className="hidden lg:block border-l border-white/15 pl-8 pb-1">
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
               <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Portfolio</p>
-              <p className="text-white text-lg leading-7 font-light">
+              <p className="text-white text-xl leading-tight font-light mb-8">Integrated advisory</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Positioning</p>
+              <p className="text-sm leading-7 text-gray-300">
                 A curated set of capabilities designed to move leadership from strategy to execution.
               </p>
             </div>

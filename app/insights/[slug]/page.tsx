@@ -2,7 +2,7 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
-import { ArrowLeftIcon, ArrowRightIcon, CalendarBlank, User } from "@phosphor-icons/react/dist/ssr";
+import { ArrowLeft as ArrowLeftIcon, ArrowRight as ArrowRightIcon, CalendarBlank, User } from "@phosphor-icons/react/dist/ssr";
 import { getInsightBySlug, getStrapiImageUrl, getInsights } from "../../lib/strapi";
 import { formatDate } from "../../lib/utils";
 import type { StrapiBlock, Insight } from "../../types/insight";
@@ -94,55 +94,66 @@ export default async function InsightDetailPage({ params }: Props) {
   const nextInsight = currentIndex < allInsights.length - 1 ? allInsights[currentIndex + 1] : null;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background text-brand-navy font-sans">
       <Navbar />
-      <div className="h-14" />
+      <div className="h-14 md:h-20" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
-      <section className="relative min-h-[32rem] flex items-end overflow-hidden px-6 md:px-16">
+      <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
         {insight.featuredImage && (
-          <img
-            src={getStrapiImageUrl(insight.featuredImage)}
-            alt={insight.title}
-            className="absolute inset-0 w-full h-full object-cover"
-          />
+          <div className="absolute inset-0 z-0">
+            <img
+              src={getStrapiImageUrl(insight.featuredImage)}
+              alt={insight.title}
+              className="w-full h-full object-cover"
+            />
+          </div>
         )}
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-navy via-brand-navy/80 to-brand-navy/20" />
+        <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
 
-        <div className="relative z-10 max-w-6xl mx-auto pb-16 w-full">
+        <div className="relative z-10 max-w-[1200px] mx-auto w-full h-full flex flex-col justify-start">
           {/* Breadcrumb */}
-          <div className="flex items-center gap-2 mb-8">
+          <div className="flex items-center gap-2 mb-10 md:mb-12">
             <Link
               href="/insights"
-              className="text-brand-gold/80 hover:text-brand-gold text-xs tracking-widest uppercase transition-colors flex items-center gap-1.5"
+              className="text-white/70 hover:text-white text-[11px] tracking-widest uppercase transition-colors flex items-center gap-1.5"
             >
-              <ArrowLeftIcon size={12} />
-              Insights Hub
+              <ArrowLeftIcon size={11} />
+              Insights
             </Link>
-            <span className="text-brand-gold/30 text-xs">/</span>
-            <span className="text-brand-gold/60 text-xs tracking-widest uppercase truncate max-w-xs">
+            <span className="text-white/30 text-xs">/</span>
+            <span className="text-white/60 text-[11px] tracking-widest uppercase truncate max-w-[200px]">
               {insight.title}
             </span>
           </div>
 
-          <div className="flex items-center gap-4 mb-6">
-            <span className="text-xs bg-brand-gold text-brand-navy px-3 py-1 font-bold tracking-[0.15em] uppercase rounded-sm">
-              {insight.category || 'Expert Perspective'}
-            </span>
-          </div>
-
-          <h1 className="text-white text-4xl md:text-5xl lg:text-6xl font-semibold leading-tight max-w-4xl mb-8">
-            {insight.title}
-          </h1>
-
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-gray-300 text-sm">
-            <div className="flex items-center gap-2">
-              <User size={18} className="text-brand-gold" />
-              <span>{insight.author || 'Canbiz Global Advisory'}</span>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 lg:gap-20 items-end">
+            <div>
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
+                {insight.category || 'Expert Perspective'}
+              </p>
+              <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
+                {insight.title}
+              </h1>
+              <div className="flex flex-wrap items-center gap-x-8 gap-y-4 text-gray-300 text-sm font-light">
+                <div className="flex items-center gap-2">
+                  <User size={16} className="text-brand-gold" />
+                  <span>{insight.author || 'Canbiz Global Advisory'}</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CalendarBlank size={16} className="text-brand-gold" />
+                  <span>{formatDate(insight.published)}</span>
+                </div>
+              </div>
             </div>
-            <div className="flex items-center gap-2">
-              <CalendarBlank size={18} className="text-brand-gold" />
-              <span>{formatDate(insight.published)}</span>
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Focus</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">Strategic Intelligence</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Intel</p>
+              <p className="text-sm leading-7 text-gray-300">
+                Actionable research built to help enterprise leadership navigate complexity and scale rapidly.
+              </p>
             </div>
           </div>
         </div>
@@ -151,7 +162,6 @@ export default async function InsightDetailPage({ params }: Props) {
       {/* ── Article Content ──────────────────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-28 px-6 md:px-16">
         <div className="max-w-3xl mx-auto">
-          
           {/* Main Content */}
           <article className="prose prose-lg max-w-none">
             {insight.content && insight.content.length > 0 ? (

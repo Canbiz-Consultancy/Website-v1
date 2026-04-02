@@ -37,7 +37,7 @@ export default async function IndustryDetailPage({ params }: Props) {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
-      <div className="h-14" />
+      <div className="h-14 md:h-20" />
 
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="relative h-[600px] lg:h-[650px] pt-32 md:pt-40 pb-16 overflow-hidden px-6 md:px-16 isolate">
@@ -48,7 +48,8 @@ export default async function IndustryDetailPage({ params }: Props) {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-0 bg-gradient-to-t from-brand-navy via-brand-navy/70 to-brand-navy/20" />
+        <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-brand-navy via-brand-navy/88 to-brand-navy/35" />
 
         <div className="relative z-10 max-w-[1200px] mx-auto w-full h-full flex flex-col justify-start">
           {/* Breadcrumb */}
@@ -66,15 +67,27 @@ export default async function IndustryDetailPage({ params }: Props) {
             </span>
           </div>
 
-          <p className="text-brand-gold text-[10px] tracking-[0.28em] uppercase mb-4 md:mb-6">
-            {detail.eyebrow}
-          </p>
-          <h1 className="text-white text-3xl md:text-5xl lg:text-6xl font-semibold leading-[1.05] tracking-[-0.02em] max-w-[820px] mb-4 md:mb-6">
-            {detail.headline}
-          </h1>
-          <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[640px]">
-            {detail.subheadline}
-          </p>
+          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_240px] gap-12 lg:gap-20 items-end">
+            <div>
+              <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
+                {detail.eyebrow}
+              </p>
+              <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
+                {detail.headline}
+              </h1>
+              <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">
+                {detail.subheadline}
+              </p>
+            </div>
+            <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Focus</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">{industry.shortTitle}</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Positioning</p>
+              <p className="text-sm leading-7 text-gray-300">
+                Industry-specific strategic advisory designed for institutional clarity and operational excellence.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
