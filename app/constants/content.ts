@@ -2371,7 +2371,7 @@ export const aboutSection = {
   storyHeadingPlain: "A foundation of",
   storyHeadingGold: "sustainable growth",
   storyPara1:
-    "Established with a clear mission to build resilient, independent businesses, Canbiz Consultancy helps organizations prioritize well-defined systems over premature infrastructure expansion.",
+    "Established as a strategic joint venture between Professional Services (Doha, est. 2012) and Benac Consultancy (India, est. 2014), Canbiz Consultancy was founded with a clear mission to build resilient, independent businesses by prioritizing well-defined systems over premature infrastructure expansion.",
   storyPara2:
     "Whether it’s developing documented policies, constructing operational workflows, or delivering continuous corporate training, our interventions prevent the deep, long-term risks of unstructured operations.",
   ctaQuestion: "Want to know more about our story, leadership, and journey?",
