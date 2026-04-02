@@ -191,12 +191,6 @@ export default function ServicesPage() {
               >
                 {servicesSection.ctaSecondary} <ArrowRightIcon size={14} />
               </a>
-              <Link
-                href="/"
-                className="text-gray-500 text-xs font-bold uppercase tracking-widest hover:text-brand-navy transition-colors flex items-center gap-1.5 mt-4 sm:mt-0"
-              >
-                <ArrowLeftIcon size={13} /> Back to Home
-              </Link>
             </div>
           </div>
         </div>
