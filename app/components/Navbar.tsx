@@ -129,6 +129,7 @@ export function Navbar() {
     if (sectionId === "industries") { router.push("/industries"); return; }
     if (sectionId === "careers")    { router.push("/careers");    return; }
     if (sectionId === "about")      { router.push("/about");      return; }
+    if (sectionId === "insights")   { router.push("/insights");   return; }
 
     if (pathname === "/") {
       const element = document.getElementById(sectionId);
