@@ -157,30 +157,28 @@ export default function IndustriesPage() {
       </section>
 
       {/* ── CTA ──────────────────────────────────────────────────────────────── */}
-      <section className="bg-[#F3F4F6] px-6 md:px-16 py-20 md:py-24">
-        <div className="max-w-6xl mx-auto border-t border-black/10 pt-14 md:pt-16">
-          <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_280px] gap-12 items-start">
-            <div>
-              <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-6">Get Started</p>
-              <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6">
-                Not sure where to begin?
-              </h2>
-              <p className="text-gray-500 text-sm leading-7 max-w-2xl">
-                Our team will help you identify the right services for your goals.
-                Book a complimentary discovery call and let's explore how Canbiz
-                can make a measurable difference for your organisation.
-              </p>
-            </div>
-            <div className="flex flex-col gap-4">
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
+          <div className="max-w-[600px] flex flex-col items-center">
+            <p className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Get Started</p>
+            <h2 className="text-black text-4xl md:text-5xl font-semibold leading-tight mb-4">
+              Not sure where to begin?
+            </h2>
+            <p className="text-gray-500 text-sm leading-relaxed max-w-[400px] mb-10">
+              Our team will help you identify the right services for your goals.
+              Book a complimentary discovery call and let's explore how Canbiz
+              can make a measurable difference for your organisation.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
                 href="#contact"
-                className="bg-brand-navy text-white px-8 py-3 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 flex items-center justify-center gap-2"
+                className="inline-flex items-center gap-3 bg-brand-navy text-white px-8 py-4 text-xs font-bold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 uppercase tracking-widest"
               >
                 Request a Consultation <ArrowRightIcon size={14} />
               </a>
               <Link
                 href="/"
-                className="text-gray-500 text-sm hover:text-brand-navy transition-colors flex items-center gap-1.5"
+                className="text-gray-500 text-xs font-bold uppercase tracking-widest hover:text-brand-navy transition-colors flex items-center gap-1.5 mt-4 sm:mt-0"
               >
                 <ArrowLeftIcon size={13} /> Back to Home
               </Link>

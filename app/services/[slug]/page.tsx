@@ -262,14 +262,37 @@ export default async function ServiceDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── CTA & FAQs ─────────────────────────────────────────────────────── */}
+      {/* ── FAQs ─────────────────────────────────────────────────────────────── */}
+      {detail.faqs && detail.faqs.length > 0 && (
+        <section className="bg-[#F3F4F6] px-6 md:px-16 py-16 md:py-24">
+          <div className="max-w-[800px] mx-auto">
+             <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-8 text-center">Frequent Inquiries</h2>
+             <div className="border-t border-black/10">
+               {detail.faqs.map((faq: any, i: number) => (
+                 <details key={i} className="group border-b border-black/10 [&_summary::-webkit-details-marker]:hidden">
+                   <summary className="flex items-center justify-between cursor-pointer py-6 font-medium text-sm hover:text-brand-gold transition-colors">
+                     {faq.question}
+                     <span className="transition group-open:rotate-180">
+                        <CaretDownIcon size={16} />
+                     </span>
+                   </summary>
+                   <div className="pb-6 pr-10 text-sm text-gray-500 leading-7">
+                     {faq.answer}
+                   </div>
+                 </details>
+               ))}
+             </div>
+          </div>
+        </section>
+      )}
+
+      {/* ── CTA ─────────────────────────────────────────────────────── */}
       <section className="bg-white px-6 md:px-16 py-24 md:py-32">
-        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
           
-          {/* CTA */}
-          <div className="lg:w-1/2">
+          <div className="max-w-[600px] flex flex-col items-center">
              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Initiate Engagement</h2>
-             <h3 className="text-4xl md:text-5xl font-semibold leading-tight mb-4">
+             <h3 className="text-black text-4xl md:text-5xl font-semibold leading-tight mb-4">
                Ready to structure your success?
              </h3>
              <p className="text-gray-500 text-sm leading-relaxed max-w-[400px] mb-10">
@@ -282,28 +305,6 @@ export default async function ServiceDetailPage({ params }: Props) {
                 {detail.cta} <ArrowRightIcon size={14} />
              </Link>
           </div>
-
-          {/* FAQs (Optional but rendered if present) */}
-          {detail.faqs && detail.faqs.length > 0 && (
-            <div className="lg:w-1/2 w-full">
-               <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Frequent Inquiries</h2>
-               <div className="border-t border-black/10">
-                 {detail.faqs.map((faq: any, i: number) => (
-                   <details key={i} className="group border-b border-black/10 [&_summary::-webkit-details-marker]:hidden">
-                     <summary className="flex items-center justify-between cursor-pointer py-6 font-medium text-sm hover:text-brand-gold transition-colors">
-                       {faq.question}
-                       <span className="transition group-open:rotate-180">
-                          <CaretDownIcon size={16} />
-                       </span>
-                     </summary>
-                     <div className="pb-6 pr-10 text-sm text-gray-500 leading-7">
-                       {faq.answer}
-                     </div>
-                   </details>
-                 ))}
-               </div>
-            </div>
-          )}
 
         </div>
       </section>

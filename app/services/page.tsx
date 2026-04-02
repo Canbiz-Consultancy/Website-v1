@@ -170,32 +170,34 @@ export default function ServicesPage() {
       </section>
 
       {/* â”€â”€ CTA â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
-      <section className="bg-brand-surface py-20 px-6 md:px-16">
-        <div className="max-w-3xl mx-auto text-center">
-          <p className="text-brand-gold text-xs tracking-[0.3em] uppercase mb-4">
-            Get Started
-          </p>
-          <h2 className="text-brand-navy text-3xl md:text-4xl font-semibold leading-tight mb-6">
-            Not sure where to begin?
-          </h2>
-          <p className="text-gray-500 text-sm leading-relaxed mb-10">
-            Our team will help you identify the right services for your goals.
-            Book a complimentary discovery call and let's explore how Canbiz
-            can make a measurable difference for your organisation.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-              href="#contact"
-              className="bg-brand-navy text-white px-10 py-3.5 text-sm font-medium hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 flex items-center gap-2"
-            >
-              {servicesSection.ctaSecondary} <ArrowRightIcon size={14} />
-            </a>
-            <Link
-              href="/"
-              className="text-gray-500 text-sm hover:text-brand-navy transition-colors flex items-center gap-1.5"
-            >
-              <ArrowLeftIcon size={13} /> Back to Home
-            </Link>
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32">
+        <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
+          <div className="max-w-[600px] flex flex-col items-center">
+            <p className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">
+              Get Started
+            </p>
+            <h2 className="text-black text-4xl md:text-5xl font-semibold leading-tight mb-4">
+              Not sure where to begin?
+            </h2>
+            <p className="text-gray-500 text-sm leading-relaxed max-w-[400px] mb-10">
+              Our team will help you identify the right services for your goals.
+              Book a complimentary discovery call and let's explore how Canbiz
+              can make a measurable difference for your organisation.
+            </p>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center gap-3 bg-brand-navy text-white px-8 py-4 text-xs font-bold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 uppercase tracking-widest"
+              >
+                {servicesSection.ctaSecondary} <ArrowRightIcon size={14} />
+              </a>
+              <Link
+                href="/"
+                className="text-gray-500 text-xs font-bold uppercase tracking-widest hover:text-brand-navy transition-colors flex items-center gap-1.5 mt-4 sm:mt-0"
+              >
+                <ArrowLeftIcon size={13} /> Back to Home
+              </Link>
+            </div>
           </div>
         </div>
       </section>
