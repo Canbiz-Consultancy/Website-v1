@@ -2404,10 +2404,10 @@ export const aboutPillars = [
 ];
 
 export const aboutStats = [
-  { value: "10+", label: "Years of Excellence" },
-  { value: "1,000+", label: "Clients Served" },
-  { value: "30+", label: "Countries Reached" },
-  { value: "6+", label: "Industry Sectors" },
+  { value: "15", label: "Years of Experience" },
+  { value: "4000+", label: "Clients" },
+  { value: "3", label: "Countries" },
+  { value: "14", label: "Specialized Services" },
 ];
 
 export const aboutLeadership = [
