@@ -133,8 +133,6 @@ export const navItems = [
     children: [
       { label: "Our Story", sub: "A decade of impact" },
       { label: "Mission & Vision", sub: "Purpose-driven advisory" },
-      { label: "Leadership Team", sub: "Meet our experts" },
-      { label: "Our Journey", sub: "Milestones and growth" },
       { label: "Employee Training", sub: "Cultivating leadership from within" },
     ],
   },

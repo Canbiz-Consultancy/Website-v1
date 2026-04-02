@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export function TrainingSection() {
   return (
-    <section className="grid grid-cols-1 lg:grid-cols-2">
+    <section id="employee-training" className="grid grid-cols-1 lg:grid-cols-2">
       <div className="bg-brand-surface flex items-center px-6 md:px-16 py-24 order-2 lg:order-1">
         <div className="max-w-2xl">
           <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">

@@ -350,8 +350,7 @@ export function Navbar() {
                               const aboutAnchors: Record<string, string> = {
                                 "Our Story":        "/about#our-story",
                                 "Mission & Vision": "/about#mission-values",
-                                "Leadership Team":  "/about#leadership",
-                                "Our Journey":      "/about#journey",
+                                "Employee Training": "/about#employee-training",
                               };
                               const careersAnchors: Record<string, string> = {
                                 "Open Positions": "/careers#open-positions",
@@ -475,8 +474,7 @@ export function Navbar() {
                               const aboutAnchors: Record<string, string> = {
                                 "Our Story":        "/about#our-story",
                                 "Mission & Vision": "/about#mission-values",
-                                "Leadership Team":  "/about#leadership",
-                                "Our Journey":      "/about#journey",
+                                "Employee Training": "/about#employee-training",
                               };
                               const careersAnchors: Record<string, string> = {
                                 "Open Positions": "/careers#open-positions",
