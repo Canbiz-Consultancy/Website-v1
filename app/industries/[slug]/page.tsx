@@ -76,31 +76,20 @@ export default async function IndustryDetailPage({ params }: Props) {
         </div>
       </section>
 
-      {/* ── Overview & Highlights ──────────────────────────────────────────── */}
+      {/* ── Sector Overview ──────────────────────────────────────────── */}
       <section className="bg-white py-24 md:py-28 px-6 md:px-16">
-        <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16">
-          <div className="lg:w-1/3">
+        <div className="max-w-[800px] mx-auto flex flex-col items-center text-center">
              <p className="text-[10px] uppercase tracking-[0.28em] text-gray-400 mb-4">Sector Overview</p>
-             <h2 className="text-brand-navy text-2xl md:text-3xl font-semibold leading-tight mb-6">
+             <h2 className="text-brand-navy text-2xl md:text-3xl lg:text-4xl font-semibold leading-tight mb-6">
                Leading transformation in <span className="text-brand-gold">{industry.shortTitle}</span>.
              </h2>
-             <p className="text-gray-600 text-sm leading-7 mb-8">{detail.overview}</p>
+             <p className="text-gray-600 text-sm md:text-base leading-relaxed mb-10 max-w-[700px]">{detail.overview}</p>
              <a
                 href="#contact"
-                className="inline-flex items-center gap-2 text-sm text-brand-navy font-medium hover:text-gray-600 transition-colors border-b border-gray-300 pb-1"
+                className="inline-flex items-center gap-2 text-sm text-brand-navy font-medium hover:text-brand-gold transition-colors border-b border-gray-300 hover:border-brand-gold pb-1"
               >
                 Consult Our Industry Experts <ArrowRightIcon size={14} />
               </a>
-          </div>
-
-          <div className="lg:w-2/3 border-t border-black/10">
-            {detail.highlights.map((h, i) => (
-              <div key={i} className="grid grid-cols-[140px_minmax(0,1fr)] gap-6 border-b border-black/10 py-6 md:py-8">
-                <p className="text-brand-gold text-3xl md:text-4xl font-light">{h.value}</p>
-                <p className="text-gray-500 text-xs uppercase tracking-[0.22em]">{h.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
 
