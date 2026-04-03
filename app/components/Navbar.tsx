@@ -208,7 +208,7 @@ export function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy-mid text-white border-b border-brand-navy-border">
         {/* Top bar */}
         <div className="px-6 md:px-16">
-          <div className="max-w-6xl mx-auto flex items-center justify-between">
+          <div className="w-full flex items-center justify-between">
             <Link
               href="/"
               className="relative shrink-0 h-20 flex items-center justify-start"
@@ -293,7 +293,7 @@ export function Navbar() {
               />
 
               <div className="px-6 md:px-16">
-                <div className="max-w-6xl mx-auto py-10 grid grid-cols-[320px_1fr] gap-20 min-h-96">
+                <div className="w-full py-10 grid grid-cols-[320px_1fr] gap-20 min-h-96">
 
                 {/* Inner content: keyed by activeDropdown so it crossfades on tab switch */}
                 <AnimatePresence mode="wait">

@@ -5,7 +5,7 @@ import { footerLinks, footerSocials, footerContent } from "../constants/content"
 export function Footer() {
   return (
     <footer className="bg-white py-6 px-6 md:px-16 border-t border-gray-200">
-      <div className="max-w-6xl mx-auto">
+      <div className="w-full">
         <div className="flex flex-col items-center md:flex-row md:items-center justify-between gap-8 mb-8">
           <div className="flex items-center">
             <img
