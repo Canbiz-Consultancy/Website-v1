@@ -1,9 +1,16 @@
 import type { Insight, StrapiResponse, StrapiSingleResponse } from "../types/insight";
 import type { Job } from "../types/job";
 
-const STRAPI_URL = process.env.STRAPI_URL || "http://localhost:1337";
+const STRAPI_URL =
+  process.env.NEXT_PUBLIC_STRAPI_URL ||
+  process.env.STRAPI_URL ||
+  "";
 
 async function fetchStrapi<T>(endpoint: string, options: RequestInit = {}): Promise<T | null> {
+  if (!STRAPI_URL) {
+    console.error("Strapi URL is not configured. Set STRAPI_URL (server) or NEXT_PUBLIC_STRAPI_URL (client).");
+    return null;
+  }
   const url = `${STRAPI_URL}/api${endpoint}`;
   
   const headers: Record<string, string> = {

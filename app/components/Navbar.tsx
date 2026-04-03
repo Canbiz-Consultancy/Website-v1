@@ -6,7 +6,7 @@ import { MagnifyingGlassIcon, ListIcon, XIcon, CaretUp, CaretDown } from "@phosp
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { navItems, services, industries } from "../constants/content";
-import { getFeaturedInsights } from "../lib/strapi";
+import { getStrapiImageUrl } from "../lib/strapi";
 import { Insight } from "../types/insight";
 import { useEffect } from "react";
 
@@ -128,9 +128,14 @@ export function Navbar() {
 
   useEffect(() => {
     async function loadInsights() {
-      const data = await getFeaturedInsights(6);
-      if (data && data.length > 0) {
-        setInsights(data);
+      try {
+        const response = await fetch(`/api/insights/featured?limit=2`);
+        const json = await response.json();
+        if (json?.insights?.length > 0) {
+          setInsights(json.insights);
+        }
+      } catch {
+        // ignore client fetch errors
       }
     }
     loadInsights();
@@ -331,30 +336,63 @@ export function Navbar() {
                     {/* Right column */}
                     <div className="flex flex-col">
                       {activeItem.label === "Insights" ? (
-                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 divide-y divide-gray-100">
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
                           {insights.length > 0 ? (
-                            insights.map((insight, idx) => (
+                            <>
+                              {insights.map((insight) => (
                               <motion.div key={insight.id} variants={itemVariants}>
                                 <Link
                                   href={`/insights/${insight.slug}`}
                                   onClick={() => setActiveDropdown(null)}
-                                  className={`flex items-start justify-between py-5 group hover:pl-2 transition-all duration-200 border-none
-                                    ${idx < 2 ? "pt-0" : ""}`}
+                                  className="group block"
                                 >
+                                  <div className="aspect-[16/10] overflow-hidden bg-gray-100 mb-4 border border-gray-100">
+                                    <img
+                                      src={getStrapiImageUrl(insight.featuredImage)}
+                                      alt={insight.title}
+                                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                    />
+                                  </div>
                                   <div className="flex-1">
                                     <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-2 block">
                                       {insight.category}
                                     </span>
-                                    <span className="text-sm text-brand-navy group-hover:text-brand-gold transition-colors font-medium block leading-snug">
+                                    <h4 className="text-base text-brand-navy font-semibold group-hover:text-brand-gold transition-colors mb-2 line-clamp-2 leading-snug">
                                       {insight.title}
-                                    </span>
+                                    </h4>
+                                    <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed">
+                                      {insight.excerpt}
+                                    </p>
                                   </div>
-                                  <span className="text-gray-300 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
-                                    →
-                                  </span>
                                 </Link>
                               </motion.div>
-                            ))
+                              ))}
+                              {insights.length < 2 && (
+                                <motion.div variants={itemVariants}>
+                                  <Link
+                                    href="/insights"
+                                    onClick={() => setActiveDropdown(null)}
+                                    className="group block"
+                                  >
+                                    <div className="aspect-[16/10] overflow-hidden bg-brand-navy text-white mb-4 border border-brand-navy-border flex items-center justify-center">
+                                      <div className="text-center px-6">
+                                        <p className="text-[10px] uppercase tracking-[0.24em] text-brand-gold mb-3 font-semibold">
+                                          Explore More
+                                        </p>
+                                        <h4 className="text-lg font-semibold mb-2">View all insights</h4>
+                                        <p className="text-xs text-gray-300 leading-relaxed">
+                                          Discover the full knowledge library and latest research.
+                                        </p>
+                                      </div>
+                                    </div>
+                                    <div className="flex items-center gap-2 text-xs font-medium text-brand-navy group-hover:text-brand-gold transition-colors">
+                                      Browse insights
+                                      <span aria-hidden="true">→</span>
+                                    </div>
+                                  </Link>
+                                </motion.div>
+                              )}
+                            </>
                           ) : (
                             <motion.div
                               variants={itemVariants}
