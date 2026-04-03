@@ -76,12 +76,6 @@ export const navItems = [
     label: "Insights",
     section: "insights",
     children: [
-      { label: "CEO Imperative", sub: "Strategic leadership perspectives" },
-      { label: "Entrepreneurship", sub: "Growth and innovation research" },
-      { label: "Digital Transformation", sub: "Technology and IT trends" },
-      { label: "Women Leadership", sub: "Empowerment and inclusion" },
-      { label: "ESG & Sustainability", sub: "Policy and green business" },
-      { label: "Global Markets", sub: "GCC and international outlook" },
     ],
   },
   {

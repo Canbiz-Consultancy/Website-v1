@@ -6,6 +6,9 @@ import { MagnifyingGlassIcon, ListIcon, XIcon, CaretUp, CaretDown } from "@phosp
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import { navItems, services, industries } from "../constants/content";
+import { getFeaturedInsights } from "../lib/strapi";
+import { Insight } from "../types/insight";
+import { useEffect } from "react";
 
 // ─── Animation variants ───────────────────────────────────────────────────────
 
@@ -121,6 +124,17 @@ export function Navbar() {
   const [expandedMobileItems, setExpandedMobileItems] = useState<string[]>([]);
   const router = useRouter();
   const pathname = usePathname();
+  const [insights, setInsights] = useState<Insight[]>([]);
+
+  useEffect(() => {
+    async function loadInsights() {
+      const data = await getFeaturedInsights(6);
+      if (data && data.length > 0) {
+        setInsights(data);
+      }
+    }
+    loadInsights();
+  }, []);
 
   const handleNavClick = (sectionId: string) => {
     setMobileOpen(false);
@@ -317,26 +331,45 @@ export function Navbar() {
                     {/* Right column */}
                     <div className="flex flex-col">
                       {activeItem.label === "Insights" ? (
-                        <motion.div
-                          variants={itemVariants}
-                          className="flex flex-col justify-center items-center h-full text-center max-w-2xl mx-auto"
-                        >
-                          <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6 bg-brand-gold/5">
-                            <MagnifyingGlassIcon className="text-brand-gold" size={24} weight="light" />
-                          </div>
-                          <h4 className="text-brand-navy text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
-                          <p className="text-gray-500 text-sm leading-relaxed mb-8">
-                            We're curating our latest research, white papers, and thought leadership
-                            perspectives from our team of experts across the GCC.
-                          </p>
-                          <div className="flex gap-4">
-                            {["CEO Perspectives", "GCC Market Entry", "Digital Transformation"].map((tag) => (
-                              <span key={tag} className="text-xs uppercase tracking-widest text-brand-gold/80 bg-brand-gold/10 px-3 py-1.5 rounded-sm">
-                                {tag}
-                              </span>
-                            ))}
-                          </div>
-                        </motion.div>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-2 divide-y divide-gray-100">
+                          {insights.length > 0 ? (
+                            insights.map((insight, idx) => (
+                              <motion.div key={insight.id} variants={itemVariants}>
+                                <Link
+                                  href={`/insights/${insight.slug}`}
+                                  onClick={() => setActiveDropdown(null)}
+                                  className={`flex items-start justify-between py-5 group hover:pl-2 transition-all duration-200 border-none
+                                    ${idx < 2 ? "pt-0" : ""}`}
+                                >
+                                  <div className="flex-1">
+                                    <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-2 block">
+                                      {insight.category}
+                                    </span>
+                                    <span className="text-sm text-brand-navy group-hover:text-brand-gold transition-colors font-medium block leading-snug">
+                                      {insight.title}
+                                    </span>
+                                  </div>
+                                  <span className="text-gray-300 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
+                                    →
+                                  </span>
+                                </Link>
+                              </motion.div>
+                            ))
+                          ) : (
+                            <motion.div
+                              variants={itemVariants}
+                              className="col-span-2 flex flex-col justify-center items-center h-full text-center py-10"
+                            >
+                              <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6 bg-brand-gold/5">
+                                <MagnifyingGlassIcon className="text-brand-gold" size={24} weight="light" />
+                              </div>
+                              <h4 className="text-brand-navy text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
+                              <p className="text-gray-500 text-sm leading-relaxed">
+                                We're curating our latest research and thought leadership perspectives.
+                              </p>
+                            </motion.div>
+                          )}
+                        </div>
                       ) : (
                         <div className="grid grid-cols-2 gap-x-12 gap-y-2 divide-y divide-gray-100">
                           {activeItem.children
