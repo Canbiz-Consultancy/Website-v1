@@ -42,7 +42,7 @@ export default function PrivacyPolicyPage() {
     {
       title: "7. Contact Us",
       content:
-        "If you have questions or comments about this policy, you may email us at info@canbizconsultancy.com or by post to: Canbiz Consultancy Services, Office 402, Canbiz Tower, Business Bay, Dubai, UAE.",
+        "If you have questions or comments about this policy, you may email us at info@canbizconsultancy.com or by post to: Canbiz Consultancy Services, Office no: 301, Floor 03, Regency Business Center, Corniche Street, Doha, Qatar.",
     },
   ];
 
@@ -130,7 +130,7 @@ export default function PrivacyPolicyPage() {
               href="mailto:info@canbizconsultancy.com"
               className="text-brand-gold text-sm font-medium hover:underline underline-offset-4"
             >
-              contact-compliance@canbizconsultancy.com
+              info@canbizconsultancy.com
             </a>
           </div>
         </div>

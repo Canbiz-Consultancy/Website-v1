@@ -533,7 +533,7 @@ export const serviceDetails: Record<string, {
       "quote": "Canbiz didn't just give us a lecture; they gave us a new operating language. Our mid-level managers are now executing at an executive standard.",
       "author": "Director of Operations",
       "role": "Public Sector Authority",
-      "company": "UAE"
+      "company": "Qatar"
     },
     "targetAudience": [
       {
@@ -1001,7 +1001,7 @@ export const serviceDetails: Record<string, {
       "quote": "The cascading KPIs finally gave our mid-management clear targets. We went from 'busy' to 'productive' in a single quarter.",
       "author": "Chief Executive Officer",
       "role": "Retail Group",
-      "company": "Dubai"
+      "company": "Qatar"
     },
     "targetAudience": [
       {
@@ -1937,7 +1937,7 @@ export const serviceDetails: Record<string, {
       "quote": "The Canbiz program didn't just teach theory; it fundamentally rewired how I commanded the room. Within 6 months, I navigated a leap from Director to VP.",
       "author": "Vice President",
       "role": "Global Banking Institution",
-      "company": "UAE"
+      "company": "Qatar"
     },
     "targetAudience": [
       {
@@ -2439,7 +2439,7 @@ export const aboutJourney = [
   {
     year: "2014",
     title: "The Foundation",
-    description: "Canbiz was established in Dubai as a boutique management consultancy focused on SMEs and regional market entry."
+    description: "Canbiz was established in Doha as a boutique management consultancy focused on SMEs and regional market entry."
   },
   {
     year: "2017",
@@ -2528,7 +2528,7 @@ export const openPositions = [
     id: 1,
     title: "Senior Management Consultant",
     department: "Consulting",
-    location: "Dubai, UAE",
+    location: "Doha, Qatar",
     type: "Full-Time",
     level: "Senior",
     slug: "senior-management-consultant",
@@ -2545,7 +2545,7 @@ export const openPositions = [
     id: 2,
     title: "Brand Strategy Consultant",
     department: "Brand & Marketing",
-    location: "Dubai, UAE",
+    location: "Doha, Qatar",
     type: "Full-Time",
     level: "Mid-Level",
     slug: "brand-strategy-consultant",
@@ -2562,7 +2562,7 @@ export const openPositions = [
     id: 3,
     title: "Digital Solutions Lead",
     department: "Technology",
-    location: "Dubai, UAE",
+    location: "Doha, Qatar",
     type: "Full-Time",
     level: "Senior",
     slug: "digital-solutions-lead",
@@ -2579,7 +2579,7 @@ export const openPositions = [
     id: 4,
     title: "Executive Education Facilitator",
     department: "Programs & Education",
-    location: "Dubai, UAE",
+    location: "Doha, Qatar",
     type: "Contract / Part-Time",
     level: "Expert",
     slug: "executive-education-facilitator",
@@ -2596,7 +2596,7 @@ export const openPositions = [
     id: 5,
     title: "Business Development Manager",
     department: "Growth & Partnerships",
-    location: "Dubai, UAE",
+    location: "Doha, Qatar",
     type: "Full-Time",
     level: "Mid-Level",
     slug: "business-development-manager",
@@ -2613,7 +2613,7 @@ export const openPositions = [
     id: 6,
     title: "Government Advisory Analyst",
     department: "Government Advisory",
-    location: "Abu Dhabi, UAE",
+    location: "Doha, Qatar",
     type: "Full-Time",
     level: "Junior",
     slug: "government-advisory-analyst",
@@ -2718,19 +2718,19 @@ export const contactSection = {
   officeHeadingPlain: "Visit Us",
   officeHeadingMain: "Our",
   officeHeadingGold: "Office",
-  officeImageSrc: "https://images.unsplash.com/photo-1549247796-6d153dc3cb4a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkdWJhaXxlbnwxfHx8fDE3NzIzNjYxOTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-  officeImageAlt: "Dubai Skyline",
+  officeImageSrc: "https://images.unsplash.com/photo-1595856903272-97b63f25c777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2hhJTIwcWF0YXIlMjBza3lsaW5lfGVufDF8fHx8MTc3MjM2NjE5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
+  officeImageAlt: "Doha Skyline",
   office: {
-    city: "Dubai",
-    country: "United Arab Emirates",
-    address: "Office 402, Canbiz Tower, Business Bay",
-    phone: "+971 4 123 4567",
+    city: "Doha",
+    country: "Qatar",
+    address: "Office no: 301, Floor 03, Regency Business Center, Corniche Street",
+    phone: "+974 5173 2111",
     email: "info@canbizconsultancy.com"
   },
   otherInquiriesHeading: "Other Inquiries",
   otherInquiries: [
-    { label: "Careers", email: "careers@canbizconsultancy.com" },
-    { label: "Media & Press", email: "media@canbizconsultancy.com" }
+    { label: "General", email: "info@canbizconsultancy.com" },
+    { label: "Press", email: "info@canbizconsultancy.com" }
   ],
   formEyebrow: "Send a Message",
   formHeadingPlain: "How can we",

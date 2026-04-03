@@ -37,7 +37,7 @@ export default function TermsOfServicePage() {
     {
       title: "6. Governing Law",
       content:
-        "These Terms shall be governed by and defined following the laws of the United Arab Emirates. Canbiz Consultancy Services and yourself irrevocably consent that the courts of the United Arab Emirates shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.",
+        "These Terms shall be governed by and defined following the laws of Qatar. Canbiz Consultancy Services and yourself irrevocably consent that the courts of Qatar shall have exclusive jurisdiction to resolve any dispute which may arise in connection with these terms.",
     },
     {
       title: "7. Modifications",
@@ -123,13 +123,13 @@ export default function TermsOfServicePage() {
               Have questions regarding these terms?
             </p>
             <p className="text-gray-500 text-xs mb-4">
-              Our legal team can clarify our service conditions.
+              Our team can clarify our service conditions.
             </p>
             <a
               href="mailto:info@canbizconsultancy.com"
               className="text-brand-gold text-sm font-medium hover:underline underline-offset-4"
             >
-              legal@canbizconsultancy.com
+              info@canbizconsultancy.com
             </a>
           </div>
         </div>

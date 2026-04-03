@@ -153,7 +153,7 @@ export default function CareersPage() {
                             ))}
                           </div>
                           <a
-                            href="mailto:careers@canbizconsultancy.com"
+                            href="mailto:info@canbizconsultancy.com"
                             className="mt-8 flex items-center justify-between w-full bg-brand-navy text-white px-6 py-4 text-[11px] uppercase tracking-widest font-bold hover:bg-brand-gold hover:text-brand-navy transition-colors duration-300"
                           >
                             Apply Now <ArrowRightIcon size={14} />

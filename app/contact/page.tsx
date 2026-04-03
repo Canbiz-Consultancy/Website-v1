@@ -68,8 +68,8 @@ export default function ContactPage() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-             src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c?auto=format&fit=crop&q=80&w=1920" 
-             alt="Dubai Business District" 
+             src="https://images.unsplash.com/photo-1595856903272-97b63f25c777?auto=format&fit=crop&q=80&w=1920" 
+             alt="Doha Business District" 
              className="w-full h-full object-cover object-center"
           />
         </div>
@@ -132,7 +132,7 @@ export default function ContactPage() {
             <div className="space-y-6">
               <div>
                 <p className="text-black text-sm font-medium mb-2">Email</p>
-                <a href="mailto:hello@canbizconsultancy.com" className="text-black text-lg hover:text-brand-navy transition-colors">hello@canbizconsultancy.com</a>
+                <a href="mailto:info@canbizconsultancy.com" className="text-black text-lg hover:text-brand-navy transition-colors">info@canbizconsultancy.com</a>
               </div>
               
               <div>
