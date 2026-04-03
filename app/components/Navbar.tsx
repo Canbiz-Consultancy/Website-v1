@@ -205,7 +205,7 @@ export function Navbar() {
         )}
       </AnimatePresence>
 
-      <nav className="fixed top-0 left-0 right-0 z-50 bg-white text-brand-navy border-b-2 border-gray-200">
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-brand-navy-mid text-white border-b border-brand-navy-border">
         {/* Top bar */}
         <div className="px-6 md:px-16">
           <div className="max-w-6xl mx-auto flex items-center justify-between">
@@ -215,9 +215,9 @@ export function Navbar() {
               onClick={() => setActiveDropdown(null)}
             >
               <img
-                src="/logo.svg"
+                src="/logo-nav.svg"
                 alt="Canbiz Logo"
-                className="h-18 w-auto"
+                className="h-16 w-auto"
               />
             </Link>
 
@@ -238,8 +238,8 @@ export function Navbar() {
                   }}
                   className={`relative px-4 h-full text-xs tracking-wide transition-colors flex items-center gap-1
                     ${isActive
-                      ? "text-brand-navy bg-brand-surface"
-                      : "text-brand-navy hover:text-brand-navy hover:bg-brand-surface"
+                      ? "text-white"
+                      : "text-white/80 hover:text-brand-gold hover:underline hover:decoration-brand-gold hover:underline-offset-8"
                     }`}
                 >
                   {item.label}
@@ -263,7 +263,7 @@ export function Navbar() {
               Contact Us
             </button>
             <button
-              className="lg:hidden text-gray-600 hover:text-brand-navy"
+              className="lg:hidden text-white/80 hover:text-brand-gold"
               onClick={() => setMobileOpen(!mobileOpen)}
             >
               {mobileOpen ? <XIcon size={22} /> : <ListIcon size={22} />}
@@ -284,7 +284,7 @@ export function Navbar() {
               initial="hidden"
               animate="visible"
               exit="exit"
-              className="w-full bg-white shadow-2xl overflow-hidden relative origin-top border-b border-gray-200"
+              className="w-full bg-brand-navy-mid shadow-2xl overflow-hidden relative origin-top border-b border-brand-navy-border"
             >
               {/* Animated gold top border */}
               <motion.div
@@ -308,13 +308,13 @@ export function Navbar() {
                     {/* Left column */}
                     <motion.div
                       variants={leftColVariants}
-                      className="pr-12 border-r border-gray-200 flex flex-col justify-start"
+                      className="pr-12 border-r border-brand-navy-border flex flex-col justify-start"
                     >
                       <p className="text-xs uppercase tracking-widest text-brand-gold mb-4 font-semibold">
                         {activeItem.label}
                       </p>
                       <div className="mb-8">
-                        <h3 className="text-xl text-brand-navy font-semibold leading-snug mb-3">
+                        <h3 className="text-xl text-white font-semibold leading-snug mb-3">
                           {activeItem.label === "Insights"
                             ? "Strategic perspectives shaping the future of regional business."
                             : activeItem.label === "Services"
@@ -327,7 +327,7 @@ export function Navbar() {
 
                       <button
                         onClick={() => { setActiveDropdown(null); handleNavClick(activeItem.section); }}
-                        className="inline-block border border-gray-300 text-brand-navy font-medium text-xs px-6 py-3 hover:bg-brand-navy hover:border-brand-navy hover:text-white transition-all duration-300 w-fit"
+                        className="inline-block border border-brand-gold/50 text-brand-gold font-medium text-xs px-6 py-3 hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition-all duration-300 w-fit"
                       >
                         Explore {activeItem.label}
                       </button>
@@ -346,7 +346,7 @@ export function Navbar() {
                                   onClick={() => setActiveDropdown(null)}
                                   className="group block"
                                 >
-                                  <div className="aspect-[16/10] overflow-hidden bg-gray-100 mb-4 border border-gray-100">
+                                  <div className="aspect-[16/10] overflow-hidden bg-brand-navy-mid mb-4 border border-brand-navy-border">
                                     <img
                                       src={getStrapiImageUrl(insight.featuredImage)}
                                       alt={insight.title}
@@ -357,10 +357,10 @@ export function Navbar() {
                                     <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-2 block">
                                       {insight.category}
                                     </span>
-                                    <h4 className="text-base text-brand-navy font-semibold group-hover:text-brand-gold transition-colors mb-2 line-clamp-2 leading-snug">
+                                    <h4 className="text-base text-white font-semibold group-hover:text-brand-gold transition-colors mb-2 line-clamp-2 leading-snug">
                                       {insight.title}
                                     </h4>
-                                    <p className="text-xs text-gray-500 line-clamp-2 leading-relaxed">
+                                    <p className="text-xs text-white/70 line-clamp-2 leading-relaxed">
                                       {insight.excerpt}
                                     </p>
                                   </div>
@@ -374,18 +374,18 @@ export function Navbar() {
                                     onClick={() => setActiveDropdown(null)}
                                     className="group block"
                                   >
-                                    <div className="aspect-[16/10] overflow-hidden bg-brand-navy text-white mb-4 border border-brand-navy-border flex items-center justify-center">
+                                    <div className="aspect-[16/10] overflow-hidden bg-brand-navy-mid text-white mb-4 border border-brand-navy-border flex items-center justify-center">
                                       <div className="text-center px-6">
                                         <p className="text-[10px] uppercase tracking-[0.24em] text-brand-gold mb-3 font-semibold">
                                           Explore More
                                         </p>
                                         <h4 className="text-lg font-semibold mb-2">View all insights</h4>
-                                        <p className="text-xs text-gray-300 leading-relaxed">
+                                        <p className="text-xs text-white/70 leading-relaxed">
                                           Discover the full knowledge library and latest research.
                                         </p>
                                       </div>
                                     </div>
-                                    <div className="flex items-center gap-2 text-xs font-medium text-brand-navy group-hover:text-brand-gold transition-colors">
+                                    <div className="flex items-center gap-2 text-xs font-medium text-brand-gold group-hover:text-brand-gold transition-colors">
                                       Browse insights
                                       <span aria-hidden="true">→</span>
                                     </div>
@@ -401,7 +401,7 @@ export function Navbar() {
                               <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6 bg-brand-gold/5">
                                 <MagnifyingGlassIcon className="text-brand-gold" size={24} weight="light" />
                               </div>
-                              <h4 className="text-brand-navy text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
+                              <h4 className="text-white text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
                               <p className="text-gray-500 text-sm leading-relaxed">
                                 We're curating our latest research and thought leadership perspectives.
                               </p>
@@ -447,7 +447,7 @@ export function Navbar() {
                                       ${idx < 2 ? "pt-0" : ""}`}
                                   >
                                     <div className="flex-1">
-                                      <span className="text-sm text-brand-navy group-hover:text-brand-gold transition-colors font-medium block">
+                                      <span className="text-sm text-white group-hover:text-brand-gold transition-colors font-medium block">
                                         {child.label}
                                         {child.upcoming && (
                                           <span className="ml-2 inline-flex items-center px-1.5 py-0.5 rounded-xs bg-brand-gold/10 text-brand-gold border border-brand-gold/20 text-[7px] font-bold uppercase tracking-widest leading-none align-middle">
@@ -456,12 +456,12 @@ export function Navbar() {
                                         )}
                                       </span>
                                       {child.sub && (
-                                        <span className="text-xs text-gray-500 mt-1 block">
+                                        <span className="text-xs text-white/60 mt-1 block">
                                           {child.sub}
                                         </span>
                                       )}
                                     </div>
-                                    <span className="text-gray-300 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
+                                    <span className="text-brand-gold/70 group-hover:text-brand-gold transition-all duration-200 text-lg mt-0.5 opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0">
                                       →
                                     </span>
                                   </Link>
@@ -483,7 +483,7 @@ export function Navbar() {
             >
               <button
                 onClick={() => setActiveDropdown(null)}
-                className="group flex flex-col items-center gap-1 text-gray-300 hover:text-brand-gold transition-all duration-200"
+                className="group flex flex-col items-center gap-1 text-white/60 hover:text-brand-gold transition-all duration-200"
               >
                 <CaretUp size={18} weight="bold" />
               </button>
@@ -500,7 +500,7 @@ export function Navbar() {
               animate={{ opacity: 1, height: "auto" }}
               exit={{ opacity: 0, height: 0 }}
               transition={{ duration: 0.3, ease: EASE_OUT }}
-              className="lg:hidden bg-white border-t border-gray-200 overflow-y-auto max-h-[calc(100vh-80px)] shadow-2xl"
+              className="lg:hidden bg-brand-navy-mid border-t border-brand-navy-border overflow-y-auto max-h-[calc(100vh-80px)] shadow-2xl"
             >
               <div className="flex flex-col h-full">
                 {navItems.map((item) => {
@@ -510,7 +510,7 @@ export function Navbar() {
                   return (
                     <div key={item.label}>
                       <button
-                        className="w-full text-left px-6 py-5 text-[13px] font-semibold text-brand-navy hover:text-brand-gold transition-colors tracking-widest uppercase border-b border-gray-100 flex items-center justify-between bg-white"
+                        className="w-full text-left px-6 py-5 text-[13px] font-semibold text-white/90 hover:text-brand-gold transition-colors tracking-widest uppercase border-b border-brand-navy-border flex items-center justify-between bg-brand-navy-mid"
                         onClick={() => {
                           if (hasChildren) {
                             toggleMobileItem(item.label);
@@ -524,7 +524,7 @@ export function Navbar() {
                           <motion.div
                             animate={{ rotate: isExpanded ? 180 : 0 }}
                             transition={{ duration: 0.2 }}
-                            className="bg-gray-50 p-1.5 rounded-full text-gray-500"
+                            className="bg-brand-navy p-1.5 rounded-full text-white/70"
                           >
                             <CaretDown size={14} weight="bold" />
                           </motion.div>
@@ -539,7 +539,7 @@ export function Navbar() {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.3, ease: EASE_OUT }}
-                            className="overflow-hidden bg-[#F9FAFB]"
+                            className="overflow-hidden bg-brand-navy"
                           >
                             {item.children.map((child) => {
                               const aboutAnchors: Record<string, string> = {
@@ -571,7 +571,7 @@ export function Navbar() {
                                     setMobileOpen(false);
                                     setExpandedMobileItems([]);
                                   }}
-                                  className="block px-8 py-4 text-sm text-gray-600 hover:text-brand-gold hover:bg-gray-100 transition-colors border-b border-gray-200/50"
+                                  className="block px-8 py-4 text-sm text-white/70 hover:text-brand-gold transition-colors border-b border-brand-navy-border/60"
                                 >
                                   <div className="flex items-start justify-between">
                                     <div className="flex-1">
@@ -584,12 +584,12 @@ export function Navbar() {
                                         )}
                                       </span>
                                       {child.sub && (
-                                        <span className="text-[11px] text-gray-400 mt-1.5 block leading-relaxed max-w-[280px]">
+                                        <span className="text-[11px] text-white/50 mt-1.5 block leading-relaxed max-w-[280px]">
                                           {child.sub}
                                         </span>
                                       )}
                                     </div>
-                                    <span className="text-gray-300">
+                                    <span className="text-white/40">
                                       →
                                     </span>
                                   </div>
