@@ -175,8 +175,7 @@ export const servicesSection = {
   eyebrow: "Our Core Services",
   headingPlain: "Business Systems &",
   headingGold: "Corporate Solutions",
-  subtext:
-    "Specializing in business systems for startups, corporate training for companies, business process management, company policies and procedures, and startup consulting services. We build operational frameworks that enable sustainable growth and organizational excellence.",
+  subtext: "Specialized business systems, corporate training, and operational frameworks for sustainable growth.",
   ctaPrimary: "Explore All Services",
   ctaSecondary: "Request a Consultation",
 };
