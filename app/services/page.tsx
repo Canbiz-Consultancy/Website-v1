@@ -61,7 +61,9 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* â”€â”€ Services Grid â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+
+
+      {/* ── Services Grid ────────────────────────────────────────────────────────────────── */}
       <section className="bg-[#F3F4F6] py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-gray-200">
@@ -89,7 +91,7 @@ export default function ServicesPage() {
                         </span>
                       </div>
                       {service.isUpcoming && (
-                        <div className="absolute top-4 right-4 text-[10px] bg-brand-navy text-gray-400 px-2.5 py-1 font-semibold tracking-widest uppercase">
+                        <div className="absolute top-4 right-4 text-[10px] bg-brand-gold text-brand-navy px-2.5 py-1 font-semibold tracking-widest uppercase">
                           Upcoming
                         </div>
                       )}
@@ -121,10 +123,10 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {/* â”€â”€ Why Canbiz Strip â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */}
+      {/* ── Why Canbiz Strip ────────────────────────────────────────────────── */}
       <section className="bg-brand-navy py-24 px-6 md:px-16">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-center">
             <div>
               <p className="text-brand-gold text-xs tracking-[0.2em] uppercase mb-4">
                 Why Canbiz
@@ -149,11 +151,11 @@ export default function ServicesPage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 border-t border-white/10 pt-16 md:pt-20">
+            <div className="grid grid-cols-2 gap-x-12 gap-y-16 border-t lg:border-t-0 lg:border-l border-white/10 pt-16 lg:pt-0 lg:pl-16">
               {aboutStats.map((s, i) => (
-                <div key={i} className="border-l border-white/10 pl-6">
+                <div key={i} className="flex flex-col">
                   <p className="text-4xl md:text-5xl font-light text-brand-gold mb-3 tracking-tight">{s.value}</p>
-                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">{s.label}</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 leading-relaxed">{s.label}</p>
                 </div>
               ))}
             </div>
