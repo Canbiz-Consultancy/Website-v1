@@ -409,7 +409,7 @@ export function Navbar() {
                           )}
                         </div>
                       ) : (
-                        <div className="grid grid-cols-2 gap-x-12 gap-y-2 divide-y divide-gray-100">
+                        <div className="grid grid-cols-2 gap-x-12 gap-y-2 divide-y divide-brand-navy-border/60">
                           {activeItem.children
                             .filter((child) => {
                               if (activeItem.section === "careers") {
