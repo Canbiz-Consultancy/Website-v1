@@ -45,7 +45,7 @@ export default function ServicesPage() {
                 {servicesSection.headingPlain}{" "}
                 <span className="text-brand-gold">{servicesSection.headingGold}</span>
               </h1>
-              <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">
+              <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-none font-light">
                 {servicesSection.subtext}
               </p>
             </div>

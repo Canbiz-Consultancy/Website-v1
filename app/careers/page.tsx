@@ -11,9 +11,54 @@ import {
   ArrowLeftIcon,
 } from "@phosphor-icons/react";
 import Link from "next/link";
+import { getCareers } from "../lib/strapi";
+import { Job } from "../types/job";
+import { StrapiBlock } from "../types/insight";
+import { useEffect, ReactNode } from "react";
+
+function RenderStrapiBlocks({ blocks }: { blocks: any }): ReactNode {
+  if (typeof blocks === 'string') return <span>{blocks}</span>;
+  if (!Array.isArray(blocks)) return null;
+
+  return blocks.map((block: StrapiBlock, index: number) => {
+    const children = block.children?.map((child, i) => {
+      let text = child.text || "";
+      if (child.bold) return <strong key={i} className="font-semibold">{text}</strong>;
+      if (child.italic) return <em key={i}>{text}</em>;
+      return <span key={i}>{text}</span>;
+    }) || [];
+
+    switch (block.type) {
+      case "paragraph":
+        return <p key={index} className="mb-4 last:mb-0 leading-relaxed text-gray-600">{children}</p>;
+      case "list":
+        const ListTag = block.listType === "ordered" ? "ol" : "ul";
+        return (
+          <ListTag key={index} className={`mb-4 last:mb-0 ${block.listType === "ordered" ? "list-decimal" : "list-disc"} pl-5 space-y-1`}>
+            {children}
+          </ListTag>
+        );
+      case "listItem":
+        return <li key={index} className="text-gray-600">{children}</li>;
+      default:
+        return <p key={index} className="mb-4 last:mb-0 leading-relaxed text-gray-600">{children}</p>;
+    }
+  });
+}
 
 export default function CareersPage() {
   const [expandedId, setExpandedId] = useState<number | null>(null);
+  const [jobs, setJobs] = useState<Job[]>(openPositions as any);
+
+  useEffect(() => {
+    async function loadJobs() {
+      const response = await getCareers(1, 40);
+      if (response && response.data && response.data.length > 0) {
+        setJobs(response.data);
+      }
+    }
+    loadJobs();
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#FDFDFD] text-brand-navy font-sans selection:bg-brand-gold/30">
@@ -80,90 +125,105 @@ export default function CareersPage() {
           </div>
           
           <div className="border-t border-black/10">
-            {openPositions.map((pos, i) => {
-               const isOpen = expandedId === pos.id;
-               return (
-                <div key={pos.id} className="border-b border-black/10">
-                  <button
-                    className="w-full text-left py-8 md:py-12 grid grid-cols-1 md:grid-cols-[120px_minmax(0,1fr)_160px] gap-6 md:gap-10 md:items-center group"
-                    onClick={() => setExpandedId(isOpen ? null : pos.id)}
-                  >
-                     <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-gray-500">
-                       {String(i + 1).padStart(2, "0")}
-                     </p>
-                     <div>
-                       <p className="text-[10px] uppercase tracking-[0.24em] text-gray-500 mb-3 group-hover:text-brand-gold transition-colors">
-                         {pos.department}
-                       </p>
-                       <h4 className="text-2xl font-semibold mb-4 tracking-[-0.02em] text-black group-hover:text-brand-navy transition-colors">{pos.title}</h4>
-                       <div className="flex flex-wrap items-center gap-6">
-                          <span className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-widest font-bold">
-                            <MapPinIcon size={14} className="text-brand-gold" />
-                            {pos.location}
-                          </span>
-                          <span className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-widest font-bold">
-                            <BriefcaseIcon size={14} className="text-brand-gold" />
-                            {pos.type}
-                          </span>
-                       </div>
-                     </div>
-                     <div className="flex items-center gap-4 md:justify-end">
-                        <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold group-hover:text-brand-gold transition-colors">
-                          {isOpen ? "Close Details" : "View Role"}
-                        </span>
-                        <ArrowRightIcon
-                          size={14}
-                          className={`transition-transform duration-300 ${
-                            isOpen ? "rotate-90 text-brand-gold" : "text-brand-navy"
-                          }`}
-                        />
-                     </div>
-                  </button>
-                  {isOpen && (
-                     <div className="px-0 py-10 grid grid-cols-1 lg:grid-cols-3 gap-16 border-t border-black/10">
-                       <div className="lg:col-span-2 space-y-10">
-                          <div>
-                            <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">About The Role</h4>
-                            <p className="text-sm text-gray-600 leading-7">{pos.description}</p>
-                          </div>
-                          <div>
-                            <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">What We're Looking For</h4>
-                            <ul className="space-y-4 border-l border-brand-navy/10 pl-6">
-                              {pos.requirements.map((r, idx) => (
-                                <li key={idx} className="flex gap-4 text-sm text-gray-600 leading-7">
-                                  <ArrowRightIcon size={16} className="text-brand-navy/40 shrink-0 mt-1" />
-                                  <span>{r}</span>
-                                </li>
-                              ))}
-                            </ul>
-                          </div>
-                       </div>
-                       <div className="bg-[#F3F4F6] p-8 md:p-10 border-l-2 border-brand-navy h-fit">
-                          <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">Role Details</h4>
-                          <div className="space-y-6">
-                            {[
-                              { label: "Department", value: pos.department },
-                              { label: "Type", value: pos.type },
-                              { label: "Location", value: pos.location },
-                            ].map(d => (
-                              <div key={d.label} className="border-b border-black/10 pb-4 last:border-0 last:pb-0">
-                                 <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">{d.label}</p>
-                                 <p className="text-sm text-black font-semibold">{d.value}</p>
-                              </div>
-                            ))}
-                          </div>
-                          <a
-                            href="mailto:info@canbizconsultancy.com"
-                            className="mt-8 flex items-center justify-between w-full bg-brand-navy text-white px-6 py-4 text-[11px] uppercase tracking-widest font-bold hover:bg-brand-gold hover:text-brand-navy transition-colors duration-300"
-                          >
-                            Apply Now <ArrowRightIcon size={14} />
-                          </a>
-                       </div>
-                     </div>
-                  )}
+            {jobs.length === 0 ? (
+              <div className="py-24 text-center">
+                <div className="w-16 h-16 bg-[#F3F4F6] rounded-full flex items-center justify-center mx-auto mb-6">
+                  <BriefcaseIcon size={32} className="text-gray-400" weight="light" />
                 </div>
-               )
-            })}
+                <h4 className="text-2xl font-semibold text-brand-navy mb-4">No Open Positions</h4>
+                <p className="text-gray-500 text-sm leading-relaxed max-w-[460px] mx-auto">
+                  We're not currently hiring for any specific roles, but we're always looking for exceptional talent. 
+                  Check back soon or send your CV to <a href="mailto:info@canbizconsultancy.com" className="text-brand-gold font-bold hover:underline">info@canbizconsultancy.com</a> for future consideration.
+                </p>
+              </div>
+            ) : (
+              jobs.map((pos, i) => {
+                const isOpen = expandedId === pos.id;
+                return (
+                  <div key={pos.id} className="border-b border-black/10">
+                    <button
+                      className="w-full text-left py-8 md:py-12 grid grid-cols-1 md:grid-cols-[120px_minmax(0,1fr)_160px] gap-6 md:gap-10 md:items-center group"
+                      onClick={() => setExpandedId(isOpen ? null : pos.id)}
+                    >
+                       <p className="text-[10px] font-bold uppercase tracking-[0.26em] text-gray-500">
+                         {String(i + 1).padStart(2, "0")}
+                       </p>
+                       <div>
+                         <p className="text-[10px] uppercase tracking-[0.24em] text-gray-500 mb-3 group-hover:text-brand-gold transition-colors">
+                           {pos.department}
+                         </p>
+                         <h4 className="text-2xl font-semibold mb-4 tracking-[-0.02em] text-black group-hover:text-brand-navy transition-colors">{pos.title}</h4>
+                         <div className="flex flex-wrap items-center gap-6">
+                            <span className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-widest font-bold">
+                              <MapPinIcon size={14} className="text-brand-gold" />
+                              {pos.location}
+                            </span>
+                            <span className="flex items-center gap-2 text-gray-500 text-xs uppercase tracking-widest font-bold">
+                              <BriefcaseIcon size={14} className="text-brand-gold" />
+                              {pos.type}
+                            </span>
+                         </div>
+                       </div>
+                       <div className="flex items-center gap-4 md:justify-end">
+                          <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold group-hover:text-brand-gold transition-colors">
+                            {isOpen ? "Close Details" : "View Role"}
+                          </span>
+                          <ArrowRightIcon
+                            size={14}
+                            className={`transition-transform duration-300 ${
+                              isOpen ? "rotate-90 text-brand-gold" : "text-brand-navy"
+                            }`}
+                          />
+                       </div>
+                    </button>
+                    {isOpen && (
+                       <div className="px-0 py-10 grid grid-cols-1 lg:grid-cols-3 gap-16 border-t border-black/10">
+                         <div className="lg:col-span-2 space-y-10">
+                            <div>
+                              <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">About The Role</h4>
+                              <div className="text-sm text-gray-600 leading-7">
+                                <RenderStrapiBlocks blocks={pos.description} />
+                              </div>
+                            </div>
+                            <div>
+                              <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">What We're Looking For</h4>
+                              <ul className="space-y-4 border-l border-brand-navy/10 pl-6">
+                                {pos.requirements.map((r, idx) => (
+                                  <li key={idx} className="flex gap-4 text-sm text-gray-600 leading-7">
+                                    <ArrowRightIcon size={16} className="text-brand-navy/40 shrink-0 mt-1" />
+                                    <span>{r}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                         </div>
+                         <div className="bg-[#F3F4F6] p-8 md:p-10 border-l-2 border-brand-navy h-fit">
+                            <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">Role Details</h4>
+                            <div className="space-y-6">
+                              {[
+                                { label: "Department", value: pos.department },
+                                { label: "Type", value: pos.type },
+                                { label: "Location", value: pos.location },
+                              ].map(d => (
+                                <div key={d.label} className="border-b border-black/10 pb-4 last:border-0 last:pb-0">
+                                   <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">{d.label}</p>
+                                   <p className="text-sm text-black font-semibold">{d.value}</p>
+                                </div>
+                              ))}
+                            </div>
+                            <a
+                              href="mailto:info@canbizconsultancy.com"
+                              className="mt-8 flex items-center justify-between w-full bg-brand-navy text-white px-6 py-4 text-[11px] uppercase tracking-widest font-bold hover:bg-brand-gold hover:text-brand-navy transition-colors duration-300"
+                            >
+                              Apply Now <ArrowRightIcon size={14} />
+                            </a>
+                         </div>
+                       </div>
+                    )}
+                  </div>
+                 )
+              })
+            )}
           </div>
         </div>
       </section>

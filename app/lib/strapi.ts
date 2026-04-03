@@ -1,4 +1,5 @@
 import type { Insight, StrapiResponse, StrapiSingleResponse } from "../types/insight";
+import type { Job } from "../types/job";
 
 const STRAPI_URL = process.env.STRAPI_URL || "http://localhost:1337";
 
@@ -46,6 +47,14 @@ function processInsight(insight: any): Insight {
   return {
     ...insight,
     slug: slugify(insight.title || ""),
+  };
+}
+
+function processJob(job: any): Job {
+  return {
+    id: job.id,
+    ...job,
+    requirements: typeof job.requirements === 'string' ? job.requirements.split('\n').filter((r: string) => r.trim() !== '') : [],
   };
 }
 
@@ -115,6 +124,39 @@ export async function getInsightsByCategory(
   }
   
   return response || { data: [], meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } } };
+}
+
+export async function getCareers(
+  page: number = 1,
+  pageSize: number = 10
+): Promise<StrapiResponse<Job>> {
+  const params = new URLSearchParams({
+    "pagination[page]": page.toString(),
+    "pagination[pageSize]": pageSize.toString(),
+    "sort[0]": "publishedAt:desc",
+  });
+
+  const response = await fetchStrapi<StrapiResponse<Job>>(`/careers?${params.toString()}`);
+  
+  if (response && response.data) {
+    response.data = response.data.map(processJob);
+  }
+  
+  return response || { data: [], meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } } };
+}
+
+export async function getCareerBySlug(slug: string): Promise<Job | null> {
+  const params = new URLSearchParams({
+    "filters[slug][$eq]": slug,
+  });
+
+  const response = await fetchStrapi<StrapiResponse<Job>>(`/careers?${params.toString()}`);
+  
+  if (response && response.data && response.data.length > 0) {
+    return processJob(response.data[0]);
+  }
+  
+  return null;
 }
 
 export function getStrapiImageUrl(image: { url: string } | null): string {
