@@ -184,7 +184,7 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section className="px-6 md:px-16 py-24 md:py-32 bg-brand-navy text-white">
         <div className="max-w-[1200px] mx-auto">
            
-           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 mb-24">
+           <div className="flex flex-col lg:flex-row gap-16 lg:gap-24">
              <div className="lg:w-1/3">
                 <h2 className="text-[11px] text-brand-gold tracking-[0.2em] font-bold uppercase mb-6">Outcomes</h2>
                 <h3 className="mb-4 text-3xl md:text-4xl font-semibold leading-tight">
@@ -199,26 +199,6 @@ export default async function ServiceDetailPage({ params }: Props) {
                  </div>
                ))}
              </div>
-           </div>
-
-           {/* Proof Element */}
-           <div className="bg-brand-navy-mid p-10 md:p-16 border-l-4 border-gray-600 relative overflow-hidden">
-              <div className="absolute top-0 right-0 opacity-5 text-[150px] leading-none font-serif">&ldquo;</div>
-              {detail.proof?.quote ? (
-                <div className="relative z-10">
-                   <p className="text-xl md:text-2xl font-light leading-relaxed mb-8 max-w-[800px]">"{detail.proof.quote}"</p>
-                   <div>
-                     <p className="text-sm font-bold uppercase tracking-widest">{detail.proof.author}</p>
-                     <p className="text-xs text-gray-400 mt-1">{detail.proof.role}, {detail.proof.company}</p>
-                   </div>
-                </div>
-              ) : (
-                <div className="relative z-10">
-                   <p className="text-[11px] text-brand-gold tracking-[0.2em] font-bold uppercase mb-4">Case Impact</p>
-                   <p className="text-xl md:text-2xl font-light leading-relaxed mb-6 max-w-[800px]">{detail.proof?.impact}</p>
-                   <p className="text-sm text-gray-400 max-w-[600px] leading-relaxed">{detail.proof?.context}</p>
-                </div>
-              )}
            </div>
 
         </div>

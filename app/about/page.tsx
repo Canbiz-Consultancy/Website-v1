@@ -60,17 +60,9 @@ export default function AboutPage() {
             </div>
           </div>
 
-          {/* Stats strip */}
-          <div className="mt-8 md:mt-12 border-t border-white/10 pt-8 grid grid-cols-2 md:grid-cols-4 gap-8">
-            {aboutStats.map((s, i) => (
-              <div key={i} className="border-l border-white/10 pl-6">
-                 <p className="text-4xl md:text-5xl font-light text-brand-gold mb-3 tracking-tight">{s.value}</p>
-                 <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-white/50">{s.label}</p>
-              </div>
-            ))}
-          </div>
         </div>
       </section>
+
 
       {/* ── Story Section ─────────────────────────────────────────────────────── */}
       <section id="our-story" className="bg-white px-6 md:px-16 py-24 md:py-32">
@@ -95,6 +87,18 @@ export default function AboutPage() {
                <p>{aboutSection.storyPara2}</p>
              </div>
           </div>
+        </div>
+      </section>
+
+      {/* ── Stats Strip ────────────────────────────────────────────────────── */}
+      <section className="bg-white px-6 md:px-16 py-24 md:py-32 border-t border-black/5">
+        <div className="max-w-[1200px] mx-auto grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16">
+          {aboutStats.map((s, i) => (
+            <div key={i} className="border-l border-black/10 pl-6">
+              <p className="text-4xl md:text-5xl font-light text-brand-navy mb-3 tracking-tight">{s.value}</p>
+              <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">{s.label}</p>
+            </div>
+          ))}
         </div>
       </section>
 

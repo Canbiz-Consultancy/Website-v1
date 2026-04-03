@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { services, servicesSection, serviceDetails } from "../constants/content";
+import { services, servicesSection, serviceDetails, aboutStats } from "../constants/content";
 import { ArrowRightIcon, ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 
@@ -149,21 +149,11 @@ export default function ServicesPage() {
               </Link>
             </div>
 
-            <div className="grid grid-cols-2 gap-px bg-brand-navy-border">
-              {[
-                { v: "10+", l: "Years of Excellence" },
-                { v: "1,000+", l: "Clients Served" },
-                { v: "30+", l: "Countries Reached" },
-                { v: "6+", l: "Industry Sectors" },
-              ].map((s, i) => (
-                <div
-                  key={i}
-                  className="bg-brand-navy-mid p-8 flex flex-col items-center justify-center text-center"
-                >
-                  <span className="text-brand-gold text-3xl font-light mb-2">
-                    {s.v}
-                  </span>
-                  <span className="text-gray-400 text-xs">{s.l}</span>
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-10 md:gap-16 border-t border-white/10 pt-16 md:pt-20">
+              {aboutStats.map((s, i) => (
+                <div key={i} className="border-l border-white/10 pl-6">
+                  <p className="text-4xl md:text-5xl font-light text-brand-gold mb-3 tracking-tight">{s.value}</p>
+                  <p className="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400">{s.label}</p>
                 </div>
               ))}
             </div>

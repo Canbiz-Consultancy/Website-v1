@@ -88,18 +88,17 @@ export const navItems = [
     label: "Services",
     section: "services",
     children: [
-      { label: "Business Systems", sub: "Startup consulting & system design" },
-      { label: "Corporate Training", sub: "Workforce development programs" },
-      { label: "Business Process Management", sub: "Process optimization & workflows" },
-      { label: "Company Policies & Procedures", sub: "Policy frameworks & SOPs" },
-      { label: "Startup Consulting Services", sub: "Growth strategy & scaling" },
+      { label: "Strategic Planning", sub: "Strategy development & scaling" },
+      { label: "Governance & Structure", sub: "Organizational design & frameworks" },
+      { label: "Policies & Procedures", sub: "SOPs & compliance frameworks" },
+      { label: "Process Optimization", sub: "Efficiency & workflow design" },
       { label: "System Automation", sub: "Digital transformation & ERP" },
-      { label: "Performance Management", sub: "KPIs & balanced scorecards" },
+      { label: "Performance Management", sub: "KPIs & accountability systems" },
       { label: "Risk Management", sub: "Internal controls & compliance" },
-      { label: "Departmental Systems", sub: "HR, Finance, Operations & more" },
-      { label: "Gap Analysis", sub: "Business diagnostics & assessment" },
-      { label: "Change Management", sub: "Implementation & transformation" },
-      { label: "Documentation", sub: "Knowledge systems & SOPs" },
+      { label: "Departmental Systems", sub: "Function-specific operational excellence" },
+      { label: "Gap Analysis", sub: "Organizational diagnostics & assessment" },
+      { label: "Change Management", sub: "Execution & implementation support" },
+      { label: "Knowledge Systems", sub: "Corporate documentation & wikis" },
       { label: "Global Delegations", sub: "International business exposure", upcoming: true },
       { label: "Junior CEO Program", sub: "Youth leadership development", upcoming: true },
       { label: "Women CEO Programs", sub: "Women entrepreneurship", upcoming: true },
@@ -142,8 +141,8 @@ export const navItems = [
 
 export const advisorySection = {
   eyebrow: "Our Advisory Philosophy",
-  heading: "Transforming startups through business systems and corporate training.",
-  body: "At Canbiz Consultancy, we specialize in business systems for startups, corporate training for companies, business process management, company policies and procedures, and startup consulting services. We believe the real foundation of a successful organization is structured processes—not just physical expansion. Our approach combines comprehensive business process management with documented company policies and procedures, creating operational frameworks that eliminate founder dependency. Through targeted corporate training programs and systematic startup consulting, we build capability-driven teams that empower your business to function, adapt, and scale smoothly on its own.",
+  heading: "Transforming organizations through strategic clarity and structured excellence.",
+  body: "At Canbiz Consultancy, we specialize in strategic planning, organizational governance, and full-scale business process optimization. We believe the true foundation of a successful organization is a robust structural framework—not just physical expansion. Our approach combines rigorous strategic roadmapping with documented policies and procedures, creating operational ecosystems that eliminate inefficiency and drive sustainable performance. Through systematic digital transformation and performance management, we build capability-driven organizations that empower your business to function, adapt, and scale smoothly on its own.",
   image:
     "https://images.unsplash.com/photo-1565688527174-775059ac429c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmclMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjM1ODMyN3ww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Canbiz Consultancy",
@@ -154,18 +153,18 @@ export const advisorySection = {
 export const advisoryPillars = [
   {
     icon: LightbulbIcon,
-    value: "Business Systems",
-    label: "Designing comprehensive business systems for startups that create scalable operational frameworks and eliminate founder dependency.",
+    value: "Strategic Clarity",
+    label: "Aligning vision with market opportunity through clear, actionable strategy and scalable business model optimization.",
   },
   {
     icon: ShieldCheckIcon,
-    value: "Process Management",
-    label: "Implementing business process management with documented company policies and procedures that ensure operational consistency.",
+    value: "Structured Governance",
+    label: "Designing high-performance organizations with rigorous internal controls and clear accountability frameworks.",
   },
   {
     icon: ChartBarIcon,
-    value: "Corporate Training",
-    label: "Delivering corporate training for companies that builds workforce capabilities to execute business systems effectively.",
+    value: "Operational Excellence",
+    label: "Streamlining business processes and automating workflows to drive maximum efficiency and measurable outcomes.",
   },
 ];
 
@@ -183,102 +182,102 @@ export const servicesSection = {
 export const services = [
   {
     id: 1,
-    slug: "business-systems",
+    slug: "strategic-planning-strategy-optimization",
     icon: StrategyIcon,
-    title: "Business Systems for Startups",
-    shortTitle: "Business Systems",
+    title: "Strategic Planning & Strategy Optimization",
+    shortTitle: "Strategic Planning",
     description:
-      "Comprehensive startup consulting services that design scalable business systems, from operational workflows to company policies and procedures. Build the foundation for sustainable growth without founder dependency.",
+      "We help organizations align their vision with market opportunities by developing clear, actionable strategies that drive growth and competitive advantage.",
   },
   {
     id: 2,
-    slug: "corporate-training",
-    icon: FlowArrowIcon,
-    title: "Corporate Training for Companies",
-    shortTitle: "Corporate Training",
+    slug: "organizational-structure-governance-consulting",
+    icon: BuildingsIcon,
+    title: "Organizational Structure & Governance Consulting",
+    shortTitle: "Governance & Structure",
     description:
-      "Customized corporate training programs that develop workforce capabilities to execute business systems effectively. From leadership development to operational excellence training.",
+      "We design structured organizations with clear roles, responsibilities, and governance systems to ensure effective decision-making and accountability.",
   },
   {
     id: 3,
-    slug: "business-process-management",
+    slug: "policies-procedures-development",
     icon: FileTextIcon,
-    title: "Business Process Management",
-    shortTitle: "Process Management",
+    title: "Policies & Procedures Development",
+    shortTitle: "Policies & Procedures",
     description:
-      "Design and optimize business processes that drive efficiency and scalability. From workflow mapping to process automation, we create streamlined operations that support growth.",
+      "We develop comprehensive policy frameworks and procedures that standardize operations and ensure compliance across all departments.",
   },
   {
     id: 4,
-    slug: "company-policies-procedures",
+    slug: "business-process-design-optimization",
     icon: GearIcon,
-    title: "Company Policies and Procedures",
-    shortTitle: "Policies & Procedures",
+    title: "Business Process Design & Optimization",
+    shortTitle: "Process Optimization",
     description:
-      "Develop comprehensive company policies and procedures that ensure compliance, reduce risk, and standardize operations. From employee handbooks to operational SOPs.",
+      "We streamline and redesign business processes to improve efficiency, reduce redundancy, and enhance operational performance.",
   },
   {
     id: 5,
-    slug: "system-automation",
+    slug: "system-automation-digital-transformation",
     icon: RobotIcon,
     title: "System Automation & Digital Transformation",
     shortTitle: "System Automation",
     description:
-      "Automating manual processes and improving operational efficiency through ERP implementation, CRM systems, workflow automation, and comprehensive digital transformation.",
+      "We support organizations in transitioning from manual operations to automated, technology-driven systems.",
   },
   {
     id: 6,
-    slug: "performance-management",
-    icon: TrendUpIcon,
+    slug: "performance-management-systems",
+    icon: ChartBarIcon,
     title: "Performance Management Systems",
     shortTitle: "Performance Management",
     description:
-      "Establishing measurable performance systems with KPI development, balanced scorecard implementation, performance monitoring, and productivity measurement frameworks.",
+      "We establish measurable performance frameworks that enable organizations to track, evaluate, and improve productivity.",
   },
   {
     id: 7,
-    slug: "risk-management",
-    icon: ShieldIcon,
+    slug: "internal-control-risk-management",
+    icon: ShieldCheckIcon,
     title: "Internal Control & Risk Management",
     shortTitle: "Risk Management",
     description:
-      "Strengthening operational control and minimizing risk through internal control system design, risk management frameworks, financial controls, and fraud prevention.",
+      "We design robust control systems to safeguard assets, ensure compliance, and minimize business risks.",
   },
   {
     id: 8,
-    slug: "departmental-systems",
+    slug: "departmental-system-development",
     icon: BriefcaseIcon,
     title: "Departmental System Development",
     shortTitle: "Departmental Systems",
     description:
-      "Creating structured systems for each department including HR, Finance, Sales, Marketing, Procurement, Operations, and Customer Experience management systems.",
+      "We build structured systems for each business function to ensure consistency, efficiency, and clarity.",
   },
   {
     id: 9,
-    slug: "gap-analysis",
+    slug: "organizational-gap-analysis-business-diagnostics",
     icon: MagnifyingGlassIcon,
     title: "Organizational Gap Analysis & Business Diagnostics",
     shortTitle: "Gap Analysis",
     description:
-      "Identifying weaknesses and improvement opportunities through organizational diagnostic studies, process gap identification, system efficiency analysis, and improvement roadmaps.",
+      "We conduct in-depth assessments to identify inefficiencies, structural weaknesses, and opportunities for improvement.",
   },
   {
     id: 10,
-    slug: "change-management",
-    icon: ArrowsLeftRightIcon,
+    slug: "change-management-implementation-support",
+    icon: ArrowsClockwiseIcon,
     title: "Change Management & Implementation Support",
     shortTitle: "Change Management",
     description:
-      "Ensuring smooth adoption of new systems and strategies through change management strategies, leadership alignment programs, staff training, and transformation support.",
+      "We ensure smooth execution of new strategies and systems through structured change management and team alignment.",
   },
   {
     id: 11,
-    slug: "corporate-documentation",
+    slug: "corporate-documentation-knowledge-systems",
     icon: BookOpenIcon,
     title: "Corporate Documentation & Knowledge Systems",
-    shortTitle: "Documentation & Knowledge",
+    shortTitle: "Knowledge Systems",
     description:
-      "Building structured documentation for long-term operational clarity with policy manuals, SOP manuals, process documentation, and corporate knowledge bases.",
+      "We create structured documentation systems that enhance clarity, consistency, and long-term organizational knowledge.",
   },
   {
     id: 12,
@@ -324,1297 +323,1278 @@ export const serviceDetails: Record<string, {
   deliverables: { title: string; description: string }[];
   process: { step: string; title: string; description: string }[];
   outcomes: { metric: string; description: string }[];
-  proof: { quote?: string; author?: string; role?: string; company?: string; impact?: string; context?: string };
   targetAudience: { title: string; description: string }[];
   whyUs: { title: string; description: string }[];
   faqs?: { question: string; answer: string }[];
   cta: string;
 }> = {
-  "business-systems": {
-    "hero": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN5c3RlbXMlMjBwbGFubmluZ3xlbnwxfHx8fDE3NzI0MDY0MDB8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Strategic architecture planning",
-    "eyebrow": "Operations & Infrastructure",
-    "headline": "Building the architecture for a scalable enterprise.",
-    "subheadline": "We design robust institutional frameworks that eliminate founder dependency and embed predictability into your core operations.",
+  "strategic-planning-strategy-optimization": {
+    "hero": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzdHJhdGVneSUyMHBsYW5uaW5nfGVufDF8fHx8MTc3MjQwNjQwMHww&ixlib=rb-4.1.0&q=80&w=1080",
+    "heroAlt": "Strategic Planning & Strategy Optimization",
+    "eyebrow": "Strategy & Growth",
+    "headline": "Aligning vision with market opportunity.",
+    "subheadline": "We help organizations develop clear, actionable strategies that drive competitive advantage and sustainable growth in complex environments.",
     "painPoints": [
       {
-        "title": "Founder Bottlenecks",
-        "description": "Operational velocity is constrained because daily decisions require senior leadership intervention."
+        "title": "Lack of Strategic Focus",
+        "description": "Organizational efforts are fragmented due to a lack of clear direction and prioritized objectives."
       },
       {
-        "title": "Inconsistent Execution",
-        "description": "Service or product quality fluctuates due to a reliance on individual heroics rather than institutionalized processes."
+        "title": "Market Misalignment",
+        "description": "Products or services are out of sync with current market demands and competitive dynamics."
       },
       {
-        "title": "Scaling Friction",
-        "description": "Attempts to increase volume lead to proportional increases in chaos, overhead, and customer dissatisfaction."
+        "title": "Growth Stagnation",
+        "description": "The business has hit a ceiling and lacks a clear roadmap for scaling or entering new markets."
       },
       {
-        "title": "Tribal Knowledge",
-        "description": "Critical operational intelligence exists only in the minds of a few key employees, creating unacceptable risk."
+        "title": "Inefficient Business Model",
+        "description": "The current core revenue drivers are no longer sustainable or optimized for maximum value capture."
       }
     ],
     "deliverables": [
       {
-        "title": "Enterprise Blueprint",
-        "description": "A comprehensive schematic of your organization's functional architecture and reporting lines."
+        "title": "Business Strategy Development",
+        "description": "Comprehensive long-term roadmaps defining your unique value proposition and path to market leadership."
       },
       {
-        "title": "Systemized Workflows",
-        "description": "Standardized, repeatable operational loops designed to run independently of specific personnel."
+        "title": "Market Alignment & Positioning",
+        "description": "Data-driven assessments to ensure your offerings meet specific market needs better than competitors."
       },
       {
-        "title": "Delegation Frameworks",
-        "description": "Structured authority matrices that empower mid-level management without relinquishing holistic control."
+        "title": "Business Model Optimization",
+        "description": "Restructuring revenue streams and cost structures to maximize profitability and scalability."
       },
       {
-        "title": "Capacity Modeling",
-        "description": "Stress-tested operational models capable of absorbing 5x to 10x volume increases."
+        "title": "Go-To-Market Strategy",
+        "description": "Operational playbooks for successfully launching new products or entering new geographic territories."
+      },
+      {
+        "title": "Strategic Roadmap Development",
+        "description": "Phased implementation plans that translate high-level vision into specific, trackable milestones."
       }
     ],
     "process": [
       {
         "step": "01",
-        "title": "Diagnostic Mapping",
-        "description": "We conduct a forensic analysis of your current operational reality, isolating structural weaknesses and undocumented routines."
+        "title": "Discovery & Research",
+        "description": "Deep-dive into your current operations, market positioning, and executive aspirations."
       },
       {
         "step": "02",
-        "title": "Target Architecture Design",
-        "description": "We architect a new, optimized business system tailored to your sector's regulatory and competitive demands."
+        "title": "Strategy Architecture",
+        "description": "Designing the core strategic pillars and business model innovations required for growth."
       },
       {
         "step": "03",
-        "title": "Strategic Phasing",
-        "description": "We develop a risk-mitigated rollout plan that ensures uninterrupted daily operations during the structural transition."
+        "title": "Roadmap Engineering",
+        "description": "Translating strategy into a phased execution plan with clear ownership and KPIs."
       },
       {
         "step": "04",
-        "title": "Implementation & Transfer",
-        "description": "We embed the new systems alongside your teams, transferring ownership and capability to internal stakeholders."
+        "title": "Implementation Support",
+        "description": "Staying embedded with your team to ensure strategic initiatives are actually realized."
       }
     ],
     "outcomes": [
       {
-        "metric": "450+",
-        "description": "Systems Implemented"
+        "metric": "25%+",
+        "description": "Revenue Growth"
       },
       {
-        "metric": "40%",
-        "description": "Efficiency Gain"
+        "metric": "15%",
+        "description": "Market Share Gain"
       },
       {
-        "metric": "20k+",
-        "description": "Manual Hours Saved"
+        "metric": "100%",
+        "description": "Strategic Alignment"
       },
       {
-        "metric": "98%",
-        "description": "Client Success Rate"
+        "metric": "3x",
+        "description": "Valuation Increase"
       }
     ],
-    "proof": {
-      "impact": "Transitioned a multi-million dollar logistics firm from a founder-led bottleneck into a fully systemized enterprise.",
-      "context": "Within 14 months of implementing our tailored business systems, the firm increased processing capacity by 150% without adding administrative headcount, allowing the CEO to fully exit daily operations to focus on acquisitions."
-    },
     "targetAudience": [
       {
-        "title": "High-Growth Founders",
-        "description": "Entrepreneurs whose businesses have outgrown their individual capacity to manage them."
+        "title": "Established Enterprises",
+        "description": "Companies seeking to pivot or refresh their strategy in the face of market disruption."
+      },
+      {
+        "title": "Scaling Startups",
+        "description": "High-growth ventures needing structured strategy to manage rapid expansion without chaos."
       },
       {
         "title": "Private Equity Firms",
-        "description": "Investors looking to institutionalize newly acquired portfolio companies prior to scaling."
-      },
-      {
-        "title": "Legacy Enterprises",
-        "description": "Established firms suffering from generational stagnation and outdated operational models."
+        "description": "Investors needing to define clear value-creation plans for their portfolio acquisitions."
       }
     ],
     "whyUs": [
       {
-        "title": "Agnostic Architecture",
-        "description": "We don't force a one-size-fits-all model; we design systems molded to your unique strategic moat."
+        "title": "Execution Focused",
+        "description": "We don't deliver 'shelf-ware'; we build strategies that are functionally implementable by your team."
       },
       {
-        "title": "Execution Focus",
-        "description": "We move beyond theoretical consulting, staying embedded until the system runs itself."
+        "title": "Data-Driven Insights",
+        "description": "Our recommendations are backed by rigorous market analytics, not just high-level theory."
       },
       {
-        "title": "Leadership Liberation",
-        "description": "Our ultimate metric is the amount of strategic time we return back to the executive board."
+        "title": "Long-Term Partners",
+        "description": "We view strategy as an ongoing evolution, not a one-time event."
       }
     ],
-    "cta": "Design Your Business Foundation"
+    "cta": "Accelerate Your Strategy"
   },
-  "corporate-training": {
-    "hero": "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxlbXBsb3llZSUyMHRyYWluaW5nfGVufDF8fHx8MTcyMzg1NjQxNHww&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Corporate Training Workshop",
-    "eyebrow": "Learning & Development",
-    "headline": "Empowering human capital to execute strategy.",
-    "subheadline": "Customized capacity-building programs that bridge the gap between theoretical corporate strategy and frontline tactical execution.",
+  "organizational-structure-governance-consulting": {
+    "hero": "https://images.unsplash.com/photo-1497366216548-37526070297c?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBvZmZpY2UlMjBtZWV0aW5nfGVufDF8fHx8MTc3MjQwNjQwMXww&ixlib=rb-4.1.0&q=80&w=1080",
+    "heroAlt": "Organizational Structure & Governance",
+    "eyebrow": "Governance & Accountability",
+    "headline": "Designing organizations for decisive action.",
+    "subheadline": "We build structured organizations with clear roles, responsibilities, and governance systems to ensure effective decision-making.",
     "painPoints": [
       {
-        "title": "Capability Gaps",
-        "description": "The workforce lacks the specialized skills necessary to adapt to rapid technological or market shifts."
+        "title": "Role Ambiguity",
+        "description": "Employees are unclear on where their responsibilities end and others begin, leading to duplicated efforts or gaps."
       },
       {
-        "title": "Management Malpractice",
-        "description": "High-performing technical staff are promoted to management without the leadership tools required to succeed."
+        "title": "Decision Bottlenecks",
+        "description": "Critical decisions are delayed because the path of authority is unclear or overly centralized."
       },
       {
-        "title": "Cultural Misalignment",
-        "description": "Silos and miscommunication erode productivity due to a lack of shared organizational vocabulary."
+        "title": "Lack of Accountability",
+        "description": "A lack of formal structure makes it difficult to hold individuals or departments accountable for outcomes."
       },
       {
-        "title": "Low Retention",
-        "description": "Top talent exits due to stagnant career development and uninspiring learning environments."
+        "title": "Communication Silos",
+        "description": "Fragmented structures hinder the flow of information across the organization, eroding efficiency."
       }
     ],
     "deliverables": [
       {
-        "title": "Executive Leadership Cohorts",
-        "description": "Intensive, scenario-based programming to groom high-potential successors."
+        "title": "Organizational Structure Design",
+        "description": "Creating functional, divisional, or matrix architectures optimized for your specific business goals."
       },
       {
-        "title": "Tactical Upskilling Modules",
-        "description": "Targeted training focused on specific procedural or technological adoptions."
+        "title": "Governance Frameworks",
+        "description": "Establishing the 'rules of the game' for how the organization is controlled and directed."
       },
       {
-        "title": "Train-the-Trainer Protocols",
-        "description": "Internalizing educational capacity by developing your own subject matter experts."
+        "title": "Delegation of Authority (DOA)",
+        "description": "Defining clear levels of spending and decision-making power across the hierarchy."
       },
       {
-        "title": "Competency Matrices",
-        "description": "Clear, graduated frameworks that align skill acquisition with career progression."
+        "title": "Job Descriptions & Role Mapping",
+        "description": "Detailed documentation of every position's purpose, responsibilities, and success metrics."
+      },
+      {
+        "title": "Board & Executive Governance",
+        "description": "Specialized systems for high-level oversight and executive-team accountability."
       }
     ],
     "process": [
       {
         "step": "01",
-        "title": "Skills Audit",
-        "description": "We map your current workforce capabilities against the competencies required to achieve your strategic intent."
+        "title": "Structural Audit",
+        "description": "Analyzing your current reporting lines and decision-making rituals to identify friction."
       },
       {
         "step": "02",
-        "title": "Curriculum Engineering",
-        "description": "We design bespoke training interventions tailored to the specific operational realities of your teams."
+        "title": "Architecture Blueprinting",
+        "description": "Designing a new organizational model that reflects your strategic priorities and scale."
       },
       {
         "step": "03",
-        "title": "Active Facilitation",
-        "description": "Our industry veterans deliver high-impact workshops utilizing real-world case studies."
+        "title": "Governance Codification",
+        "description": "Developing the manuals, DOA matrices, and protocols that bring the structure to life."
       },
       {
         "step": "04",
-        "title": "Application & Tracking",
-        "description": "We implement post-training mechanisms to ensure new skills convert into daily operational habits."
+        "title": "Transition Coaching",
+        "description": "Guiding leaders through the behavioral shift required to operate within the new framework."
       }
     ],
     "outcomes": [
       {
-        "metric": "15k+",
-        "description": "Professionals Trained"
+        "metric": "Zero",
+        "description": "Overlap Conflict"
       },
       {
-        "metric": "85%",
-        "description": "Retention Improvement"
-      },
-      {
-        "metric": "120+",
-        "description": "Curriculums Designed"
-      },
-      {
-        "metric": "3.5x",
-        "description": "Average ROI"
-      }
-    ],
-    "proof": {
-      "quote": "Canbiz didn't just give us a lecture; they gave us a new operating language. Our mid-level managers are now executing at an executive standard.",
-      "author": "Director of Operations",
-      "role": "Public Sector Authority",
-      "company": "Qatar"
-    },
-    "targetAudience": [
-      {
-        "title": "Corporate HR Leaders",
-        "description": "CHROs requiring sophisticated tools to upgrade collective organizational capabilities."
-      },
-      {
-        "title": "Government Entities",
-        "description": "Public sector bodies mandating comprehensive upskilling in alignment with national visions."
-      },
-      {
-        "title": "SME Management",
-        "description": "Growing firms needing to rapid-train a maturing middle-management layer."
-      }
-    ],
-    "whyUs": [
-      {
-        "title": "Practitioner Led",
-        "description": "Our programs are facilitated by former executives who have lived the challenges they teach."
-      },
-      {
-        "title": "Contextual Relevance",
-        "description": "We replace generic theory with localized, highly relevant operational scenarios."
-      },
-      {
-        "title": "Measurable Application",
-        "description": "We tie learning outcomes directly to measurable KPIs on the performance scorecard."
-      }
-    ],
-    "cta": "Upskill Your Workforce"
-  },
-  "business-process-management": {
-    "hero": "https://images.unsplash.com/photo-1553877522-43269d4ea984?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Nlc3MlMjBtYW5hZ2VtZW50fGVufDF8fHx8MTc3MjQwNjQxMHww&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Business Process Mapping",
-    "eyebrow": "Efficiency & Excellence",
-    "headline": "Simplify the complex. Maximize the output.",
-    "subheadline": "A rigorous, data-driven methodology to eradicate operational waste, streamline workflows, and enhance gross margin efficiency.",
-    "painPoints": [
-      {
-        "title": "Operational Bloat",
-        "description": "Processes have accumulated redundant steps over years, resulting in sluggish turnaround times."
-      },
-      {
-        "title": "Error Epidemics",
-        "description": "High defect rates and rework costs caused by convoluted, disjointed cross-departmental handoffs."
-      },
-      {
-        "title": "Blind Spots",
-        "description": "Leadership cannot accurately identify where delays are occurring within the value chain."
-      },
-      {
-        "title": "Margin Erosion",
-        "description": "Inefficiencies secretly inflate operational costs, suppressing profitability despite revenue growth."
-      }
-    ],
-    "deliverables": [
-      {
-        "title": "End-to-End Value Streaming",
-        "description": "Visual mapping of your entire delivery cycle from procurement to customer fulfillment."
-      },
-      {
-        "title": "Waste Elimination Protocol",
-        "description": "Identification and targeted removal of non-value-adding activities using Lean methodology."
-      },
-      {
-        "title": "Standardized Flow Logic",
-        "description": "Re-engineered process loops optimized for speed, accuracy, and minimum friction."
-      },
-      {
-        "title": "Performance Dashboards",
-        "description": "Telemetry systems that provide real-time visibility into workflow health and velocity."
-      }
-    ],
-    "process": [
-      {
-        "step": "01",
-        "title": "As-Is Capturing",
-        "description": "We map the reality of how work is actually done, bypassing sanitized manuals for ground truth."
-      },
-      {
-        "step": "02",
-        "title": "Bottleneck Diagnostics",
-        "description": "Utilizing variance analysis, we pinpoint the exact sources of systemic friction."
-      },
-      {
-        "step": "03",
-        "title": "To-Be Reengineering",
-        "description": "We collectively design an optimal future-state process balancing compliance with velocity."
-      },
-      {
-        "step": "04",
-        "title": "Piloting & Refinement",
-        "description": "We execute the new process in a controlled environment, tuning it before enterprise-wide launch."
-      }
-    ],
-    "outcomes": [
-      {
-        "metric": "1.2k+",
-        "description": "Processes Optimized"
-      },
-      {
-        "metric": "25%",
-        "description": "Waste Reduction"
-      },
-      {
-        "metric": "30%",
-        "description": "Cycle Time Cut"
+        "metric": "50%",
+        "description": "Decision Speed-up"
       },
       {
         "metric": "100%",
-        "description": "Standardization Score"
+        "description": "Role Clarity"
+      },
+      {
+        "metric": "95%",
+        "description": "Board Assurance"
       }
     ],
-    "proof": {
-      "impact": "Reduced loan approval cycle times for a regional financial institution by 42%.",
-      "context": "By eradicating redundant approval layers and re-sequencing the compliance verification steps, our intervention drastically improved customer satisfaction."
-    },
     "targetAudience": [
       {
-        "title": "Chief Operating Officers",
-        "description": "Executives tasked with fundamentally restructuring enterprise delivery mechanisms."
+        "title": "Family Businesses",
+        "description": "Firms transitioning from founder-led management to professional governance."
       },
       {
-        "title": "Manufacturing & Logistics",
-        "description": "Sector players where minimal process deviations directly dictate gross margins."
+        "title": "Expanding Groups",
+        "description": "Companies struggling to manage multiple subsidiaries or geographic locations."
       },
       {
-        "title": "Scaling Agencies",
-        "description": "Firms looking to productize and standardize bespoke service deliveries."
+        "title": "Mergers & Acquisitions",
+        "description": "Teams needing to integrate two distinct structures into one cohesive organization."
       }
     ],
     "whyUs": [
       {
-        "title": "Radical Simplification",
-        "description": "We do not believe in complex processes; we design elegant paths of least resistance."
+        "title": "Practical Discipline",
+        "description": "We don't create bureaucracy; we design structures that facilitate commercial velocity."
       },
       {
-        "title": "Cross-Functional Integration",
-        "description": "We solve the inter-departmental friction points where most processes traditionally fail."
+        "title": "Conflict Mitigation",
+        "description": "Our designs proactively address potential role overlaps and power struggles."
       },
       {
-        "title": "Data-Backed Precision",
-        "description": "Every optimization we implement is justified by rigorous empirical data, not assumptions."
+        "title": "Scalable Logic",
+        "description": "We build structures that can double in size without needing to be re-engineered."
       }
     ],
-    "cta": "Optimize Your Workflows"
+    "cta": "Structure For Success"
   },
-  "company-policies-procedures": {
-    "hero": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjbG9zZSUyMHVwJTIwb2YlMjBkb2N1bWVudCUyMHRleHR8ZW58MXx8fHwxNzcyNDA2NDExfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Corporate Governance Documents",
-    "eyebrow": "Governance & Risk",
-    "headline": "Clarity in action through incontrovertible standards.",
-    "subheadline": "Developing sophisticated policy frameworks that enforce compliance, mitigate legal exposure, and establish a uniform corporate culture.",
+  "policies-procedures-development": {
+    "hero": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudHMlMjBvZmZpY2V8ZW58MXx8fHwxNzc2NDA2MzcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "heroAlt": "Policies & Procedures Development",
+    "eyebrow": "Standardization & Compliance",
+    "headline": "Standardizing excellence across the enterprise.",
+    "subheadline": "We develop comprehensive policy frameworks and procedures that standardize operations and ensure compliance across all departments.",
     "painPoints": [
       {
-        "title": "Regulatory Vulnerability",
-        "description": "The organization operates in a state of risk due to severe compliance gaps and undocumented liabilities."
+        "title": "Inconsistent Quality",
+        "description": "Output depends on which employee is performing the task, leading to unpredictable results."
       },
       {
-        "title": "Behavioral Ambiguity",
-        "description": "A lack of clear, enforceable standards leads to inconsistent management decisions and employee disputes."
+        "title": "Compliance Risk",
+        "description": "The absence of documented procedures leaves the organization exposed to regulatory and legal liability."
       },
       {
-        "title": "Onboarding Paralysis",
-        "description": "New hires struggle to integrate efficiently because 'how things are done' is an oral tradition."
+        "title": "Onboarding Lag",
+        "description": "New employees take too long to reach full productivity due to a lack of instructional resources."
       },
       {
-        "title": "Atheoritical Growth",
-        "description": "Rapid scaling has bypassed governance, resulting in a 'Wild West' operational environment."
+        "title": "Operational Chaos",
+        "description": "Employees are constantly asking 'how do I do this?', resulting in massive time waste for management."
       }
     ],
     "deliverables": [
       {
-        "title": "Corporate Policy Manuals",
-        "description": "Legally vetted documents dictating organizational boundaries and behavioral standards."
+        "title": "Corporate & Departmental Policies",
+        "description": "Clear guidelines defining behavioral and operational boundaries for the entire organization."
       },
       {
         "title": "Standard Operating Procedures (SOPs)",
-        "description": "Granular, step-by-step instructional guides for critical technical and administrative tasks."
+        "description": "Granular, step-by-step guides for executing core business tasks with absolute consistency."
+      },
+      {
+        "title": "Compliance & Control Policies",
+        "description": "Internal frameworks designed to safeguard assets and ensure adherence to local laws."
       },
       {
         "title": "Employee Handbooks",
-        "description": "Accessible, culturally aligned guides outlining expectations, benefits, and dispute resolution."
+        "description": "Accessible culture and rule summaries that set clear expectations from day one."
       },
       {
-        "title": "Governance Matrices",
-        "description": "Clear definitions establishing who has the authority to approve, veto, or execute specific actions."
+        "title": "Governance Manuals",
+        "description": "High-level documentation for executive and board-level operational standards."
       }
     ],
     "process": [
       {
         "step": "01",
-        "title": "Regulatory Scanning",
-        "description": "We cross-reference your current practices against local laws and industry-specific regulations."
+        "title": "Baseline Audit",
+        "description": "Identifying gaps in your current documentation and benchmarking against industry standards."
       },
       {
         "step": "02",
-        "title": "Stakeholder Interviews",
-        "description": "We extract nuanced operational realities directly from your subject matter experts."
+        "title": "Expert Extraction",
+        "description": "Interviewing your specialists to capture 'tribal knowledge' and convert it into formal SOPs."
       },
       {
         "step": "03",
-        "title": "Iterative Drafting",
-        "description": "We translate complex legal and operational requirements into clear, unambiguous corporate language."
+        "title": "Documentation Build",
+        "description": "Authoring professional, clear, and legally-informed policy and procedure manuals."
       },
       {
         "step": "04",
-        "title": "Adoption Strategy",
-        "description": "We don't just hand over a binder; we assist in the rollout to ensure read-rates and enforcement."
+        "title": "Rollout & Adoption",
+        "description": "Training your team on the new standards and establishing a culture of procedural adherence."
       }
     ],
     "outcomes": [
       {
-        "metric": "3k+",
-        "description": "SOPs Developed"
+        "metric": "80%",
+        "description": "Faster Onboarding"
       },
       {
-        "metric": "-80%",
-        "description": "Compliance Infractions"
-      },
-      {
-        "metric": "+50%",
-        "description": "Onboarding Velocity"
+        "metric": "Zero",
+        "description": "Compliance Fines"
       },
       {
         "metric": "100%",
-        "description": "Audit Readiness"
+        "description": "Process Continuity"
+      },
+      {
+        "metric": "40%",
+        "description": "Admin Time Saved"
       }
     ],
-    "proof": {
-      "quote": "The SOPs developed by Canbiz transformed our operations from reactive chaos to proactive control. We passed our ISO audit flawlessly.",
-      "author": "Chief Compliance Officer",
-      "role": "Industrial Manufacturing Group",
-      "company": "KSA"
-    },
     "targetAudience": [
       {
-        "title": "Compliance Directors",
-        "description": "Leaders requiring airtight documentation to survive stringent regulatory environments."
+        "title": "High-Growth Startups",
+        "description": "Firms needing to move beyond founder-led 'improvisation' to professional standards."
       },
       {
-        "title": "Franchisors",
-        "description": "Brands needing to perfectly replicate operational standards across multiple geographic locations."
+        "title": "Industrial Entities",
+        "description": "Companies where procedural errors lead to safety risks or massive financial loss."
       },
       {
-        "title": "Pre-IPO Companies",
-        "description": "Startups requiring institutional-grade governance structures prior to major funding rounds."
+        "title": "Regulated Firms",
+        "description": "Organizations requiring airtight documentation to maintain licenses and pass audits."
       }
     ],
     "whyUs": [
       {
-        "title": "Linguistic Clarity",
-        "description": "We abhor dense jargon. We write policies that frontline employees actually read and understand."
+        "title": "Radical Clarity",
+        "description": "We write documents that employees actually understand and use, not just dense legal jargon."
       },
       {
-        "title": "Strategic Alignment",
-        "description": "Our documents don't just enforce rules; they reinforce your overarching corporate strategy."
+        "title": "Holistic Integration",
+        "description": "We ensure policies in one department don't conflict with procedures in another."
       },
       {
-        "title": "Living Documents",
-        "description": "We establish review cycles, ensuring your governance framework evolves alongside your business."
+        "title": "Future-Ready",
+        "description": "We build documentation systems that are easy to update as your business evolves."
       }
     ],
-    "cta": "Formalize Your Standards"
+    "cta": "Standardize Your Success"
   },
-  "system-automation": {
-    "hero": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbWF0aW9uJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzI0MDY0MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Digital Transformation Data",
-    "eyebrow": "Digital Transformation",
-    "headline": "Harnessing technology to exponentially amplify effort.",
-    "subheadline": "Strategic modernization through targeted software implementation, ERP integration, and intelligent workflow automation.",
+  "business-process-design-optimization": {
+    "hero": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Nlc3Nlc3xlbnwxfHx8fDE3NzY0MDYzNzJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "heroAlt": "Business Process Design & Optimization",
+    "eyebrow": "Efficiency & Excellence",
+    "headline": "Engineering friction out of your business.",
+    "subheadline": "We streamline and redesign business processes to improve efficiency, reduce redundancy, and enhance operational performance.",
     "painPoints": [
       {
-        "title": "Data Silos",
-        "description": "Departments operate in vacuum-sealed legacy systems, requiring massive manual data entry to bridge the gaps."
+        "title": "Operational Bloat",
+        "description": "Workflows have historical 'residue'—unnecessary steps that add cost without adding any value."
       },
       {
-        "title": "Platform Fatigue",
-        "description": "Investment in disconnected SaaS tools has created a costly, confusing, and fragmented IT ecosystem."
+        "title": "Cross-Dept Friction",
+        "description": "Handoffs between departments are disjointed, leading to delays and communication breakdowns."
       },
       {
-        "title": "Human Bandwidth Waste",
-        "description": "Highly paid talent spends the majority of their week engaged in repetitive, menial administrative tasks."
+        "title": "Margin Erosion",
+        "description": "Inefficient processes are quietly eating your profits through rework, errors, and wasted labor."
       },
       {
-        "title": "Scalability Ceilings",
-        "description": "The current technological infrastructure fundamentally cannot handle a surge in transactional volume."
+        "title": "System Fragility",
+        "description": "Workflows are not resilient; a single unexpected event can cause the entire operation to stall."
       }
     ],
     "deliverables": [
       {
-        "title": "Digital Architecture Roadmap",
-        "description": "A multi-year strategic plan detailing enterprise software procurement and retirement."
+        "title": "Process Mapping & Documentation",
+        "description": "Visualizing exactly how work flows through your company to identify every bottleneck."
       },
       {
-        "title": "ERP Implementation Strategy",
-        "description": "Requirement gathering, vendor selection, and oversight for foundational system rollouts."
+        "title": "Process Re-Engineering",
+        "description": "Radically redesigning workflows to prioritize speed, quality, and minimum human effort."
       },
       {
-        "title": "API Integration Workflows",
-        "description": "Custom logic connecting disparate platforms into a single, seamless data pipeline."
+        "title": "Workflow Standardization",
+        "description": "Creating uniform methods for execution to ensure predictable results every time."
       },
       {
-        "title": "Robotic Process Automation",
-        "description": "Deployment of intelligent bots to execute high-volume, rules-based administrative tasks."
+        "title": "Cross-Department Integration",
+        "description": "Ensuring seamless 'handoff' logic between sales, ops, finance, and support."
+      },
+      {
+        "title": "Operational Efficiency Audits",
+        "description": "Rigorous data assessments to measure the ROI of your current operational routines."
+      }
+    ],
+    "process": [
+      {
+        "step": "01",
+        "title": "Value-Stream Analysis",
+        "description": "Auditing your current processes to differentiate between value-adding work and waste."
+      },
+      {
+        "step": "02",
+        "title": "Bottleneck Identification",
+        "description": "Locating the exact points where your operational velocity is being constrained."
+      },
+      {
+        "step": "03",
+        "title": "Process Re-Design",
+        "description": "Architecting an optimized, 'lean' process that delivers superior results with less effort."
+      },
+      {
+        "step": "04",
+        "title": "Pilot & Refinement",
+        "description": "Testing the new workflow in a controlled environment before full enterprise-wide rollout."
+      }
+    ],
+    "outcomes": [
+      {
+        "metric": "30%+",
+        "description": "Efficiency Gain"
+      },
+      {
+        "metric": "-45%",
+        "description": "Cycle Time"
+      },
+      {
+        "metric": "Zero",
+        "description": "Redundancy"
+      },
+      {
+        "metric": "20%",
+        "description": "Margin Increase"
+      }
+    ],
+    "targetAudience": [
+      {
+        "title": "Operational Leaders",
+        "description": "COOs and Ops Directors tasked with cutting costs and improving delivery speeds."
+      },
+      {
+        "title": "Service Agencies",
+        "description": "Firms looking to productize their offerings through highly standardized delivery loops."
+      },
+      {
+        "title": "Manufacturing Groups",
+        "description": "Organizations where tiny process variances lead to massive downstream costs."
+      }
+    ],
+    "whyUs": [
+      {
+        "title": "Lean Methodology",
+        "description": "We apply world-class lean principles to the unique context of your specific industry."
+      },
+      {
+        "title": "Technology Balanced",
+        "description": "We don't just suggest 'more software'; we fix the process first so technology actually works."
+      },
+      {
+        "title": "Results Driven",
+        "description": "Our work is measured by hard metrics like cycle time, defect rates, and gross margin."
+      }
+    ],
+    "cta": "Optimize Your Flow"
+  },
+  "system-automation-digital-transformation": {
+    "hero": "https://images.unsplash.com/photo-1518770660439-4636190af475?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxhdXRvbWF0aW9uJTIwdGVjaG5vbG9neXxlbnwxfHx8fDE3NzI0MDY0MTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "heroAlt": "System Automation & Digital Transformation",
+    "eyebrow": "Digital Transformation",
+    "headline": "Harnessing technology to exponentially amplify effort.",
+    "subheadline": "We support organizations in transitioning from manual operations to automated, technology-driven systems for maximum scalability.",
+    "painPoints": [
+      {
+        "title": "Manual Inefficiency",
+        "description": "Teams are bogged down by repetitive, error-prone manual tasks that could be easily automated."
+      },
+      {
+        "title": "Data Fragmentation",
+        "description": "Critical business information is scattered across spreadsheets and disconnected legacy tools."
+      },
+      {
+        "title": "Lack of Real-Time Visibility",
+        "description": "Leadership cannot see the pulse of the business because data synthesis takes days or weeks."
+      },
+      {
+        "title": "Incompatible Systems",
+        "description": "Existing software tools don't talk to each other, necessitating manual data re-entry."
+      }
+    ],
+    "deliverables": [
+      {
+        "title": "ERP & CRM Implementation Advisory",
+        "description": "Guidance on selecting and deploying foundational enterprise software that fits your budget."
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "Eliminating manual steps in your sales, HR, or finance cycles through intelligent digital triggers."
+      },
+      {
+        "title": "Document Management Systems (DMS)",
+        "description": "Transitioning to a paperless environment with centralized, searchable intellectual property."
+      },
+      {
+        "title": "HRMS & Accounting Integration",
+        "description": "Connecting your people and money data to ensure seamless cross-functional reporting."
+      },
+      {
+        "title": "End-to-End Digital Transformation",
+        "description": "A comprehensive roadmap to modernize every digital touchpoint of your organization."
       }
     ],
     "process": [
       {
         "step": "01",
         "title": "Tech Stack Audit",
-        "description": "We inventory your existing digital assets, measuring utilization rates and identifying costly redundancies."
+        "description": "Auditing your current digital assets and identifying costly redundancies or capability gaps."
       },
       {
         "step": "02",
-        "title": "Automation Prioritization",
-        "description": "We calculate the exact ROI of automating specific workflows, focusing on quick capacity-freeing wins."
+        "title": "Automation Roadmap",
+        "description": "Prioritizing automation projects based on their potential to free up team capacity and ROI."
       },
       {
         "step": "03",
-        "title": "Solution Architecture",
-        "description": "We select the optimal software stack—favoring lean, interoperable tools over monolithic bloatware."
+        "title": "Solution Engineering",
+        "description": "Designing the architecture and selecting the specific tools needed for your transformation."
       },
       {
         "step": "04",
-        "title": "Deployment & Training",
-        "description": "We oversee technical integration while driving the human change management required for adoption."
+        "title": "Deployment & Adoption",
+        "description": "Managing the technical rollout and training your team to ensure the new tools are actually used."
       }
     ],
     "outcomes": [
       {
-        "metric": "800+",
-        "description": "Workflows Automated"
+        "metric": "60%+",
+        "description": "Manual Tasks Cut"
       },
       {
-        "metric": "99.9%",
+        "metric": "100%",
         "description": "Data Accuracy"
       },
       {
-        "metric": "3x",
-        "description": "Software ROI"
+        "metric": "Instant",
+        "description": "Reporting Speed"
       },
       {
-        "metric": "-40%",
-        "description": "Manual Admin Time"
+        "metric": "3x",
+        "description": "Software R.O.I."
       }
     ],
-    "proof": {
-      "impact": "Automated the entire client onboarding sequence for a regional advisory firm.",
-      "context": "By integrating their CRM with document parsing APIs, we reduced administrative onboarding time from 3 days to exactly 14 minutes, eliminating transcription errors entirely."
-    },
     "targetAudience": [
       {
-        "title": "Chief Information Officers",
-        "description": "IT leaders looking to modernize legacy infrastructure without disrupting core business."
+        "title": "CIOs & IT Managers",
+        "description": "Tech leaders looking to modernize infrastructure without breaking core business continuity."
       },
       {
-        "title": "Operations Directors",
-        "description": "Executives seeking to extract heavy manual admin work from their operational teams."
+        "title": "Rapidly Growing Firms",
+        "description": "Companies that have outgrown spreadsheets and require enterprise-grade automation."
       },
       {
-        "title": "Mid-Market Enterprises",
-        "description": "Companies that have outgrown spreadsheets and require cohesive, enterprise-grade software."
+        "title": "Paper-Heavy Businesses",
+        "description": "Traditional organizations looking to digitize their archives and workflows."
       }
     ],
     "whyUs": [
       {
-        "title": "Business First",
-        "description": "We aren't software resellers. We let your strategic business objectives dictate the technology."
-      },
-      {
         "title": "Vendor Agnostic",
-        "description": "We provide unbiased recommendations, selecting the exact tools that fit your budget and reality."
+        "description": "We don't sell software; we recommend the exact tools that are right for your specific needs."
       },
       {
-        "title": "Focus on Adoption",
-        "description": "We know software is useless without people using it; our implementations heavily index on user experience."
+        "title": "Adoption Focus",
+        "description": "We know tech is useless if people don't use it; we prioritize UX and change management."
+      },
+      {
+        "title": "Business First",
+        "description": "We let your business objectives drive the technology, not the other way around."
       }
     ],
-    "cta": "Automate Your Operations"
+    "cta": "Automate Your Success"
   },
-  "performance-management": {
+  "performance-management-systems": {
     "hero": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc3MjQwNjQxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Performance Analytics",
-    "eyebrow": "Growth & Analytics",
-    "headline": "Engineering accountability through precision measurement.",
-    "subheadline": "Deploying rigorous metric frameworks that directly align individual employee output with overarching corporate strategy.",
+    "heroAlt": "Performance Management Systems",
+    "eyebrow": "Growth & Accountability",
+    "headline": "Measurable clarity for every contributor.",
+    "subheadline": "We establish measurable performance frameworks that enable organizations to track, evaluate, and improve productivity.",
     "painPoints": [
       {
         "title": "Strategic Disconnect",
-        "description": "Frontline employees have no understanding of how their daily tasks contribute to annual objectives."
+        "description": "Employees don't understand how their daily efforts contribute to the company's annual goals."
       },
       {
-        "title": "Subjective Evaluations",
-        "description": "Appraisals are based on recency bias and personal relationships rather than objective data."
+        "title": "Subjective Appraisals",
+        "description": "Performance reviews are based on personal feelings rather than objective, data-backed results."
+      },
+      {
+        "title": "Lack of Accountability",
+        "description": "Without clear metrics, it's impossible to distinguish between high performers and those needing support."
       },
       {
         "title": "Metric Overload",
-        "description": "Leadership is drowning in dashboards showing vanity metrics that offer no actionable insight."
-      },
-      {
-        "title": "Reactive Management",
-        "description": "Performance issues are only identified during year-end reviews, long after the damage has been done."
+        "description": "Leadership is tracking 50+ numbers but has no idea which ones actually drive the business."
       }
     ],
     "deliverables": [
       {
-        "title": "Balanced Scorecards",
-        "description": "Translating corporate vision into holistic metrics spanning finance, customer, and processes."
+        "title": "KPI Development",
+        "description": "Defining the Key Performance Indicators that truly reflect departmental and individual success."
       },
       {
-        "title": "Cascading KPI Architecture",
-        "description": "Breaking down board objectives into specific, quantifiable targets for every department."
+        "title": "Balanced Scorecard Implementation",
+        "description": "Creating holistic views of performance across finance, customers, and operations."
       },
       {
-        "title": "Appraisal Systems",
-        "description": "Structuring transparent evaluation cycles that distinguish between high and low performers."
+        "title": "Performance Monitoring Systems",
+        "description": "Setting up the digital dashboards and routines required for real-time visibility."
       },
       {
-        "title": "Executive Dashboards",
-        "description": "Clean, real-time visual interfaces highlighting only the leading indicators that matter most."
+        "title": "Employee Appraisal Systems",
+        "description": "Structuring fair, transparent, and motivating review cycles for the whole workforce."
+      },
+      {
+        "title": "Departmental Target Setting",
+        "description": "Cascading high-level board objectives into specific, achievable goals for every team."
       }
     ],
     "process": [
       {
         "step": "01",
         "title": "Objective Distillation",
-        "description": "We work with the executive board to clarify precisely what successful execution looks like."
+        "description": "Working with leadership to clarify exactly what 'winning' looks like for the organization."
       },
       {
         "step": "02",
-        "title": "Metric Selection",
-        "description": "We bypass vanity data, isolating the vital few 'leading indicators' that predict future success."
+        "title": "Metric Engineering",
+        "description": "Selecting the 'Vital Few' leading indicators that predict future success and ignore vanity data."
       },
       {
         "step": "03",
-        "title": "System Configuration",
-        "description": "We design appraisal templates, review cadences, and feedback loops to sustain the framework."
+        "title": "Cadence Design",
+        "description": "Establishing the daily, weekly, and monthly rituals required to review and act on performance data."
       },
       {
         "step": "04",
-        "title": "Managerial Training",
-        "description": "We coach your leaders on how to use data for constructive coaching and decisive intervention."
+        "title": "Coaching & Enablement",
+        "description": "Training managers on how to use performance data for constructive feedback and professional growth."
       }
     ],
     "outcomes": [
       {
-        "metric": "2k+",
-        "description": "KPIs Defined"
-      },
-      {
-        "metric": "90%",
-        "description": "Goal Alignment"
-      },
-      {
-        "metric": "+35%",
-        "description": "Productivity Lift"
-      },
-      {
         "metric": "100%",
-        "description": "Data Transparency"
+        "description": "Strategic Alignment"
+      },
+      {
+        "metric": "25%+",
+        "description": "Productivity Increase"
+      },
+      {
+        "metric": "Zero",
+        "description": "Appraisal Bias"
+      },
+      {
+        "metric": "High",
+        "description": "Meritocratic Culture"
       }
     ],
-    "proof": {
-      "quote": "The cascading KPIs finally gave our mid-management clear targets. We went from 'busy' to 'productive' in a single quarter.",
-      "author": "Chief Executive Officer",
-      "role": "Retail Group",
-      "company": "Qatar"
-    },
     "targetAudience": [
       {
         "title": "Executive Boards",
-        "description": "Directors seeking transparent, unfiltered visibility into the actual performance of the enterprise."
+        "description": "Leaders needing a clear, unfiltered view of how the organization is actually performing."
       },
       {
-        "title": "Human Resources",
-        "description": "HR Directors tasked with shifting company culture from tenure-based to meritocratic."
+        "title": "HR Directors",
+        "description": "Professionals tasked with building a merit-based culture and improving talent retention."
       },
       {
-        "title": "Sales & Operations",
-        "description": "Department heads needing precise mechanisms to drive target attainment."
+        "title": "Regional Managers",
+        "description": "Leaders managing multiple sites who need standardized performance data to compare results."
       }
     ],
     "whyUs": [
       {
         "title": "Leading Indicators",
-        "description": "We measure the inputs that generate success, rather than just staring at lagging financial outputs."
+        "description": "We focus on the inputs that generate results, not just looking in the rearview mirror at profit."
+      },
+      {
+        "title": "Radical Simplicity",
+        "description": "We strip away the noise, focusing on the 3-5 metrics that truly move the needle for each role."
       },
       {
         "title": "Behavioral Alignment",
-        "description": "We design metrics that incentivize the right behaviors, actively avoiding KPIs that encourage gaming."
-      },
-      {
-        "title": "Simplicity by Design",
-        "description": "We build dashboards with radical clarity, stripping away the noise of 30+ useless metrics."
+        "description": "We ensure your metrics incentivize the right behaviors, not just gaming the system."
       }
     ],
     "cta": "Drive Better Results"
   },
-  "risk-management": {
+  "internal-control-risk-management": {
     "hero": "https://images.unsplash.com/photo-1454165833767-027ffea9e772?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyaXNrJTIwbWFuYWdlbWVudHxlbnwxfHx8fDE3NzI0MDY0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Risk and Security Strategy",
+    "heroAlt": "Internal Control & Risk Management",
     "eyebrow": "Compliance & Security",
-    "headline": "Protecting your progress. Securing your future.",
-    "subheadline": "Identifying hidden vulnerabilities and constructing resilient internal controls to safeguard against operational, financial, and reputational ruin.",
+    "headline": "Safeguarding your hard-earned progress.",
+    "subheadline": "We design robust control systems to safeguard assets, ensure compliance, and minimize business risks.",
     "painPoints": [
       {
         "title": "Financial Leakage",
-        "description": "A lack of segregation of duties exposes the firm to internal fraud and unchecked expenditure."
+        "description": "Ineffective internal controls are leading to unchecked spending or potential cases of fraud."
       },
       {
-        "title": "Operational Fragility",
-        "description": "A single point of failure (a crucial supplier, an IT system) threatens the entire business's survival."
+        "title": "Regulatory Exposure",
+        "description": "The organization is not fully compliant with local regulations, risking heavy fines or license loss."
       },
       {
-        "title": "Regulatory Targets",
-        "description": "Changing legislative landscapes leave the company exposed to massive fines due to non-compliance."
+        "title": "Operational Vulnerability",
+        "description": "A lack of risk assessment means the company is unprepared for black-swan events or market shocks."
       },
       {
-        "title": "Reactive Firefighting",
-        "description": "The organization has no established protocol for responding to macroeconomic shocks or disasters."
+        "title": "Lack of Oversight",
+        "description": "Management has no formal reporting or check-points to ensure that delegated tasks are handled properly."
       }
     ],
     "deliverables": [
       {
-        "title": "Enterprise Risk Registers",
-        "description": "A prioritized matrix identifying all probable threats and their potential financial impact."
+        "title": "Internal Control System Design",
+        "description": "Developing the checks and balances required to ensure operational integrity and honesty."
       },
       {
-        "title": "Internal Control Frameworks",
-        "description": "Rigorous checks, balances, and approval hierarchies designed to prevent operational malpractice."
+        "title": "Risk Management Frameworks",
+        "description": "A structured method for identifying, scoring, and mitigating various business threats."
       },
       {
-        "title": "Continuity Plans (BCP)",
-        "description": "Actionable strategies ensuring the organization survives and functions during black-swan events."
+        "title": "Financial Controls",
+        "description": "Airtight systems for budgeting, spending approvals, and financial reporting verification."
       },
       {
-        "title": "Compliance Audits",
-        "description": "Independent verification to ensure adherence to sector-specific mandates."
+        "title": "Compliance Monitoring",
+        "description": "Regular audit cadences to ensure the organization stays on the right side of the law."
+      },
+      {
+        "title": "Fraud Prevention Programs",
+        "description": "Specific procedural barriers and whistleblower systems to protect against internal malpractice."
       }
     ],
     "process": [
       {
         "step": "01",
-        "title": "Threat Identification",
-        "description": "We conduct a sweeping audit of your environment, looking for structural and systemic weaknesses."
+        "title": "Risk Assessment Audit",
+        "description": "A comprehensive sweep of your organization to find hidden vulnerabilities and weak control points."
       },
       {
         "step": "02",
-        "title": "Probability Scoring",
-        "description": "We quantify risks, prioritizing interventions based on likelihood of occurrence and severity."
+        "title": "Control Architecture",
+        "description": "Designing customized internal controls that provide security without paralyzing the business."
       },
       {
         "step": "03",
-        "title": "Control Engineering",
-        "description": "We design specific, non-obtrusive operational controls that neutralize high-priority threats."
+        "title": "Policy Integration",
+        "description": "Codifying the new controls into formal manuals and employee training programs."
       },
       {
         "step": "04",
-        "title": "Stress Testing",
-        "description": "We conduct simulations and tabletop exercises to validate your team's readiness to execute BCPs."
+        "title": "Continuous Assurance",
+        "description": "Setting up internal audit cycles to ensure the controls are being followed and remain effective."
       }
     ],
     "outcomes": [
       {
-        "metric": "5k+",
-        "description": "Risks Mitigated"
-      },
-      {
-        "metric": "$10M+",
-        "description": "Fraud Prevented"
-      },
-      {
-        "metric": "100+",
-        "description": "Control Systems"
+        "metric": "100%",
+        "description": "Compliance Score"
       },
       {
         "metric": "Zero",
-        "description": "Compliance Breaches"
+        "description": "Unchecked Leaks"
+      },
+      {
+        "metric": "Total",
+        "description": "Asset Protection"
+      },
+      {
+        "metric": "Peace",
+        "description": "of Mind"
       }
     ],
-    "proof": {
-      "impact": "Designed the internal control architecture for a major regional investment holding.",
-      "context": "Our risk intervention uncovered a multi-million dirham vulnerability in procurement. By executing strict digital segregation of duties, we sealed the leak and provided board-level assurance."
-    },
     "targetAudience": [
       {
         "title": "Audit Committees",
-        "description": "Directors requiring independent assurance that executive management is safeguarding assets."
+        "description": "Boards requiring independent assurance that executive management is safeguarding assets."
       },
       {
-        "title": "Financial Services",
-        "description": "Highly regulated entities where risk management dictates the survival of the product."
+        "title": "Growing Enterprises",
+        "description": "Firms scaling rapidly that need to formalize their internal safeguards against increased complexity."
       },
       {
-        "title": "Expanding Regional Firms",
-        "description": "Organizations moving into new jurisdictions where unfamiliar regulatory risks await."
+        "title": "Heavily Regulated Sectors",
+        "description": "Businesses in finance, healthcare, or logistics where compliance is non-negotiable."
       }
     ],
     "whyUs": [
       {
         "title": "Commercial Pragmatism",
-        "description": "We don't paralyze your business with paranoia; we design controls that allow commercial agility."
+        "description": "We don't design red tape. We build controls that protect without slowing down your operations."
       },
       {
-        "title": "Anticipatory Logic",
-        "description": "We look beyond historical data to predict emerging risks in the technological landscape."
+        "title": "Anticipatory Focus",
+        "description": "We look for future threats (IT, ESG, Regulatory) rather than just looking at past audit failures."
       },
       {
-        "title": "Holistic Security",
-        "description": "We view risk holistically, recognizing that an IT failure is just as damaging as a financial lapse."
+        "title": "Holistic Visibility",
+        "description": "We view risk across the entire organization, from the board room to the warehouse floor."
       }
     ],
     "cta": "Fortify Your Operations"
   },
-  "departmental-systems": {
+  "departmental-system-development": {
     "hero": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwd29ya2luZyUyMHRvZ2V0aGVyfGVufDF8fHx8MTc3MjQwNjQxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Departmental Operations",
+    "heroAlt": "Departmental System Development",
     "eyebrow": "Integrated Operations",
-    "headline": "Expert engineering for every functional silo.",
-    "subheadline": "Deep, specialized system development for HR, Finance, Operations, and Sales to elevate departmental standards.",
+    "headline": "Specialized excellence for every functional area.",
+    "subheadline": "We build structured systems for each business function to ensure consistency, efficiency, and clarity across the enterprise.",
     "painPoints": [
       {
         "title": "Functional Imbalance",
-        "description": "A brilliant sales team outpaces struggling ops, leading to delivered promises breaking down."
+        "description": "One department is highly efficient while others are struggling, leading to organizational friction."
       },
       {
-        "title": "Siloed Friction",
-        "description": "Departments use incompatible metrics and software, leading to toxic internal politics."
+        "title": "Siloed Operations",
+        "description": "Each department uses different 'unwritten' rules, making cross-functional projects difficult."
       },
       {
         "title": "Lack of Specialization",
-        "description": "Functions are run using generalized methods rather than industry-best-practice playbooks."
+        "description": "Critical functions like HR or Finance are being run with generic methods rather than expert playbooks."
       },
       {
         "title": "Scalability Walls",
-        "description": "A specific department cannot keep up with the scaling demands of the wider enterprise."
+        "description": "A specific department cannot handle the increased volume that the rest of the company is generating."
       }
     ],
     "deliverables": [
       {
-        "title": "HR & Talent Frameworks",
-        "description": "End-to-end systems for sourcing, managing, and exiting human capital efficiently."
+        "title": "HR & Workforce Systems",
+        "description": "End-to-end frameworks for recruiting, managing, and developing human capital."
       },
       {
-        "title": "Financial Architectures",
-        "description": "Rigorous models for budgeting, cash flow forecasting, and automated board reporting."
+        "title": "Finance & Accounting Systems",
+        "description": "Structured models for cash flow, budgeting, and automated financial reporting."
       },
       {
-        "title": "Sales & CRM Playbooks",
-        "description": "Structured pipeline logic, objection handling scripts, and conversion tracking mechanics."
+        "title": "Sales & Marketing Systems",
+        "description": "Pipeline management logic, CRM protocols, and metric-driven marketing workflows."
       },
       {
-        "title": "Procurement Logic",
-        "description": "Systems dictating vendor selection, negotiation thresholds, and supply chain redundancies."
+        "title": "Procurement & Ops Systems",
+        "description": "Uniform standards for vendor selection, inventory control, and service delivery."
+      },
+      {
+        "title": "Customer Experience Systems",
+        "description": "Repeatable frameworks for managing the entire client success journey."
       }
     ],
     "process": [
       {
         "step": "01",
-        "title": "Micro-Diagnostic",
-        "description": "We isolate the specific department, auditing its current tooling, talent, and process efficiency."
+        "title": "Functional Diagnostic",
+        "description": "Auditing a specific department's current talent, tools, and processes compared to global best-practices."
       },
       {
         "step": "02",
-        "title": "Best-Practice Injection",
-        "description": "We cross-reference your department's reality against the operational standards of top-tier global firms."
+        "title": "System Assembly",
+        "description": "Designing the specialized forms, software logic, and SOPs required to professionalize the function."
       },
       {
         "step": "03",
-        "title": "System Assembly",
-        "description": "We build the specialized frameworks, forms, and software integrations required to elevate the function."
+        "title": "Horizontal Integration",
+        "description": "Ensuring the new departmental system 'speaks' to the rest of the organization's workflows."
       },
       {
         "step": "04",
-        "title": "Horizontal Alignment",
-        "description": "We meticulously connect the newly stabilized department back into the broader organizational flow."
+        "title": "Capability Transfer",
+        "description": "Training the departmental team on how to own and evolve their new specialized system."
       }
     ],
     "outcomes": [
       {
-        "metric": "50+",
-        "description": "Dept Frameworks"
+        "metric": "40%+",
+        "description": "Dept Speed-up"
       },
       {
-        "metric": "90%",
-        "description": "Cross-Silo Flow"
-      },
-      {
-        "metric": "+40%",
-        "description": "Operational Speed"
-      },
-      {
-        "metric": "-60%",
+        "metric": "80%",
         "description": "Error Reduction"
+      },
+      {
+        "metric": "100%",
+        "description": "System Ownership"
+      },
+      {
+        "metric": "Unified",
+        "description": "Org Flow"
       }
     ],
-    "proof": {
-      "quote": "Canbiz overhauled our Procurement and Finance departments simultaneously. For the first time, our systems are talking to each other, saving hundreds of hours.",
-      "author": "Chief Financial Officer",
-      "role": "Construction Enterprise",
-      "company": "Qatar"
-    },
     "targetAudience": [
       {
+        "title": "Founders & CEOs",
+        "description": "Leaders realizing that they can no longer oversee every detail and need professionalized departments."
+      },
+      {
         "title": "Department Heads",
-        "description": "Leaders aware that their specific functional area requires a professional upgrade."
+        "description": "Leaders newly appointed to modernize a legacy function within a larger organization."
       },
       {
-        "title": "Maturing Founders",
-        "description": "CEOs realizing that 'everyone doing everything' no longer works, and specialization is essential."
-      },
-      {
-        "title": "Post-Merger Entities",
-        "description": "Organizations struggling to reconcile two different departmental cultures into one system."
+        "title": "Private Equity Firms",
+        "description": "Investors looking to rapidly upgrade the functional capabilities of a portfolio company."
       }
     ],
     "whyUs": [
       {
-        "title": "Domain Analysts",
-        "description": "We deploy specialized consultants; a finance system is designed by a finance veteran."
+        "title": "Domain Experts",
+        "description": "We don't use generalists. Your finance system is built by a finance expert, your HR by an HR expert."
       },
       {
-        "title": "Horizontal Integration",
-        "description": "We ensure the isolated department serves the wider structural goals of the entire company."
+        "title": "Integration Logic",
+        "description": "We ensure departments work together as a single machine, not as competing silos."
       },
       {
-        "title": "Future-Proofing",
-        "description": "We build departmental capacity to handle the volume you target in 3 years."
+        "title": "Future-Proof Design",
+        "description": "We build departmental systems intended to handle 3-5x your current volume."
       }
     ],
-    "cta": "Empower Your Departments"
+    "cta": "Professionalize Your Departments"
   },
-  "gap-analysis": {
+  "organizational-gap-analysis-business-diagnostics": {
     "hero": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJlZXIlMjBzdWNjZXNzfGVufDF8fHx8MTc3MjQwNjQxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Strategic Gap Analysis",
+    "heroAlt": "Organizational Gap Analysis",
     "eyebrow": "Business Intelligence",
-    "headline": "Illuminating the path from present reality to target state.",
-    "subheadline": "Rigorous organizational diagnostics that pierce through assumptions to identify the hidden root causes of stagnation.",
+    "headline": "Diagnosing the root causes of stagnation.",
+    "subheadline": "We conduct in-depth assessments to identify inefficiencies, structural weaknesses, and opportunities for improvement.",
     "painPoints": [
       {
-        "title": "Growth Plateaus",
-        "description": "Despite aggressive investment, revenue or efficiency metrics refuse to scale past a ceiling."
+        "title": "Unexplained Stagnation",
+        "description": "Despite effort and investment, the business has stopped growing and the reasons are unclear."
       },
       {
-        "title": "Symptomatic Fixing",
-        "description": "Leadership plays 'whack-a-mole' with issues without ever identifying the underlying disease."
+        "title": "High Operational Costs",
+        "description": "Expenses are out of line with industry benchmarks, but it's hard to pinpoint exactly where the waste is."
       },
       {
-        "title": "Strategy Misalignment",
-        "description": "A vast chasm exists between what the board intends and what the frontline executes."
+        "title": "Cultural Friction",
+        "description": "Teams are disconnected and morale is low, impacting productivity and client service."
       },
       {
-        "title": "Cultural Blind Spots",
-        "description": "Management is unaware of critical leaks because the internal culture discourages reporting bad news."
+        "title": "System Inefficiency",
+        "description": "Existing workflows feel slow and outdated, but the organization is unsure how to modernize them."
       }
     ],
     "deliverables": [
       {
-        "title": "360-Degree Diagnostic",
-        "description": "An objective assessment of your organization's people, process, tech, and strategy."
+        "title": "Organizational Diagnostic Studies",
+        "description": "A 360-degree audit of your people, process, and technology to find hidden flaws."
       },
       {
-        "title": "Root-Cause Matrices",
-        "description": "Visual mapping tracing current operational pain points back to their foundational origins."
+        "title": "Process & System Gap Analysis",
+        "description": "Identifying exactly where your current operations fall short of your strategic goals."
       },
       {
-        "title": "Industry Benchmarking",
-        "description": "Comparative analytics showing where you lose ground against top-quartile competitors."
+        "title": "Role Conflict Identification",
+        "description": "Finding overlaps or gaps in responsibility that are causing friction and delay."
       },
       {
-        "title": "Remediation Roadmap",
-        "description": "A prioritized action plan detailing exactly how to close the identified performance gaps."
+        "title": "Structural Weakness Assessment",
+        "description": "Measuring the resilience and scalability of your current organizational architecture."
+      },
+      {
+        "title": "Improvement Roadmaps",
+        "description": "A prioritized list of tactical and strategic moves to bridge the identified gaps."
       }
     ],
     "process": [
       {
         "step": "01",
-        "title": "Data Harvesting",
-        "description": "We extract quantitative metrics and conduct confidential interviews across all levels."
+        "title": "Data Gathering",
+        "description": "Extracting quantitative metrics and conducting qualitative interviews across all levels."
       },
       {
         "step": "02",
-        "title": "Hypothesis Testing",
-        "description": "We analyze friction points, cross-referencing qualitative complaints with hard data."
+        "title": "Analysis & Insight",
+        "description": "Pattern matching your data against industry best-practices to find performance variances."
       },
       {
         "step": "03",
-        "title": "Gap Quantification",
-        "description": "We measure the exact distance (revenue loss or time waste) between current and optimal state."
+        "title": "Root-Cause Discovery",
+        "description": "Stripping away symptoms to find the underlying structural or behavioral issues."
       },
       {
         "step": "04",
-        "title": "Intervention Design",
-        "description": "We script specific tactical moves required by leadership to bridge the chasm."
+        "title": "Synthesis & Reporting",
+        "description": "Delivering a clear, objective assessment with immediate 'quick-win' recommendations."
       }
     ],
     "outcomes": [
       {
-        "metric": "300+",
-        "description": "Audits Conducted"
+        "metric": "Total",
+        "description": "Objective Clarity"
       },
       {
-        "metric": "$10M+",
-        "description": "Value Found"
-      },
-      {
-        "metric": "5k+",
-        "description": "Action Items Generated"
+        "metric": "15%+",
+        "description": "Margin Found"
       },
       {
         "metric": "100%",
-        "description": "Objective Clarity"
+        "description": "Friction Found"
+      },
+      {
+        "metric": "Clear",
+        "description": "Future Path"
       }
     ],
-    "proof": {
-      "impact": "Uncovered structural misalignments in a regional distributor resulting in a 15% margin recovery.",
-      "context": "Our analysis revealed a misconfigured incentive structure inadvertently encouraging sales to cannibalize high-margin products. Fixing this recovered massive profitability."
-    },
     "targetAudience": [
       {
         "title": "Incoming Executives",
-        "description": "New CEOs requiring an objective lay-of-the-land before instituting major changes."
+        "description": "New CEOs or COOs needing an objective 'lay of the land' before making major changes."
       },
       {
         "title": "Stalled Enterprises",
-        "description": "Companies that have lost momentum and cannot empirically figure out why."
+        "description": "Companies that have hit a performance plateau and can't empirically explain why."
       },
       {
-        "title": "Pre-Digital Pivot",
-        "description": "Organizations needing to map process flaws before cementing them into new software."
+        "title": "Pre-Digital Firms",
+        "description": "Organizations needing to map their process flaws before automating them into new software."
       }
     ],
     "whyUs": [
       {
         "title": "Uncompromising Objectivity",
-        "description": "We deliver the unfiltered truth to leadership, untainted by internal politics."
+        "description": "We deliver the unfiltered truth to leadership, untainted by internal office politics."
       },
       {
         "title": "Holistic Vision",
-        "description": "We analyze the complex interplay between all moving parts of your business model."
+        "description": "We see how a problem in finance might actually be rooted in a structural flaw in HR."
       },
       {
         "title": "Action Bias",
-        "description": "We don't deliver academic reports; we deliver prioritized, surgical execution plans."
+        "description": "We don't deliver academic reports; we deliver prioritized lists of things you can fix tomorrow."
       }
     ],
     "cta": "Diagnose Your Business"
   },
-  "change-management": {
+  "change-management-implementation-support": {
     "hero": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBjaGFuZ2V8ZW58MXx8fHwxNzc2MzM3MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Change Management and Adoption",
+    "heroAlt": "Change Management & Implementation Support",
     "eyebrow": "Transformation & Culture",
-    "headline": "Mastering the psychology of execution.",
-    "subheadline": "Structured methodologies to dismantle resistance, secure buy-in, and guarantee the successful adoption of new strategic systems.",
+    "headline": "Managing the human side of execution.",
+    "subheadline": "We ensure smooth execution of new strategies and systems through structured change management and team alignment.",
     "painPoints": [
       {
-        "title": "Failed Implementations",
-        "description": "Expensive new strategies are launched but quickly abandoned by a resistant workforce."
+        "title": "Implementation Failure",
+        "description": "Expensive new strategies or systems are launched but never actually adopted by the workforce."
       },
       {
-        "title": "Cultural Paralysis",
-        "description": "Deep-seated organizational habits act as an immune system, attacking proposed innovations."
+        "title": "Team Resistance",
+        "description": "Employees are pushing back against new ways of working, leading to delays and lower morale."
       },
       {
         "title": "Leadership Misalignment",
-        "description": "Sponsors of the change fail to present a unified front, causing downstream apathy."
+        "description": "Different leaders are sending conflicting signals, causing confusion and apathy among staff."
       },
       {
-        "title": "Morale Collapse",
-        "description": "Poorly communicated restructures lead to anxiety, rumors, and the exodus of top talent."
+        "title": "Culture Clash",
+        "description": "The current organizational culture is actively working against the proposed strategic shifts."
       }
     ],
     "deliverables": [
       {
-        "title": "Stakeholder Impact Analysis",
-        "description": "Mapping exactly who will be disrupted by the change and to what severity."
+        "title": "Change Management Strategy",
+        "description": "A comprehensive plan to navigate the emotional and practical transition of a transformation."
       },
       {
-        "title": "Strategic Comm Plans",
-        "description": "Crafting a compelling narrative that answers the critical question: 'What's in it for me?'"
+        "title": "Leadership Alignment Programs",
+        "description": "Coaching and workshops to ensure the executive team presents a unified front."
       },
       {
-        "title": "Resistance Mitigation",
-        "description": "Executing specific interventions to convert key internal detractors into advocates."
+        "title": "Staff Training & Enablement",
+        "description": "Hands-on upskilling to ensure every employee feels capable of operating in the new reality."
       },
       {
-        "title": "Adoption Measurement",
-        "description": "Tracking the actual behavioral shift of the workforce rather than just project milestones."
+        "title": "Implementation Roadmaps",
+        "description": "Practical, phased schedules that balance speed with the organization's capacity for change."
+      },
+      {
+        "title": "Transformation Support",
+        "description": "Embedded consultants to monitor adoption and pivot the strategy as needed."
       }
     ],
     "process": [
       {
         "step": "01",
-        "title": "Readiness Triage",
-        "description": "We assess if your organization possesses the emotional bandwidth to absorb the proposed change."
+        "title": "Readiness Audit",
+        "description": "Assessing if your organization possesses the emotional and time bandwidth to handle a major shift."
       },
       {
         "step": "02",
         "title": "Coalition Building",
-        "description": "We recruit highly influential internal figures across hierarchies to champion the new direction."
+        "description": "Recruiting and training influential internal champions to drive the change from the ground up."
       },
       {
         "step": "03",
-        "title": "Narrative Deployment",
-        "description": "We orchestrate town halls and internal marketing to frame the transformation positively."
+        "title": "Strategic Communication",
+        "description": "Drafting and deploying the 'why' behind the change to win hearts and minds across the firm."
       },
       {
         "step": "04",
-        "title": "Reinforcement Systems",
-        "description": "We establish feedback loops and celebration mechanisms to make new behaviors permanent."
+        "title": "Institutionalization",
+        "description": "Establishing the feedback loops and reward systems needed to make the change permanent."
       }
     ],
     "outcomes": [
       {
-        "metric": "150+",
-        "description": "TransformationsManaged"
+        "metric": "90%+",
+        "description": "Adoption Rate"
       },
       {
-        "metric": "90%",
-        "description": "System Adoption Rate"
+        "metric": "Zero",
+        "description": "Strategic Rollback"
       },
       {
-        "metric": "-60%",
-        "description": "Implementation Time"
+        "metric": "High",
+        "description": "Team Morale"
       },
       {
         "metric": "100%",
-        "description": "Stakeholder Alignment"
+        "description": "Project Success"
       }
     ],
-    "proof": {
-      "quote": "Canbiz didn't just manage the timeline; they managed our culture. They turned a highly controversial restructuring into a unified rallying point.",
-      "author": "VP of People & Culture",
-      "role": "Telecommunications Firm",
-      "company": "Bahrain"
-    },
     "targetAudience": [
       {
-        "title": "Transformational Leaders",
-        "description": "Executives tasked with pushing through a highly disruptive shift in strategy or tech."
+        "title": "CEO & Board Members",
+        "description": "Leaders pushing through a highly disruptive shift in strategy or organizational model."
       },
       {
-        "title": "M&A Integration Teams",
-        "description": "PMOs responsible for merging two distinct corporate cultures into a functional entity."
+        "title": "Integration Managers",
+        "description": "PMOs responsible for merging companies or launching major cross-functional systems."
       },
       {
         "title": "HR Business Partners",
-        "description": "Leaders managing the human fallout of downsizing, restructuring, or rapid scaling."
+        "description": "People leaders managing the human impact of rapid scaling or restructuring."
       }
     ],
     "whyUs": [
       {
-        "title": "Behavioral Economics",
-        "description": "Our strategies are rooted in psychology, recognizing that humans resist forced transitions."
+        "title": "Psychology Based",
+        "description": "We understand that resistance is a human survival mechanism; we design our change plans to neutralize it."
       },
       {
         "title": "Proactive Defense",
-        "description": "We predict resistance before it manifests, neutralizing blockers early in the project."
+        "description": "We identify and engage key internal influencers long before the change is officially 'launched'."
       },
       {
-        "title": "Empathetic Rigor",
-        "description": "We balance deep empathy for the disrupted workforce with absolute commitment to the business outcome."
+        "title": "Results Obsessed",
+        "description": "We don't measure success by workshops held, but by the actual behavioral shift of the workforce."
       }
     ],
     "cta": "Manage Your Transformation"
   },
-  "corporate-documentation": {
+  "corporate-documentation-knowledge-systems": {
     "hero": "https://images.unsplash.com/photo-1517842645767-c639042777db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub3RlcyUyMGJvb2t8ZW58MXx8fHwxNzcyNDA2NDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    "heroAlt": "Corporate Knowledge Systems",
+    "heroAlt": "Corporate Documentation & Knowledge Systems",
     "eyebrow": "Knowledge Management",
-    "headline": "Institutionalizing your intellectual capital.",
-    "subheadline": "Transforming fragmented individual expertise into highly searchable, centralized corporate knowledge systems that survive turnover.",
+    "headline": "Securing your intellectual capital.",
+    "subheadline": "We create structured documentation systems that enhance clarity, consistency, and long-term organizational knowledge.",
     "painPoints": [
       {
         "title": "Knowledge Evaporation",
-        "description": "When key veterans leave the company, their critical operational 'know-how' leaves with them."
+        "description": "When key staff leave the company, their critical 'know-how' leaves with them, creating massive risk."
       },
       {
-        "title": "Onboarding Lag",
-        "description": "New hires take months to become productive due to reliance on endless tap-on-the-shoulder shadowing."
+        "title": "Duplicate Inquiries",
+        "description": "Management spends hours answering the same fundamental procedural questions over and over again."
       },
       {
-        "title": "Version Control Chaos",
-        "description": "Employees execute tasks using conflicting, outdated documents stored on scattered local drives."
+        "title": "Version Chaos",
+        "description": "Employees are using outdated or conflicting documents found on various local drives or chat threads."
       },
       {
-        "title": "Redundant Inquiry",
-        "description": "Management spends valuable hours answering the same fundamental procedural questions."
+        "title": "Instructional Gaps",
+        "description": "Critical tasks go unperformed or are done incorrectly because no one 'wrote down the right way'."
       }
     ],
     "deliverables": [
       {
-        "title": "Knowledge Base Deployment",
-        "description": "Structured company wikis architected for intuitive discovery and rapid learning."
+        "title": "Policy & SOP Manuals",
+        "description": "Formalizing your company's core guidelines and procedures into professional, searchable volumes."
       },
       {
-        "title": "Role-Specific Playbooks",
-        "description": "Curated guides containing exactly the context, processes, and tools a specific job title needs."
+        "title": "Process Documentation",
+        "description": "Visual and written records of every critical workflow across the enterprise."
       },
       {
-        "title": "Taxonomy & Governance Logic",
-        "description": "Strict rules for how information is categorized, tagged, vetted, and retired."
-      },
-      {
-        "title": "Process Flow Libraries",
-        "description": "Centralized repositories of visual workflows detailing the standard for every task."
+        "title": "Corporate Knowledge Base",
+        "description": "Centralized digital 'wikis' or portals designed for skill-based internal training."
       }
     ],
     "process": [
       {
         "step": "01",
         "title": "Information Audit",
-        "description": "We locate where critical knowledge currently resides—in drives, chat threads, or minds."
+        "description": "Locating where your business's critical knowledge currently resides—in drives, minds, or emails."
       },
       {
         "step": "02",
         "title": "Extraction & Authoring",
-        "description": "We conduct debriefs with top performers, converting intuition into explicit written logic."
+        "description": "Interviewing top performers to convert their 'expert intuition' into explicit, written logic."
       },
       {
         "step": "03",
         "title": "Architecture Build",
-        "description": "We design a digital library so procedural answers are found in seconds, not hours."
+        "description": "Designing the digital structure for your knowledge base so information is found in seconds."
       },
       {
         "step": "04",
-        "title": "Maintenance Workflows",
-        "description": "We implement protocols dictating who is responsible for updating the wiki as procedures evolve."
+        "title": "Maintenance Protocol",
+        "description": "Establishing the rules for who is responsible for updating the knowledge base as your business evolves."
       }
     ],
     "outcomes": [
       {
         "metric": "10k+",
-        "description": "Assets Mapped"
-      },
-      {
-        "metric": "-70%",
-        "description": "Search Time"
-      },
-      {
-        "metric": "+60%",
-        "description": "Onboarding Velocity"
+        "description": "Assets Codified"
       },
       {
         "metric": "100%",
-        "description": "IP Retention"
+        "description": "IP Security"
+      },
+      {
+        "metric": "-75%",
+        "description": "Search Time"
+      },
+      {
+        "metric": "Total",
+        "description": "Org. Clarity"
       }
     ],
-    "proof": {
-      "impact": "Captured and codified decades of scattered intellectual property for a legacy manufacturer.",
-      "context": "Faced with a retiring wave of senior engineers, we built an interactive corporate brain capturing diagnostic methodologies, ensuring the next generation possessed the same problem-solving DNA."
-    },
     "targetAudience": [
       {
-        "title": "Remote/Hybrid Teams",
-        "description": "Organizations lacking physical proximity for organic 'water-cooler' knowledge transfer."
+        "title": "Scaling Founders",
+        "description": "Leaders needing to rapidly decouple critical training from their own personal calendar."
       },
       {
-        "title": "Scaling Startups",
-        "description": "Fast-growing companies needing to rapidly decouple critical training from the founder's calendar."
+        "title": "Hybrid/Remote Teams",
+        "description": "Organizations that can't rely on 'tap-on-the-shoulder' knowledge sharing in a physical office."
       },
       {
-        "title": "High-Turnover Sectors",
-        "description": "Industries where rapid employee cycling necessitates a completely foolproof onboarding sprint."
+        "title": "Succession Planners",
+        "description": "Firms preparing for leadership transitions that require institutional knowledge to remain stable."
       }
     ],
     "whyUs": [
       {
-        "title": "Information Architecture",
-        "description": "We design relational databases that intuitively guide the user, avoiding 'folder dumps'."
+        "title": "Linguistic Precision",
+        "description": "We write documents that are impossible to misunderstand, focused on high-speed execution."
       },
       {
-        "title": "Concise Pedagogics",
-        "description": "We write for modern attention spans, favoring bullet points and diagrams over dense paragraphs."
+        "title": "Structural Logic",
+        "description": "We don't just write; we architect information systems that are intuitive for the human brain."
       },
       {
-        "title": "Platform Native",
-        "description": "Versed in modern knowledge stacks, we ensure the technological implementation fits your culture."
+        "title": "Continuity Mindset",
+        "description": "We view documentation as a survival tool, ensuring your business's 'brain' stays inside the building."
       }
     ],
-    "cta": "Build Your Corporate Brain"
+    "cta": "Secure Your Knowledge"
   },
   "global-business-delegations": {
     "hero": "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
@@ -1698,12 +1678,6 @@ export const serviceDetails: Record<string, {
         "description": "Network Access"
       }
     ],
-    "proof": {
-      "quote": "The Canbiz delegation to South Korea bypassed years of networking. Within five days, we secured a master distribution agreement with a leading robotics manufacturer.",
-      "author": "Managing Director",
-      "role": "Logistics Enterprise",
-      "company": "Saudi Arabia"
-    },
     "targetAudience": [
       {
         "title": "Visionary Entrepreneurs",
@@ -1816,10 +1790,6 @@ export const serviceDetails: Record<string, {
         "description": "Succession"
       }
     ],
-    "proof": {
-      "impact": "Transformed the succession trajectory for a prominent GCC family office.",
-      "context": "By enrolling the 19-year-old heir, we bridged a severe communication gap, embedding a deep understanding of P&L management that allowed for a confident, phased operational handover."
-    },
     "targetAudience": [
       {
         "title": "Family Business Owners",
@@ -1932,12 +1902,6 @@ export const serviceDetails: Record<string, {
         "description": "Peer Coalition"
       }
     ],
-    "proof": {
-      "quote": "The Canbiz program didn't just teach theory; it fundamentally rewired how I commanded the room. Within 6 months, I navigated a leap from Director to VP.",
-      "author": "Vice President",
-      "role": "Global Banking Institution",
-      "company": "Qatar"
-    },
     "targetAudience": [
       {
         "title": "Female Founders",

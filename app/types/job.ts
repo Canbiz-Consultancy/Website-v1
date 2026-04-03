@@ -7,7 +7,6 @@ export interface Job {
   location: string;
   type: string;
   level: string;
-  slug: string;
   description: string | StrapiBlock[];
   requirements: string[];
 }
@@ -21,7 +20,6 @@ export interface StrapiJobResponse {
       location: string;
       type: string;
       level: string;
-      slug: string;
       description: string;
       requirements: string; // Storing as a string for simplicity, or we can use separate fields
       createdAt: string;

@@ -145,20 +145,6 @@ export async function getCareers(
   return response || { data: [], meta: { pagination: { page, pageSize, pageCount: 0, total: 0 } } };
 }
 
-export async function getCareerBySlug(slug: string): Promise<Job | null> {
-  const params = new URLSearchParams({
-    "filters[slug][$eq]": slug,
-  });
-
-  const response = await fetchStrapi<StrapiResponse<Job>>(`/careers?${params.toString()}`);
-  
-  if (response && response.data && response.data.length > 0) {
-    return processJob(response.data[0]);
-  }
-  
-  return null;
-}
-
 export function getStrapiImageUrl(image: { url: string } | null): string {
   if (!image || !image.url) return "";
   if (image.url.startsWith("http")) return image.url;
