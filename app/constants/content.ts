@@ -43,7 +43,7 @@ export const heroSlides = [
       "Our startup consulting services provide comprehensive business systems development, from company policies and procedures to business process management. Build the foundation for sustainable growth without founder dependency.",
     tab: "Startup Consulting",
     image:
-      "https://images.unsplash.com/photo-1705234384669-c6d31c61b789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDRU8lMjBsZWFkZXJzaGlwJTIwZnV0dXJlJTIwc3RyYXRlZ3klMjB2aXNpb258ZW58MXx8fHwxNzcyMzM3MzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHN0cmF0ZWd5JTIwZ3JhcGglMjBjaGFydCUyMGRhdGF8ZW58MXx8fHwxNzcyNDM0NzQzfDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: 2,
@@ -53,7 +53,7 @@ export const heroSlides = [
       "Implement comprehensive business process management systems with documented company policies and procedures. Eliminate operational bottlenecks and create scalable workflows that drive efficiency and growth.",
     tab: "Process Management",
     image:
-      "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMHByb2Nlc3MlMjBmbG93JTIwY2hhcnQlMjBkaWFncmFtfGVufDF8fHx8MTc3MjQzNDc0NHww&ixlib=rb-4.1.0&q=80&w=1080",
   },
   {
     id: 3,
@@ -63,7 +63,7 @@ export const heroSlides = [
       "Our corporate training programs empower teams with the skills to execute business systems effectively. From startup consulting to established enterprises, we build capabilities that sustain growth and operational excellence.",
     tab: "Corporate Training",
     image:
-      "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGVkdWNhdGlvbiUyMGxlYXJuaW5nJTIwZGV2ZWxvcG1lbnQlMjBza2lsbHN8ZW58MXx8fHwxNzcyNDM1MDY3fDA&ixlib=rb-4.1.0&q=80&w=1080",
   },
 ];
 
