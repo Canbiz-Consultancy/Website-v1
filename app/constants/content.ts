@@ -555,7 +555,7 @@ export const serviceDetails: Record<string, {
     "cta": "Structure For Success"
   },
   "policies-procedures-development": {
-    "hero": "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N1bWVudHMlMjBvZmZpY2V8ZW58MXx8fHwxNzc2NDA2MzcxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb21wbGlhbmNlJTIwYnVzaW5lc3MlMjByZWd1bGF0aW9ucyUyMGNoZWNrbGlzdHxlbnwxfHx8fDE3NzI0MDY0MTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Policies & Procedures Development",
     "eyebrow": "Standardization & Compliance",
     "headline": "Standardizing excellence across the enterprise.",
@@ -903,7 +903,7 @@ export const serviceDetails: Record<string, {
     "cta": "Automate Your Success"
   },
   "performance-management-systems": {
-    "hero": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkYXRhJTIwYW5hbHl0aWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc3MjQwNjQxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwZXJmb3JtYW5jZSUyMG1hbmFnZW1lbnQlMjBtZXRyaWNzJTIwZGFzaGJvYXJkfGVufDF8fHx8MTc3MjQwNjQxM3ww&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Performance Management Systems",
     "eyebrow": "Growth & Accountability",
     "headline": "Measurable clarity for every contributor.",
@@ -1019,7 +1019,7 @@ export const serviceDetails: Record<string, {
     "cta": "Drive Better Results"
   },
   "internal-control-risk-management": {
-    "hero": "https://images.unsplash.com/photo-1454165833767-027ffea9e772?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxyaXNrJTIwbWFuYWdlbWVudHxlbnwxfHx8fDE3NzI0MDY0MTR8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBhZHZpc29yeSUyMGJhbmtpbmclMjBidXNpbmVzcyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzI0MDY0MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Internal Control & Risk Management",
     "eyebrow": "Compliance & Security",
     "headline": "Safeguarding your hard-earned progress.",
@@ -1135,7 +1135,7 @@ export const serviceDetails: Record<string, {
     "cta": "Fortify Your Operations"
   },
   "departmental-system-development": {
-    "hero": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWFtJTIwd29ya2luZyUyMHRvZ2V0aGVyfGVufDF8fHx8MTc3MjQwNjQxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkZXBhcnRtZW50YWwlMjB0ZWFtJTIwbWVldGluZyUyMGNvbGxhYm9yYXRpb24lMjBjb25mZXJlbmNlJTIwcm9vbXxlbnwxfHx8fDE3NzI0MDY0MjN8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Departmental System Development",
     "eyebrow": "Integrated Operations",
     "headline": "Specialized excellence for every functional area.",
@@ -1251,7 +1251,7 @@ export const serviceDetails: Record<string, {
     "cta": "Professionalize Your Departments"
   },
   "organizational-gap-analysis-business-diagnostics": {
-    "hero": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYXJlZXIlMjBzdWNjZXNzfGVufDF8fHx8MTc3MjQwNjQxN3ww&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGFuYWx5c2lzJTIwZGlhZ25vc3RpY3xlbnwxfHx8fDE3NzI0MDY0MTd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Organizational Gap Analysis",
     "eyebrow": "Business Intelligence",
     "headline": "Diagnosing the root causes of stagnation.",
@@ -1367,7 +1367,7 @@ export const serviceDetails: Record<string, {
     "cta": "Diagnose Your Business"
   },
   "change-management-implementation-support": {
-    "hero": "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBjaGFuZ2V8ZW58MXx8fHwxNzc2MzM3MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1552664730-d307ca884978?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjaGFuZ2UlMjBtYW5hZ2VtZW50JTIwYnVzaW5lc3MlMjB0cmFuc2Zvcm1hdGlvbiUyMHRlYW0lMjBtZWV0aW5nfGVufDF8fHx8MTc3MjQwNjQyOHww&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Change Management & Implementation Support",
     "eyebrow": "Transformation & Culture",
     "headline": "Managing the human side of execution.",
@@ -1483,7 +1483,7 @@ export const serviceDetails: Record<string, {
     "cta": "Manage Your Transformation"
   },
   "corporate-documentation-knowledge-systems": {
-    "hero": "https://images.unsplash.com/photo-1517842645767-c639042777db?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxub3RlcyUyMGJvb2t8ZW58MXx8fHwxNzcyNDA2NDE4fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb3Jwb3JhdGUlMjBkb2N1bWVudGF0aW9uJTIwa25vd2xlZGdlJTIwbWFuYWdlbWVudCUyMGZpbGVzJTIwYXJjaGl2ZXxlbnwxfHx8fDE3NzI0MDY0Mjd8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Corporate Documentation & Knowledge Systems",
     "eyebrow": "Knowledge Management",
     "headline": "Securing your intellectual capital.",
@@ -1703,7 +1703,7 @@ export const serviceDetails: Record<string, {
     "cta": "Expand Your Network"
   },
   "junior-ceo-program": {
-    "hero": "https://images.unsplash.com/photo-1543269865-cbf427effbad?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxraWRzJTIwbGVhcm5pbmclMjBidXNpbmVzc3xlbnwxfHx8fDE3NzI0MDY0MTh8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1523240795612-9a054b0db644?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx5b3V0aCUyMGxlYWRlcnNoaXAlMjBwcm9ncmFtJTIwYnVzaW5lc3MlMjBlZHVjYXRpb24lMjB0cmFpbmluZ3xlbnwxfHx8fDE3NzI0MDY0MjZ8MA&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Young Leadership Program",
     "eyebrow": "Future Leaders",
     "headline": "Securing generational business success.",
@@ -1815,7 +1815,7 @@ export const serviceDetails: Record<string, {
     "cta": "Develop Your Successor"
   },
   "women-leadership-programs": {
-    "hero": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbiUyMGxlYWRlcnNoaXB8ZW58MXx8fHwxNzcyMzQ4NzQ0fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "hero": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21lbiUyMGxlYWRlcnNoaXAlMjBjb25mZXJlbmNlJTIwcHJlc2VudGF0aW9ufGVufDF8fHx8MTc3MjM0ODc0NHww&ixlib=rb-4.1.0&q=80&w=1080",
     "heroAlt": "Women Leadership",
     "eyebrow": "Inclusion & Empowerment",
     "headline": "Unlocking apex executive female potential.",
@@ -2154,7 +2154,7 @@ export const industryDetails: Record<string, {
     cta: "Start Your Digital Journey",
   },
   "financial-services": {
-    hero: "https://images.unsplash.com/photo-1763739527737-e3626d731072?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmd8ZW58MXx8fHwxNzcyMzM3MTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    hero: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBhZHZpc29yeSUyMGJhbmtpbmclMjBidXNpbmVzcyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzI0MDY0MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
     heroAlt: "Financial Services",
     eyebrow: "Financial Services",
     headline: "Driving financial performance and risk resilience.",
@@ -2276,7 +2276,7 @@ export const aboutSection = {
     "Established as a strategic joint venture between Professional Services (Doha, est. 2012) and Benac Consultancy (India, est. 2014), Canbiz Consultancy was founded with a clear mission to build resilient, independent businesses by prioritizing well-defined systems over premature infrastructure expansion.",
   storyPara2:
     "Whether it’s developing documented policies, constructing operational workflows, or delivering continuous corporate training, our interventions prevent the deep, long-term risks of unstructured operations.",
-  ctaQuestion: "Want to know more about our story, leadership, and journey?",
+  ctaQuestion: "Want to know more about our story and values?",
   ctaLabel: "Learn More About Us",
 };
 
