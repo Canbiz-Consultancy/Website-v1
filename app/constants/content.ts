@@ -1979,7 +1979,7 @@ export const industries = [
     description:
       "Strategic advisory, financial management, and policy consulting for government ministries, authorities, and semi-government organizations seeking to optimize performance and public value delivery.",
     image:
-      "https://images.unsplash.com/photo-1768399808130-abac2a8442e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwcHVibGljJTIwc2VjdG9yJTIwcG9saWN5JTIwcGxhbm5pbmd8ZW58MXx8fHwxNzcyMzM3MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwYnVpbGRpbmclMjBhcmNoaXRlY3R1cmUlMjBjYXBpdG9sJTIwbGF3JTIwY291cnR8ZW58MXx8fHwxNzcyNDA3NjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     stat: "20+",
     statLabel: "Government clients served",
     tags: ["Policy Planning", "Financial Advisory", "Strategic Management"],
@@ -2021,7 +2021,7 @@ export const industries = [
     description:
       "Expert financial advisory, performance management, and consulting services for financial institutions, investment firms, and corporate finance teams across the region.",
     image:
-      "https://images.unsplash.com/photo-1763739527737-e3626d731072?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmd8ZW58MXx8fHwxNzcyMzM3MTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBzZXJ2aWNlcyUyMGJhbmtpbmclMjBmaW5hbmNlJTIwc3RvY2slMjBtYXJrZXR8ZW58MXx8fHwxNzcyNDA3NjU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     stat: "35+",
     statLabel: "Financial institutions advised",
     tags: ["Investment Advisory", "Risk Management", "Corporate Finance"],
@@ -2049,7 +2049,7 @@ export const industries = [
     description:
       "Curated international business delegations, cross-border market entry strategies, and global networking programs facilitating partnerships across continents.",
     image:
-      "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWUlMjBnbG9iZSUyMHdvcmxkJTIwbWFwJTIwZWFydGglMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MjQwNzg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     stat: "30+",
     statLabel: "Countries visited on delegations",
     tags: ["Market Entry", "Business Delegations", "Global Partnerships"],
@@ -2070,7 +2070,7 @@ export const industryDetails: Record<string, {
   cta: string;
 }> = {
   "government-public-sector": {
-    hero: "https://images.unsplash.com/photo-1768399808130-abac2a8442e0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwcHVibGljJTIwc2VjdG9yJTIwcG9saWN5JTIwcGxhbm5pbmd8ZW58MXx8fHwxNzcyMzM3MTYwfDA&ixlib=rb-4.1.0&q=80&w=1080",
+    hero: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnb3Zlcm5tZW50JTIwYnVpbGRpbmclMjBhcmNoaXRlY3R1cmUlMjBjYXBpdG9sJTIwbGF3JTIwY291cnR8ZW58MXx8fHwxNzcyNDA3NjQ3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     heroAlt: "Government advisory and strategic planning session",
     eyebrow: "Government & Public Sector",
     headline: "Shaping public sector excellence.",
@@ -2154,7 +2154,7 @@ export const industryDetails: Record<string, {
     cta: "Start Your Digital Journey",
   },
   "financial-services": {
-    hero: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBhZHZpc29yeSUyMGJhbmtpbmclMjBidXNpbmVzcyUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NzI0MDY0MjJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
+    hero: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxmaW5hbmNpYWwlMjBzZXJ2aWNlcyUyMGJhbmtpbmclMjBmaW5hbmNlJTIwc3RvY2slMjBtYXJrZXR8ZW58MXx8fHwxNzcyNDA3NjU3fDA&ixlib=rb-4.1.0&q=80&w=1080",
     heroAlt: "Financial Services",
     eyebrow: "Financial Services",
     headline: "Driving financial performance and risk resilience.",
@@ -2210,7 +2210,7 @@ export const industryDetails: Record<string, {
     cta: "Explore Our Programs",
   },
   "global-business-international-markets": {
-    hero: "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
+    hero: "https://images.unsplash.com/photo-1451187580459-43490279c0fa?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWUlMjBnbG9iZSUyMHdvcmxkJTIwbWFwJTIwZWFydGglMjB2aXN1YWxpemF0aW9ufGVufDF8fHx8MTc3MjQwNzg0M3ww&ixlib=rb-4.1.0&q=80&w=1080",
     heroAlt: "Global Business & International Markets",
     eyebrow: "Global Business",
     headline: "Connecting GCC entrepreneurs with the world.",
