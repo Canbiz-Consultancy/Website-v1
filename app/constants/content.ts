@@ -1932,7 +1932,7 @@ export const serviceDetails: Record<string, {
 
 export const confidenceSection = {
   image:
-    "https://images.unsplash.com/photo-1763739527737-e3626d731072?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxidXNpbmVzcyUyMGNvbnN1bHRpbmclMjBzdHJhdGVneSUyMG1lZXRpbmd8ZW58MXx8fHwxNzcyMzM3MTU1fDA&ixlib=rb-4.1.0&q=80&w=1080",
+    "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtYW5hZ2VtZW50JTIwY29uc3VsdGluZyUyMGJ1c2luZXNzJTIwc3RyYXRlZ3klMjBtZWV0aW5nfGVufDF8fHx8MTc3MjQwNjQyM3ww&ixlib=rb-4.1.0&q=80&w=1080",
   imageAlt: "Strategic advisory with confidence",
   imageTag: "Management Consulting",
   eyebrow: "Strategy & Performance",
