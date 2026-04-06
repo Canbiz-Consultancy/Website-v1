@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { contactSection } from "../constants/content";
+import { contactSection, contactPage } from "../constants/content";
 import {
   ArrowLeftIcon,
   MapPinIcon,
@@ -111,11 +111,11 @@ export default function ContactPage() {
               </p>
             </div>
             <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Firm</p>
-              <p className="text-white text-xl leading-tight font-light mb-8">Canbiz Conulstancy</p>
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Positioning</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">{contactPage.heroSidebar.firmLabel}</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">{contactPage.heroSidebar.firmValue}</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">{contactPage.heroSidebar.positioningLabel}</p>
               <p className="text-sm leading-7 text-gray-300">
-                A disciplined advisory platform built for long-term institutional impact.
+                {contactPage.heroSidebar.positioningValue}
               </p>
             </div>
           </div>
@@ -128,24 +128,24 @@ export default function ContactPage() {
           
           {/* Left: Office Information */}
           <div className="lg:w-1/3 shrink-0">
-            <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Get in Touch</h2>
+            <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">{contactPage.getInTouch.eyebrow}</h2>
             <h3 className="mb-8 text-2xl md:text-3xl font-semibold leading-snug max-w-[280px]">
-              Let's connect.
+              {contactPage.getInTouch.heading}
             </h3>
             
             <div className="space-y-6">
               <div>
-                <p className="text-black text-sm font-medium mb-2">Email</p>
-                <a href="mailto:info@canbizconsultancy.com" className="text-black text-lg hover:text-brand-navy transition-colors">info@canbizconsultancy.com</a>
+                <p className="text-black text-sm font-medium mb-2">{contactPage.getInTouch.emailLabel}</p>
+                <a href={`mailto:${contactSection.office.email}`} className="text-black text-lg hover:text-brand-navy transition-colors">{contactSection.office.email}</a>
               </div>
               
               <div>
-                <p className="text-black text-sm font-medium mb-2">Phone</p>
+                <p className="text-black text-sm font-medium mb-2">{contactPage.getInTouch.phoneLabel}</p>
                 <a href={`tel:${contactSection.office.phone.replace(/\\s/g, '')}`} className="text-black text-lg hover:text-brand-navy transition-colors">{contactSection.office.phone}</a>
               </div>
               
               <div>
-                <p className="text-black text-sm font-medium mb-2">Address</p>
+                <p className="text-black text-sm font-medium mb-2">{contactPage.getInTouch.addressLabel}</p>
                 <p className="text-gray-600 text-sm leading-relaxed">{contactSection.office.address}</p>
                 <p className="text-gray-500 text-sm mt-1">{contactSection.office.city}, {contactSection.office.country}</p>
               </div>
@@ -155,12 +155,12 @@ export default function ContactPage() {
           {/* Right: Contact Form */}
           <div className="lg:w-2/3">
             <div className="mb-16">
-              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Contact Us</h2>
+              <h2 className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">{contactPage.form.eyebrow}</h2>
               <h3 className="text-3xl md:text-4xl font-semibold leading-tight max-w-[600px]">
-                Begin your <span className="text-brand-gold">transformation</span>
+                {contactPage.form.headingPlain}<span className="text-brand-gold">{contactPage.form.headingGold}</span>
               </h3>
               <p className="text-gray-500 text-sm leading-7 max-w-[500px] mt-4">
-                Share your vision with us, and let's explore how strategic advisory can accelerate your organization's growth and operational excellence.
+                {contactPage.form.subtext}
               </p>
             </div>
 
@@ -172,15 +172,15 @@ export default function ContactPage() {
                     <div className="w-20 h-20 bg-brand-gold/20 flex items-center justify-center rounded-full mx-auto mb-8">
                       <ArrowRightIcon size={28} className="text-brand-gold -rotate-45" weight="bold" />
                     </div>
-                    <h4 className="text-white text-3xl font-light mb-4">Connection Established</h4>
+                    <h4 className="text-white text-3xl font-light mb-4">{contactPage.success.heading}</h4>
                     <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-[600px]">
-                      Thank you for your interest in Canbiz Advisory. Our team has received your message and will respond within 24 business hours to discuss your strategic needs.
+                      {contactPage.success.body}
                     </p>
                     <button 
                       onClick={() => setSuccess(false)}
                       className="text-brand-gold text-sm font-semibold uppercase tracking-widest hover:text-white transition-colors border border-brand-gold px-8 py-4 hover:bg-brand-gold hover:text-brand-navy"
                     >
-                      Send Another Message
+                      {contactPage.success.sendAnotherLabel}
                     </button>
                   </div>
                 </div>
@@ -189,7 +189,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label htmlFor="name" className="text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400 block mb-3">
-                        Full Name *
+                        {contactPage.form.nameLabel}
                       </label>
                       <input 
                         type="text" 
@@ -203,7 +203,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label htmlFor="email" className="text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400 block mb-3">
-                        Email Address *
+                        {contactPage.form.emailLabel}
                       </label>
                       <input 
                         type="email" 
@@ -220,7 +220,7 @@ export default function ContactPage() {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                     <div>
                       <label htmlFor="phoneNumber" className="text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400 block mb-3">
-                        Phone Number
+                        {contactPage.form.phoneLabel}
                       </label>
                       <input 
                         type="tel" 
@@ -233,7 +233,7 @@ export default function ContactPage() {
                     </div>
                     <div>
                       <label htmlFor="company" className="text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400 block mb-3">
-                        Company / Organization
+                        {contactPage.form.companyLabel}
                       </label>
                       <input 
                         type="text" 
@@ -248,7 +248,7 @@ export default function ContactPage() {
 
                   <div>
                     <label htmlFor="message" className="text-[10px] font-bold uppercase tracking-[0.28em] text-gray-400 block mb-3">
-                      Message *
+                      {contactPage.form.messageLabel}
                     </label>
                     <textarea 
                       id="message" 
@@ -264,10 +264,10 @@ export default function ContactPage() {
                   <div className="flex items-center justify-between pt-8 border-t border-black/10">
                     <div>
                       <p className="text-[10px] text-gray-400 leading-loose max-w-[400px] mb-2">
-                        By submitting this form, you acknowledge that you have read and agree to our Privacy Policy.
+                        {contactPage.form.privacyText1}
                       </p>
                       <p className="text-[10px] text-gray-400 leading-loose">
-                        We respect your privacy and will never share your information with third parties.
+                        {contactPage.form.privacyText2}
                       </p>
                     </div>
                     <button 
@@ -275,7 +275,7 @@ export default function ContactPage() {
                       disabled={isSubmitting}
                       className="bg-brand-navy text-white text-sm font-bold px-10 py-4 flex items-center gap-3 hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 disabled:opacity-70 disabled:cursor-not-allowed uppercase tracking-widest shadow-lg hover:shadow-xl"
                     >
-                      {isSubmitting ? "Submitting..." : "Submit"} 
+                      {isSubmitting ? contactPage.form.submittingLabel : contactPage.form.submitLabel} 
                       {!isSubmitting && <ArrowRightIcon size={14} />}
                     </button>
                   </div>

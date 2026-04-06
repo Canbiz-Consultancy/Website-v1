@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { industries, industryDetails, industriesSection, industriesBottomStats } from "../constants/content";
+import { industries, industryDetails, industriesSection, industriesBottomStats, industriesPage } from "../constants/content";
 import { ArrowRightIcon, ArrowLeftIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
 
@@ -51,11 +51,11 @@ export default function IndustriesPage() {
               </p>
             </div>
             <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Sectors</p>
-              <p className="text-white text-xl leading-tight font-light mb-8">Targeted Expertise</p>
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Positioning</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">{industriesPage.heroSidebar.sectorsLabel}</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">{industriesPage.heroSidebar.sectorsValue}</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">{industriesPage.heroSidebar.positioningLabel}</p>
               <p className="text-sm leading-7 text-gray-300">
-                Targeted expertise across priority industries where execution discipline matters most.
+                {industriesPage.heroSidebar.positioningValue}
               </p>
             </div>
           </div>
@@ -114,7 +114,7 @@ export default function IndustriesPage() {
                     </p>
 
                     <div className="inline-flex items-center gap-2 text-xs font-medium text-brand-gold group-hover:gap-3 transition-all duration-300">
-                      Explore industry <ArrowRightIcon size={12} className="translate-y-[1px]" />
+                      {industriesPage.exploreIndustryLabel} <ArrowRightIcon size={12} className="translate-y-[1px]" />
                     </div>
                   </div>
                 </Link>
@@ -129,24 +129,21 @@ export default function IndustriesPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_320px] gap-14 items-start">
           <div>
             <p className="text-brand-gold text-[10px] tracking-[0.28em] uppercase mb-6">
-              Why Canbiz
+              {industriesPage.whyCanbiz.eyebrow}
             </p>
             <h2 className="text-white text-3xl md:text-4xl font-semibold leading-tight mb-6">
-              A single trusted partner for{" "}
-              <span className="text-brand-gold">every dimension</span> of
-              your growth.
+              {industriesPage.whyCanbiz.headingPlain}
+              <span className="text-brand-gold">{industriesPage.whyCanbiz.headingGold}</span>
+              {industriesPage.whyCanbiz.headingEnd}
             </h2>
             <p className="text-gray-400 text-sm leading-7 max-w-xl mb-10">
-              From strategy to execution, brand to technology, leadership to
-              government — Canbiz provides integrated advisory that eliminates
-              silos and ensures every service we deliver is connected to your
-              overarching business ambition.
+              {industriesPage.whyCanbiz.body}
             </p>
             <Link
-              href="/#about"
+              href={industriesPage.whyCanbiz.ctaHref}
               className="inline-flex items-center gap-2 border border-white/70 text-white px-8 py-3 text-sm font-medium hover:bg-white hover:text-brand-navy transition-all duration-300"
             >
-              About Canbiz <ArrowRightIcon size={14} />
+              {industriesPage.whyCanbiz.ctaLabel} <ArrowRightIcon size={14} />
             </Link>
           </div>
 
@@ -165,27 +162,25 @@ export default function IndustriesPage() {
       <section className="bg-white px-6 md:px-16 py-24 md:py-32">
         <div className="max-w-[1200px] mx-auto flex flex-col items-center text-center">
           <div className="max-w-[600px] flex flex-col items-center">
-            <p className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">Get Started</p>
+            <p className="text-[11px] text-gray-400 tracking-[0.2em] font-bold uppercase mb-6">{industriesPage.ctaSection.eyebrow}</p>
             <h2 className="text-black text-4xl md:text-5xl font-semibold leading-tight mb-4">
-              Not sure where to begin?
+              {industriesPage.ctaSection.heading}
             </h2>
             <p className="text-gray-500 text-sm leading-relaxed max-w-[400px] mb-10">
-              Our team will help you identify the right services for your goals.
-              Book a complimentary discovery call and let's explore how Canbiz
-              can make a measurable difference for your organisation.
+              {industriesPage.ctaSection.body}
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
               <a
-                href="#contact"
+                href={industriesPage.ctaSection.primaryCtaHref}
                 className="inline-flex items-center gap-3 bg-brand-navy text-white px-8 py-4 text-xs font-bold hover:bg-brand-gold hover:text-brand-navy transition-all duration-300 uppercase tracking-widest"
               >
-                Request a Consultation <ArrowRightIcon size={14} />
+                {industriesPage.ctaSection.primaryCta} <ArrowRightIcon size={14} />
               </a>
               <Link
-                href="/"
+                href={industriesPage.ctaSection.secondaryCtaHref}
                 className="text-gray-500 text-xs font-bold uppercase tracking-widest hover:text-brand-navy transition-colors flex items-center gap-1.5 mt-4 sm:mt-0"
               >
-                <ArrowLeftIcon size={13} /> Back to Home
+                <ArrowLeftIcon size={13} /> {industriesPage.ctaSection.secondaryCta}
               </Link>
             </div>
           </div>

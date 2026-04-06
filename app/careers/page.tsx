@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
-import { openPositions } from "../constants/content";
+import { openPositions, careersPage } from "../constants/content";
 import {
   ArrowRightIcon,
   MapPinIcon,
@@ -88,21 +88,21 @@ export default function CareersPage() {
           <div className="grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_260px] gap-12 lg:gap-20 items-end">
             <div>
               <p className="text-brand-gold text-[10px] md:text-xs tracking-[0.28em] uppercase font-bold mb-4 md:mb-6">
-                Empowering Human Capital
+                {careersPage.hero.eyebrow}
               </p>
               <h1 className="text-white text-3xl md:text-5xl lg:text-7xl font-semibold leading-[1.02] tracking-[-0.03em] max-w-[900px] mb-4 md:mb-6">
-                Join a disciplined consulting team.
+                {careersPage.hero.heading}
               </h1>
               <p className="text-gray-300 text-base md:text-lg lg:text-[22px] leading-[1.7] max-w-[680px] font-light">
-                We're hiring across multiple practice areas. Find the role where your expertise can create the most impact.
+                {careersPage.hero.subtext}
               </p>
             </div>
             <div className="hidden lg:block border-l border-white/15 pl-8 pb-2">
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Focus</p>
-              <p className="text-white text-xl leading-tight font-light mb-8">Measurable Outcomes</p>
-              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">Environment</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">{careersPage.heroSidebar.focusLabel}</p>
+              <p className="text-white text-xl leading-tight font-light mb-8">{careersPage.heroSidebar.focusValue}</p>
+              <p className="text-[10px] uppercase tracking-[0.24em] text-white/45 mb-4">{careersPage.heroSidebar.environmentLabel}</p>
               <p className="text-sm leading-7 text-gray-300">
-                A high-performance culture rooted in structured systems and strategic clarity.
+                {careersPage.heroSidebar.environmentValue}
               </p>
             </div>
           </div>
@@ -114,13 +114,13 @@ export default function CareersPage() {
         <div className="max-w-[1200px] mx-auto">
           <div className="mb-16 md:mb-20 flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8">
             <div>
-             <h2 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">Open Positions</h2>
+             <h2 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">{careersPage.openPositions.eyebrow}</h2>
              <h3 className="mb-4 text-3xl md:text-4xl text-black font-semibold leading-tight max-w-[600px]">
-               Discover your next career milestone.
+               {careersPage.openPositions.heading}
              </h3>
             </div>
             <p className="text-sm text-gray-500 leading-7 max-w-[340px]">
-              Apply below to explore opportunities within our fast-growing, highly structured operational environment.
+              {careersPage.openPositions.subtext}
             </p>
           </div>
           
@@ -130,10 +130,11 @@ export default function CareersPage() {
                 <div className="w-16 h-16 bg-[#F3F4F6] rounded-full flex items-center justify-center mx-auto mb-6">
                   <BriefcaseIcon size={32} className="text-gray-400" weight="light" />
                 </div>
-                <h4 className="text-2xl font-semibold text-brand-navy mb-4">No Open Positions</h4>
+                <h4 className="text-2xl font-semibold text-brand-navy mb-4">{careersPage.openPositions.noPositionsTitle}</h4>
                 <p className="text-gray-500 text-sm leading-relaxed max-w-[460px] mx-auto">
-                  We're not currently hiring for any specific roles, but we're always looking for exceptional talent. 
-                  Check back soon or send your CV to <a href="mailto:info@canbizconsultancy.com" className="text-brand-gold font-bold hover:underline">info@canbizconsultancy.com</a> for future consideration.
+                  {careersPage.openPositions.noPositionsBody}{" "}
+                  <a href={`mailto:${careersPage.openPositions.noPositionsEmail}`} className="text-brand-gold font-bold hover:underline">{careersPage.openPositions.noPositionsEmail}</a>{" "}
+                  {careersPage.openPositions.noPositionsCta}
                 </p>
               </div>
             ) : (
@@ -166,7 +167,7 @@ export default function CareersPage() {
                        </div>
                        <div className="flex items-center gap-4 md:justify-end">
                           <span className="text-[10px] uppercase tracking-[0.2em] text-gray-500 font-bold group-hover:text-brand-gold transition-colors">
-                            {isOpen ? "Close Details" : "View Role"}
+                            {isOpen ? careersPage.openPositions.closeDetailsLabel : careersPage.openPositions.viewRoleLabel}
                           </span>
                           <ArrowRightIcon
                             size={14}
@@ -180,13 +181,13 @@ export default function CareersPage() {
                        <div className="px-0 py-10 grid grid-cols-1 lg:grid-cols-3 gap-16 border-t border-black/10">
                          <div className="lg:col-span-2 space-y-10">
                             <div>
-                              <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">About The Role</h4>
+                              <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">{careersPage.openPositions.aboutRoleLabel}</h4>
                               <div className="text-sm text-gray-600 leading-7">
                                 <RenderStrapiBlocks blocks={pos.description} />
                               </div>
                             </div>
                             <div>
-                              <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">What We're Looking For</h4>
+                              <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-4">{careersPage.openPositions.requirementsLabel}</h4>
                               <ul className="space-y-4 border-l border-brand-navy/10 pl-6">
                                 {pos.requirements.map((r, idx) => (
                                   <li key={idx} className="flex gap-4 text-sm text-gray-600 leading-7">
@@ -198,12 +199,12 @@ export default function CareersPage() {
                             </div>
                          </div>
                          <div className="bg-[#F3F4F6] p-8 md:p-10 border-l-2 border-brand-navy h-fit">
-                            <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">Role Details</h4>
+                            <h4 className="text-[11px] text-gray-500 tracking-[0.2em] font-bold uppercase mb-6">{careersPage.openPositions.roleDetailsLabel}</h4>
                             <div className="space-y-6">
                               {[
-                                { label: "Department", value: pos.department },
-                                { label: "Type", value: pos.type },
-                                { label: "Location", value: pos.location },
+                                { label: careersPage.openPositions.departmentLabel, value: pos.department },
+                                { label: careersPage.openPositions.typeLabel, value: pos.type },
+                                { label: careersPage.openPositions.locationLabel, value: pos.location },
                               ].map(d => (
                                 <div key={d.label} className="border-b border-black/10 pb-4 last:border-0 last:pb-0">
                                    <p className="text-[10px] text-gray-500 uppercase tracking-widest font-bold mb-2">{d.label}</p>
@@ -212,10 +213,10 @@ export default function CareersPage() {
                               ))}
                             </div>
                             <a
-                              href="mailto:info@canbizconsultancy.com"
+                              href={`mailto:${careersPage.openPositions.noPositionsEmail}`}
                               className="mt-8 flex items-center justify-between w-full bg-brand-navy text-white px-6 py-4 text-[11px] uppercase tracking-widest font-bold hover:bg-brand-gold hover:text-brand-navy transition-colors duration-300"
                             >
-                              Apply Now <ArrowRightIcon size={14} />
+                              {careersPage.openPositions.applyNowLabel} <ArrowRightIcon size={14} />
                             </a>
                          </div>
                        </div>
@@ -232,22 +233,22 @@ export default function CareersPage() {
       <section className="bg-brand-navy text-white px-6 md:px-16 py-24 md:py-32">
          <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24">
            <div className="lg:w-1/3">
-              <h2 className="text-[11px] text-brand-gold tracking-[0.2em] font-bold uppercase mb-6">Life At Canbiz</h2>
+              <h2 className="text-[11px] text-brand-gold tracking-[0.2em] font-bold uppercase mb-6">{careersPage.lifeAtCanbiz.eyebrow}</h2>
               <h3 className="mb-4 text-3xl md:text-4xl font-semibold leading-tight text-white">
-                An ecosystem of excellence.
+                {careersPage.lifeAtCanbiz.heading}
               </h3>
            </div>
            <div className="lg:w-2/3 grid grid-cols-1 sm:grid-cols-2 gap-10 md:gap-16 border-t border-brand-navy-border pt-8 md:pt-0 md:border-t-0 md:border-l pl-0 md:pl-16">
              <div>
-               <p className="text-sm font-bold uppercase tracking-widest mb-4">Structured Growth</p>
+               <p className="text-sm font-bold uppercase tracking-widest mb-4">{careersPage.lifeAtCanbiz.values[0].title}</p>
                <p className="text-sm text-gray-400 leading-7">
-                 We don't just organize clients; we apply the same exact rigorous frameworks to our internal progression paths. Growth is deliberate and documented.
+                 {careersPage.lifeAtCanbiz.values[0].description}
                </p>
              </div>
              <div>
-               <p className="text-sm font-bold uppercase tracking-widest mb-4">Autonomy</p>
+               <p className="text-sm font-bold uppercase tracking-widest mb-4">{careersPage.lifeAtCanbiz.values[1].title}</p>
                <p className="text-sm text-gray-400 leading-7">
-                 Our operational templates allow you to focus entirely on creative problem solving and delivering strategic value without administrative bottlenecks.
+                 {careersPage.lifeAtCanbiz.values[1].description}
                </p>
              </div>
            </div>

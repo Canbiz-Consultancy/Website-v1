@@ -2257,8 +2257,6 @@ export const insightsSection = {
   ctaLabel: "See all insights",
 };
 
-export const fallbackInsights = [];
-
 // ─── About Section ────────────────────────────────────────────────────────────
 
 export const aboutSection = {
@@ -2309,68 +2307,6 @@ export const aboutStats = [
   { value: "3", label: "Countries" },
   { value: "14", label: "Specialized Services" },
 ];
-
-export const aboutLeadership = [
-  {
-    name: "Dr. Ahmed Al-Mansoori",
-    role: "Founder & Chairman",
-    image: "https://images.unsplash.com/photo-1560250097-0b93528c311a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBtYW58ZW58MXx8fHwxNzcyMzQ4NzA5fDA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "A visionary leader with over 25 years of experience in regional economic development, corporate strategy, and cross-border partnerships."
-  },
-  {
-    name: "Sarah Jenks",
-    role: "Managing Director",
-    image: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjB3b21hbnxlbnwxfHx8fDE3NzIzNDg3NDR8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Expert in organizational transformation, leading Canbiz's advisory expansion and ensuring world-class service delivery across all practice areas."
-  },
-  {
-    name: "Tariq Rahman",
-    role: "Head of Government Advisory",
-    image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxwcm9mZXNzaW9uYWwlMjBleGVjdXRpdmV8ZW58MXx8fDE3NzIzNDg3NTJ8MA&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Trusted advisor to public sector institutions, specializing in policy formulation, national strategy, and public-private partnerships."
-  },
-  {
-    name: "Elena Rostova",
-    role: "Head of Digital & Innovation",
-    image: "https://images.unsplash.com/photo-1580489944761-15a19d654956?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx0ZWNoJTIwZmVtYWxlJTIwbGVhZGVyfGVufDF8fHx8MTc3MjM0ODc2Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-    description: "Driving technological modernization for clients, bridging the gap between strategic business objectives and complex enterprise IT ecosystems."
-  }
-];
-
-export const aboutJourney = [
-  {
-    year: "2014",
-    title: "The Foundation",
-    description: "Canbiz was established in Doha as a boutique management consultancy focused on SMEs and regional market entry."
-  },
-  {
-    year: "2017",
-    title: "Practice Expansion",
-    description: "Launched the Digital Solutions and Brand Strategy practices to provide integrated end-to-end services for growing clients."
-  },
-  {
-    year: "2019",
-    title: "Regional Reach",
-    description: "Expanded our footprint across the GCC, taking on major government advisory projects and opening pathways for international partnerships."
-  },
-  {
-    year: "2021",
-    title: "Executive Education",
-    description: "Introduced the Executive MBA, Women CEO, and Junior CEO programs, addressing a critical need for structured capability building."
-  },
-  {
-    year: "2024",
-    title: "Global Delegations",
-    description: "Scaled our global network, connecting hundreds of GCC entrepreneurs with markets across Europe, Asia, and the Americas."
-  },
-  {
-    year: "2026",
-    title: "A Decade of Impact",
-    description: "Celebrating over a decade of continuous growth, trusted by 1,000+ clients to navigate complexity and achieve sustainable success."
-  }
-];
-
-// ─── Careers Section ──────────────────────────────────────────────────────────
 
 export const careersSection = {
   eyebrow: "Join Our Team",
@@ -2427,85 +2363,6 @@ export const careersWhyPoints = [
 
 export const openPositions = [];
 
-export const careersBenefits = [
-  {
-    title: "Competitive Compensation",
-    description:
-      "Market-leading salaries, performance bonuses, and equity participation for senior roles reflecting the value you bring.",
-  },
-  {
-    title: "Executive Education Access",
-    description:
-      "Free enrolment in Canbiz executive programs including MBA modules, leadership workshops, and global delegation participation.",
-  },
-  {
-    title: "Flexible Working",
-    description:
-      "Hybrid and remote-friendly policies that respect your personal commitments while empowering you to do your best work.",
-  },
-  {
-    title: "Health & Wellbeing",
-    description:
-      "Comprehensive medical insurance, mental health support, and wellness initiatives for you and your family.",
-  },
-  {
-    title: "Global Travel",
-    description:
-      "Regular international exposure through business delegations, client visits, and conferences across 30+ countries.",
-  },
-  {
-    title: "Structured Mentorship",
-    description:
-      "One-on-one mentorship from Canbiz's senior leadership and industry advisors to accelerate your career trajectory.",
-  },
-];
-
-export const careersLifeImages = [
-  {
-    src: "https://images.unsplash.com/photo-1758518731468-98e90ffd7430?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBjb21wYW55JTIwdGVhbSUyMGRpdmVyc2UlMjBwcm9mZXNzaW9uYWxzfGVufDF8fHx8MTc3MjMzNzE2OHww&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "Canbiz team collaboration",
-    caption: "Collaborative, high-energy team environment",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1705234384669-c6d31c61b789?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxDRU8lMjBsZWFkZXJzaGlwJTIwZnV0dXJlJTIwc3RyYXRlZ3klMjB2aXNpb258ZW58MXx8fHwxNzcyMzM3MzcwfDA&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "Strategy sessions at Canbiz",
-    caption: "Working on challenges that shape the region",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1759013277013-d69946b834eb?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxnbG9iYWwlMjBidXNpbmVzcyUyMGludGVybmF0aW9uYWwlMjB0cmF2ZWwlMjBuZXR3b3JraW5nfGVufDF8fHx8MTc3MjMzNzE1OXww&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "International delegations",
-    caption: "Global exposure across 30+ countries",
-  },
-  {
-    src: "https://images.unsplash.com/photo-1573166364839-1bfe9196c23e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHx3b21lbiUyMGJ1c2luZXNzJTIwZXhlY3V0aXZlJTIwYm9hcmRyb29tfGVufDF8fHx8MTc3MjMzNzE1OHww&ixlib=rb-4.1.0&q=80&w=1080",
-    alt: "Women leadership programs",
-    caption: "An inclusive culture where everyone leads",
-  },
-];
-
-export const careersGradPrograms = [
-  {
-    title: "Graduate Consultant Program",
-    duration: "12 Months",
-    description:
-      "A structured pathway for top graduates to join Canbiz as junior consultants and build a world-class advisory career from the ground up.",
-    tracks: ["Management Consulting", "Brand Strategy", "Government Advisory"],
-  },
-  {
-    title: "Technology Graduate Track",
-    duration: "12 Months",
-    description:
-      "For graduates in computer science, engineering, or related fields ready to build enterprise digital solutions and drive transformation projects.",
-    tracks: ["Software Development", "Digital Strategy", "IT Maintenance"],
-  },
-  {
-    title: "6-Month Internship Program",
-    duration: "6 Months",
-    description:
-      "Hands-on internship placements for university students and recent graduates across all Canbiz practice areas, with a strong conversion pipeline.",
-    tracks: ["Open to All Departments"],
-  },
-];
 
 // ─── Contact Section ──────────────────────────────────────────────────────────
 
@@ -2514,11 +2371,6 @@ export const contactSection = {
   headingPlain: "Let's build",
   headingGold: "together",
   subtext: "Whether you have a question about our services, want to partner with us, or are ready to transform your organization, our team is here to help.",
-  officeHeadingPlain: "Visit Us",
-  officeHeadingMain: "Our",
-  officeHeadingGold: "Office",
-  officeImageSrc: "https://images.unsplash.com/photo-1595856903272-97b63f25c777?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2hhJTIwcWF0YXIlMjBza3lsaW5lfGVufDF8fHx8MTc3MjM2NjE5Mnww&ixlib=rb-4.1.0&q=80&w=1080",
-  officeImageAlt: "Doha Skyline",
   office: {
     city: "Doha",
     country: "Qatar",
@@ -2526,11 +2378,6 @@ export const contactSection = {
     phone: "+974 5173 2111",
     email: "info@canbizconsultancy.com"
   },
-  otherInquiriesHeading: "Other Inquiries",
-  otherInquiries: [
-    { label: "General", email: "info@canbizconsultancy.com" },
-    { label: "Press", email: "info@canbizconsultancy.com" }
-  ],
   formEyebrow: "Send a Message",
   formHeadingPlain: "How can we",
   formHeadingGold: "help?"
@@ -2557,6 +2404,159 @@ export const footerSocials = [
   { icon: LinkedinLogoIcon, href: "#", label: "LinkedIn" },
   { icon: YoutubeLogoIcon, href: "#", label: "YouTube" },
 ];
+
+// ─── Industries Page ──────────────────────────────────────────────────────────
+
+export const industriesPage = {
+  heroSidebar: {
+    sectorsLabel: "Sectors",
+    sectorsValue: "Targeted Expertise",
+    positioningLabel: "Positioning",
+    positioningValue: "Targeted expertise across priority industries where execution discipline matters most.",
+  },
+  whyCanbiz: {
+    eyebrow: "Why Canbiz",
+    headingPlain: "A single trusted partner for ",
+    headingGold: "every dimension",
+    headingEnd: " of your growth.",
+    body: "From strategy to execution, brand to technology, leadership to government — Canbiz provides integrated advisory that eliminates silos and ensures every service we deliver is connected to your overarching business ambition.",
+    ctaLabel: "About Canbiz",
+    ctaHref: "/#about",
+  },
+  ctaSection: {
+    eyebrow: "Get Started",
+    heading: "Not sure where to begin?",
+    body: "Our team will help you identify the right services for your goals. Book a complimentary discovery call and let's explore how Canbiz can make a measurable difference for your organisation.",
+    primaryCta: "Request a Consultation",
+    primaryCtaHref: "#contact",
+    secondaryCta: "Back to Home",
+    secondaryCtaHref: "/",
+  },
+  exploreIndustryLabel: "Explore industry",
+};
+
+// ─── Careers Page ─────────────────────────────────────────────────────────────
+
+export const careersPage = {
+  hero: {
+    eyebrow: "Empowering Human Capital",
+    heading: "Join a disciplined consulting team.",
+    subtext: "We're hiring across multiple practice areas. Find the role where your expertise can create the most impact.",
+  },
+  heroSidebar: {
+    focusLabel: "Focus",
+    focusValue: "Measurable Outcomes",
+    environmentLabel: "Environment",
+    environmentValue: "A high-performance culture rooted in structured systems and strategic clarity.",
+  },
+  openPositions: {
+    eyebrow: "Open Positions",
+    heading: "Discover your next career milestone.",
+    subtext: "Apply below to explore opportunities within our fast-growing, highly structured operational environment.",
+    noPositionsTitle: "No Open Positions",
+    noPositionsBody: "We're not currently hiring for any specific roles, but we're always looking for exceptional talent. Check back soon or send your CV to",
+    noPositionsEmail: "info@canbizconsultancy.com",
+    noPositionsCta: "for future consideration.",
+    viewRoleLabel: "View Role",
+    closeDetailsLabel: "Close Details",
+    aboutRoleLabel: "About The Role",
+    requirementsLabel: "What We're Looking For",
+    roleDetailsLabel: "Role Details",
+    departmentLabel: "Department",
+    typeLabel: "Type",
+    locationLabel: "Location",
+    applyNowLabel: "Apply Now",
+  },
+  lifeAtCanbiz: {
+    eyebrow: "Life At Canbiz",
+    heading: "An ecosystem of excellence.",
+    values: [
+      {
+        title: "Structured Growth",
+        description: "We don't just organize clients; we apply the same exact rigorous frameworks to our internal progression paths. Growth is deliberate and documented.",
+      },
+      {
+        title: "Autonomy",
+        description: "Our operational templates allow you to focus entirely on creative problem solving and delivering strategic value without administrative bottlenecks.",
+      },
+    ],
+  },
+};
+
+// ─── Contact Page ─────────────────────────────────────────────────────────────
+
+export const contactPage = {
+  heroSidebar: {
+    firmLabel: "Firm",
+    firmValue: "Canbiz Consultancy",
+    positioningLabel: "Positioning",
+    positioningValue: "A disciplined advisory platform built for long-term institutional impact.",
+  },
+  getInTouch: {
+    eyebrow: "Get in Touch",
+    heading: "Let's connect.",
+    emailLabel: "Email",
+    phoneLabel: "Phone",
+    addressLabel: "Address",
+  },
+  form: {
+    eyebrow: "Contact Us",
+    headingPlain: "Begin your ",
+    headingGold: "transformation",
+    subtext: "Share your vision with us, and let's explore how strategic advisory can accelerate your organization's growth and operational excellence.",
+    nameLabel: "Full Name *",
+    emailLabel: "Email Address *",
+    phoneLabel: "Phone Number",
+    companyLabel: "Company / Organization",
+    messageLabel: "Message *",
+    privacyText1: "By submitting this form, you acknowledge that you have read and agree to our Privacy Policy.",
+    privacyText2: "We respect your privacy and will never share your information with third parties.",
+    submitLabel: "Submit",
+    submittingLabel: "Submitting...",
+  },
+  success: {
+    iconText: "Connection Established",
+    heading: "Connection Established",
+    body: "Thank you for your interest in Canbiz Advisory. Our team has received your message and will respond within 24 business hours to discuss your strategic needs.",
+    sendAnotherLabel: "Send Another Message",
+  },
+};
+
+// ─── Navbar Dropdown Content ──────────────────────────────────────────────────
+
+export const navbarDropdownContent = {
+  insights: {
+    description: "Strategic perspectives shaping the future of regional business.",
+    exploreLabel: "Explore",
+  },
+  services: {
+    description: "Expert advisory tailored to transform your organization's performance.",
+    exploreLabel: "Explore",
+  },
+  industries: {
+    description: "Sectors we empower through deep expertise and innovative solutions.",
+    exploreLabel: "Explore",
+  },
+  careers: {
+    description: "Everything you need to know about careers at Canbiz.",
+    exploreLabel: "Explore",
+  },
+  about: {
+    description: "Everything you need to know about us at Canbiz.",
+    exploreLabel: "Explore",
+  },
+  emptyInsights: {
+    title: "Knowledge platform coming soon",
+    description: "We're curating our latest research and thought leadership perspectives.",
+  },
+  insightsFallback: {
+    title: "Explore More",
+    heading: "View all insights",
+    description: "Discover the full knowledge library and latest research.",
+    browseLabel: "Browse insights",
+  },
+  contactButton: "Contact Us",
+};
 
 // ─── Employee Training Section ────────────────────────────────────────────────
 export const employeeTrainingSection = {

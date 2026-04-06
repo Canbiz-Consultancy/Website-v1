@@ -6,7 +6,7 @@ import { useRouter, usePathname } from "next/navigation";
 import { MagnifyingGlassIcon, ListIcon, XIcon, CaretUp, CaretDown } from "@phosphor-icons/react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
-import { navItems, services, industries } from "../constants/content";
+import { navItems, services, industries, navbarDropdownContent } from "../constants/content";
 import { getStrapiImageUrl } from "../lib/strapi";
 import { Insight } from "../types/insight";
 import { useEffect } from "react";
@@ -320,11 +320,15 @@ export function Navbar() {
                       <div className="mb-8">
                         <h3 className="text-xl text-white font-semibold leading-snug mb-3">
                           {activeItem.label === "Insights"
-                            ? "Strategic perspectives shaping the future of regional business."
+                            ? navbarDropdownContent.insights.description
                             : activeItem.label === "Services"
-                            ? "Expert advisory tailored to transform your organization's performance."
+                            ? navbarDropdownContent.services.description
                             : activeItem.label === "Industries"
-                            ? "Sectors we empower through deep expertise and innovative solutions."
+                            ? navbarDropdownContent.industries.description
+                            : activeItem.label === "Careers"
+                            ? navbarDropdownContent.careers.description
+                            : activeItem.label === "About Us"
+                            ? navbarDropdownContent.about.description
                             : `Everything you need to know about ${activeItem.label.toLowerCase()} at Canbiz.`}
                         </h3>
                       </div>
@@ -333,7 +337,17 @@ export function Navbar() {
                         onClick={() => { setActiveDropdown(null); handleNavClick(activeItem.section); }}
                         className="inline-block border border-brand-gold/50 text-brand-gold font-medium text-xs px-6 py-3 hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition-all duration-300 w-fit"
                       >
-                        Explore {activeItem.label}
+                        {activeItem.label === "Insights"
+                          ? navbarDropdownContent.insights.exploreLabel
+                          : activeItem.label === "Services"
+                          ? navbarDropdownContent.services.exploreLabel
+                          : activeItem.label === "Industries"
+                          ? navbarDropdownContent.industries.exploreLabel
+                          : activeItem.label === "Careers"
+                          ? navbarDropdownContent.careers.exploreLabel
+                          : activeItem.label === "About Us"
+                          ? navbarDropdownContent.about.exploreLabel
+                          : "Explore"} {activeItem.label}
                       </button>
                     </motion.div>
 
@@ -387,16 +401,16 @@ export function Navbar() {
                                     <div className="aspect-[16/10] overflow-hidden bg-brand-navy-mid text-white mb-4 border border-brand-navy-border flex items-center justify-center">
                                       <div className="text-center px-6">
                                         <p className="text-[10px] uppercase tracking-[0.24em] text-brand-gold mb-3 font-semibold">
-                                          Explore More
+                                          {navbarDropdownContent.insightsFallback.title}
                                         </p>
-                                        <h4 className="text-lg font-semibold mb-2">View all insights</h4>
+                                        <h4 className="text-lg font-semibold mb-2">{navbarDropdownContent.insightsFallback.heading}</h4>
                                         <p className="text-xs text-white/70 leading-relaxed">
-                                          Discover the full knowledge library and latest research.
+                                          {navbarDropdownContent.insightsFallback.description}
                                         </p>
                                       </div>
                                     </div>
                                     <div className="flex items-center gap-2 text-xs font-medium text-brand-gold group-hover:text-brand-gold transition-colors">
-                                      Browse insights
+                                      {navbarDropdownContent.insightsFallback.browseLabel}
                                       <span aria-hidden="true">→</span>
                                     </div>
                                   </Link>
@@ -411,9 +425,9 @@ export function Navbar() {
                               <div className="w-12 h-12 border border-brand-gold/30 rounded-full flex items-center justify-center mb-6 bg-brand-gold/5">
                                 <MagnifyingGlassIcon className="text-brand-gold" size={24} weight="light" />
                               </div>
-                              <h4 className="text-white text-lg font-semibold mb-3">Knowledge platform coming soon</h4>
+                              <h4 className="text-white text-lg font-semibold mb-3">{navbarDropdownContent.emptyInsights.title}</h4>
                               <p className="text-gray-500 text-sm leading-relaxed">
-                                We're curating our latest research and thought leadership perspectives.
+                                {navbarDropdownContent.emptyInsights.description}
                               </p>
                             </motion.div>
                           )}
@@ -617,7 +631,7 @@ export function Navbar() {
                     onClick={() => { setMobileOpen(false); router.push("/contact"); }}
                     className="w-full bg-brand-navy text-white text-sm font-semibold px-4 py-4 hover:bg-brand-gold hover:text-brand-navy transition-all tracking-widest uppercase shadow-lg shadow-brand-navy/10"
                   >
-                    Contact Us
+                    {navbarDropdownContent.contactButton}
                   </button>
                 </div>
               </div>
