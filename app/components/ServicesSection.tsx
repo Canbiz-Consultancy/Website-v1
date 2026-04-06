@@ -25,15 +25,15 @@ export function ServicesSection() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-px bg-brand-navy-border">
-          {services.map((service) => {
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-0 bg-brand-navy">
+          {services.filter((_, i) => i < 14).map((service) => {
             const Icon = service.icon;
             const isHovered = hoveredId === service.id;
             return (
               <Link
                 key={service.id}
                 href={`/services/${service.slug}`}
-                className={`relative p-5 md:p-8 transition-all duration-300 block ${
+                className={`relative p-5 md:p-8 transition-all duration-300 block outline outline-1 outline-brand-navy-border outline-offset-[-1px] ${
                   isHovered ? "bg-brand-gold" : "bg-brand-navy-mid"
                 }`}
                 onMouseEnter={() => setHoveredId(service.id)}
