@@ -4,6 +4,7 @@ import "./globals.css";
 
 const siteUrl = "https://www.canbizconsultancy.com";
 const siteName = "Canbiz Consultancy";
+const siteLogo = `${siteUrl}/logo.png`;
 const siteDescription =
   "A premier management consultancy and professional services firm dedicated to empowering organizations and leaders across the GCC and global markets.";
 
@@ -29,11 +30,20 @@ export const metadata: Metadata = {
     siteName,
     title: "Canbiz Consultancy Services",
     description: siteDescription,
+    images: [
+      {
+        url: siteLogo,
+        width: 1200,
+        height: 630,
+        alt: "Canbiz Consultancy",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Canbiz Consultancy Services",
     description: siteDescription,
+    images: [siteLogo],
   },
 };
 
@@ -47,7 +57,7 @@ export default function RootLayout({
     "@type": "Organization",
     name: siteName,
     url: siteUrl,
-    logo: `${siteUrl}/favicon.ico`,
+    logo: siteLogo,
   };
 
   const websiteJsonLd = {
