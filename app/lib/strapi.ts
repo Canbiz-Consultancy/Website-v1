@@ -153,7 +153,7 @@ export async function getCareers(
 }
 
 export function getStrapiImageUrl(image: { url: string } | null): string {
-  if (!image || !image.url) return "";
+  if (!image || !image.url) return "/placeholder.svg";
   if (image.url.startsWith("http")) return image.url;
   return `${STRAPI_URL}${image.url}`;
 }

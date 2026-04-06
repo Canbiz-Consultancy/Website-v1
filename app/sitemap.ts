@@ -44,7 +44,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const insightEntries: MetadataRoute.Sitemap = [];
   try {
     const first = await getInsights(1, 100);
-    const pageCount = first.meta.pagination.pageCount || 1;
+    const pageCount = first.meta.pagination?.pageCount || 1;
     const allInsights = [...first.data];
 
     for (let page = 2; page <= pageCount; page += 1) {
