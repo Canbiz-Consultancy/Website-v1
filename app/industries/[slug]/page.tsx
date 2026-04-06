@@ -1,9 +1,12 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "../../components/Navbar";
 import { Footer } from "../../components/Footer";
 import { industries, industryDetails, services } from "../../constants/content";
 import { ArrowLeftIcon, ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
+
+const siteUrl = "https://www.canbizconsultancy.com";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -20,6 +23,20 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${industry.name} | Canbiz Consultancy Services`,
     description: industry.description,
+    alternates: {
+      canonical: `/industries/${slug}`,
+    },
+    openGraph: {
+      title: `${industry.name} | Canbiz Consultancy Services`,
+      description: industry.description,
+      url: `${siteUrl}/industries/${slug}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${industry.name} | Canbiz Consultancy Services`,
+      description: industry.description,
+    },
   };
 }
 
@@ -42,10 +59,13 @@ export default async function IndustryDetailPage({ params }: Props) {
       {/* ── Hero ─────────────────────────────────────────────────────────────── */}
       <section className="relative h-[600px] lg:h-[650px] pt-32 md:pt-40 pb-16 overflow-hidden px-6 md:px-16 isolate">
         <div className="absolute inset-0 z-0">
-          <img
+          <Image
             src={detail.hero}
             alt={detail.heroAlt}
-            className="w-full h-full object-cover"
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority
           />
         </div>
         <div className="absolute inset-x-0 bottom-0 z-0 h-40 bg-gradient-to-t from-[#07101d] to-transparent" />

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -78,10 +79,12 @@ export default function IndustriesPage() {
                   {/* Hero image */}
                   {detail && (
                     <div className="relative h-48 overflow-hidden">
-                      <img
+                      <Image
                         src={detail.hero}
                         alt={detail.heroAlt}
-                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        fill
+                        sizes="(min-width: 1024px) 50vw, 100vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-brand-navy/20 transition-colors duration-300" />
                       <div className="absolute top-4 left-4">

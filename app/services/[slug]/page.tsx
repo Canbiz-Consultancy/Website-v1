@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "../../components/Navbar";
@@ -5,6 +6,8 @@ import { Footer } from "../../components/Footer";
 import { services, serviceDetails, industries } from "../../constants/content";
 import { ArrowLeftIcon, ArrowRightIcon, CaretDownIcon } from "@phosphor-icons/react/dist/ssr";
 import type { Metadata } from "next";
+
+const siteUrl = "https://www.canbizconsultancy.com";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -24,6 +27,20 @@ export async function generateMetadata({ params }: Props) {
   return {
     title: `${service.title} | Canbiz Advisory`,
     description: service.description,
+    alternates: {
+      canonical: `/services/${slug}`,
+    },
+    openGraph: {
+      title: `${service.title} | Canbiz Advisory`,
+      description: service.description,
+      url: `${siteUrl}/services/${slug}`,
+      type: "article",
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${service.title} | Canbiz Advisory`,
+      description: service.description,
+    },
   };
 }
 
@@ -47,10 +64,13 @@ export default async function ServiceDetailPage({ params }: Props) {
       <section className="relative isolate px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-             src={detail.hero} 
-             alt={detail.heroAlt} 
-             className="w-full h-full object-cover object-center"
+          <Image
+             src={detail.hero}
+             alt={detail.heroAlt}
+             fill
+             sizes="100vw"
+             className="object-cover object-center"
+             priority
           />
         </div>
         

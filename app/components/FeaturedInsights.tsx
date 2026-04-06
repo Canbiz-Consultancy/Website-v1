@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react/dist/ssr";
 import { getFeaturedInsights, getStrapiImageUrl } from "../lib/strapi";
@@ -13,6 +14,7 @@ export async function FeaturedInsights() {
   const featuredInsight = insights[0];
   const sideInsights = insights.slice(1, 3);
   const bottomInsights = insights.slice(3, 6);
+  const featuredImageUrl = getStrapiImageUrl(featuredInsight.featuredImage);
 
   return (
     <section className="bg-white py-24 px-6 md:px-16">
@@ -37,11 +39,17 @@ export async function FeaturedInsights() {
             className="lg:col-span-2 group cursor-pointer overflow-hidden border border-gray-100 hover:shadow-lg transition-shadow"
           >
             <div className="relative overflow-hidden h-72">
-                <img
-                  src={getStrapiImageUrl(featuredInsight.featuredImage)}
-                  alt={featuredInsight.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                {featuredImageUrl ? (
+                  <Image
+                    src={featuredImageUrl}
+                    alt={featuredInsight.title}
+                    fill
+                    sizes="(min-width: 1024px) 66vw, 100vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-brand-navy/20" />
+                )}
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
               <span className="absolute top-4 left-4 text-xs bg-brand-gold text-brand-navy px-2 py-0.5 font-semibold tracking-wider uppercase">
                 {featuredInsight.category}
@@ -65,12 +73,18 @@ export async function FeaturedInsights() {
                 href={`/insights/${insight.slug}`}
                 className="group cursor-pointer bg-white border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow flex-1"
               >
-                    <div className="overflow-hidden h-36">
-                  <img
-                    src={getStrapiImageUrl(insight.featuredImage)}
-                    alt={insight.title}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                  />
+                    <div className="relative overflow-hidden h-36">
+                  {getStrapiImageUrl(insight.featuredImage) ? (
+                    <Image
+                      src={getStrapiImageUrl(insight.featuredImage)}
+                      alt={insight.title}
+                      fill
+                      sizes="(min-width: 1024px) 33vw, 100vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <div className="absolute inset-0 bg-brand-navy/20" />
+                  )}
                 </div>
                 <div className="p-5">
                   <span className="text-xs text-brand-gold font-semibold tracking-wider uppercase block mb-2">{insight.category}</span>
@@ -91,12 +105,18 @@ export async function FeaturedInsights() {
               href={`/insights/${insight.slug}`}
               className="group cursor-pointer bg-white border border-gray-100 overflow-hidden hover:shadow-lg transition-shadow"
             >
-                <div className="overflow-hidden h-44">
-                <img
-                  src={getStrapiImageUrl(insight.featuredImage)}
-                  alt={insight.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
+                <div className="relative overflow-hidden h-44">
+                {getStrapiImageUrl(insight.featuredImage) ? (
+                  <Image
+                    src={getStrapiImageUrl(insight.featuredImage)}
+                    alt={insight.title}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                ) : (
+                  <div className="absolute inset-0 bg-brand-navy/20" />
+                )}
               </div>
               <div className="p-6">
                 <span className="text-xs text-brand-gold font-semibold tracking-wider uppercase block mb-2">{insight.category}</span>

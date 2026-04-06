@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { employeeTrainingSection } from "../constants/content";
 import Link from "next/link";
@@ -28,10 +29,12 @@ export function TrainingSection() {
       </div>
 
       <div className="relative h-96 lg:h-auto overflow-hidden order-1 lg:order-2">
-        <img
+        <Image
           src={employeeTrainingSection.image}
           alt={employeeTrainingSection.imageAlt}
-          className="w-full h-full object-cover"
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-brand-navy/10" />
         <div className="absolute bottom-8 right-8">

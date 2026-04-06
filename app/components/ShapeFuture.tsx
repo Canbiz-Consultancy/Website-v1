@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { shapeFutureSection } from "../constants/content";
 
 export function ShapeFuture() {
@@ -16,10 +17,12 @@ export function ShapeFuture() {
       </div>
 
       <div className="relative h-96 lg:h-auto overflow-hidden">
-        <img
+        <Image
           src={shapeFutureSection.image}
           alt={shapeFutureSection.imageAlt}
-          className="w-full h-full object-cover"
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-brand-navy/30" />
         <div className="absolute inset-0 flex items-center justify-center">

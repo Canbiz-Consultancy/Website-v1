@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { MagnifyingGlassIcon, ListIcon, XIcon, CaretUp, CaretDown } from "@phosphor-icons/react";
@@ -214,10 +215,13 @@ export function Navbar() {
               className="relative shrink-0 h-20 flex items-center justify-start"
               onClick={() => setActiveDropdown(null)}
             >
-              <img
+              <Image
                 src="/logo-nav.svg"
                 alt="Canbiz Logo"
+                width={180}
+                height={64}
                 className="h-16 w-auto"
+                priority
               />
             </Link>
 
@@ -346,12 +350,18 @@ export function Navbar() {
                                   onClick={() => setActiveDropdown(null)}
                                   className="group block"
                                 >
-                                  <div className="aspect-[16/10] overflow-hidden bg-brand-navy-mid mb-4 border border-brand-navy-border">
-                                    <img
-                                      src={getStrapiImageUrl(insight.featuredImage)}
-                                      alt={insight.title}
-                                      className="w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105"
-                                    />
+                                  <div className="relative aspect-[16/10] overflow-hidden bg-brand-navy-mid mb-4 border border-brand-navy-border">
+                                    {getStrapiImageUrl(insight.featuredImage) ? (
+                                      <Image
+                                        src={getStrapiImageUrl(insight.featuredImage)}
+                                        alt={insight.title}
+                                        fill
+                                        sizes="(min-width: 1024px) 400px, 100vw"
+                                        className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+                                      />
+                                    ) : (
+                                      <div className="absolute inset-0 bg-brand-navy/20" />
+                                    )}
                                   </div>
                                   <div className="flex-1">
                                     <span className="text-[10px] uppercase tracking-[0.2em] text-brand-gold font-bold mb-2 block">

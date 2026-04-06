@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -69,10 +70,12 @@ export default function AboutPage() {
         <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 items-center">
           <div className="lg:w-1/2 relative">
              <div className="relative aspect-[4/5] overflow-hidden">
-               <img
+               <Image
                  src={aboutSection.image}
                  alt={aboutSection.imageAlt}
-                 className="w-full h-full object-cover grayscale-[0.2]"
+                 fill
+                 sizes="(min-width: 1024px) 50vw, 100vw"
+                 className="object-cover grayscale-[0.2]"
                />
              </div>
           </div>

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 import Link from "next/link";
 import { ArrowRightIcon } from "@phosphor-icons/react";
@@ -69,11 +70,13 @@ export function IndustriesSection() {
 
           <div className="lg:col-span-3 flex flex-col order-1 lg:order-2">
             <div className="relative h-56 lg:h-64 overflow-hidden">
-              <img
+              <Image
                 key={active.id}
                 src={active.image}
                 alt={active.name}
-                className="w-full h-full object-cover transition-transform duration-700 scale-100 hover:scale-105"
+                fill
+                sizes="(min-width: 1024px) 60vw, 100vw"
+                className="object-cover transition-transform duration-700 scale-100 hover:scale-105"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/60 to-transparent" />
             </div>

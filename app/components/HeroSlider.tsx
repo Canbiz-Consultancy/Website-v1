@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { CaretLeftIcon, CaretRightIcon, PauseIcon, PlayIcon } from "@phosphor-icons/react";
 import { heroSlides, heroTabs } from "../constants/content";
@@ -28,7 +29,14 @@ export function HeroSlider() {
           key={s.id}
           className={`absolute inset-0 transition-opacity duration-700 ${i === current ? "opacity-100" : "opacity-0"}`}
         >
-          <img src={s.image} alt="" className="w-full h-full object-cover" />
+          <Image
+            src={s.image}
+            alt={s.title}
+            fill
+            sizes="100vw"
+            className="object-cover"
+            priority={i === 0}
+          />
           <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/20" />
         </div>
       ))}

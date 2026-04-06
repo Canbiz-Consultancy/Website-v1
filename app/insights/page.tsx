@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -9,7 +10,21 @@ import { ArrowLeft as ArrowLeftIcon, ArrowRight as ArrowRightIcon } from "@phosp
 
 export const metadata: Metadata = {
   title: "Insights | Canbiz Consultancy",
-  description: "Thought leadership, research, and perspectives from the Canbiz consulting team — helping leaders navigate complexity and unlock growth.",
+  description: "Thought leadership, research, and perspectives from the Canbiz consulting team - helping leaders navigate complexity and unlock growth.",
+  alternates: {
+    canonical: "/insights",
+  },
+  openGraph: {
+    title: "Insights | Canbiz Consultancy",
+    description: "Thought leadership, research, and perspectives from the Canbiz consulting team - helping leaders navigate complexity and unlock growth.",
+    url: "https://www.canbizconsultancy.com/insights",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Insights | Canbiz Consultancy",
+    description: "Thought leadership, research, and perspectives from the Canbiz consulting team - helping leaders navigate complexity and unlock growth.",
+  },
 };
 
 export default async function InsightsPage() {
@@ -90,11 +105,17 @@ export default async function InsightsPage() {
                 >
                   {/* Image */}
                   <div className="relative h-48 overflow-hidden">
-                    <img
-                      src={getStrapiImageUrl(insight.featuredImage)}
-                      alt={insight.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
+                    {getStrapiImageUrl(insight.featuredImage) ? (
+                      <Image
+                        src={getStrapiImageUrl(insight.featuredImage)}
+                        alt={insight.title}
+                        fill
+                        sizes="(min-width: 1024px) 33vw, 100vw"
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    ) : (
+                      <div className="absolute inset-0 bg-brand-navy/20" />
+                    )}
                     <div className="absolute inset-0 bg-brand-navy/40 group-hover:bg-brand-navy/20 transition-colors duration-300" />
                     <div className="absolute top-4 left-4">
                       <span className="text-[10px] bg-brand-gold text-brand-navy px-2.5 py-1 font-semibold tracking-widest uppercase">
@@ -143,3 +164,4 @@ export default async function InsightsPage() {
     </div>
   );
 }
+

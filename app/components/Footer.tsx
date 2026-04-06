@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { footerLinks, footerSocials, footerContent } from "../constants/content";
 
 export function Footer() {
@@ -8,10 +9,13 @@ export function Footer() {
       <div className="w-full">
         <div className="flex flex-col items-center md:flex-row md:items-center justify-between gap-8 mb-8">
           <div className="flex items-center">
-            <img
+            <Image
               src="/logo.svg"
               alt="Canbiz Logo"
+              width={200}
+              height={80}
               className="h-20 w-auto"
+              priority
             />
           </div>
 

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { Navbar } from "../../components/Navbar";
@@ -7,6 +8,8 @@ import { getInsightBySlug, getStrapiImageUrl, getInsights } from "../../lib/stra
 import { formatDate } from "../../lib/utils";
 import type { StrapiBlock, Insight } from "../../types/insight";
 import type { ReactNode } from "react";
+
+const siteUrl = "https://www.canbizconsultancy.com";
 
 interface Props {
   params: Promise<{ slug: string }>;
@@ -74,9 +77,28 @@ export async function generateMetadata({ params }: Props) {
   
   if (!insight) return { title: "Not Found | Canbiz Consultancy" };
 
+  const imageUrl = insight.featuredImage ? getStrapiImageUrl(insight.featuredImage) : "";
+  const canonical = `/insights/${slug}`;
+
   return {
     title: `${insight.title} | Canbiz Insights`,
     description: insight.excerpt,
+    alternates: {
+      canonical,
+    },
+    openGraph: {
+      title: `${insight.title} | Canbiz Insights`,
+      description: insight.excerpt,
+      url: `${siteUrl}${canonical}`,
+      type: "article",
+      images: imageUrl ? [{ url: imageUrl }] : undefined,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${insight.title} | Canbiz Insights`,
+      description: insight.excerpt,
+      images: imageUrl ? [imageUrl] : undefined,
+    },
   };
 }
 
@@ -92,9 +114,36 @@ export default async function InsightDetailPage({ params }: Props) {
   const currentIndex = allInsights.findIndex(i => i.id === insight.id);
   const prevInsight = currentIndex > 0 ? allInsights[currentIndex - 1] : null;
   const nextInsight = currentIndex < allInsights.length - 1 ? allInsights[currentIndex + 1] : null;
+  const canonicalUrl = `${siteUrl}/insights/${insight.slug}`;
+  const articleJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    headline: insight.title,
+    description: insight.excerpt,
+    datePublished: insight.published,
+    dateModified: insight.updatedAt || insight.published,
+    author: {
+      "@type": "Organization",
+      name: insight.author || "Canbiz Global Advisory",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Canbiz Consultancy",
+      logo: {
+        "@type": "ImageObject",
+        url: `${siteUrl}/favicon.ico`,
+      },
+    },
+    mainEntityOfPage: canonicalUrl,
+    image: insight.featuredImage ? [getStrapiImageUrl(insight.featuredImage)] : undefined,
+  };
 
   return (
     <div className="min-h-screen bg-background text-brand-navy font-sans">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
       <Navbar />
       <div className="h-14 md:h-20" />
 
@@ -102,10 +151,13 @@ export default async function InsightDetailPage({ params }: Props) {
       <section className="relative isolate bg-brand-navy px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
         {insight.featuredImage && (
           <div className="absolute inset-0 z-0">
-            <img
+            <Image
               src={getStrapiImageUrl(insight.featuredImage)}
               alt={insight.title}
-              className="w-full h-full object-cover"
+              fill
+              sizes="100vw"
+              className="object-cover"
+              priority
             />
           </div>
         )}

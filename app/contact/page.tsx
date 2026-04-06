@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Navbar } from "../components/Navbar";
 import { Footer } from "../components/Footer";
@@ -67,10 +68,13 @@ export default function ContactPage() {
       <section className="relative isolate px-6 md:px-16 pt-32 md:pt-40 pb-16 overflow-hidden h-[600px] lg:h-[650px]">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
-          <img 
-             src="https://images.unsplash.com/photo-1595856903272-97b63f25c777?auto=format&fit=crop&q=80&w=1920" 
-             alt="Doha Business District" 
-             className="w-full h-full object-cover object-center"
+          <Image
+             src="https://images.unsplash.com/photo-1595856903272-97b63f25c777?auto=format&fit=crop&q=80&w=1920"
+             alt="Doha Business District"
+             fill
+             sizes="100vw"
+             className="object-cover object-center"
+             priority
           />
         </div>
         

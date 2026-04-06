@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { confidenceSection } from "../constants/content";
 import Link from "next/link";
@@ -8,10 +9,12 @@ export function ConfidenceSection() {
   return (
     <section className="grid grid-cols-1 lg:grid-cols-2">
       <div className="relative h-96 lg:h-auto overflow-hidden">
-        <img
+        <Image
           src={confidenceSection.image}
           alt={confidenceSection.imageAlt}
-          className="w-full h-full object-cover"
+          fill
+          sizes="(min-width: 1024px) 50vw, 100vw"
+          className="object-cover"
         />
         <div className="absolute inset-0 bg-brand-navy/20" />
         <div className="absolute bottom-8 left-8">

@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { ArrowRightIcon } from "@phosphor-icons/react";
 import { careersSection, careersValues, careersWhyPoints } from "../constants/content";
 import Link from "next/link";
@@ -38,10 +39,12 @@ export function CareersSection() {
       <div className="max-w-[1200px] mx-auto flex flex-col lg:flex-row gap-16 lg:gap-24 mb-6 md:mb-12 border-t border-black/10 pt-24 md:pt-32">
          <div className="lg:w-1/2 relative">
              <div className="relative aspect-[4/5] overflow-hidden">
-               <img
+               <Image
                  src={careersSection.image}
                  alt={careersSection.imageAlt}
-                 className="w-full h-full object-cover grayscale-[0.2]"
+                 fill
+                 sizes="(min-width: 1024px) 50vw, 100vw"
+                 className="object-cover grayscale-[0.2]"
                />
              </div>
          </div>

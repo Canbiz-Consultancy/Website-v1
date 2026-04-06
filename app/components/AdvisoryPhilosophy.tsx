@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { advisoryPillars, advisorySection } from "../constants/content";
 
 export function AdvisoryPhilosophy() {
@@ -38,10 +39,12 @@ export function AdvisoryPhilosophy() {
         </div>
 
         <div className="relative min-h-[320px] lg:min-h-[420px] overflow-hidden hidden lg:block">
-          <img
+          <Image
             src={advisorySection.image}
             alt={advisorySection.imageAlt}
-            className="w-full h-full object-cover absolute inset-0"
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-brand-navy/80 via-transparent to-transparent" />
           <div className="absolute bottom-0 left-0 right-0 px-8 py-7">
